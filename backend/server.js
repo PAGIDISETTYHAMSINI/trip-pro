@@ -1,10 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 const destinations = require('./data');
+const sequelize = require('./db');
+const authRoutes = require('./routes/auth');
+const bookingRoutes = require('./routes/bookings');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/bookings', bookingRoutes);
 
 app.get('/api/destinations', (req, res) => {
   const minimalDestinations = destinations.map(d => ({
@@ -102,6 +109,14 @@ app.get('/api/itineraries', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+
+sequelize.sync({ alter: true })
+  .then(() => {
+    console.log('Database synced successfully');
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
