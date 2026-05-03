@@ -5,6 +5,7 @@ import { AuthContext } from './context/AuthContext';
 import { Home } from './pages/Home';
 import { Login, Signup } from './pages/Auth';
 import { Checkout, Success } from './pages/Checkout';
+import { Dashboard } from './pages/Dashboard';
 import './index.css';
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
         <nav style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           {user ? (
             <>
-              <span style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Link to="/dashboard" style={{ textDecoration: 'none', color: 'var(--primary)', fontWeight: 600 }}>My Trips</Link>
+              <span style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '1rem' }}>
                 <User size={18} /> {user.name}
               </span>
               <button onClick={handleLogout} className="btn" style={{ padding: '0.5rem 1rem', background: 'transparent', color: 'var(--text-main)', border: '1px solid var(--border)' }}>
@@ -55,6 +57,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/success" element={<Success />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </main>
     </>
