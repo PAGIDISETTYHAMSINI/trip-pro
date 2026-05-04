@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { MapPin, Wallet, Calendar, Plane, Building, Utensils, Activity, Search } from 'lucide-react';
+import { MapPin, Wallet, Calendar, Plane, Building, Utensils, Activity, Search, Train, Car, Info, Users, Clock } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 
 export const Home = () => {
@@ -129,6 +129,25 @@ export const Home = () => {
           </form>
           {error && <div className="error-message">{error}</div>}
         </div>
+
+        {selectedDestinationInfo && (
+          <div className="destination-insights glass" style={{ marginTop: '2rem', padding: '1.5rem', display: 'flex', gap: '2rem', justifyContent: 'center', background: 'rgba(255,255,255,0.8)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Info size={20} color="var(--primary)" />
+              <div>
+                <strong style={{ display: 'block', fontSize: '0.8rem', color: 'var(--text-muted)' }}>Best Months to Visit</strong>
+                <span>{selectedDestinationInfo.bestMonths || 'Year-round'}</span>
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Users size={20} color="var(--primary)" />
+              <div>
+                <strong style={{ display: 'block', fontSize: '0.8rem', color: 'var(--text-muted)' }}>Great For</strong>
+                <span>{selectedDestinationInfo.suggestedAgeGroups || 'All Age Groups'}</span>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {searched && (
@@ -164,13 +183,17 @@ export const Home = () => {
                   <div className="cost-breakdown">
                     <div className="breakdown-item">
                       <div className="item-info">
-                        <div className="item-icon"><Plane size={20} /></div>
+                        <div className="item-icon">
+                          {itinerary.transport.method === 'Train' ? <Train size={20} /> : 
+                           itinerary.transport.method === 'Car' ? <Car size={20} /> : 
+                           <Plane size={20} />}
+                        </div>
                         <div>
-                          <strong>Flight</strong>
-                          <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.flight.type}</div>
+                          <strong>{itinerary.transport.method}</strong>
+                          <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.transport.type}</div>
                         </div>
                       </div>
-                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.flight.toLocaleString()}</div>
+                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.transport.toLocaleString()}</div>
                     </div>
 
                     <div className="breakdown-item">
@@ -211,10 +234,18 @@ export const Home = () => {
 
                   {itinerary.activities.length > 0 && (
                     <div className="activities-list" style={{ marginBottom: '1.5rem' }}>
-                      <h4>Included Activities</h4>
-                      <div>
+                      <h4 style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Clock size={16} color="var(--primary)" /> Smart Activity Schedule
+                      </h4>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                         {itinerary.activities.map((act, i) => (
-                          <span key={i} className="activity-tag">{act.name}</span>
+                          <div key={i} style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.5)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
+                            <div style={{ fontWeight: '600', fontSize: '0.95rem' }}>{act.name}</div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
+                              <span>{act.suggestedTime || 'Flexible Time'}</span>
+                              <span>{act.proximity || 'Near City Center'}</span>
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>

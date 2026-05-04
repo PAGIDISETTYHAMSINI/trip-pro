@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { Plane, Calendar, CreditCard } from 'lucide-react';
+import { Plane, Calendar, CreditCard, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Dashboard = () => {
@@ -49,13 +49,13 @@ export const Dashboard = () => {
             <div key={booking.id} className="glass" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderLeft: '4px solid var(--primary)' }}>
               <div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Plane size={20} color="var(--primary)" /> {booking.destinationName}
+                  <MapPin size={20} color="var(--primary)" /> {booking.destinationName}
                 </h3>
                 <p style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
                   <Calendar size={16} /> {booking.days} Days Trip
                 </p>
                 <div style={{ marginTop: '0.75rem', fontSize: '0.85rem' }}>
-                  <strong>Includes:</strong> {booking.itineraryDetails.hotel.type}, {booking.itineraryDetails.flight.type} Flight, {booking.itineraryDetails.activities.length} Activities
+                  <strong>Includes:</strong> {booking.itineraryDetails.hotel.type}, {(booking.itineraryDetails.transport || booking.itineraryDetails.flight)?.type} Transport, {booking.itineraryDetails.activities.length} Activities
                 </div>
               </div>
               <div style={{ textAlign: 'right' }}>

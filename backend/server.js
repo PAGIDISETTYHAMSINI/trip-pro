@@ -18,7 +18,9 @@ app.get('/api/destinations', (req, res) => {
     id: d.id,
     name: d.name,
     image: d.image,
-    currencySymbol: d.name.includes('India') ? '₹' : '$'
+    currencySymbol: d.name.includes('India') ? '₹' : '$',
+    bestMonths: d.bestMonths,
+    suggestedAgeGroups: d.suggestedAgeGroups
   }));
   res.json(minimalDestinations);
 });
@@ -57,17 +59,24 @@ app.get('/api/itineraries', (req, res) => {
 
   const validItineraries = [];
 
-  // Generate itineraries by iterating over flights, hotels, and food options
-  for (const flightBase of destination.flights) {
+  // Combine transport options into one array
+  const transports = [
+    ...(destination.flights || []).map(t => ({ ...t, method: 'Flight' })),
+    ...(destination.trains || []).map(t => ({ ...t, method: 'Train' })),
+    ...(destination.cars || []).map(t => ({ ...t, method: 'Car' }))
+  ];
+
+  // Generate itineraries by iterating over transport, hotels, and food options
+  for (const transportBase of transports) {
     for (const hotelBase of destination.hotels) {
       for (const foodBase of destination.foodOptions) {
         
-        const flight = { ...flightBase, cost: flightBase.cost * rate };
+        const transport = { ...transportBase, cost: transportBase.cost * rate };
         const hotel = { ...hotelBase, costPerNight: hotelBase.costPerNight * rate };
         const food = { ...foodBase, costPerDay: foodBase.costPerDay * rate };
         const activities = destination.activities.map(a => ({ ...a, cost: a.cost * rate }));
 
-        const baseCost = flight.cost + (hotel.costPerNight * daysNum) + (food.costPerDay * daysNum);
+        const baseCost = transport.cost + (hotel.costPerNight * daysNum) + (food.costPerDay * daysNum);
         
         if (baseCost <= budgetNum) {
           // See how many activities we can add
@@ -93,14 +102,14 @@ app.get('/api/itineraries', (req, res) => {
             const totalCost = baseCost + comboCost;
             
             validItineraries.push({
-              flight,
+              transport,
               hotel: { ...hotel, totalCost: hotel.costPerNight * daysNum },
               food: { ...food, totalCost: food.costPerDay * daysNum },
               activities: combo,
               totalCost,
               currencySymbol,
               breakdown: {
-                flight: flight.cost,
+                transport: transport.cost,
                 hotel: hotel.costPerNight * daysNum,
                 food: food.costPerDay * daysNum,
                 activities: comboCost
