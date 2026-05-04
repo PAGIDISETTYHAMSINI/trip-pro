@@ -23,6 +23,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Hostel Room",
+            "cost": 40
+          },
+          {
+            "type": "Deluxe AC Hostel Room",
+            "cost": 60
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 100
+          }
         ]
       },
       {
@@ -32,6 +47,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 120
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 180
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 300
+          }
         ]
       },
       {
@@ -41,6 +71,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Resort Room",
+            "cost": 350
+          },
+          {
+            "type": "Deluxe AC Luxury Resort Room",
+            "cost": 525
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 875
+          }
         ]
       }
     ],
@@ -68,7 +113,11 @@ const destinations = [
         "cost": 30,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -76,7 +125,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -84,7 +137,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -92,7 +149,11 @@ const destinations = [
         "cost": 60,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -100,7 +161,11 @@ const destinations = [
         "cost": 100,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -188,6 +253,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.9",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.3",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -214,6 +351,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Guest House Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Guest House Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -223,6 +375,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Boutique Villa Room",
+            "cost": 80
+          },
+          {
+            "type": "Deluxe AC Boutique Villa Room",
+            "cost": 120
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 200
+          }
         ]
       },
       {
@@ -232,6 +399,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury 5-Star Room",
+            "cost": 250
+          },
+          {
+            "type": "Deluxe AC Luxury 5-Star Room",
+            "cost": 375
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 625
+          }
         ]
       }
     ],
@@ -259,7 +441,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -267,7 +453,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -275,7 +465,11 @@ const destinations = [
         "cost": 80,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -283,7 +477,11 @@ const destinations = [
         "cost": 30,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -291,7 +489,11 @@ const destinations = [
         "cost": 50,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -381,6 +583,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "5.0",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.4",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.4",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -407,6 +681,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Capsule Hotel Room",
+            "cost": 35
+          },
+          {
+            "type": "Deluxe AC Capsule Hotel Room",
+            "cost": 53
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 88
+          }
         ]
       },
       {
@@ -416,6 +705,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Business Hotel Room",
+            "cost": 100
+          },
+          {
+            "type": "Deluxe AC Business Hotel Room",
+            "cost": 150
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 250
+          }
         ]
       },
       {
@@ -425,6 +729,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Ryokan Room",
+            "cost": 400
+          },
+          {
+            "type": "Deluxe AC Luxury Ryokan Room",
+            "cost": 600
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 1000
+          }
         ]
       }
     ],
@@ -452,7 +771,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -460,7 +783,11 @@ const destinations = [
         "cost": 30,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -468,7 +795,11 @@ const destinations = [
         "cost": 80,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -476,7 +807,11 @@ const destinations = [
         "cost": 120,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -484,7 +819,11 @@ const destinations = [
         "cost": 40,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -572,6 +911,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.9",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.6",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.4",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -598,6 +1009,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.6",
+        "roomOptions": [
+          {
+            "type": "Standard Hostel/Budget Room",
+            "cost": 80
+          },
+          {
+            "type": "Deluxe AC Hostel/Budget Room",
+            "cost": 120
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 200
+          }
         ]
       },
       {
@@ -607,6 +1033,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Mid-range Hotel Room",
+            "cost": 200
+          },
+          {
+            "type": "Deluxe AC Mid-range Hotel Room",
+            "cost": 300
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 500
+          }
         ]
       },
       {
@@ -616,6 +1057,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 600
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 900
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 1500
+          }
         ]
       }
     ],
@@ -643,7 +1099,11 @@ const destinations = [
         "cost": 45,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -651,7 +1111,11 @@ const destinations = [
         "cost": 30,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -659,7 +1123,11 @@ const destinations = [
         "cost": 150,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -667,7 +1135,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -675,7 +1147,11 @@ const destinations = [
         "cost": 250,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -763,6 +1239,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.7",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.6",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.2",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -789,6 +1337,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Beach Shack Room",
+            "cost": 15
+          },
+          {
+            "type": "Deluxe AC Beach Shack Room",
+            "cost": 23
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 38
+          }
         ]
       },
       {
@@ -798,6 +1361,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard 3-Star Resort Room",
+            "cost": 50
+          },
+          {
+            "type": "Deluxe AC 3-Star Resort Room",
+            "cost": 75
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 125
+          }
         ]
       },
       {
@@ -807,6 +1385,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury 5-Star Room",
+            "cost": 150
+          },
+          {
+            "type": "Deluxe AC Luxury 5-Star Room",
+            "cost": 225
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 375
+          }
         ]
       }
     ],
@@ -834,7 +1427,11 @@ const destinations = [
         "cost": 40,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -842,7 +1439,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -850,7 +1451,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -858,7 +1463,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -866,7 +1475,11 @@ const destinations = [
         "cost": 30,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -956,6 +1569,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.1",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.4",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -982,6 +1667,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Homestay Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Homestay Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -991,6 +1691,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Houseboat Room",
+            "cost": 80
+          },
+          {
+            "type": "Deluxe AC Houseboat Room",
+            "cost": 120
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 200
+          }
         ]
       },
       {
@@ -1000,6 +1715,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Ayurvedic Resort Room",
+            "cost": 200
+          },
+          {
+            "type": "Deluxe AC Ayurvedic Resort Room",
+            "cost": 300
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 500
+          }
         ]
       }
     ],
@@ -1027,7 +1757,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -1035,7 +1769,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -1043,7 +1781,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -1051,7 +1793,11 @@ const destinations = [
         "cost": 40,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -1059,7 +1805,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -1147,6 +1897,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.6",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.9",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.9",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -1173,6 +1995,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.6",
+        "roomOptions": [
+          {
+            "type": "Standard Hostel/Budget Room",
+            "cost": 12
+          },
+          {
+            "type": "Deluxe AC Hostel/Budget Room",
+            "cost": 18
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 30
+          }
         ]
       },
       {
@@ -1182,6 +2019,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Heritage Hotel Room",
+            "cost": 60
+          },
+          {
+            "type": "Deluxe AC Heritage Hotel Room",
+            "cost": 90
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 150
+          }
         ]
       },
       {
@@ -1191,6 +2043,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Palace Hotel Room",
+            "cost": 300
+          },
+          {
+            "type": "Deluxe AC Palace Hotel Room",
+            "cost": 450
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 750
+          }
         ]
       }
     ],
@@ -1218,7 +2085,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -1226,7 +2097,11 @@ const destinations = [
         "cost": 150,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -1234,7 +2109,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -1242,7 +2121,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -1250,7 +2133,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -1338,6 +2225,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.9",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.2",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.6",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -1364,6 +2323,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "3.5",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 15
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 23
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 38
+          }
         ]
       },
       {
@@ -1373,6 +2347,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 40
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 60
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 100
+          }
         ]
       },
       {
@@ -1382,6 +2371,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.6",
+        "roomOptions": [
+          {
+            "type": "Standard Taj View Luxury Room",
+            "cost": 250
+          },
+          {
+            "type": "Deluxe AC Taj View Luxury Room",
+            "cost": 375
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 625
+          }
         ]
       }
     ],
@@ -1409,7 +2413,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -1417,7 +2425,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -1425,7 +2437,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -1433,7 +2449,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -1441,7 +2461,11 @@ const destinations = [
         "cost": 12,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -1529,6 +2553,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.5",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.5",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.5",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -1555,6 +2651,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Backpacker Hostel Room",
+            "cost": 12
+          },
+          {
+            "type": "Deluxe AC Backpacker Hostel Room",
+            "cost": 18
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 30
+          }
         ]
       },
       {
@@ -1564,6 +2675,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Mid-range Hotel Room",
+            "cost": 45
+          },
+          {
+            "type": "Deluxe AC Mid-range Hotel Room",
+            "cost": 68
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 113
+          }
         ]
       },
       {
@@ -1573,6 +2699,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard 5-Star Hotel Room",
+            "cost": 180
+          },
+          {
+            "type": "Deluxe AC 5-Star Hotel Room",
+            "cost": 270
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 450
+          }
         ]
       }
     ],
@@ -1600,7 +2741,11 @@ const destinations = [
         "cost": 8,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -1608,7 +2753,11 @@ const destinations = [
         "cost": 8,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -1616,7 +2765,11 @@ const destinations = [
         "cost": 0,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -1624,7 +2777,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -1632,7 +2789,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -1720,6 +2881,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.4",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.9",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.2",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -1746,6 +2979,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "5.0",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Hotel Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Budget Hotel Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -1755,6 +3003,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.5",
+        "roomOptions": [
+          {
+            "type": "Standard Business Hotel Room",
+            "cost": 60
+          },
+          {
+            "type": "Deluxe AC Business Hotel Room",
+            "cost": 90
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 150
+          }
         ]
       },
       {
@@ -1764,6 +3027,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Sea View Luxury Room",
+            "cost": 250
+          },
+          {
+            "type": "Deluxe AC Sea View Luxury Room",
+            "cost": 375
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 625
+          }
         ]
       }
     ],
@@ -1791,7 +3069,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -1799,7 +3081,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -1807,7 +3093,11 @@ const destinations = [
         "cost": 0,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -1815,7 +3105,11 @@ const destinations = [
         "cost": 40,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -1823,7 +3117,11 @@ const destinations = [
         "cost": 12,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "December to April",
@@ -1911,6 +3209,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.6",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.4",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -1937,6 +3307,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Ghat Hostel Room",
+            "cost": 10
+          },
+          {
+            "type": "Deluxe AC Ghat Hostel Room",
+            "cost": 15
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 25
+          }
         ]
       },
       {
@@ -1946,6 +3331,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Heritage Guest House Room",
+            "cost": 35
+          },
+          {
+            "type": "Deluxe AC Heritage Guest House Room",
+            "cost": 53
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 88
+          }
         ]
       },
       {
@@ -1955,6 +3355,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury River View Room",
+            "cost": 150
+          },
+          {
+            "type": "Deluxe AC Luxury River View Room",
+            "cost": 225
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 375
+          }
         ]
       }
     ],
@@ -1982,7 +3397,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -1990,7 +3409,11 @@ const destinations = [
         "cost": 0,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -1998,7 +3421,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -2006,7 +3433,11 @@ const destinations = [
         "cost": 8,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -2014,7 +3445,11 @@ const destinations = [
         "cost": 12,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -2102,6 +3537,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.2",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.3",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -2128,6 +3635,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Guesthouse Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Guesthouse Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -2137,6 +3659,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.5",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 50
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 75
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 125
+          }
         ]
       },
       {
@@ -2146,6 +3683,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.2",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Glamping Room",
+            "cost": 180
+          },
+          {
+            "type": "Deluxe AC Luxury Glamping Room",
+            "cost": 270
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 450
+          }
         ]
       }
     ],
@@ -2173,7 +3725,11 @@ const destinations = [
         "cost": 50,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -2181,7 +3737,11 @@ const destinations = [
         "cost": 60,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -2189,7 +3749,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -2197,7 +3761,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -2205,7 +3773,11 @@ const destinations = [
         "cost": 30,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "December to April",
@@ -2293,6 +3865,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.1",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.9",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.4",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -2319,6 +3963,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 25
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 38
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 63
+          }
         ]
       },
       {
@@ -2328,6 +3987,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Beach Resort Room",
+            "cost": 80
+          },
+          {
+            "type": "Deluxe AC Beach Resort Room",
+            "cost": 120
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 200
+          }
         ]
       },
       {
@@ -2337,6 +4011,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Villa Room",
+            "cost": 250
+          },
+          {
+            "type": "Deluxe AC Luxury Villa Room",
+            "cost": 375
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 625
+          }
         ]
       }
     ],
@@ -2364,7 +4053,11 @@ const destinations = [
         "cost": 60,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -2372,7 +4065,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -2380,7 +4077,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -2388,7 +4089,11 @@ const destinations = [
         "cost": 30,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -2396,7 +4101,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -2486,6 +4195,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.2",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.5",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -2512,6 +4293,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "5.0",
+        "roomOptions": [
+          {
+            "type": "Standard Hostel Room",
+            "cost": 10
+          },
+          {
+            "type": "Deluxe AC Hostel Room",
+            "cost": 15
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 25
+          }
         ]
       },
       {
@@ -2521,6 +4317,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Mountain View Hotel Room",
+            "cost": 40
+          },
+          {
+            "type": "Deluxe AC Mountain View Hotel Room",
+            "cost": 60
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 100
+          }
         ]
       },
       {
@@ -2530,6 +4341,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Resort Room",
+            "cost": 150
+          },
+          {
+            "type": "Deluxe AC Luxury Resort Room",
+            "cost": 225
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 375
+          }
         ]
       }
     ],
@@ -2557,7 +4383,11 @@ const destinations = [
         "cost": 40,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -2565,7 +4395,11 @@ const destinations = [
         "cost": 25,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -2573,7 +4407,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -2581,7 +4419,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -2589,7 +4431,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -2678,6 +4524,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.6",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.8",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.6",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -2704,6 +4622,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Homestay Room",
+            "cost": 15
+          },
+          {
+            "type": "Deluxe AC Homestay Room",
+            "cost": 23
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 38
+          }
         ]
       },
       {
@@ -2713,6 +4646,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 40
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 60
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 100
+          }
         ]
       },
       {
@@ -2722,6 +4670,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard Tea Estate Resort Room",
+            "cost": 180
+          },
+          {
+            "type": "Deluxe AC Tea Estate Resort Room",
+            "cost": 270
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 450
+          }
         ]
       }
     ],
@@ -2749,7 +4712,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -2757,7 +4724,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -2765,7 +4736,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -2773,7 +4748,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -2781,7 +4760,11 @@ const destinations = [
         "cost": 8,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -2869,6 +4852,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.2",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.8",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.4",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -2895,6 +4950,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Ashram Stay Room",
+            "cost": 8
+          },
+          {
+            "type": "Deluxe AC Ashram Stay Room",
+            "cost": 12
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 20
+          }
         ]
       },
       {
@@ -2904,6 +4974,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Riverside Camp Room",
+            "cost": 30
+          },
+          {
+            "type": "Deluxe AC Riverside Camp Room",
+            "cost": 45
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 75
+          }
         ]
       },
       {
@@ -2913,6 +4998,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Spa Resort Room",
+            "cost": 200
+          },
+          {
+            "type": "Deluxe AC Luxury Spa Resort Room",
+            "cost": 300
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 500
+          }
         ]
       }
     ],
@@ -2940,7 +5040,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -2948,7 +5052,11 @@ const destinations = [
         "cost": 50,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -2956,7 +5064,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -2964,7 +5076,11 @@ const destinations = [
         "cost": 0,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -2972,7 +5088,11 @@ const destinations = [
         "cost": 8,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -3060,6 +5180,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.0",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.4",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "5.0",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -3086,6 +5278,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Backpacker Hostel Room",
+            "cost": 12
+          },
+          {
+            "type": "Deluxe AC Backpacker Hostel Room",
+            "cost": 18
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 30
+          }
         ]
       },
       {
@@ -3095,6 +5302,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Lake View Hotel Room",
+            "cost": 50
+          },
+          {
+            "type": "Deluxe AC Lake View Hotel Room",
+            "cost": 75
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 125
+          }
         ]
       },
       {
@@ -3104,6 +5326,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Lake Palace Luxury Room",
+            "cost": 400
+          },
+          {
+            "type": "Deluxe AC Lake Palace Luxury Room",
+            "cost": 600
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 1000
+          }
         ]
       }
     ],
@@ -3131,7 +5368,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -3139,7 +5380,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -3147,7 +5392,11 @@ const destinations = [
         "cost": 8,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -3155,7 +5404,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -3163,7 +5416,11 @@ const destinations = [
         "cost": 6,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -3251,6 +5508,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.2",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.9",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -3277,6 +5606,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 21
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 32
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 53
+          }
         ]
       },
       {
@@ -3286,6 +5630,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 48
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 72
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 120
+          }
         ]
       },
       {
@@ -3295,6 +5654,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 194
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 291
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 485
+          }
         ]
       }
     ],
@@ -3322,7 +5696,11 @@ const destinations = [
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -3330,7 +5708,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -3338,7 +5720,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -3346,7 +5732,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -3354,7 +5744,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -3442,6 +5836,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.3",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.2",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.9",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -3468,6 +5934,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 24
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 36
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 60
+          }
         ]
       },
       {
@@ -3477,6 +5958,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.6",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 41
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 62
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 103
+          }
         ]
       },
       {
@@ -3486,6 +5982,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "5.0",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 248
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 372
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 620
+          }
         ]
       }
     ],
@@ -3513,7 +6024,11 @@ const destinations = [
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -3521,7 +6036,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -3529,7 +6048,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -3537,7 +6060,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -3545,7 +6072,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -3634,6 +6165,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.3",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.6",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -3660,6 +6263,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.5",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -3669,6 +6287,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 42
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 63
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 105
+          }
         ]
       },
       {
@@ -3678,6 +6311,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 218
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 327
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 545
+          }
         ]
       }
     ],
@@ -3705,7 +6353,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -3713,7 +6365,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -3721,7 +6377,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -3729,7 +6389,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -3737,7 +6401,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -3825,6 +6493,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.7",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.3",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.2",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -3851,6 +6591,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -3860,6 +6615,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "3.5",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 44
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 66
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 110
+          }
         ]
       },
       {
@@ -3869,6 +6639,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 154
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 231
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 385
+          }
         ]
       }
     ],
@@ -3896,7 +6681,11 @@ const destinations = [
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -3904,7 +6693,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -3912,7 +6705,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -3920,7 +6717,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -3928,7 +6729,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -4016,6 +6821,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.3",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.7",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.6",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -4042,6 +6919,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.2",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 23
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 35
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 58
+          }
         ]
       },
       {
@@ -4051,6 +6943,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 58
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 87
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 145
+          }
         ]
       },
       {
@@ -4060,6 +6967,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 216
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 324
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 540
+          }
         ]
       }
     ],
@@ -4087,7 +7009,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -4095,7 +7021,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -4103,7 +7033,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -4111,7 +7045,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -4119,7 +7057,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -4207,6 +7149,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.6",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.7",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.9",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -4233,6 +7247,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 16
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 24
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 40
+          }
         ]
       },
       {
@@ -4242,6 +7271,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.2",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 52
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 78
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 130
+          }
         ]
       },
       {
@@ -4251,6 +7295,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 204
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 306
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 510
+          }
         ]
       }
     ],
@@ -4278,7 +7337,11 @@ const destinations = [
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -4286,7 +7349,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -4294,7 +7361,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -4302,7 +7373,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -4310,7 +7385,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -4398,6 +7477,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.6",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.8",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.7",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -4424,6 +7575,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 17
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 26
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 43
+          }
         ]
       },
       {
@@ -4433,6 +7599,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 59
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 89
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 148
+          }
         ]
       },
       {
@@ -4442,6 +7623,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 220
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 330
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 550
+          }
         ]
       }
     ],
@@ -4469,7 +7665,11 @@ const destinations = [
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -4477,7 +7677,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -4485,7 +7689,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -4493,7 +7701,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -4501,7 +7713,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "December to April",
@@ -4589,6 +7805,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.5",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.6",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.5",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -4615,6 +7903,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 21
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 32
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 53
+          }
         ]
       },
       {
@@ -4624,6 +7927,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 59
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 89
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 148
+          }
         ]
       },
       {
@@ -4633,6 +7951,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 171
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 257
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 428
+          }
         ]
       }
     ],
@@ -4660,7 +7993,11 @@ const destinations = [
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -4668,7 +8005,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -4676,7 +8017,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -4684,7 +8029,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -4692,7 +8041,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -4780,6 +8133,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.5",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.3",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.6",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -4806,6 +8231,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -4815,6 +8255,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 54
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 81
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 135
+          }
         ]
       },
       {
@@ -4824,6 +8279,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 217
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 326
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 543
+          }
         ]
       }
     ],
@@ -4851,7 +8321,11 @@ const destinations = [
         "cost": 16,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -4859,7 +8333,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -4867,7 +8345,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -4875,7 +8357,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -4883,7 +8369,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -4971,6 +8461,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.4",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.4",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.7",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -4997,6 +8559,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 21
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 32
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 53
+          }
         ]
       },
       {
@@ -5006,6 +8583,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 46
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 69
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 115
+          }
         ]
       },
       {
@@ -5015,6 +8607,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 171
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 257
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 428
+          }
         ]
       }
     ],
@@ -5042,7 +8649,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -5050,7 +8661,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -5058,7 +8673,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -5066,7 +8685,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -5074,7 +8697,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -5162,6 +8789,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "5.0",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.1",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -5188,6 +8887,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.6",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 23
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 35
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 58
+          }
         ]
       },
       {
@@ -5197,6 +8911,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 45
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 68
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 113
+          }
         ]
       },
       {
@@ -5206,6 +8935,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 225
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 338
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 563
+          }
         ]
       }
     ],
@@ -5233,7 +8977,11 @@ const destinations = [
         "cost": 12,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -5241,7 +8989,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -5249,7 +9001,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -5257,7 +9013,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -5265,7 +9025,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -5353,6 +9117,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.4",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.7",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.9",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -5379,6 +9215,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.2",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 16
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 24
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 40
+          }
         ]
       },
       {
@@ -5388,6 +9239,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 58
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 87
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 145
+          }
         ]
       },
       {
@@ -5397,6 +9263,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.2",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 248
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 372
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 620
+          }
         ]
       }
     ],
@@ -5424,7 +9305,11 @@ const destinations = [
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -5432,7 +9317,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -5440,7 +9329,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -5448,7 +9341,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -5456,7 +9353,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "December to April",
@@ -5544,6 +9445,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.1",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.8",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -5570,6 +9543,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 17
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 26
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 43
+          }
         ]
       },
       {
@@ -5579,6 +9567,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 59
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 89
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 148
+          }
         ]
       },
       {
@@ -5588,6 +9591,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 175
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 263
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 438
+          }
         ]
       }
     ],
@@ -5615,7 +9633,11 @@ const destinations = [
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -5623,7 +9645,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -5631,7 +9657,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -5639,7 +9669,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -5647,7 +9681,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -5735,6 +9773,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.3",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.2",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -5761,6 +9871,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 15
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 23
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 38
+          }
         ]
       },
       {
@@ -5770,6 +9895,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 42
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 63
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 105
+          }
         ]
       },
       {
@@ -5779,6 +9919,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 170
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 255
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 425
+          }
         ]
       }
     ],
@@ -5806,7 +9961,11 @@ const destinations = [
         "cost": 11,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -5814,7 +9973,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -5822,7 +9985,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -5830,7 +9997,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -5838,7 +10009,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "October to March",
@@ -5926,6 +10101,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.0",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.8",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -5952,6 +10199,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 17
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 26
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 43
+          }
         ]
       },
       {
@@ -5961,6 +10223,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 56
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 84
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 140
+          }
         ]
       },
       {
@@ -5970,6 +10247,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 248
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 372
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 620
+          }
         ]
       }
     ],
@@ -5997,7 +10289,11 @@ const destinations = [
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -6005,7 +10301,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -6013,7 +10313,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -6021,7 +10325,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -6029,7 +10337,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -6117,6 +10429,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.3",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.5",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -6143,6 +10527,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.2",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -6152,6 +10551,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.6",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 43
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 65
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 108
+          }
         ]
       },
       {
@@ -6161,6 +10575,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 192
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 288
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 480
+          }
         ]
       }
     ],
@@ -6188,7 +10617,11 @@ const destinations = [
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -6196,7 +10629,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -6204,7 +10641,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -6212,7 +10653,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -6220,7 +10665,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -6308,6 +10757,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.7",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.2",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.7",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -6334,6 +10855,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 18
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 27
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 45
+          }
         ]
       },
       {
@@ -6343,6 +10879,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 54
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 81
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 135
+          }
         ]
       },
       {
@@ -6352,6 +10903,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 186
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 279
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 465
+          }
         ]
       }
     ],
@@ -6379,7 +10945,11 @@ const destinations = [
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -6387,7 +10957,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -6395,7 +10969,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -6403,7 +10981,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -6411,7 +10993,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -6499,6 +11085,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.5",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.1",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.6",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -6525,6 +11183,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 21
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 32
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 53
+          }
         ]
       },
       {
@@ -6534,6 +11207,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 58
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 87
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 145
+          }
         ]
       },
       {
@@ -6543,6 +11231,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 213
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 320
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 533
+          }
         ]
       }
     ],
@@ -6570,7 +11273,11 @@ const destinations = [
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -6578,7 +11285,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -6586,7 +11297,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -6594,7 +11309,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -6602,7 +11321,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -6690,6 +11413,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.5",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.4",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.2",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -6716,6 +11511,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 22
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 33
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 55
+          }
         ]
       },
       {
@@ -6725,6 +11535,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 47
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 71
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 118
+          }
         ]
       },
       {
@@ -6734,6 +11559,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 171
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 257
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 428
+          }
         ]
       }
     ],
@@ -6761,7 +11601,11 @@ const destinations = [
         "cost": 11,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -6769,7 +11613,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -6777,7 +11625,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -6785,7 +11637,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -6793,7 +11649,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -6881,6 +11741,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.7",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.2",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.4",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -6907,6 +11839,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 18
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 27
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 45
+          }
         ]
       },
       {
@@ -6916,6 +11863,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 50
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 75
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 125
+          }
         ]
       },
       {
@@ -6925,6 +11887,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.9",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 224
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 336
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 560
+          }
         ]
       }
     ],
@@ -6952,7 +11929,11 @@ const destinations = [
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -6960,7 +11941,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -6968,7 +11953,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -6976,7 +11965,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -6984,7 +11977,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -7072,6 +12069,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "5.0",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.9",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.2",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -7098,6 +12167,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 18
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 27
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 45
+          }
         ]
       },
       {
@@ -7107,6 +12191,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 52
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 78
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 130
+          }
         ]
       },
       {
@@ -7116,6 +12215,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 207
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 311
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 518
+          }
         ]
       }
     ],
@@ -7143,7 +12257,11 @@ const destinations = [
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -7151,7 +12269,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -7159,7 +12281,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -7167,7 +12293,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -7175,7 +12305,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -7263,6 +12397,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.3",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "5.0",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -7289,6 +12495,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.8",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 21
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 32
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 53
+          }
         ]
       },
       {
@@ -7298,6 +12519,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 46
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 69
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 115
+          }
         ]
       },
       {
@@ -7307,6 +12543,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 155
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 233
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 388
+          }
         ]
       }
     ],
@@ -7334,7 +12585,11 @@ const destinations = [
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -7342,7 +12597,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -7350,7 +12609,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -7358,7 +12621,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -7366,7 +12633,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -7454,6 +12725,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.2",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.7",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.6",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -7480,6 +12823,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 19
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 29
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 48
+          }
         ]
       },
       {
@@ -7489,6 +12847,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "3.5",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 44
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 66
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 110
+          }
         ]
       },
       {
@@ -7498,6 +12871,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.0",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 238
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 357
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 595
+          }
         ]
       }
     ],
@@ -7525,7 +12913,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -7533,7 +12925,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -7541,7 +12937,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -7549,7 +12949,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -7557,7 +12961,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -7645,6 +13053,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.7",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.3",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -7671,6 +13151,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.9",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -7680,6 +13175,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 43
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 65
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 108
+          }
         ]
       },
       {
@@ -7689,6 +13199,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 154
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 231
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 385
+          }
         ]
       }
     ],
@@ -7716,7 +13241,11 @@ const destinations = [
         "cost": 18,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -7724,7 +13253,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -7732,7 +13265,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -7740,7 +13277,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -7748,7 +13289,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "September to November",
@@ -7836,6 +13381,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.4",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.5",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "5.0",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -7862,6 +13479,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "5.0",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 21
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 32
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 53
+          }
         ]
       },
       {
@@ -7871,6 +13503,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 54
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 81
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 135
+          }
         ]
       },
       {
@@ -7880,6 +13527,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 168
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 252
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 420
+          }
         ]
       }
     ],
@@ -7907,7 +13569,11 @@ const destinations = [
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -7915,7 +13581,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -7923,7 +13593,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -7931,7 +13605,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -7939,7 +13617,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -8027,6 +13709,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.4",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.9",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -8053,6 +13807,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Ocean View Diner (Seafood & Grills)",
           "Bistro 42 (Continental & Cafe)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 21
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 32
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 53
+          }
         ]
       },
       {
@@ -8062,6 +13831,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 42
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 63
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 105
+          }
         ]
       },
       {
@@ -8071,6 +13855,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 242
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 363
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 605
+          }
         ]
       }
     ],
@@ -8098,7 +13897,11 @@ const destinations = [
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -8106,7 +13909,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -8114,7 +13921,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -8122,7 +13933,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -8130,7 +13945,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "December to April",
@@ -8218,6 +14037,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.6",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "5.0",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.3",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -8244,6 +14135,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 22
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 33
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 55
+          }
         ]
       },
       {
@@ -8253,6 +14159,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 57
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 86
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 143
+          }
         ]
       },
       {
@@ -8262,6 +14183,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Street Market Stalls (Local Fast Food)"
+        ],
+        "rating": "4.7",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 235
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 353
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 588
+          }
         ]
       }
     ],
@@ -8289,7 +14225,11 @@ const destinations = [
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -8297,7 +14237,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -8305,7 +14249,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -8313,7 +14261,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -8321,7 +14273,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.8",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "Year-round",
@@ -8409,6 +14365,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.9",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.9",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.8",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -8435,6 +14463,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "Ocean View Diner (Seafood & Grills)"
+        ],
+        "rating": "4.4",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 17
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 26
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 43
+          }
         ]
       },
       {
@@ -8444,6 +14487,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 49
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 74
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 123
+          }
         ]
       },
       {
@@ -8453,6 +14511,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Café Sunrise (Breakfast & Coffee)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 194
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 291
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 485
+          }
         ]
       }
     ],
@@ -8480,7 +14553,11 @@ const destinations = [
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -8488,7 +14565,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -8496,7 +14577,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -8504,7 +14589,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -8512,7 +14601,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "December to April",
@@ -8600,6 +14693,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.5",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.2",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.7",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -8626,6 +14791,21 @@ const destinations = [
         "nearbyRestaurants": [
           "The Spice Route (Authentic Local Food)",
           "Green Leaf Vegetarian (Healthy Options)"
+        ],
+        "rating": "3.6",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 15
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 23
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 38
+          }
         ]
       },
       {
@@ -8635,6 +14815,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "Café Sunrise (Breakfast & Coffee)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 47
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 71
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 118
+          }
         ]
       },
       {
@@ -8644,6 +14839,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Royal Dining Room (Fine Dining)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "4.3",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 191
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 287
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 478
+          }
         ]
       }
     ],
@@ -8671,7 +14881,11 @@ const destinations = [
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -8679,7 +14893,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.3",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -8687,7 +14905,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -8695,7 +14917,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -8703,7 +14929,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -8791,6 +15021,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.9",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.8",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.4",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   },
   {
@@ -8817,6 +15119,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Bistro 42 (Continental & Cafe)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.1",
+        "roomOptions": [
+          {
+            "type": "Standard Budget Stay Room",
+            "cost": 20
+          },
+          {
+            "type": "Deluxe AC Budget Stay Room",
+            "cost": 30
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 50
+          }
         ]
       },
       {
@@ -8826,6 +15143,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Street Market Stalls (Local Fast Food)",
           "Royal Dining Room (Fine Dining)"
+        ],
+        "rating": "4.5",
+        "roomOptions": [
+          {
+            "type": "Standard Standard Hotel Room",
+            "cost": 40
+          },
+          {
+            "type": "Deluxe AC Standard Hotel Room",
+            "cost": 60
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 100
+          }
         ]
       },
       {
@@ -8835,6 +15167,21 @@ const destinations = [
         "nearbyRestaurants": [
           "Green Leaf Vegetarian (Healthy Options)",
           "The Spice Route (Authentic Local Food)"
+        ],
+        "rating": "3.7",
+        "roomOptions": [
+          {
+            "type": "Standard Luxury Hotel Room",
+            "cost": 238
+          },
+          {
+            "type": "Deluxe AC Luxury Hotel Room",
+            "cost": 357
+          },
+          {
+            "type": "Premium Suite (Balcony)",
+            "cost": 595
+          }
         ]
       }
     ],
@@ -8862,7 +15209,11 @@ const destinations = [
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
         "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "rating": "4.1",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a2",
@@ -8870,7 +15221,11 @@ const destinations = [
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
         "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "rating": "4.4",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a3",
@@ -8878,7 +15233,11 @@ const destinations = [
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
         "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a4",
@@ -8886,7 +15245,11 @@ const destinations = [
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
         "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "rating": "4.6",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       },
       {
         "id": "a5",
@@ -8894,7 +15257,11 @@ const destinations = [
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
         "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "rating": "4.2",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "durationHours": 2
       }
     ],
     "bestMonths": "November to February",
@@ -8982,6 +15349,78 @@ const destinations = [
       "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
       "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
       "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ],
+    "detailedTransport": [
+      {
+        "id": "dt1",
+        "type": "Flight",
+        "agency": "Air India",
+        "name": "AI-402 Direct",
+        "departureTime": "08:30 AM",
+        "cost": 5000
+      },
+      {
+        "id": "dt2",
+        "type": "Train",
+        "agency": "Indian Railways",
+        "name": "Rajdhani Express",
+        "departureTime": "06:00 AM",
+        "cost": 1500
+      },
+      {
+        "id": "dt3",
+        "type": "Bus",
+        "agency": "SmartBus",
+        "name": "Volvo AC Sleeper",
+        "departureTime": "22:00 PM",
+        "cost": 800
+      },
+      {
+        "id": "dt4",
+        "type": "Car",
+        "agency": "YouWe Travel",
+        "name": "Private Sedan",
+        "departureTime": "Flexible",
+        "cost": 2000
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Local Spice Route",
+        "rating": "4.1",
+        "openingTime": "11:00 AM - 11:00 PM",
+        "menuHighlights": [
+          "Authentic Thali",
+          "Spicy Curries",
+          "Local Street Food Sampler"
+        ],
+        "averageCost": 400
+      },
+      {
+        "id": "r2",
+        "name": "Ocean View Cafe",
+        "rating": "4.6",
+        "openingTime": "08:00 AM - 09:00 PM",
+        "menuHighlights": [
+          "Continental Breakfast",
+          "Fresh Seafood",
+          "Artisan Coffee"
+        ],
+        "averageCost": 800
+      },
+      {
+        "id": "r3",
+        "name": "Royal Heritage Dining",
+        "rating": "4.9",
+        "openingTime": "06:00 PM - 11:30 PM",
+        "menuHighlights": [
+          "Premium Steaks",
+          "Fine Wine",
+          "Chef Tasting Menu"
+        ],
+        "averageCost": 2500
+      }
     ]
   }
 ];

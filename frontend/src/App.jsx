@@ -7,6 +7,7 @@ import { Login, Signup } from './pages/Auth';
 import { Checkout, Success } from './pages/Checkout';
 import { Dashboard } from './pages/Dashboard';
 import { TripSchedule } from './pages/TripSchedule';
+import { TripBuilder } from './pages/TripBuilder';
 import './index.css';
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/success" element={<Success />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/build-trip" element={<TripBuilder />} />
           <Route path="/dashboard/schedule/:id" element={<TripSchedule />} />
         </Routes>
       </main>

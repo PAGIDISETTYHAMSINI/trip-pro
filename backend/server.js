@@ -25,6 +25,12 @@ app.get('/api/destinations', (req, res) => {
   res.json(minimalDestinations);
 });
 
+app.get('/api/destinations/:id', (req, res) => {
+  const dest = destinations.find(d => d.id === req.params.id);
+  if (!dest) return res.status(404).json({ error: 'Destination not found' });
+  res.json(dest);
+});
+
 // Helper function to get combinations of array elements
 function getCombinations(array, size, start, initialStuff, output) {
   if (initialStuff.length >= size) {

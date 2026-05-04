@@ -105,6 +105,11 @@ export const Home = () => {
       <section className="hero container">
         <h1>Plan Your Dream Trip <br/>Within Your Budget</h1>
         <p>Tell us where you want to go and how much you want to spend, and we'll craft the perfect itinerary options for you.</p>
+        <div style={{ marginBottom: '3rem' }}>
+          <Link to="/build-trip" className="btn" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.39)' }}>
+            Or Build Your Own Custom Trip
+          </Link>
+        </div>
 
         <div className="planner-form-container glass">
           <form className="planner-form" onSubmit={handleSubmit}>
