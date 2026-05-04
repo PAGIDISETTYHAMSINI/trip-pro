@@ -12,7 +12,7 @@ export const Dashboard = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/bookings', {
+        const res = await axios.get('https://trip-pro.onrender.com/api/bookings', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setBookings(res.data);

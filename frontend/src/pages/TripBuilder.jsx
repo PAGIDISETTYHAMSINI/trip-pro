@@ -130,7 +130,7 @@ export const TripBuilder = () => {
   const t = translations[lang];
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/destinations')
+    axios.get('https://trip-pro.onrender.com/api/destinations')
       .then(res => {
         setDestinations(res.data);
         setLoading(false);
@@ -142,7 +142,7 @@ export const TripBuilder = () => {
     if (!selectedDestinationId) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:5000/api/destinations/${selectedDestinationId}`);
+      const res = await axios.get(`https://trip-pro.onrender.com/api/destinations/${selectedDestinationId}`);
       setDestDetails(res.data);
       setStep(2);
     } catch (err) {

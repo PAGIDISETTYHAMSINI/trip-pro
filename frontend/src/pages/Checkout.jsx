@@ -37,7 +37,7 @@ export const Checkout = () => {
           itineraryDetails: itinerary
         };
 
-        await axios.post('http://localhost:5000/api/bookings', bookingData, {
+        await axios.post('https://trip-pro.onrender.com/api/bookings', bookingData, {
           headers: { Authorization: `Bearer ${token}` }
         });
       }

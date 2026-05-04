@@ -14,7 +14,7 @@ export const TripSchedule = () => {
   useEffect(() => {
     const fetchBooking = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/bookings', {
+        const res = await axios.get('https://trip-pro.onrender.com/api/bookings', {
           headers: { Authorization: `Bearer ${token}` }
         });
         const found = res.data.find(b => b.id === id);

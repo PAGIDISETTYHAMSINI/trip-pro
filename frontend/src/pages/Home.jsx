@@ -23,7 +23,7 @@ export const Home = () => {
 
   useEffect(() => {
     // Fetch available destinations
-    axios.get('http://localhost:5000/api/destinations')
+    axios.get('https://trip-pro.onrender.com/api/destinations')
       .then(res => setDestinations(res.data))
       .catch(err => console.error("Error fetching destinations", err));
   }, []);
@@ -51,7 +51,7 @@ export const Home = () => {
     try {
       const endpoint = formData.destinationId === 'surprise' ? '/api/surprise-me' : '/api/itineraries';
       const params = formData.destinationId === 'surprise' ? { budget: formData.budget, days: formData.days } : formData;
-      const response = await axios.get(`http://localhost:5000${endpoint}`, { params });
+      const response = await axios.get(`https://trip-pro.onrender.com${endpoint}`, { params });
       setItineraries(response.data);
     } catch (err) {
       setError("Failed to fetch itineraries. Please ensure backend is running.");
