@@ -326,7 +326,14 @@ export const TripBuilder = () => {
               ))}
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-              {destDetails.detailedTransport.filter(t => t.type.includes(transportType)).map(tr => (
+              {destDetails.detailedTransport.filter(tr => {
+                const type = transportType.toLowerCase();
+                if (type === 'flight') return tr.id.startsWith('f');
+                if (type === 'train') return tr.id.startsWith('t');
+                if (type === 'bus') return tr.id.startsWith('b');
+                if (type === 'car') return tr.id.startsWith('c');
+                return tr.type.toLowerCase().includes(type);
+              }).map(tr => (
                 <div key={tr.id} className={`glass card-hover ${selectedTransport?.id === tr.id ? 'active-card' : ''}`} style={{ padding: '1.5rem', cursor: 'pointer', border: selectedTransport?.id === tr.id ? '2px solid var(--primary)' : '1px solid var(--border)' }} onClick={() => setSelectedTransport(tr)}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                     <div style={{ fontWeight: 'bold' }}>{tr.agency}</div>
