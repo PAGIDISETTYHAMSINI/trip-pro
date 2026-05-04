@@ -8,6 +8,11 @@ const bookingRoutes = require('./routes/bookings');
 const app = express();
 app.use(cors());
 app.use(express.json());
+ 
+ // Root Route
+ app.get('/', (req, res) => {
+   res.send('<h1>🚀 Trip Pro Backend is Live!</h1><p>The API is running and connected to the database.</p>');
+ });
 
 // Routes
 app.use('/api/auth', authRoutes);
