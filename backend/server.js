@@ -180,7 +180,24 @@ app.get('/api/surprise-me', (req, res) => {
 
     const itineraries = generateItinerariesForDestination(dest, effectiveBudget, daysNum);
     if (itineraries.length > 0) {
-      allValidItineraries.push(itineraries[0]); // Just take the absolute best one for this destination
+      let bestItinerary = itineraries[0];
+
+      // Currency Normalization: If user searched in INR, but the trip is international (USD),
+      // we must convert the final display prices back to INR so they don't see $600 when searching ₹50000.
+      if (isBudgetInr && !isIndian) {
+        bestItinerary.totalCost = Math.round(bestItinerary.totalCost * 83);
+        bestItinerary.currencySymbol = '₹';
+        bestItinerary.breakdown.transport = Math.round(bestItinerary.breakdown.transport * 83);
+        bestItinerary.breakdown.hotel = Math.round(bestItinerary.breakdown.hotel * 83);
+        bestItinerary.breakdown.food = Math.round(bestItinerary.breakdown.food * 83);
+        bestItinerary.breakdown.activities = Math.round(bestItinerary.breakdown.activities * 83);
+        bestItinerary.transport.cost = Math.round(bestItinerary.transport.cost * 83);
+        bestItinerary.hotel.totalCost = Math.round(bestItinerary.hotel.totalCost * 83);
+        bestItinerary.food.totalCost = Math.round(bestItinerary.food.totalCost * 83);
+        bestItinerary.activities = bestItinerary.activities.map(a => ({ ...a, cost: Math.round(a.cost * 83) }));
+      }
+
+      allValidItineraries.push(bestItinerary); // Just take the absolute best one for this destination
     }
   }
 
