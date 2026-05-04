@@ -19,17 +19,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Hostel",
-        "costPerNight": 40
+        "costPerNight": 40,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 120
+        "costPerNight": 120,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Resort",
-        "costPerNight": 350
+        "costPerNight": 350,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -55,35 +67,40 @@ const destinations = [
         "name": "Eiffel Tower Ticket",
         "cost": 30,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Louvre Museum",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Seine River Cruise",
         "cost": 25,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Versailles Tour",
         "cost": 60,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Disneyland Paris",
         "cost": 100,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -137,17 +154,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Guest House",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Boutique Villa",
-        "costPerNight": 80
+        "costPerNight": 80,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury 5-Star",
-        "costPerNight": 250
+        "costPerNight": 250,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -173,35 +202,40 @@ const destinations = [
         "name": "Ubud Monkey Forest",
         "cost": 5,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Temple Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Scuba Diving",
         "cost": 80,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Surfing Lesson",
         "cost": 30,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Spa Day",
         "cost": 50,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -255,17 +289,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Capsule Hotel",
-        "costPerNight": 35
+        "costPerNight": 35,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Business Hotel",
-        "costPerNight": 100
+        "costPerNight": 100,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Ryokan",
-        "costPerNight": 400
+        "costPerNight": 400,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -291,35 +337,40 @@ const destinations = [
         "name": "Tokyo Skytree",
         "cost": 25,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "TeamLab Planets",
         "cost": 30,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Disneyland/DisneySea",
         "cost": 80,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Mount Fuji Day Trip",
         "cost": 120,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Akihabara Maid Cafe",
         "cost": 40,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -373,17 +424,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Hostel/Budget",
-        "costPerNight": 80
+        "costPerNight": 80,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h2",
         "type": "Mid-range Hotel",
-        "costPerNight": 200
+        "costPerNight": 200,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 600
+        "costPerNight": 600,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -409,35 +472,40 @@ const destinations = [
         "name": "Empire State Building",
         "cost": 45,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Statue of Liberty Cruise",
         "cost": 30,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Broadway Show",
         "cost": 150,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "MoMA",
         "cost": 25,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Helicopter Tour",
         "cost": 250,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -491,17 +559,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Beach Shack",
-        "costPerNight": 15
+        "costPerNight": 15,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h2",
         "type": "3-Star Resort",
-        "costPerNight": 50
+        "costPerNight": 50,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury 5-Star",
-        "costPerNight": 150
+        "costPerNight": 150,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       }
     ],
     "foodOptions": [
@@ -527,35 +607,40 @@ const destinations = [
         "name": "Scuba Diving, India",
         "cost": 40,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Dudhsagar Waterfall Trek, India",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Spice Plantation Tour, India",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Sunset Cruise, India",
         "cost": 25,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Parasailing, India",
         "cost": 30,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -609,17 +694,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Homestay",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h2",
         "type": "Houseboat",
-        "costPerNight": 80
+        "costPerNight": 80,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Ayurvedic Resort",
-        "costPerNight": 200
+        "costPerNight": 200,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       }
     ],
     "foodOptions": [
@@ -645,35 +742,40 @@ const destinations = [
         "name": "Kathakali Performance, India",
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Munnar Tea Gardens Tour, India",
         "cost": 25,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Periyar Wildlife Safari, India",
         "cost": 35,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Ayurvedic Massage, India",
         "cost": 40,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Backwater Canoe Tour, India",
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -727,17 +829,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Hostel/Budget",
-        "costPerNight": 12
+        "costPerNight": 12,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Heritage Hotel",
-        "costPerNight": 60
+        "costPerNight": 60,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Palace Hotel",
-        "costPerNight": 300
+        "costPerNight": 300,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       }
     ],
     "foodOptions": [
@@ -763,35 +877,40 @@ const destinations = [
         "name": "Amber Fort Tour, India",
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Hot Air Balloon Ride, India",
         "cost": 150,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "City Palace Ticket, India",
         "cost": 10,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Chokhi Dhani Village Experience, India",
         "cost": 25,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Elephant Ride, India",
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -845,17 +964,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 15
+        "costPerNight": 15,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 40
+        "costPerNight": 40,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Taj View Luxury",
-        "costPerNight": 250
+        "costPerNight": 250,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       }
     ],
     "foodOptions": [
@@ -881,35 +1012,40 @@ const destinations = [
         "name": "Taj Mahal Entry, India",
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Agra Fort, India",
         "cost": 10,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Fatehpur Sikri Day Trip, India",
         "cost": 20,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Mehtab Bagh Sunset, India",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Heritage Walk, India",
         "cost": 12,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -963,17 +1099,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Backpacker Hostel",
-        "costPerNight": 12
+        "costPerNight": 12,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h2",
         "type": "Mid-range Hotel",
-        "costPerNight": 45
+        "costPerNight": 45,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "5-Star Hotel",
-        "costPerNight": 180
+        "costPerNight": 180,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -999,35 +1147,40 @@ const destinations = [
         "name": "Red Fort Ticket, India",
         "cost": 8,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Qutub Minar, India",
         "cost": 8,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "India Gate Walk, India",
         "cost": 0,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Akshardham Temple Tour, India",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Food Tour, India",
         "cost": 25,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -1081,17 +1234,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Hotel",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h2",
         "type": "Business Hotel",
-        "costPerNight": 60
+        "costPerNight": 60,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Sea View Luxury",
-        "costPerNight": 250
+        "costPerNight": 250,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1117,35 +1282,40 @@ const destinations = [
         "name": "Gateway of India Boat Ride, India",
         "cost": 5,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Elephanta Caves Tour, India",
         "cost": 15,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Marine Drive Walk, India",
         "cost": 0,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Bollywood Studio Tour, India",
         "cost": 40,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Dharavi Tour, India",
         "cost": 12,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "December to April",
@@ -1199,17 +1369,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Ghat Hostel",
-        "costPerNight": 10
+        "costPerNight": 10,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h2",
         "type": "Heritage Guest House",
-        "costPerNight": 35
+        "costPerNight": 35,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury River View",
-        "costPerNight": 150
+        "costPerNight": 150,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1235,35 +1417,40 @@ const destinations = [
         "name": "Sunrise Boat Ride, India",
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Ganga Aarti Experience, India",
         "cost": 0,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Sarnath Tour, India",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Walking Tour of Ghats, India",
         "cost": 8,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Silk Weaving Village Visit, India",
         "cost": 12,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -1317,17 +1504,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Guesthouse",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 50
+        "costPerNight": 50,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Glamping",
-        "costPerNight": 180
+        "costPerNight": 180,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1353,35 +1552,40 @@ const destinations = [
         "name": "Pangong Lake Trip, India",
         "cost": 50,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Nubra Valley Safari, India",
         "cost": 60,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Monastery Tour, India",
         "cost": 20,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Magnetic Hill Visit, India",
         "cost": 10,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "River Rafting, India",
         "cost": 30,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "December to April",
@@ -1435,17 +1639,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 25
+        "costPerNight": 25,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Beach Resort",
-        "costPerNight": 80
+        "costPerNight": 80,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Villa",
-        "costPerNight": 250
+        "costPerNight": 250,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1471,35 +1687,40 @@ const destinations = [
         "name": "Scuba Diving (Havelock), India",
         "cost": 60,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Cellular Jail Tour, India",
         "cost": 10,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Ross Island Visit, India",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Snorkeling, India",
         "cost": 30,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Glass Bottom Boat Ride, India",
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -1553,17 +1774,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Hostel",
-        "costPerNight": 10
+        "costPerNight": 10,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h2",
         "type": "Mountain View Hotel",
-        "costPerNight": 40
+        "costPerNight": 40,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Resort",
-        "costPerNight": 150
+        "costPerNight": 150,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1589,35 +1822,40 @@ const destinations = [
         "name": "Rohtang Pass Trip, India",
         "cost": 40,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Solang Valley Adventure, India",
         "cost": 25,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Paragliding, India",
         "cost": 35,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Hadimba Temple Visit, India",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "River Rafting, India",
         "cost": 20,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -1671,17 +1909,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Homestay",
-        "costPerNight": 15
+        "costPerNight": 15,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 40
+        "costPerNight": 40,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Tea Estate Resort",
-        "costPerNight": 180
+        "costPerNight": 180,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1707,35 +1957,40 @@ const destinations = [
         "name": "Tiger Hill Sunrise Tour, India",
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Toy Train Ride, India",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Tea Garden Tour, India",
         "cost": 10,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Himalayan Mountaineering Institute, India",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Ropeway Ride, India",
         "cost": 8,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -1789,17 +2044,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Ashram Stay",
-        "costPerNight": 8
+        "costPerNight": 8,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h2",
         "type": "Riverside Camp",
-        "costPerNight": 30
+        "costPerNight": 30,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Spa Resort",
-        "costPerNight": 200
+        "costPerNight": 200,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1825,35 +2092,40 @@ const destinations = [
         "name": "River Rafting, India",
         "cost": 20,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Bungee Jumping, India",
         "cost": 50,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Yoga Session, India",
         "cost": 10,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Ganga Aarti, India",
         "cost": 0,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Beatles Ashram Visit, India",
         "cost": 8,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -1907,17 +2179,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Backpacker Hostel",
-        "costPerNight": 12
+        "costPerNight": 12,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Lake View Hotel",
-        "costPerNight": 50
+        "costPerNight": 50,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Lake Palace Luxury",
-        "costPerNight": 400
+        "costPerNight": 400,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -1943,35 +2227,40 @@ const destinations = [
         "name": "City Palace Tour, India",
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Lake Pichola Boat Ride, India",
         "cost": 15,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Sajjangarh Fort Visit, India",
         "cost": 8,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Bagore Ki Haveli Show, India",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Vintage Car Museum, India",
         "cost": 6,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -2025,17 +2314,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 21
+        "costPerNight": 21,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 48
+        "costPerNight": 48,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 194
+        "costPerNight": 194,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2061,35 +2362,40 @@ const destinations = [
         "name": "Visit Ajanta",
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -2143,17 +2449,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 24
+        "costPerNight": 24,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 41
+        "costPerNight": 41,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 248
+        "costPerNight": 248,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2179,35 +2497,40 @@ const destinations = [
         "name": "Visit Amarnath Cave",
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -2261,17 +2584,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 42
+        "costPerNight": 42,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 218
+        "costPerNight": 218,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2297,35 +2632,40 @@ const destinations = [
         "name": "Visit Akbar's Tomb",
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -2379,17 +2719,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 44
+        "costPerNight": 44,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 154
+        "costPerNight": 154,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2415,35 +2767,40 @@ const destinations = [
         "name": "Visit Amber Palace",
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -2497,17 +2854,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 23
+        "costPerNight": 23,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 58
+        "costPerNight": 58,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 216
+        "costPerNight": 216,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2533,35 +2902,40 @@ const destinations = [
         "name": "Visit Anand Bhawan",
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -2615,17 +2989,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 16
+        "costPerNight": 16,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 52
+        "costPerNight": 52,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 204
+        "costPerNight": 204,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2651,35 +3037,40 @@ const destinations = [
         "name": "Visit Bhakra Dam",
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -2733,17 +3124,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 17
+        "costPerNight": 17,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 59
+        "costPerNight": 59,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 220
+        "costPerNight": 220,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2769,35 +3172,40 @@ const destinations = [
         "name": "Visit Bibi Da Maqbra",
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "December to April",
@@ -2851,17 +3259,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 21
+        "costPerNight": 21,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 59
+        "costPerNight": 59,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 171
+        "costPerNight": 171,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -2887,35 +3307,40 @@ const destinations = [
         "name": "Visit Birla Planetarium",
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -2969,17 +3394,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 54
+        "costPerNight": 54,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 217
+        "costPerNight": 217,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3005,35 +3442,40 @@ const destinations = [
         "name": "Visit Black Pagoda",
         "cost": 16,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -3087,17 +3529,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 21
+        "costPerNight": 21,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 46
+        "costPerNight": 46,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 171
+        "costPerNight": 171,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3123,35 +3577,40 @@ const destinations = [
         "name": "Visit Bodhisatva",
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -3205,17 +3664,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 23
+        "costPerNight": 23,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 45
+        "costPerNight": 45,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 225
+        "costPerNight": 225,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3241,35 +3712,40 @@ const destinations = [
         "name": "Visit Brihadeeswara Temple",
         "cost": 12,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -3323,17 +3799,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 16
+        "costPerNight": 16,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 58
+        "costPerNight": 58,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 248
+        "costPerNight": 248,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3359,35 +3847,40 @@ const destinations = [
         "name": "Visit Brindaban Gardens",
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "December to April",
@@ -3441,17 +3934,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 17
+        "costPerNight": 17,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 59
+        "costPerNight": 59,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 175
+        "costPerNight": 175,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3477,35 +3982,40 @@ const destinations = [
         "name": "Visit Buland Darwaza",
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -3559,17 +4069,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 15
+        "costPerNight": 15,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 42
+        "costPerNight": 42,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 170
+        "costPerNight": 170,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3595,35 +4117,40 @@ const destinations = [
         "name": "Visit Charminar",
         "cost": 11,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "October to March",
@@ -3677,17 +4204,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 17
+        "costPerNight": 17,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 56
+        "costPerNight": 56,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 248
+        "costPerNight": 248,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3713,35 +4252,40 @@ const destinations = [
         "name": "Visit Cheena Kesava Temple",
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -3795,17 +4339,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 43
+        "costPerNight": 43,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 192
+        "costPerNight": 192,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3831,35 +4387,40 @@ const destinations = [
         "name": "Visit Chilka Lake",
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -3913,17 +4474,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 18
+        "costPerNight": 18,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 54
+        "costPerNight": 54,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 186
+        "costPerNight": 186,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -3949,35 +4522,40 @@ const destinations = [
         "name": "Visit Dal Lake",
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -4031,17 +4609,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 21
+        "costPerNight": 21,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 58
+        "costPerNight": 58,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 213
+        "costPerNight": 213,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4067,35 +4657,40 @@ const destinations = [
         "name": "Visit Dilwara Temple",
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -4149,17 +4744,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 22
+        "costPerNight": 22,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 47
+        "costPerNight": 47,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 171
+        "costPerNight": 171,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4185,35 +4792,40 @@ const destinations = [
         "name": "Visit Elephanta Caves",
         "cost": 11,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -4267,17 +4879,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 18
+        "costPerNight": 18,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 50
+        "costPerNight": 50,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 224
+        "costPerNight": 224,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4303,35 +4927,40 @@ const destinations = [
         "name": "Visit Ellora Caves",
         "cost": 13,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -4385,17 +5014,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 18
+        "costPerNight": 18,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 52
+        "costPerNight": 52,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 207
+        "costPerNight": 207,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4421,35 +5062,40 @@ const destinations = [
         "name": "Visit Gateway of India",
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -4503,17 +5149,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 21
+        "costPerNight": 21,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 46
+        "costPerNight": 46,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 155
+        "costPerNight": 155,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4539,35 +5197,40 @@ const destinations = [
         "name": "Visit Golden Temple",
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -4621,17 +5284,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 19
+        "costPerNight": 19,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 44
+        "costPerNight": 44,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 238
+        "costPerNight": 238,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4657,35 +5332,40 @@ const destinations = [
         "name": "Visit Gol Gumbaz",
         "cost": 15,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -4739,17 +5419,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 43
+        "costPerNight": 43,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 154
+        "costPerNight": 154,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4775,35 +5467,40 @@ const destinations = [
         "name": "Visit Hanging Gardens",
         "cost": 18,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "September to November",
@@ -4857,17 +5554,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 21
+        "costPerNight": 21,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 54
+        "costPerNight": 54,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 168
+        "costPerNight": 168,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -4893,35 +5602,40 @@ const destinations = [
         "name": "Visit Hawa Mahal",
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -4975,17 +5689,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 21
+        "costPerNight": 21,
+        "nearbyRestaurants": [
+          "Ocean View Diner (Seafood & Grills)",
+          "Bistro 42 (Continental & Cafe)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 42
+        "costPerNight": 42,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 242
+        "costPerNight": 242,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -5011,35 +5737,40 @@ const destinations = [
         "name": "Visit Howrah Bridge",
         "cost": 10,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "December to April",
@@ -5093,17 +5824,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 22
+        "costPerNight": 22,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 57
+        "costPerNight": 57,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 235
+        "costPerNight": 235,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Street Market Stalls (Local Fast Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -5129,35 +5872,40 @@ const destinations = [
         "name": "Visit Island Palace",
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "Year-round",
@@ -5211,17 +5959,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 17
+        "costPerNight": 17,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "Ocean View Diner (Seafood & Grills)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 49
+        "costPerNight": 49,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 194
+        "costPerNight": 194,
+        "nearbyRestaurants": [
+          "Café Sunrise (Breakfast & Coffee)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -5247,35 +6007,40 @@ const destinations = [
         "name": "Visit Itmaad-ud-Daulah's Tomb",
         "cost": 14,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "December to April",
@@ -5329,17 +6094,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 15
+        "costPerNight": 15,
+        "nearbyRestaurants": [
+          "The Spice Route (Authentic Local Food)",
+          "Green Leaf Vegetarian (Healthy Options)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 47
+        "costPerNight": 47,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "Café Sunrise (Breakfast & Coffee)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 191
+        "costPerNight": 191,
+        "nearbyRestaurants": [
+          "Royal Dining Room (Fine Dining)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -5365,35 +6142,40 @@ const destinations = [
         "name": "Visit Jagannath Temple",
         "cost": 17,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",
@@ -5447,17 +6229,29 @@ const destinations = [
       {
         "id": "h1",
         "type": "Budget Stay",
-        "costPerNight": 20
+        "costPerNight": 20,
+        "nearbyRestaurants": [
+          "Bistro 42 (Continental & Cafe)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h2",
         "type": "Standard Hotel",
-        "costPerNight": 40
+        "costPerNight": 40,
+        "nearbyRestaurants": [
+          "Street Market Stalls (Local Fast Food)",
+          "Royal Dining Room (Fine Dining)"
+        ]
       },
       {
         "id": "h3",
         "type": "Luxury Hotel",
-        "costPerNight": 238
+        "costPerNight": 238,
+        "nearbyRestaurants": [
+          "Green Leaf Vegetarian (Healthy Options)",
+          "The Spice Route (Authentic Local Food)"
+        ]
       }
     ],
     "foodOptions": [
@@ -5483,35 +6277,40 @@ const destinations = [
         "name": "Visit Jahaz Mahal",
         "cost": 19,
         "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center"
+        "proximity": "Walking distance from center",
+        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site."
       },
       {
         "id": "a2",
         "name": "Guided City Tour",
         "cost": 20,
         "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel"
+        "proximity": "2 km from hotel",
+        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors."
       },
       {
         "id": "a3",
         "name": "Cultural Show",
         "cost": 15,
         "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center"
+        "proximity": "5 km from city center",
+        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere."
       },
       {
         "id": "a4",
         "name": "Local Market Walk",
         "cost": 5,
         "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away"
+        "proximity": "10 km away",
+        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life."
       },
       {
         "id": "a5",
         "name": "Premium Sightseeing",
         "cost": 35,
         "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city"
+        "proximity": "Heart of the city",
+        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping."
       }
     ],
     "bestMonths": "November to February",

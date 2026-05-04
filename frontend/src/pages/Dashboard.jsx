@@ -65,9 +65,12 @@ export const Dashboard = () => {
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem', padding: '0.25rem 0.75rem', background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 600 }}>
                   <CreditCard size={14} /> Status: {booking.status}
                 </div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.5rem', marginBottom: '1rem' }}>
                   Booked on {new Date(booking.createdAt).toLocaleDateString()}
                 </div>
+                <Link to={`/dashboard/schedule/${booking.id}`} className="btn" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                  View Detailed Schedule
+                </Link>
               </div>
             </div>
           ))}

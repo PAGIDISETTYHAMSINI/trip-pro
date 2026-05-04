@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Login, Signup } from './pages/Auth';
 import { Checkout, Success } from './pages/Checkout';
 import { Dashboard } from './pages/Dashboard';
+import { TripSchedule } from './pages/TripSchedule';
 import './index.css';
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/success" element={<Success />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/schedule/:id" element={<TripSchedule />} />
         </Routes>
       </main>
     </>

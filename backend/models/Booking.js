@@ -31,6 +31,10 @@ const Booking = sequelize.define('Booking', {
   itineraryDetails: {
     type: DataTypes.JSON, // Stores the exact JSON breakdown of the itinerary
     allowNull: false,
+  },
+  schedule: {
+    type: DataTypes.JSON, // Stores the day-by-day detailed schedule
+    allowNull: true,
   }
 });
 
