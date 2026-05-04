@@ -441,6 +441,2347 @@ const destinations = [
       { id: "a5", name: "Vintage Car Museum", cost: 6 },
     ]
   }
+,
+  {
+  "id": "img_ajanta_0",
+  "name": "Ajanta, Aurangabad",
+  "image": "https://images.unsplash.com/photo-1625227702890-df4f07bb184c?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 193
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 329
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 21
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 48
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 194
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Ajanta",
+      "cost": 14
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_amarnathcave_1",
+  "name": "Amarnath Cave, Kashmir",
+  "image": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 121
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 412
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 24
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 41
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 248
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Amarnath Cave",
+      "cost": 17
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_akbarstomb_2",
+  "name": "Akbar's Tomb, Agra",
+  "image": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 154
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 477
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 20
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 42
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 218
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Akbar's Tomb",
+      "cost": 10
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_amberpalace_3",
+  "name": "Amber Palace, Jaipur",
+  "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 115
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 391
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 20
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 44
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 154
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Amber Palace",
+      "cost": 17
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_anandbhawan_4",
+  "name": "Anand Bhawan, Allahabad",
+  "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 119
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 393
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 23
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 58
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 216
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Anand Bhawan",
+      "cost": 10
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_bhakradam_5",
+  "name": "Bhakra Dam, Punjab",
+  "image": "https://images.unsplash.com/photo-1605649487212-4dcb1b6b1089?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 106
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 499
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 16
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 52
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 204
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Bhakra Dam",
+      "cost": 19
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_bibidamaqbra_6",
+  "name": "Bibi Da Maqbra, Aurangabad",
+  "image": "https://images.unsplash.com/photo-1561359313-0639aad49ca6?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 195
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 494
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 17
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 59
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 220
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Bibi Da Maqbra",
+      "cost": 13
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_birlaplanetarium_7",
+  "name": "Birla Planetarium, Calcutta",
+  "image": "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 165
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 302
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 21
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 59
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 171
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Birla Planetarium",
+      "cost": 13
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_blackpagoda_8",
+  "name": "Black Pagoda, Konark",
+  "image": "https://images.unsplash.com/photo-1589309736404-2e142a2acdf0?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 110
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 391
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 20
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 54
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 217
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Black Pagoda",
+      "cost": 16
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_bodhisatva_9",
+  "name": "Bodhisatva, Ajanta Caves",
+  "image": "https://images.unsplash.com/photo-1625227702890-df4f07bb184c?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 172
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 461
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 21
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 46
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 171
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Bodhisatva",
+      "cost": 15
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_brihadeeswaratemple_10",
+  "name": "Brihadeeswara Temple, Tanjavur",
+  "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 149
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 494
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 23
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 45
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 225
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Brihadeeswara Temple",
+      "cost": 12
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_brindabangardens_11",
+  "name": "Brindaban Gardens, Mysore",
+  "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 117
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 481
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 16
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 58
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 248
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Brindaban Gardens",
+      "cost": 13
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_bulanddarwaza_12",
+  "name": "Buland Darwaza, Fatehpur Sikri",
+  "image": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 164
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 469
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 17
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 59
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 175
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Buland Darwaza",
+      "cost": 13
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_charminar_13",
+  "name": "Charminar, Hyderabad",
+  "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 194
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 426
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 15
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 42
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 170
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Charminar",
+      "cost": 11
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_cheenakesavatemple_14",
+  "name": "Cheena Kesava Temple, Belur",
+  "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 191
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 348
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 17
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 56
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 248
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Cheena Kesava Temple",
+      "cost": 17
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_chilkalake_15",
+  "name": "Chilka Lake, Bhubaneshwar",
+  "image": "https://images.unsplash.com/photo-1589309736404-2e142a2acdf0?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 126
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 461
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 20
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 43
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 192
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Chilka Lake",
+      "cost": 14
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_dallake_16",
+  "name": "Dal Lake, Srinagar",
+  "image": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 188
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 353
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 18
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 54
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 186
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Dal Lake",
+      "cost": 14
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_dilwaratemple_17",
+  "name": "Dilwara Temple, Mt.Abu",
+  "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 143
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 472
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 21
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 58
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 213
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Dilwara Temple",
+      "cost": 14
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_elephantacaves_18",
+  "name": "Elephanta Caves, Bombay",
+  "image": "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 176
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 382
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 22
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 47
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 171
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Elephanta Caves",
+      "cost": 11
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_elloracaves_19",
+  "name": "Ellora Caves, Aurangabad",
+  "image": "https://images.unsplash.com/photo-1625227702890-df4f07bb184c?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 116
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 428
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 18
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 50
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 224
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Ellora Caves",
+      "cost": 13
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_gatewayofindia_20",
+  "name": "Gateway of India, Bombay",
+  "image": "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 141
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 352
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 18
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 52
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 207
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Gateway of India",
+      "cost": 19
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_goldentemple_21",
+  "name": "Golden Temple, Amritsar",
+  "image": "https://images.unsplash.com/photo-1605649487212-4dcb1b6b1089?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 180
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 321
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 21
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 46
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 155
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Golden Temple",
+      "cost": 14
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_golgumbaz_22",
+  "name": "Gol Gumbaz, Bijapur",
+  "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 145
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 481
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 19
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 44
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 238
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Gol Gumbaz",
+      "cost": 15
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_hanginggardens_23",
+  "name": "Hanging Gardens, Bombay",
+  "image": "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 181
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 367
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 20
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 43
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 154
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Hanging Gardens",
+      "cost": 18
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_hawamahal_24",
+  "name": "Hawa Mahal, Jaipur",
+  "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 124
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 489
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 21
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 54
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 168
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Hawa Mahal",
+      "cost": 17
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_howrahbridge_25",
+  "name": "Howrah Bridge, Calcutta",
+  "image": "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 159
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 300
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 21
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 42
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 242
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Howrah Bridge",
+      "cost": 10
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_islandpalace_26",
+  "name": "Island Palace, Udaipur",
+  "image": "https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 118
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 401
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 22
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 57
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 235
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Island Palace",
+      "cost": 19
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_itmaaduddaulahstomb_27",
+  "name": "Itmaad-ud-Daulah's Tomb, Agra",
+  "image": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 156
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 335
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 17
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 49
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 194
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Itmaad-ud-Daulah's Tomb",
+      "cost": 14
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_jagannathtemple_28",
+  "name": "Jagannath Temple, Puri",
+  "image": "https://images.unsplash.com/photo-1589309736404-2e142a2acdf0?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 169
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 444
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 15
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 47
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 191
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Jagannath Temple",
+      "cost": 17
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+},
+  {
+  "id": "img_jahazmahal_29",
+  "name": "Jahaz Mahal, Mandu",
+  "image": "https://images.unsplash.com/photo-1561359313-0639aad49ca6?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "f1",
+      "type": "Economy",
+      "cost": 173
+    },
+    {
+      "id": "f2",
+      "type": "Business",
+      "cost": 342
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "type": "Budget Stay",
+      "costPerNight": 20
+    },
+    {
+      "id": "h2",
+      "type": "Standard Hotel",
+      "costPerNight": 40
+    },
+    {
+      "id": "h3",
+      "type": "Luxury Hotel",
+      "costPerNight": 238
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "fd1",
+      "type": "Street Food",
+      "costPerDay": 10
+    },
+    {
+      "id": "fd2",
+      "type": "Standard Dining",
+      "costPerDay": 25
+    },
+    {
+      "id": "fd3",
+      "type": "Fine Dining",
+      "costPerDay": 80
+    }
+  ],
+  "activities": [
+    {
+      "id": "a1",
+      "name": "Visit Jahaz Mahal",
+      "cost": 19
+    },
+    {
+      "id": "a2",
+      "name": "Guided City Tour",
+      "cost": 20
+    },
+    {
+      "id": "a3",
+      "name": "Cultural Show",
+      "cost": 15
+    },
+    {
+      "id": "a4",
+      "name": "Local Market Walk",
+      "cost": 5
+    },
+    {
+      "id": "a5",
+      "name": "Premium Sightseeing",
+      "cost": 35
+    }
+  ]
+}
 ];
 
 module.exports = destinations;
