@@ -132,7 +132,10 @@ const destinations = [
         "cost": 480,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "fr",
+    "culturalEtiquette": "Always say 'Bonjour' when entering a shop. Service is included in bills, but a small tip for exceptional service is polite.",
+    "emergencyContacts": "Emergency: 112 | Police: 17 | Ambulance: 15"
   },
   {
     "id": "bali",
@@ -267,7 +270,10 @@ const destinations = [
         "cost": 960,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "id",
+    "culturalEtiquette": "Dress modestly. Never point with your index finger; use your thumb instead. Remove shoes before entering homes.",
+    "emergencyContacts": "Police: 110 | Ambulance: 118"
   },
   {
     "id": "tokyo",
@@ -402,7 +408,10 @@ const destinations = [
         "cost": 1080,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "ja",
+    "culturalEtiquette": "Do NOT tip; it can be considered rude. Bowing is the standard greeting. Keep quiet on public transport.",
+    "emergencyContacts": "Police: 110 | Ambulance/Fire: 119"
   },
   {
     "id": "newyork",
@@ -537,7 +546,10 @@ const destinations = [
         "cost": 360,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Tipping is practically mandatory for services (15-20% at restaurants). Personal space is highly valued.",
+    "emergencyContacts": "Emergency: 911"
   },
   {
     "id": "goa",
@@ -672,7 +684,10 @@ const destinations = [
         "cost": 180,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "kerala",
@@ -807,7 +822,10 @@ const destinations = [
         "cost": 240,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "jaipur",
@@ -942,7 +960,10 @@ const destinations = [
         "cost": 216,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "agra",
@@ -1077,7 +1098,10 @@ const destinations = [
         "cost": 144,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "newdelhi",
@@ -1212,7 +1236,10 @@ const destinations = [
         "cost": 180,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "mumbai",
@@ -1347,7 +1374,10 @@ const destinations = [
         "cost": 192,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "varanasi",
@@ -1482,7 +1512,10 @@ const destinations = [
         "cost": 156,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "ladakh",
@@ -1617,7 +1650,10 @@ const destinations = [
         "cost": 300,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "andaman",
@@ -1752,7 +1788,10 @@ const destinations = [
         "cost": 264,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "manali",
@@ -1887,7 +1926,10 @@ const destinations = [
         "cost": 60,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "darjeeling",
@@ -2022,7 +2064,10 @@ const destinations = [
         "cost": 180,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "rishikesh",
@@ -2157,7 +2202,10 @@ const destinations = [
         "cost": 120,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "udaipur",
@@ -2292,7 +2340,10 @@ const destinations = [
         "cost": 168,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "img_ajanta_0",
@@ -2427,7 +2478,10 @@ const destinations = [
         "cost": 231,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_amarnathcave_1",
@@ -2562,7 +2616,10 @@ const destinations = [
         "cost": 145,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_akbarstomb_2",
@@ -2697,7 +2754,10 @@ const destinations = [
         "cost": 184,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_amberpalace_3",
@@ -2832,7 +2892,10 @@ const destinations = [
         "cost": 138,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_anandbhawan_4",
@@ -2967,7 +3030,10 @@ const destinations = [
         "cost": 142,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_bhakradam_5",
@@ -3102,7 +3168,10 @@ const destinations = [
         "cost": 127,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_bibidamaqbra_6",
@@ -3237,7 +3306,10 @@ const destinations = [
         "cost": 234,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_birlaplanetarium_7",
@@ -3372,7 +3444,10 @@ const destinations = [
         "cost": 198,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_blackpagoda_8",
@@ -3507,7 +3582,10 @@ const destinations = [
         "cost": 132,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_bodhisatva_9",
@@ -3642,7 +3720,10 @@ const destinations = [
         "cost": 206,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_brihadeeswaratemple_10",
@@ -3777,7 +3858,10 @@ const destinations = [
         "cost": 178,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_brindabangardens_11",
@@ -3912,7 +3996,10 @@ const destinations = [
         "cost": 140,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_bulanddarwaza_12",
@@ -4047,7 +4134,10 @@ const destinations = [
         "cost": 196,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_charminar_13",
@@ -4182,7 +4272,10 @@ const destinations = [
         "cost": 232,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_cheenakesavatemple_14",
@@ -4317,7 +4410,10 @@ const destinations = [
         "cost": 229,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_chilkalake_15",
@@ -4452,7 +4548,10 @@ const destinations = [
         "cost": 151,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_dallake_16",
@@ -4587,7 +4686,10 @@ const destinations = [
         "cost": 225,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_dilwaratemple_17",
@@ -4722,7 +4824,10 @@ const destinations = [
         "cost": 171,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_elephantacaves_18",
@@ -4857,7 +4962,10 @@ const destinations = [
         "cost": 211,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_elloracaves_19",
@@ -4992,7 +5100,10 @@ const destinations = [
         "cost": 139,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_gatewayofindia_20",
@@ -5127,7 +5238,10 @@ const destinations = [
         "cost": 169,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "hi",
+    "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
   },
   {
     "id": "img_goldentemple_21",
@@ -5262,7 +5376,10 @@ const destinations = [
         "cost": 216,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_golgumbaz_22",
@@ -5397,7 +5514,10 @@ const destinations = [
         "cost": 174,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_hanginggardens_23",
@@ -5532,7 +5652,10 @@ const destinations = [
         "cost": 217,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_hawamahal_24",
@@ -5667,7 +5790,10 @@ const destinations = [
         "cost": 148,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_howrahbridge_25",
@@ -5802,7 +5928,10 @@ const destinations = [
         "cost": 190,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_islandpalace_26",
@@ -5937,7 +6066,10 @@ const destinations = [
         "cost": 141,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_itmaaduddaulahstomb_27",
@@ -6072,7 +6204,10 @@ const destinations = [
         "cost": 187,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_jagannathtemple_28",
@@ -6207,7 +6342,10 @@ const destinations = [
         "cost": 202,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   },
   {
     "id": "img_jahazmahal_29",
@@ -6342,7 +6480,10 @@ const destinations = [
         "cost": 207,
         "duration": "8 hours driving"
       }
-    ]
+    ],
+    "language": "en",
+    "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
+    "emergencyContacts": "Local Emergency: 911"
   }
 ];
 

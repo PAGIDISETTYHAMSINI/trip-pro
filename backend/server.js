@@ -101,6 +101,9 @@ function generateItinerariesForDestination(destination, budgetNum, daysNum) {
               activities: combo,
               totalCost,
               currencySymbol,
+              language: destination.language,
+              culturalEtiquette: destination.culturalEtiquette,
+              emergencyContacts: destination.emergencyContacts,
               breakdown: {
                 transport: transport.cost,
                 hotel: hotel.costPerNight * daysNum,
