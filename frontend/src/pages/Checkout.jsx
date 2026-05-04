@@ -115,7 +115,7 @@ export const Success = () => {
           <p style={{ fontSize: '1.5rem', fontWeight: 800 }}>Total Paid: {totalCost?.toLocaleString() ? (destinationName.includes('Andaman') ? '₹' : '$') + totalCost.toLocaleString() : '---'}</p>
         </div>
 
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           {token ? (
             <Link to="/dashboard" className="btn" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.39)' }}>
               View My Schedule
@@ -125,8 +125,22 @@ export const Success = () => {
               Log in to Save Trip
             </Link>
           )}
+          <button className="btn" style={{ background: '#333' }} onClick={() => window.print()}>
+            Download PDF
+          </button>
+          <button className="btn" style={{ background: '#0ea5e9' }} onClick={() => {
+            const url = window.location.href;
+            if (navigator.share) {
+              navigator.share({ title: 'My Andaman Trip', url });
+            } else {
+              navigator.clipboard.writeText(url);
+              alert('Trip link copied to clipboard!');
+            }
+          }}>
+            Share Link
+          </button>
           <Link to="/" className="btn" style={{ background: 'white', color: 'var(--text-main)', border: '1px solid var(--border)' }}>
-            Return to Home
+            Return Home
           </Link>
         </div>
       </div>

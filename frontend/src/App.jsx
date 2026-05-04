@@ -8,6 +8,7 @@ import { Checkout, Success } from './pages/Checkout';
 import { Dashboard } from './pages/Dashboard';
 import { TripSchedule } from './pages/TripSchedule';
 import { TripBuilder } from './pages/TripBuilder';
+import { ExpenseTracker } from './pages/ExpenseTracker';
 import './index.css';
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/build-trip" element={<TripBuilder />} />
           <Route path="/dashboard/schedule/:id" element={<TripSchedule />} />
+          <Route path="/dashboard/expenses" element={<ExpenseTracker />} />
         </Routes>
       </main>
     </>

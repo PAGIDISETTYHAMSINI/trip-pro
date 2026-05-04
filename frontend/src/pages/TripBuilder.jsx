@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { MapPin, Wallet, Calendar, Plane, Train, Bus, Car, Building, Coffee, Map, Clock, Search, CheckCircle, ArrowRight, ArrowLeft, Activity } from 'lucide-react';
+import { MapPin, Wallet, Calendar, Plane, Train, Bus, Car, Building, Coffee, Map, Clock, Search, CheckCircle, ArrowRight, ArrowLeft, Activity, Zap } from 'lucide-react';
 
 export const TripBuilder = () => {
   const { user } = useContext(AuthContext);
@@ -16,6 +16,9 @@ export const TripBuilder = () => {
   const [selectedDestinationId, setSelectedDestinationId] = useState('');
   const [days, setDays] = useState(3);
   const [startDate, setStartDate] = useState(new Date().toISOString().split('T')[0]);
+  const [travelers, setTravelers] = useState(2);
+  const [travelStyle, setTravelStyle] = useState('mid'); // budget, mid, luxury
+  const [useBuffer, setUseBuffer] = useState(true); // 15% safety buffer
   const [destDetails, setDestDetails] = useState(null);
   
   // Selections
@@ -152,6 +155,36 @@ export const TripBuilder = () => {
     }
   };
 
+  const runAIOptimization = () => {
+    if (!destDetails) return;
+    
+    // 1. Select Transport based on style
+    const sortedTransport = [...destDetails.detailedTransport].sort((a, b) => a.cost - b.cost);
+    if (travelStyle === 'budget') setSelectedTransport(sortedTransport[0]);
+    else if (travelStyle === 'luxury') setSelectedTransport(sortedTransport[sortedTransport.length - 1]);
+    else setSelectedTransport(sortedTransport[Math.floor(sortedTransport.length / 2)]);
+
+    // 2. Select Hotel
+    const sortedHotels = [...destDetails.hotels].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+    const bestHotel = sortedHotels[0];
+    setSelectedHotel(bestHotel);
+    
+    const sortedRooms = [...bestHotel.roomOptions].sort((a, b) => a.cost - b.cost);
+    if (travelStyle === 'budget') setSelectedRoom(sortedRooms[0]);
+    else if (travelStyle === 'luxury') setSelectedRoom(sortedRooms[sortedRooms.length - 1]);
+    else setSelectedRoom(sortedRooms[Math.floor(sortedRooms.length / 2)]);
+
+    // 3. Select Top 3 Activities
+    const topActivities = [...destDetails.activities].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)).slice(0, 3);
+    setSelectedActivities(topActivities);
+
+    // 4. Select 1 Restaurant
+    const topRest = [...destDetails.restaurants].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))[0];
+    setSelectedRestaurants([topRest]);
+
+    setStep(6); // Jump to Review
+  };
+
   const handleNext = () => setStep(prev => prev + 1);
   const handleBack = () => setStep(prev => prev - 1);
 
@@ -173,11 +206,20 @@ export const TripBuilder = () => {
 
   const calculateTotal = () => {
     let total = 0;
-    if (selectedTransport) total += selectedTransport.cost;
-    if (selectedRoom) total += (selectedRoom.cost * days);
-    total += selectedActivities.reduce((sum, a) => sum + a.cost, 0);
-    total += selectedRestaurants.reduce((sum, r) => sum + (r.averageCost * days), 0);
-    return total;
+    if (selectedTransport) total += (selectedTransport.cost * travelers);
+    if (selectedRoom) total += (selectedRoom.cost * days * Math.ceil(travelers / 2)); // Assume 2 per room
+    
+    const activitiesCost = selectedActivities.reduce((sum, a) => sum + a.cost, 0);
+    total += (activitiesCost * travelers);
+    
+    const foodCost = selectedRestaurants.reduce((sum, r) => sum + (r.averageCost * days), 0);
+    total += (foodCost * travelers);
+
+    if (useBuffer) {
+      total += (total * 0.15); // 15% Emergency Buffer
+    }
+
+    return Math.round(total);
   };
 
   const proceedToCheckout = () => {
@@ -251,15 +293,23 @@ export const TripBuilder = () => {
                   {destinations.map(d => <option key={d.id} value={d.id}>{d.name}</option>)}
                 </select>
               </div>
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <div className="form-group" style={{ flex: 1 }}>
-                  <label>Duration (Nights)</label>
-                  <input type="number" className="input-field" min="1" value={days} onChange={(e) => setDays(parseInt(e.target.value))} />
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
+                  <label>Travelers</label>
+                  <input type="number" className="input-field" min="1" value={travelers} onChange={(e) => setTravelers(parseInt(e.target.value))} />
                 </div>
-                <div className="form-group" style={{ flex: 1 }}>
-                  <label>Start Date</label>
-                  <input type="date" className="input-field" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+                <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
+                  <label>Travel Style</label>
+                  <select className="input-field" value={travelStyle} onChange={(e) => setTravelStyle(e.target.value)}>
+                    <option value="budget">Budget (Economy)</option>
+                    <option value="mid">Mid-Range (Comfort)</option>
+                    <option value="luxury">Luxury (Premium)</option>
+                  </select>
                 </div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(16, 185, 129, 0.1)', padding: '1rem', borderRadius: '8px', border: '1px solid #10b981' }}>
+                <input type="checkbox" checked={useBuffer} onChange={(e) => setUseBuffer(e.target.checked)} style={{ width: '20px', height: '20px' }} />
+                <label style={{ fontSize: '0.9rem', color: '#10b981' }}><strong>Add 15% Emergency Buffer</strong> (Recommended for safety & unexpected costs)</label>
               </div>
               <button className="btn" onClick={fetchDestinationDetails} disabled={!selectedDestinationId}>Next: Transport <ArrowRight size={16}/></button>
             </div>
@@ -272,7 +322,7 @@ export const TripBuilder = () => {
             <h2 style={{ marginBottom: '2rem' }}>{t.step2}</h2>
             <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
               {['Flight', 'Train', 'Bus', 'Ferry', 'Car'].map(type => (
-                <button key={type} onClick={() => setTransportType(type)} className="btn" style={{ background: transportType === type ? 'var(--primary)' : 'white', color: transportType === type ? 'white' : 'var(--text-main)', border: '1px solid var(--border)' }}>{type}</button>
+                <button key={type} onClick={() => { setTransportType(type); setSelectedTransport(null); }} className="btn" style={{ background: transportType === type ? 'var(--primary)' : 'white', color: transportType === type ? 'white' : 'var(--text-main)', border: '1px solid var(--border)' }}>{type}</button>
               ))}
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
@@ -472,6 +522,11 @@ export const TripBuilder = () => {
           </div>
           {step < 6 && (
             <button className="btn" style={{ width: '100%', background: '#10b981' }} onClick={() => setStep(6)} disabled={!selectedDestinationId || !selectedTransport || !selectedRoom}>Quick Review <ArrowRight size={16}/></button>
+          )}
+          {destDetails && step < 6 && (
+            <button className="btn" style={{ width: '100%', background: '#4f46e5', marginTop: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }} onClick={runAIOptimization}>
+              <Zap size={16} fill="white"/> AI Optimized Build
+            </button>
           )}
           {destDetails && (
              <div style={{ marginTop: '1rem', textAlign: 'center' }}>
