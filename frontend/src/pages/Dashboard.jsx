@@ -78,8 +78,8 @@ export const Dashboard = () => {
             </div>
           ))}
         </div>
-        </div>
-        
+      )}
+      </div>
         {/* Elite Sidebar Stats */}
         <div>
           <div className="glass" style={{ padding: '1.5rem', marginBottom: '1.5rem', borderBottom: '4px solid var(--primary)' }}>
@@ -126,5 +126,6 @@ export const Dashboard = () => {
           </Link>
         </div>
       </div>
+    </div>
   );
 };
