@@ -30,7 +30,7 @@ export const TripBuilder = () => {
   const [lang, setLang] = useState('en');
 
   // Filters & Search
-  const [transportType, setTransportType] = useState('Flight');
+  const [transportType, setTransportType] = useState('flight'); // Internal key: flight, train, bus, car
   const [transportSearch, setTransportSearch] = useState('');
   const [placeCategory, setPlaceCategory] = useState('All');
   const [placeSearch, setPlaceSearch] = useState('');
@@ -50,6 +50,10 @@ export const TripBuilder = () => {
       back: "Back",
       review: "Review Trip",
       checkout: "Book Custom Package",
+      flight: "Flight",
+      train: "Train",
+      bus: "Bus",
+      car: "Car",
       all: "All",
       search: "Search...",
       cats: {
@@ -80,6 +84,10 @@ export const TripBuilder = () => {
       back: "पीछे",
       review: "यात्रा की समीक्षा",
       checkout: "कस्टम पैकेज बुक करें",
+      flight: "हवाई जहाज",
+      train: "ट्रेन",
+      bus: "बस",
+      car: "कार",
       all: "सभी",
       search: "खोजें...",
       cats: {
@@ -110,6 +118,10 @@ export const TripBuilder = () => {
       back: "వెనుకకు",
       review: "ట్రిప్ రివ్యూ",
       checkout: "కస్టమ్ ప్యాకేజీని బుక్ చేయండి",
+      flight: "విమానం",
+      train: "రైలు",
+      bus: "బస్సు",
+      car: "కారు",
       all: "అన్నీ",
       search: "వెతకండి...",
       cats: {
@@ -321,18 +333,19 @@ export const TripBuilder = () => {
           <div className="fade-in">
             <h2 style={{ marginBottom: '2rem' }}>{t.step2}</h2>
             <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
-              {['Flight', 'Train', 'Bus', 'Ferry', 'Car'].map(type => (
-                <button key={type} onClick={() => { setTransportType(type); setSelectedTransport(null); }} className="btn" style={{ background: transportType === type ? 'var(--primary)' : 'white', color: transportType === type ? 'white' : 'var(--text-main)', border: '1px solid var(--border)' }}>{type}</button>
+              {[
+                { key: 'flight', label: t.flight || 'Flight' },
+                { key: 'train', label: t.train || 'Train' },
+                { key: 'bus', label: t.bus || 'Bus' },
+                { key: 'car', label: t.car || 'Car' }
+              ].map(cat => (
+                <button key={cat.key} onClick={() => { setTransportType(cat.key); setSelectedTransport(null); }} className="btn" style={{ background: transportType === cat.key ? 'var(--primary)' : 'white', color: transportType === cat.key ? 'white' : 'var(--text-main)', border: '1px solid var(--border)' }}>{cat.label}</button>
               ))}
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-              {destDetails.detailedTransport.filter(tr => {
-                const type = transportType.toLowerCase();
-                if (type === 'flight') return tr.id.startsWith('f');
-                if (type === 'train') return tr.id.startsWith('t');
-                if (type === 'bus') return tr.id.startsWith('b');
-                if (type === 'car') return tr.id.startsWith('c');
-                return tr.type.toLowerCase().includes(type);
+              {(destDetails.detailedTransport || []).filter(tr => {
+                const prefix = transportType[0].toLowerCase();
+                return tr.id.startsWith(prefix);
               }).map(tr => (
                 <div key={tr.id} className={`glass card-hover ${selectedTransport?.id === tr.id ? 'active-card' : ''}`} style={{ padding: '1.5rem', cursor: 'pointer', border: selectedTransport?.id === tr.id ? '2px solid var(--primary)' : '1px solid var(--border)' }} onClick={() => setSelectedTransport(tr)}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
