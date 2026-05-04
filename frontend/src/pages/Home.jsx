@@ -15,6 +15,8 @@ export const Home = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [searched, setSearched] = useState(false);
+  const [vibe, setVibe] = useState(50);
+  const [isSurprise, setIsSurprise] = useState(false);
 
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
@@ -43,11 +45,13 @@ export const Home = () => {
     setLoading(true);
     setError('');
     setSearched(true);
+    setIsSurprise(formData.destinationId === 'surprise');
+    setVibe(50); // Reset vibe
     
     try {
-      const response = await axios.get('http://localhost:5000/api/itineraries', {
-        params: formData
-      });
+      const endpoint = formData.destinationId === 'surprise' ? '/api/surprise-me' : '/api/itineraries';
+      const params = formData.destinationId === 'surprise' ? { budget: formData.budget, days: formData.days } : formData;
+      const response = await axios.get(`http://localhost:5000${endpoint}`, { params });
       setItineraries(response.data);
     } catch (err) {
       setError("Failed to fetch itineraries. Please ensure backend is running.");
@@ -56,21 +60,45 @@ export const Home = () => {
     }
   };
 
+  const getSortedItineraries = () => {
+    if (!itineraries) return [];
+    let sorted = [...itineraries];
+    if (vibe < 40) {
+      // Experience: Sort by most activities
+      sorted.sort((a, b) => b.activities.length - a.activities.length);
+    } else if (vibe > 60) {
+      // Luxury: Sort by highest hotel cost
+      sorted.sort((a, b) => b.breakdown.hotel - a.breakdown.hotel);
+    } else {
+      // Balanced: Default sort by totalCost descending
+      sorted.sort((a, b) => b.totalCost - a.totalCost);
+    }
+    return sorted;
+  };
+
+  const displayItineraries = getSortedItineraries();
+
   const handleBook = (itinerary) => {
     if (!user) {
       navigate('/login');
       return;
     }
+    
+    // For Surprise Me, destination is dynamic. Otherwise, find it from dropdown.
+    const dest = isSurprise 
+      ? { id: itinerary.destinationId, name: itinerary.destinationName, currencySymbol: itinerary.currencySymbol }
+      : destinations.find(d => d.id === formData.destinationId);
+
     navigate('/checkout', { 
       state: { 
         itinerary, 
-        destination: destinations.find(d => d.id === formData.destinationId),
+        destination: dest,
         days: formData.days
       } 
     });
   };
 
-  const selectedDestinationInfo = destinations.find(d => d.id === formData.destinationId);
+  const selectedDestinationInfo = formData.destinationId === 'surprise' ? { name: "Surprise Destination", currencySymbol: formData.budget > 5000 ? '₹' : '$' } : destinations.find(d => d.id === formData.destinationId);
 
   return (
     <>
@@ -90,6 +118,7 @@ export const Home = () => {
                 required
               >
                 <option value="">Select a place...</option>
+                <option value="surprise">🎁 Surprise Me!</option>
                 {destinations.map(d => (
                   <option key={d.id} value={d.id}>{d.name}</option>
                 ))}
@@ -130,7 +159,7 @@ export const Home = () => {
           {error && <div className="error-message">{error}</div>}
         </div>
 
-        {selectedDestinationInfo && (
+        {selectedDestinationInfo && !isSurprise && (
           <div className="destination-insights glass" style={{ marginTop: '2rem', padding: '1.5rem', display: 'flex', gap: '2rem', justifyContent: 'center', background: 'rgba(255,255,255,0.8)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Info size={20} color="var(--primary)" />
@@ -160,8 +189,28 @@ export const Home = () => {
               </div>
             ) : itineraries.length > 0 ? (
               <>
-                <h2>Curated Options for {selectedDestinationInfo?.name}</h2>
+                <h2>{isSurprise ? "Here is what your budget can do!" : `Curated Options for ${selectedDestinationInfo?.name}`}</h2>
                 <p className="text-muted">We found {itineraries.length} ways to make your trip happen under {selectedDestinationInfo?.currencySymbol}{formData.budget}.</p>
+                
+                {!isSurprise && itineraries.length > 0 && (
+                  <div className="vibe-slider-container glass" style={{ marginTop: '1.5rem', padding: '1.5rem', display: 'inline-block', width: '100%', maxWidth: '500px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                      <span style={{ color: vibe < 40 ? 'var(--primary)' : 'var(--text-muted)' }}>More Experiences</span>
+                      <span style={{ color: vibe >= 40 && vibe <= 60 ? 'var(--primary)' : 'var(--text-muted)' }}>Balanced</span>
+                      <span style={{ color: vibe > 60 ? 'var(--primary)' : 'var(--text-muted)' }}>Luxury Comfort</span>
+                    </div>
+                    <input 
+                      type="range" 
+                      min="0" max="100" 
+                      value={vibe} 
+                      onChange={(e) => setVibe(parseInt(e.target.value))}
+                      style={{ width: '100%', cursor: 'pointer' }}
+                    />
+                    <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
+                      Drag the slider to adjust your itinerary dynamically!
+                    </p>
+                  </div>
+                )}
               </>
             ) : (
               <>
@@ -173,10 +222,10 @@ export const Home = () => {
 
           {!loading && itineraries.length > 0 && (
             <div className="results-grid">
-              {itineraries.map((itinerary, index) => (
+              {displayItineraries.map((itinerary, index) => (
                 <div key={index} className="itinerary-card glass">
                   <div className="card-header">
-                    <h3>Option {index + 1}</h3>
+                    <h3>{isSurprise ? itinerary.destinationName : `Option ${index + 1}`}</h3>
                     <div className="total-cost">{itinerary.currencySymbol}{itinerary.totalCost.toLocaleString()}</div>
                   </div>
 

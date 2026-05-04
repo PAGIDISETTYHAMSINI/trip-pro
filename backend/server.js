@@ -38,22 +38,7 @@ function getCombinations(array, size, start, initialStuff, output) {
   }
 }
 
-app.get('/api/itineraries', (req, res) => {
-  console.log("Received request for itineraries:", req.query);
-  const { destinationId, budget, days } = req.query;
-  
-  if (!destinationId || !budget || !days) {
-    return res.status(400).json({ error: "Missing required parameters" });
-  }
-
-  const budgetNum = parseFloat(budget);
-  const daysNum = parseInt(days, 10);
-  
-  const destination = destinations.find(d => d.id === destinationId);
-  if (!destination) {
-    return res.status(404).json({ error: "Destination not found" });
-  }
-
+function generateItinerariesForDestination(destination, budgetNum, daysNum) {
   const isIndian = destination.name.includes('India');
   const rate = isIndian ? 83 : 1;
   const currencySymbol = isIndian ? '₹' : '$';
@@ -108,6 +93,8 @@ app.get('/api/itineraries', (req, res) => {
             const totalCost = baseCost + comboCost;
             
             validItineraries.push({
+              destinationId: destination.id,
+              destinationName: destination.name,
               transport,
               hotel: { ...hotel, totalCost: hotel.costPerNight * daysNum },
               food: { ...food, totalCost: food.costPerDay * daysNum },
@@ -127,13 +114,75 @@ app.get('/api/itineraries', (req, res) => {
     }
   }
 
-  console.log(`Generated ${validItineraries.length} valid itineraries before sorting`);
-
   // Sort by total cost descending (to use up most of the budget)
   validItineraries.sort((a, b) => b.totalCost - a.totalCost);
 
+  return validItineraries;
+}
+
+app.get('/api/itineraries', (req, res) => {
+  console.log("Received request for itineraries:", req.query);
+  const { destinationId, budget, days } = req.query;
+  
+  if (!destinationId || !budget || !days) {
+    return res.status(400).json({ error: "Missing required parameters" });
+  }
+
+  const budgetNum = parseFloat(budget);
+  const daysNum = parseInt(days, 10);
+  
+  const destination = destinations.find(d => d.id === destinationId);
+  if (!destination) {
+    return res.status(404).json({ error: "Destination not found" });
+  }
+
+  const validItineraries = generateItinerariesForDestination(destination, budgetNum, daysNum);
+
   // Return top 15 diverse options
   res.json(validItineraries.slice(0, 15));
+});
+
+app.get('/api/surprise-me', (req, res) => {
+  console.log("Received request for surprise me:", req.query);
+  const { budget, days } = req.query;
+  
+  if (!budget || !days) {
+    return res.status(400).json({ error: "Missing required parameters" });
+  }
+
+  const budgetNum = parseFloat(budget);
+  const daysNum = parseInt(days, 10);
+  
+  // To avoid comparing INR to USD blindly for Surprise Me, we normalize the budget based on the user's implicit intent.
+  // Actually, since all Indian locations have a rate of 83, the `budgetNum` from the UI might be in INR if they saw ₹ in the UI, or USD if $.
+  // Wait, the UI doesn't know the currency for "Surprise Me" because there's no destination.
+  // For "Surprise Me", we will assume the budget is in USD if it's < 5000, and INR if > 5000.
+  let isBudgetInr = budgetNum > 5000;
+  
+  const allValidItineraries = [];
+
+  // Pick 3 random destinations
+  const randomDestinations = [...destinations].sort(() => 0.5 - Math.random()).slice(0, 5); // Pick 5 to be safe
+
+  for (const dest of randomDestinations) {
+    const isIndian = dest.name.includes('India');
+    
+    // Convert budget if there's a mismatch between implicit user budget and destination currency
+    let effectiveBudget = budgetNum;
+    if (isBudgetInr && !isIndian) {
+      effectiveBudget = budgetNum / 83; // User entered INR, dest is international (USD)
+    } else if (!isBudgetInr && isIndian) {
+      effectiveBudget = budgetNum * 83; // User entered USD, dest is Indian (INR)
+    }
+
+    const itineraries = generateItinerariesForDestination(dest, effectiveBudget, daysNum);
+    if (itineraries.length > 0) {
+      allValidItineraries.push(itineraries[0]); // Just take the absolute best one for this destination
+    }
+  }
+
+  // Return exactly 3 options
+  res.json(allValidItineraries.slice(0, 3));
 });
 
 const PORT = process.env.PORT || 5000;
