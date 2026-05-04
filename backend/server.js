@@ -39,6 +39,7 @@ function getCombinations(array, size, start, initialStuff, output) {
 }
 
 app.get('/api/itineraries', (req, res) => {
+  console.log("Received request for itineraries:", req.query);
   const { destinationId, budget, days } = req.query;
   
   if (!destinationId || !budget || !days) {
@@ -65,6 +66,21 @@ app.get('/api/itineraries', (req, res) => {
     ...(destination.trains || []).map(t => ({ ...t, method: 'Train' })),
     ...(destination.cars || []).map(t => ({ ...t, method: 'Car' }))
   ];
+  
+  // Pre-calculate activities with applied rate
+  const scaledActivities = destination.activities.map(a => ({ ...a, cost: a.cost * rate }));
+  
+  // Pre-calculate all combinations of activities ONCE (since it's static per destination)
+  const allActivityCombos = [[]]; // Start with 0 activities
+  for (let i = 1; i <= scaledActivities.length; i++) {
+    getCombinations(scaledActivities, i, 0, [], allActivityCombos);
+  }
+
+  // Pre-calculate the total cost of each combination for faster filtering
+  const precalculatedCombos = allActivityCombos.map(combo => ({
+    combo,
+    comboCost: combo.reduce((sum, act) => sum + act.cost, 0)
+  }));
 
   // Generate itineraries by iterating over transport, hotels, and food options
   for (const transportBase of transports) {
@@ -74,28 +90,18 @@ app.get('/api/itineraries', (req, res) => {
         const transport = { ...transportBase, cost: transportBase.cost * rate };
         const hotel = { ...hotelBase, costPerNight: hotelBase.costPerNight * rate };
         const food = { ...foodBase, costPerDay: foodBase.costPerDay * rate };
-        const activities = destination.activities.map(a => ({ ...a, cost: a.cost * rate }));
 
         const baseCost = transport.cost + (hotel.costPerNight * daysNum) + (food.costPerDay * daysNum);
         
         if (baseCost <= budgetNum) {
-          // See how many activities we can add
-          let remainingBudget = budgetNum - baseCost;
-          
-          // Generate all combinations of activities
-          let allActivityCombos = [[]]; // Start with 0 activities
-          for (let i = 1; i <= activities.length; i++) {
-            getCombinations(activities, i, 0, [], allActivityCombos);
-          }
+          const remainingBudget = budgetNum - baseCost;
           
           // Filter activity combos that fit in remaining budget and sort by most expensive (closest to budget)
-          let validActivityCombos = allActivityCombos.map(combo => {
-            const comboCost = combo.reduce((sum, act) => sum + act.cost, 0);
-            return { combo, comboCost };
-          }).filter(c => c.comboCost <= remainingBudget)
+          let validActivityCombos = precalculatedCombos
+            .filter(c => c.comboCost <= remainingBudget)
             .sort((a, b) => b.comboCost - a.comboCost);
           
-          // Just take the top 3 best activity combinations for this base setup to avoid exploding possibilities
+          // Just take the top 3 best activity combinations for this base setup
           const topActivityCombos = validActivityCombos.slice(0, 3);
           
           for (const { combo, comboCost } of topActivityCombos) {
@@ -120,6 +126,8 @@ app.get('/api/itineraries', (req, res) => {
       }
     }
   }
+
+  console.log(`Generated ${validItineraries.length} valid itineraries before sorting`);
 
   // Sort by total cost descending (to use up most of the budget)
   validItineraries.sort((a, b) => b.totalCost - a.totalCost);
