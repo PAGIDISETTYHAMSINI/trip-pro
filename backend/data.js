@@ -18,11 +18,11 @@ const destinations = [
       { id: "fd3", type: "Fine Dining", costPerDay: 200 },
     ],
     activities: [
-      { id: "a1", name: "Eiffel Tower Ticket", cost: 30 },
-      { id: "a2", name: "Louvre Museum", cost: 20 },
-      { id: "a3", name: "Seine River Cruise", cost: 25 },
-      { id: "a4", name: "Versailles Tour", cost: 60 },
-      { id: "a5", name: "Disneyland Paris", cost: 100 },
+      { id: "a1", name: "Eiffel Tower Ticket, India", cost: 30 },
+      { id: "a2", name: "Louvre Museum, India", cost: 20 },
+      { id: "a3", name: "Seine River Cruise, India", cost: 25 },
+      { id: "a4", name: "Versailles Tour, India", cost: 60 },
+      { id: "a5", name: "Disneyland Paris, India", cost: 100 },
     ]
   },
   {
@@ -44,11 +44,11 @@ const destinations = [
       { id: "fd3", type: "High-end Dining", costPerDay: 100 },
     ],
     activities: [
-      { id: "a1", name: "Ubud Monkey Forest", cost: 5 },
-      { id: "a2", name: "Temple Tour", cost: 20 },
-      { id: "a3", name: "Scuba Diving", cost: 80 },
-      { id: "a4", name: "Surfing Lesson", cost: 30 },
-      { id: "a5", name: "Spa Day", cost: 50 },
+      { id: "a1", name: "Ubud Monkey Forest, India", cost: 5 },
+      { id: "a2", name: "Temple Tour, India", cost: 20 },
+      { id: "a3", name: "Scuba Diving, India", cost: 80 },
+      { id: "a4", name: "Surfing Lesson, India", cost: 30 },
+      { id: "a5", name: "Spa Day, India", cost: 50 },
     ]
   },
   {
@@ -70,11 +70,11 @@ const destinations = [
       { id: "fd3", type: "Omakase & Kobe Beef", costPerDay: 250 },
     ],
     activities: [
-      { id: "a1", name: "Tokyo Skytree", cost: 25 },
-      { id: "a2", name: "TeamLab Planets", cost: 30 },
-      { id: "a3", name: "Disneyland/DisneySea", cost: 80 },
-      { id: "a4", name: "Mount Fuji Day Trip", cost: 120 },
-      { id: "a5", name: "Akihabara Maid Cafe", cost: 40 },
+      { id: "a1", name: "Tokyo Skytree, India", cost: 25 },
+      { id: "a2", name: "TeamLab Planets, India", cost: 30 },
+      { id: "a3", name: "Disneyland/DisneySea, India", cost: 80 },
+      { id: "a4", name: "Mount Fuji Day Trip, India", cost: 120 },
+      { id: "a5", name: "Akihabara Maid Cafe, India", cost: 40 },
     ]
   },
   {
@@ -96,11 +96,11 @@ const destinations = [
       { id: "fd3", type: "Fine Dining", costPerDay: 300 },
     ],
     activities: [
-      { id: "a1", name: "Empire State Building", cost: 45 },
-      { id: "a2", name: "Statue of Liberty Cruise", cost: 30 },
-      { id: "a3", name: "Broadway Show", cost: 150 },
-      { id: "a4", name: "MoMA", cost: 25 },
-      { id: "a5", name: "Helicopter Tour", cost: 250 },
+      { id: "a1", name: "Empire State Building, India", cost: 45 },
+      { id: "a2", name: "Statue of Liberty Cruise, India", cost: 30 },
+      { id: "a3", name: "Broadway Show, India", cost: 150 },
+      { id: "a4", name: "MoMA, India", cost: 25 },
+      { id: "a5", name: "Helicopter Tour, India", cost: 250 },
     ]
   },
   {
@@ -122,11 +122,11 @@ const destinations = [
       { id: "fd3", type: "Fine Dining", costPerDay: 80 },
     ],
     activities: [
-      { id: "a1", name: "Scuba Diving", cost: 40 },
-      { id: "a2", name: "Dudhsagar Waterfall Trek", cost: 20 },
-      { id: "a3", name: "Spice Plantation Tour", cost: 15 },
-      { id: "a4", name: "Sunset Cruise", cost: 25 },
-      { id: "a5", name: "Parasailing", cost: 30 },
+      { id: "a1", name: "Scuba Diving, India", cost: 40 },
+      { id: "a2", name: "Dudhsagar Waterfall Trek, India", cost: 20 },
+      { id: "a3", name: "Spice Plantation Tour, India", cost: 15 },
+      { id: "a4", name: "Sunset Cruise, India", cost: 25 },
+      { id: "a5", name: "Parasailing, India", cost: 30 },
     ]
   },
   {
@@ -148,11 +148,11 @@ const destinations = [
       { id: "fd3", type: "Resort Dining", costPerDay: 90 },
     ],
     activities: [
-      { id: "a1", name: "Kathakali Performance", cost: 10 },
-      { id: "a2", name: "Munnar Tea Gardens Tour", cost: 25 },
-      { id: "a3", name: "Periyar Wildlife Safari", cost: 35 },
-      { id: "a4", name: "Ayurvedic Massage", cost: 40 },
-      { id: "a5", name: "Backwater Canoe Tour", cost: 20 },
+      { id: "a1", name: "Kathakali Performance, India", cost: 10 },
+      { id: "a2", name: "Munnar Tea Gardens Tour, India", cost: 25 },
+      { id: "a3", name: "Periyar Wildlife Safari, India", cost: 35 },
+      { id: "a4", name: "Ayurvedic Massage, India", cost: 40 },
+      { id: "a5", name: "Backwater Canoe Tour, India", cost: 20 },
     ]
   },
   {
@@ -174,11 +174,11 @@ const destinations = [
       { id: "fd3", type: "Royal Dining", costPerDay: 100 },
     ],
     activities: [
-      { id: "a1", name: "Amber Fort Tour", cost: 15 },
-      { id: "a2", name: "Hot Air Balloon Ride", cost: 150 },
-      { id: "a3", name: "City Palace Ticket", cost: 10 },
-      { id: "a4", name: "Chokhi Dhani Village Experience", cost: 25 },
-      { id: "a5", name: "Elephant Ride", cost: 20 },
+      { id: "a1", name: "Amber Fort Tour, India", cost: 15 },
+      { id: "a2", name: "Hot Air Balloon Ride, India", cost: 150 },
+      { id: "a3", name: "City Palace Ticket, India", cost: 10 },
+      { id: "a4", name: "Chokhi Dhani Village Experience, India", cost: 25 },
+      { id: "a5", name: "Elephant Ride, India", cost: 20 },
     ]
   },
   {
@@ -200,11 +200,11 @@ const destinations = [
       { id: "fd3", type: "Luxury Dining", costPerDay: 80 },
     ],
     activities: [
-      { id: "a1", name: "Taj Mahal Entry", cost: 15 },
-      { id: "a2", name: "Agra Fort", cost: 10 },
-      { id: "a3", name: "Fatehpur Sikri Day Trip", cost: 20 },
-      { id: "a4", name: "Mehtab Bagh Sunset", cost: 5 },
-      { id: "a5", name: "Heritage Walk", cost: 12 },
+      { id: "a1", name: "Taj Mahal Entry, India", cost: 15 },
+      { id: "a2", name: "Agra Fort, India", cost: 10 },
+      { id: "a3", name: "Fatehpur Sikri Day Trip, India", cost: 20 },
+      { id: "a4", name: "Mehtab Bagh Sunset, India", cost: 5 },
+      { id: "a5", name: "Heritage Walk, India", cost: 12 },
     ]
   },
   {
@@ -226,11 +226,11 @@ const destinations = [
       { id: "fd3", type: "Fine Dining", costPerDay: 90 },
     ],
     activities: [
-      { id: "a1", name: "Red Fort Ticket", cost: 8 },
-      { id: "a2", name: "Qutub Minar", cost: 8 },
-      { id: "a3", name: "India Gate Walk", cost: 0 },
-      { id: "a4", name: "Akshardham Temple Tour", cost: 5 },
-      { id: "a5", name: "Food Tour", cost: 25 },
+      { id: "a1", name: "Red Fort Ticket, India", cost: 8 },
+      { id: "a2", name: "Qutub Minar, India", cost: 8 },
+      { id: "a3", name: "India Gate Walk, India", cost: 0 },
+      { id: "a4", name: "Akshardham Temple Tour, India", cost: 5 },
+      { id: "a5", name: "Food Tour, India", cost: 25 },
     ]
   },
   {
@@ -252,11 +252,11 @@ const destinations = [
       { id: "fd3", type: "High-end Dining", costPerDay: 120 },
     ],
     activities: [
-      { id: "a1", name: "Gateway of India Boat Ride", cost: 5 },
-      { id: "a2", name: "Elephanta Caves Tour", cost: 15 },
-      { id: "a3", name: "Marine Drive Walk", cost: 0 },
-      { id: "a4", name: "Bollywood Studio Tour", cost: 40 },
-      { id: "a5", name: "Dharavi Tour", cost: 12 },
+      { id: "a1", name: "Gateway of India Boat Ride, India", cost: 5 },
+      { id: "a2", name: "Elephanta Caves Tour, India", cost: 15 },
+      { id: "a3", name: "Marine Drive Walk, India", cost: 0 },
+      { id: "a4", name: "Bollywood Studio Tour, India", cost: 40 },
+      { id: "a5", name: "Dharavi Tour, India", cost: 12 },
     ]
   },
   {
@@ -278,11 +278,11 @@ const destinations = [
       { id: "fd3", type: "Upscale Restaurant", costPerDay: 60 },
     ],
     activities: [
-      { id: "a1", name: "Sunrise Boat Ride", cost: 10 },
-      { id: "a2", name: "Ganga Aarti Experience", cost: 0 },
-      { id: "a3", name: "Sarnath Tour", cost: 15 },
-      { id: "a4", name: "Walking Tour of Ghats", cost: 8 },
-      { id: "a5", name: "Silk Weaving Village Visit", cost: 12 },
+      { id: "a1", name: "Sunrise Boat Ride, India", cost: 10 },
+      { id: "a2", name: "Ganga Aarti Experience, India", cost: 0 },
+      { id: "a3", name: "Sarnath Tour, India", cost: 15 },
+      { id: "a4", name: "Walking Tour of Ghats, India", cost: 8 },
+      { id: "a5", name: "Silk Weaving Village Visit, India", cost: 12 },
     ]
   },
   {
@@ -304,11 +304,11 @@ const destinations = [
       { id: "fd3", type: "Premium Dining", costPerDay: 80 },
     ],
     activities: [
-      { id: "a1", name: "Pangong Lake Trip", cost: 50 },
-      { id: "a2", name: "Nubra Valley Safari", cost: 60 },
-      { id: "a3", name: "Monastery Tour", cost: 20 },
-      { id: "a4", name: "Magnetic Hill Visit", cost: 10 },
-      { id: "a5", name: "River Rafting", cost: 30 },
+      { id: "a1", name: "Pangong Lake Trip, India", cost: 50 },
+      { id: "a2", name: "Nubra Valley Safari, India", cost: 60 },
+      { id: "a3", name: "Monastery Tour, India", cost: 20 },
+      { id: "a4", name: "Magnetic Hill Visit, India", cost: 10 },
+      { id: "a5", name: "River Rafting, India", cost: 30 },
     ]
   },
   {
@@ -330,11 +330,11 @@ const destinations = [
       { id: "fd3", type: "Resort Dining", costPerDay: 100 },
     ],
     activities: [
-      { id: "a1", name: "Scuba Diving (Havelock)", cost: 60 },
-      { id: "a2", name: "Cellular Jail Tour", cost: 10 },
-      { id: "a3", name: "Ross Island Visit", cost: 15 },
-      { id: "a4", name: "Snorkeling", cost: 30 },
-      { id: "a5", name: "Glass Bottom Boat Ride", cost: 20 },
+      { id: "a1", name: "Scuba Diving (Havelock), India", cost: 60 },
+      { id: "a2", name: "Cellular Jail Tour, India", cost: 10 },
+      { id: "a3", name: "Ross Island Visit, India", cost: 15 },
+      { id: "a4", name: "Snorkeling, India", cost: 30 },
+      { id: "a5", name: "Glass Bottom Boat Ride, India", cost: 20 },
     ]
   },
   {
@@ -356,11 +356,11 @@ const destinations = [
       { id: "fd3", type: "Fine Dining", costPerDay: 70 },
     ],
     activities: [
-      { id: "a1", name: "Rohtang Pass Trip", cost: 40 },
-      { id: "a2", name: "Solang Valley Adventure", cost: 25 },
-      { id: "a3", name: "Paragliding", cost: 35 },
-      { id: "a4", name: "Hadimba Temple Visit", cost: 5 },
-      { id: "a5", name: "River Rafting", cost: 20 },
+      { id: "a1", name: "Rohtang Pass Trip, India", cost: 40 },
+      { id: "a2", name: "Solang Valley Adventure, India", cost: 25 },
+      { id: "a3", name: "Paragliding, India", cost: 35 },
+      { id: "a4", name: "Hadimba Temple Visit, India", cost: 5 },
+      { id: "a5", name: "River Rafting, India", cost: 20 },
     ]
   },
   {
@@ -382,11 +382,11 @@ const destinations = [
       { id: "fd3", type: "Premium Dining", costPerDay: 80 },
     ],
     activities: [
-      { id: "a1", name: "Tiger Hill Sunrise Tour", cost: 15 },
-      { id: "a2", name: "Toy Train Ride", cost: 20 },
-      { id: "a3", name: "Tea Garden Tour", cost: 10 },
-      { id: "a4", name: "Himalayan Mountaineering Institute", cost: 5 },
-      { id: "a5", name: "Ropeway Ride", cost: 8 },
+      { id: "a1", name: "Tiger Hill Sunrise Tour, India", cost: 15 },
+      { id: "a2", name: "Toy Train Ride, India", cost: 20 },
+      { id: "a3", name: "Tea Garden Tour, India", cost: 10 },
+      { id: "a4", name: "Himalayan Mountaineering Institute, India", cost: 5 },
+      { id: "a5", name: "Ropeway Ride, India", cost: 8 },
     ]
   },
   {
@@ -408,11 +408,11 @@ const destinations = [
       { id: "fd3", type: "Fine Dining", costPerDay: 60 },
     ],
     activities: [
-      { id: "a1", name: "River Rafting", cost: 20 },
-      { id: "a2", name: "Bungee Jumping", cost: 50 },
-      { id: "a3", name: "Yoga Session", cost: 10 },
-      { id: "a4", name: "Ganga Aarti", cost: 0 },
-      { id: "a5", name: "Beatles Ashram Visit", cost: 8 },
+      { id: "a1", name: "River Rafting, India", cost: 20 },
+      { id: "a2", name: "Bungee Jumping, India", cost: 50 },
+      { id: "a3", name: "Yoga Session, India", cost: 10 },
+      { id: "a4", name: "Ganga Aarti, India", cost: 0 },
+      { id: "a5", name: "Beatles Ashram Visit, India", cost: 8 },
     ]
   },
   {
@@ -434,11 +434,11 @@ const destinations = [
       { id: "fd3", type: "Fine Dining", costPerDay: 90 },
     ],
     activities: [
-      { id: "a1", name: "City Palace Tour", cost: 10 },
-      { id: "a2", name: "Lake Pichola Boat Ride", cost: 15 },
-      { id: "a3", name: "Sajjangarh Fort Visit", cost: 8 },
-      { id: "a4", name: "Bagore Ki Haveli Show", cost: 5 },
-      { id: "a5", name: "Vintage Car Museum", cost: 6 },
+      { id: "a1", name: "City Palace Tour, India", cost: 10 },
+      { id: "a2", name: "Lake Pichola Boat Ride, India", cost: 15 },
+      { id: "a3", name: "Sajjangarh Fort Visit, India", cost: 8 },
+      { id: "a4", name: "Bagore Ki Haveli Show, India", cost: 5 },
+      { id: "a5", name: "Vintage Car Museum, India", cost: 6 },
     ]
   }
 ,
