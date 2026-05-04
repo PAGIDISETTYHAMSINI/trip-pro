@@ -108,64 +108,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Eiffel Tower Ticket",
-        "cost": 30,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Louvre Museum",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Seine River Cruise",
+        "name": "City Landmark Tour",
         "cost": 25,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.1",
+        "rating": "4.7",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Versailles Tour",
-        "cost": 60,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
+        "name": "National Museum Visit",
+        "cost": 15,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Disneyland Paris",
-        "cost": 100,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.5",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.5",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.8",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -249,81 +269,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-paris",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-paris",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-paris",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-paris",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-paris",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-paris",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-paris",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-paris",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-paris",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-paris",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-paris",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-paris",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-paris",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-paris",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-paris",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-paris",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-paris",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-paris",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-paris",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-paris",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.9",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.6",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.3",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.8",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.2",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -436,64 +664,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Ubud Monkey Forest",
-        "cost": 5,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.3",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Temple Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
+        "name": "National Museum Visit",
+        "cost": 15,
+        "rating": "4.4",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.8",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a3",
-        "name": "Scuba Diving",
-        "cost": 80,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Surfing Lesson",
-        "cost": 30,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Spa Day",
+        "name": "Local Artisan Workshop",
         "cost": 50,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.8",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.5",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -579,81 +827,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-bali",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-bali",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-bali",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-bali",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-bali",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-bali",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-bali",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-bali",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-bali",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-bali",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-bali",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-bali",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-bali",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-bali",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-bali",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-bali",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-bali",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-bali",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-bali",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-bali",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "5.0",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.7",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.4",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.9",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.4",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "5.0",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -766,64 +1222,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Tokyo Skytree",
+        "name": "City Landmark Tour",
         "cost": 25,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.6",
+        "rating": "4.7",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "TeamLab Planets",
-        "cost": 30,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "name": "National Museum Visit",
+        "cost": 15,
         "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Disneyland/DisneySea",
-        "cost": 80,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Mount Fuji Day Trip",
-        "cost": 120,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "5.0",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Akihabara Maid Cafe",
-        "cost": 40,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -907,81 +1383,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-tokyo",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-tokyo",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-tokyo",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-tokyo",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-tokyo",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-tokyo",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-tokyo",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-tokyo",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-tokyo",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-tokyo",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-tokyo",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-tokyo",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-tokyo",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-tokyo",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-tokyo",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-tokyo",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-tokyo",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-tokyo",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-tokyo",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-tokyo",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.9",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.3",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.6",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.4",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.0",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -1094,64 +1778,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Empire State Building",
-        "cost": 45,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Statue of Liberty Cruise",
-        "cost": 30,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Broadway Show",
-        "cost": 150,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "name": "City Landmark Tour",
+        "cost": 25,
         "rating": "4.7",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "MoMA",
-        "cost": 25,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
+        "name": "National Museum Visit",
+        "cost": 15,
+        "rating": "4.3",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Helicopter Tour",
-        "cost": 250,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
         "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "5.0",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -1235,43 +1939,167 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-newyork",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-newyork",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-newyork",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-newyork",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-newyork",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-newyork",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-newyork",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-newyork",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-newyork",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-newyork",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-newyork",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-newyork",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-newyork",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-newyork",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-newyork",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-newyork",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-newyork",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-newyork",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-newyork",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-newyork",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
@@ -1279,37 +2107,121 @@ const destinations = [
         "id": "r1",
         "name": "The Local Spice Route",
         "rating": "4.7",
-        "openingTime": "11:00 AM - 11:00 PM",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.6",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.7",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
+        "name": "Street Bite Hub",
         "rating": "4.2",
-        "openingTime": "06:00 PM - 11:30 PM",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -1422,64 +2334,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Scuba Diving, India",
-        "cost": 40,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.4",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.9",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Dudhsagar Waterfall Trek, India",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "name": "National Museum Visit",
+        "cost": 200,
         "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Spice Plantation Tour, India",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "5.0",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Sunset Cruise, India",
-        "cost": 25,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Parasailing, India",
-        "cost": 30,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -1565,81 +2497,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-goa",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-goa",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-goa",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-goa",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-goa",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-goa",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-goa",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-goa",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-goa",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-goa",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-goa",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-goa",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-goa",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-goa",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-goa",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-goa",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-goa",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-goa",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-goa",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-goa",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.1",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.2",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.4",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.5",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -1752,64 +2892,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Kathakali Performance, India",
-        "cost": 10,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.8",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.5",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Munnar Tea Gardens Tour, India",
-        "cost": 25,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.4",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Periyar Wildlife Safari, India",
-        "cost": 35,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Ayurvedic Massage, India",
-        "cost": 40,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Backwater Canoe Tour, India",
-        "cost": 20,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -1893,81 +3053,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-kerala",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-kerala",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-kerala",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-kerala",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-kerala",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-kerala",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-kerala",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-kerala",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-kerala",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-kerala",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-kerala",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-kerala",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-kerala",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-kerala",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-kerala",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-kerala",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-kerala",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-kerala",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-kerala",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-kerala",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.6",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.9",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.9",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.3",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -2080,64 +3448,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Amber Fort Tour, India",
-        "cost": 15,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "name": "City Landmark Tour",
+        "cost": 500,
         "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Hot Air Balloon Ride, India",
-        "cost": 150,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "City Palace Ticket, India",
-        "cost": 10,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Chokhi Dhani Village Experience, India",
-        "cost": 25,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "National Museum Visit",
+        "cost": 200,
         "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Elephant Ride, India",
-        "cost": 20,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -2221,81 +3609,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-jaipur",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-jaipur",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-jaipur",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-jaipur",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-jaipur",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-jaipur",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-jaipur",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-jaipur",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-jaipur",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-jaipur",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-jaipur",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-jaipur",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-jaipur",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-jaipur",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-jaipur",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-jaipur",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-jaipur",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-jaipur",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-jaipur",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-jaipur",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.9",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.2",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.6",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -2408,64 +4004,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Taj Mahal Entry, India",
-        "cost": 15,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.7",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a2",
-        "name": "Agra Fort, India",
-        "cost": 10,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Fatehpur Sikri Day Trip, India",
-        "cost": 20,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "name": "Secret Garden Photography",
+        "cost": 100,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Mehtab Bagh Sunset, India",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
       },
       {
-        "id": "a5",
-        "name": "Heritage Walk, India",
-        "cost": 12,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.9",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "5.0",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -2549,81 +4165,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-agra",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-agra",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-agra",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-agra",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-agra",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-agra",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-agra",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-agra",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-agra",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-agra",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-agra",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-agra",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-agra",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-agra",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-agra",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-agra",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-agra",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-agra",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-agra",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-agra",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.5",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.1",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.5",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
+        "name": "Street Bite Hub",
         "rating": "4.5",
-        "openingTime": "06:00 PM - 11:30 PM",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -2736,64 +4560,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Red Fort Ticket, India",
-        "cost": 8,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.5",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.7",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Qutub Minar, India",
-        "cost": 8,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "India Gate Walk, India",
+        "name": "Old Town Walking Trail",
         "cost": 0,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "5.0",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Akshardham Temple Tour, India",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Food Tour, India",
-        "cost": 25,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
         "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.4",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -2877,81 +4721,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-newdelhi",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-newdelhi",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-newdelhi",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-newdelhi",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-newdelhi",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-newdelhi",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-newdelhi",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-newdelhi",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-newdelhi",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-newdelhi",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-newdelhi",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-newdelhi",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-newdelhi",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-newdelhi",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-newdelhi",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-newdelhi",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-newdelhi",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-newdelhi",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-newdelhi",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-newdelhi",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.4",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.2",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.9",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.7",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.2",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -3064,64 +5116,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Gateway of India Boat Ride, India",
-        "cost": 5,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.7",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Elephanta Caves Tour, India",
-        "cost": 15,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Marine Drive Walk, India",
+        "name": "Old Town Walking Trail",
         "cost": 0,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.6",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Bollywood Studio Tour, India",
-        "cost": 40,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Dharavi Tour, India",
-        "cost": 12,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
         "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.5",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "December to April",
@@ -3205,81 +5277,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-mumbai",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-mumbai",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-mumbai",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-mumbai",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-mumbai",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-mumbai",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-mumbai",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-mumbai",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-mumbai",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-mumbai",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-mumbai",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-mumbai",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-mumbai",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-mumbai",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-mumbai",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-mumbai",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-mumbai",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-mumbai",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-mumbai",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-mumbai",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.6",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.4",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.4",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.9",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.1",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -3392,64 +5672,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Sunrise Boat Ride, India",
-        "cost": 10,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Ganga Aarti Experience, India",
-        "cost": 0,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Sarnath Tour, India",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "name": "City Landmark Tour",
+        "cost": 500,
         "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Walking Tour of Ghats, India",
-        "cost": 8,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.3",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.8",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 100,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Silk Weaving Village Visit, India",
-        "cost": 12,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -3533,81 +5833,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-varanasi",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-varanasi",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-varanasi",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-varanasi",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-varanasi",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-varanasi",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-varanasi",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-varanasi",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-varanasi",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-varanasi",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-varanasi",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-varanasi",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-varanasi",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-varanasi",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-varanasi",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-varanasi",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-varanasi",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-varanasi",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-varanasi",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-varanasi",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.2",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.5",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.3",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.8",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -3720,64 +6228,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Pangong Lake Trip, India",
-        "cost": 50,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.5",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Nubra Valley Safari, India",
-        "cost": 60,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.3",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Monastery Tour, India",
-        "cost": 20,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Magnetic Hill Visit, India",
-        "cost": 10,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "River Rafting, India",
-        "cost": 30,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "December to April",
@@ -3861,81 +6389,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-ladakh",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-ladakh",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-ladakh",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-ladakh",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-ladakh",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-ladakh",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-ladakh",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-ladakh",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-ladakh",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-ladakh",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-ladakh",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-ladakh",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-ladakh",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-ladakh",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-ladakh",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-ladakh",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-ladakh",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-ladakh",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-ladakh",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-ladakh",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.1",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.9",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.9",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.8",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
+        "name": "Street Bite Hub",
         "rating": "4.4",
-        "openingTime": "06:00 PM - 11:30 PM",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.0",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -4048,64 +6784,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Scuba Diving (Havelock), India",
-        "cost": 60,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Cellular Jail Tour, India",
-        "cost": 10,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Ross Island Visit, India",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Snorkeling, India",
-        "cost": 30,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "City Landmark Tour",
+        "cost": 500,
         "rating": "4.5",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Glass Bottom Boat Ride, India",
-        "cost": 20,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "National Museum Visit",
+        "cost": 200,
         "rating": "4.6",
-        "openingTime": "09:00 AM",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -4191,81 +6947,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-andaman",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-andaman",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-andaman",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-andaman",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-andaman",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-andaman",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-andaman",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-andaman",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-andaman",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-andaman",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-andaman",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-andaman",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-andaman",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-andaman",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-andaman",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-andaman",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-andaman",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-andaman",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-andaman",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-andaman",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.2",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.7",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.5",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.7",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.4",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "5.0",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -4378,64 +7342,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Rohtang Pass Trip, India",
-        "cost": 40,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Solang Valley Adventure, India",
-        "cost": 25,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "name": "National Museum Visit",
+        "cost": 200,
         "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Paragliding, India",
-        "cost": 35,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Hadimba Temple Visit, India",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "Secret Garden Photography",
+        "cost": 100,
         "rating": "4.7",
-        "openingTime": "09:00 AM",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "River Rafting, India",
-        "cost": 20,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.5",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -4520,81 +7504,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-manali",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-manali",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-manali",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-manali",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-manali",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-manali",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-manali",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-manali",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-manali",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-manali",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-manali",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-manali",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-manali",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-manali",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-manali",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-manali",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-manali",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-manali",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-manali",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-manali",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.6",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.3",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.8",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.5",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.6",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -4707,64 +7899,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Tiger Hill Sunrise Tour, India",
-        "cost": 15,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.4",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.6",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Toy Train Ride, India",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.2",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Tea Garden Tour, India",
-        "cost": 10,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Himalayan Mountaineering Institute, India",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Ropeway Ride, India",
-        "cost": 8,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.8",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -4848,81 +8060,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-darjeeling",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-darjeeling",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-darjeeling",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-darjeeling",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-darjeeling",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-darjeeling",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-darjeeling",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-darjeeling",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-darjeeling",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-darjeeling",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-darjeeling",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-darjeeling",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-darjeeling",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-darjeeling",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-darjeeling",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-darjeeling",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-darjeeling",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-darjeeling",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-darjeeling",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-darjeeling",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.2",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.6",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.8",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.3",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
+        "name": "Street Bite Hub",
         "rating": "4.4",
-        "openingTime": "06:00 PM - 11:30 PM",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -5035,64 +8455,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "River Rafting, India",
-        "cost": 20,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.4",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "5.0",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Bungee Jumping, India",
-        "cost": 50,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.5",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Yoga Session, India",
-        "cost": 10,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Ganga Aarti, India",
+        "name": "Old Town Walking Trail",
         "cost": 0,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Beatles Ashram Visit, India",
-        "cost": 8,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.3",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -5176,81 +8616,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-rishikesh",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-rishikesh",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-rishikesh",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-rishikesh",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-rishikesh",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-rishikesh",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-rishikesh",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-rishikesh",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-rishikesh",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-rishikesh",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-rishikesh",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-rishikesh",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-rishikesh",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-rishikesh",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-rishikesh",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-rishikesh",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-rishikesh",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-rishikesh",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-rishikesh",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-rishikesh",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.0",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.9",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.4",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.8",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "5.0",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.2",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -5363,64 +9011,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "City Palace Tour, India",
-        "cost": 10,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.1",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "5.0",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Lake Pichola Boat Ride, India",
-        "cost": 15,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 200,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Sajjangarh Fort Visit, India",
-        "cost": 8,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Bagore Ki Haveli Show, India",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Vintage Car Museum, India",
-        "cost": 6,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.5",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "5.0",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -5504,81 +9172,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-udaipur",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-udaipur",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-udaipur",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-udaipur",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-udaipur",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-udaipur",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-udaipur",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-udaipur",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-udaipur",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-udaipur",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-udaipur",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-udaipur",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-udaipur",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-udaipur",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-udaipur",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-udaipur",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-udaipur",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-udaipur",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-udaipur",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-udaipur",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.2",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.3",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.9",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.8",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
+        "name": "Street Bite Hub",
         "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -5691,64 +9567,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Ajanta",
-        "cost": 14,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.6",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.7",
-        "openingTime": "09:00 AM",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -5832,43 +9728,167 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_ajanta_0",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_ajanta_0",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_ajanta_0",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_ajanta_0",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_ajanta_0",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_ajanta_0",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_ajanta_0",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_ajanta_0",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_ajanta_0",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_ajanta_0",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_ajanta_0",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_ajanta_0",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_ajanta_0",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_ajanta_0",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_ajanta_0",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_ajanta_0",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_ajanta_0",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_ajanta_0",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_ajanta_0",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_ajanta_0",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
@@ -5876,37 +9896,121 @@ const destinations = [
         "id": "r1",
         "name": "The Local Spice Route",
         "rating": "4.3",
-        "openingTime": "11:00 AM - 11:00 PM",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.2",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.4",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.9",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.4",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "5.0",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -6019,64 +10123,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Amarnath Cave",
-        "cost": 17,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.5",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.8",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
         "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -6161,81 +10285,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_amarnathcave_1",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_amarnathcave_1",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_amarnathcave_1",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_amarnathcave_1",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_amarnathcave_1",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_amarnathcave_1",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_amarnathcave_1",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_amarnathcave_1",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_amarnathcave_1",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_amarnathcave_1",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_amarnathcave_1",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_amarnathcave_1",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_amarnathcave_1",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_amarnathcave_1",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_amarnathcave_1",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_amarnathcave_1",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_amarnathcave_1",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_amarnathcave_1",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_amarnathcave_1",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_amarnathcave_1",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.3",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.5",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.6",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.0",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -6348,64 +10680,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Akbar's Tomb",
-        "cost": 10,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "name": "City Landmark Tour",
+        "cost": 25,
         "rating": "4.7",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.8",
-        "openingTime": "09:00 AM",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.8",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.3",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -6489,81 +10841,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_akbarstomb_2",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_akbarstomb_2",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_akbarstomb_2",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_akbarstomb_2",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_akbarstomb_2",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_akbarstomb_2",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_akbarstomb_2",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_akbarstomb_2",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_akbarstomb_2",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_akbarstomb_2",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_akbarstomb_2",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_akbarstomb_2",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_akbarstomb_2",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_akbarstomb_2",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_akbarstomb_2",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_akbarstomb_2",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_akbarstomb_2",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_akbarstomb_2",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_akbarstomb_2",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_akbarstomb_2",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.7",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.0",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.3",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
+        "name": "Street Bite Hub",
         "rating": "4.2",
-        "openingTime": "06:00 PM - 11:30 PM",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -6676,64 +11236,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Amber Palace",
-        "cost": 17,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.7",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.9",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.2",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
         "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -6817,81 +11397,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_amberpalace_3",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_amberpalace_3",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_amberpalace_3",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_amberpalace_3",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_amberpalace_3",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_amberpalace_3",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_amberpalace_3",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_amberpalace_3",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_amberpalace_3",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_amberpalace_3",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_amberpalace_3",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_amberpalace_3",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_amberpalace_3",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_amberpalace_3",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_amberpalace_3",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_amberpalace_3",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_amberpalace_3",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_amberpalace_3",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_amberpalace_3",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_amberpalace_3",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.3",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.7",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.6",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.2",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -7004,64 +11792,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Anand Bhawan",
-        "cost": 10,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
         "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.8",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "5.0",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -7145,81 +11953,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_anandbhawan_4",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_anandbhawan_4",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_anandbhawan_4",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_anandbhawan_4",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_anandbhawan_4",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_anandbhawan_4",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_anandbhawan_4",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_anandbhawan_4",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_anandbhawan_4",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_anandbhawan_4",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_anandbhawan_4",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_anandbhawan_4",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_anandbhawan_4",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_anandbhawan_4",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_anandbhawan_4",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_anandbhawan_4",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_anandbhawan_4",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_anandbhawan_4",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_anandbhawan_4",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_anandbhawan_4",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.6",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.2",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.7",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.4",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.9",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.8",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -7332,64 +12348,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Bhakra Dam",
-        "cost": 19,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.5",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -7473,81 +12509,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_bhakradam_5",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_bhakradam_5",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_bhakradam_5",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_bhakradam_5",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_bhakradam_5",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_bhakradam_5",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_bhakradam_5",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_bhakradam_5",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_bhakradam_5",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_bhakradam_5",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_bhakradam_5",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_bhakradam_5",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_bhakradam_5",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_bhakradam_5",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_bhakradam_5",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_bhakradam_5",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_bhakradam_5",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_bhakradam_5",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_bhakradam_5",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_bhakradam_5",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.6",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.4",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.8",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.7",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.1",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -7660,64 +12904,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Bibi Da Maqbra",
-        "cost": 13,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.1",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.5",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.4",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.6",
-        "openingTime": "09:00 AM",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.3",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "December to April",
@@ -7801,81 +13065,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_bibidamaqbra_6",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_bibidamaqbra_6",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_bibidamaqbra_6",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_bibidamaqbra_6",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_bibidamaqbra_6",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_bibidamaqbra_6",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_bibidamaqbra_6",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_bibidamaqbra_6",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_bibidamaqbra_6",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_bibidamaqbra_6",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_bibidamaqbra_6",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_bibidamaqbra_6",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_bibidamaqbra_6",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_bibidamaqbra_6",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_bibidamaqbra_6",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_bibidamaqbra_6",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_bibidamaqbra_6",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_bibidamaqbra_6",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_bibidamaqbra_6",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_bibidamaqbra_6",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.5",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.4",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.6",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.4",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.5",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.2",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -7988,64 +13460,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Birla Planetarium",
-        "cost": 13,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.3",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.5",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
         "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Secret Garden Photography",
+        "cost": 10,
         "rating": "4.8",
-        "openingTime": "09:00 AM",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -8129,43 +13621,167 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_birlaplanetarium_7",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_birlaplanetarium_7",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_birlaplanetarium_7",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_birlaplanetarium_7",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_birlaplanetarium_7",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_birlaplanetarium_7",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_birlaplanetarium_7",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_birlaplanetarium_7",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_birlaplanetarium_7",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_birlaplanetarium_7",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_birlaplanetarium_7",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_birlaplanetarium_7",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_birlaplanetarium_7",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_birlaplanetarium_7",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_birlaplanetarium_7",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_birlaplanetarium_7",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_birlaplanetarium_7",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_birlaplanetarium_7",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_birlaplanetarium_7",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_birlaplanetarium_7",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
@@ -8173,37 +13789,121 @@ const destinations = [
         "id": "r1",
         "name": "The Local Spice Route",
         "rating": "4.5",
-        "openingTime": "11:00 AM - 11:00 PM",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.3",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.6",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.1",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.0",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -8316,64 +14016,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Black Pagoda",
-        "cost": 16,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.9",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -8457,43 +14177,167 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_blackpagoda_8",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_blackpagoda_8",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_blackpagoda_8",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_blackpagoda_8",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_blackpagoda_8",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_blackpagoda_8",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_blackpagoda_8",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_blackpagoda_8",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_blackpagoda_8",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_blackpagoda_8",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_blackpagoda_8",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_blackpagoda_8",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_blackpagoda_8",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_blackpagoda_8",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_blackpagoda_8",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_blackpagoda_8",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_blackpagoda_8",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_blackpagoda_8",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_blackpagoda_8",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_blackpagoda_8",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
@@ -8501,37 +14345,121 @@ const destinations = [
         "id": "r1",
         "name": "The Local Spice Route",
         "rating": "4.4",
-        "openingTime": "11:00 AM - 11:00 PM",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.4",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.9",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.7",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.1",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -8644,64 +14572,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Bodhisatva",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.9",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.8",
-        "openingTime": "09:00 AM",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.8",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.5",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -8785,81 +14733,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_bodhisatva_9",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_bodhisatva_9",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_bodhisatva_9",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_bodhisatva_9",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_bodhisatva_9",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_bodhisatva_9",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_bodhisatva_9",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_bodhisatva_9",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_bodhisatva_9",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_bodhisatva_9",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_bodhisatva_9",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_bodhisatva_9",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_bodhisatva_9",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_bodhisatva_9",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_bodhisatva_9",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_bodhisatva_9",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_bodhisatva_9",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_bodhisatva_9",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_bodhisatva_9",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_bodhisatva_9",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "5.0",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.4",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.1",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.8",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -8972,64 +15128,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Brihadeeswara Temple",
-        "cost": 12,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
+        "name": "City Landmark Tour",
+        "cost": 25,
         "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
         "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.1",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.8",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.3",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -9113,81 +15289,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_brihadeeswaratemple_10",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_brihadeeswaratemple_10",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_brihadeeswaratemple_10",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_brihadeeswaratemple_10",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_brihadeeswaratemple_10",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_brihadeeswaratemple_10",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_brihadeeswaratemple_10",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_brihadeeswaratemple_10",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_brihadeeswaratemple_10",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_brihadeeswaratemple_10",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_brihadeeswaratemple_10",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_brihadeeswaratemple_10",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_brihadeeswaratemple_10",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_brihadeeswaratemple_10",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_brihadeeswaratemple_10",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_brihadeeswaratemple_10",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_brihadeeswaratemple_10",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_brihadeeswaratemple_10",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_brihadeeswaratemple_10",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_brihadeeswaratemple_10",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.4",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.2",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.7",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.9",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.5",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -9300,64 +15684,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Brindaban Gardens",
-        "cost": 13,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "City Landmark Tour",
+        "cost": 25,
         "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "National Museum Visit",
+        "cost": 15,
         "rating": "4.6",
-        "openingTime": "09:00 AM",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.8",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.8",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "December to April",
@@ -9441,81 +15845,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_brindabangardens_11",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_brindabangardens_11",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_brindabangardens_11",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_brindabangardens_11",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_brindabangardens_11",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_brindabangardens_11",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_brindabangardens_11",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_brindabangardens_11",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_brindabangardens_11",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_brindabangardens_11",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_brindabangardens_11",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_brindabangardens_11",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_brindabangardens_11",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_brindabangardens_11",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_brindabangardens_11",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_brindabangardens_11",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_brindabangardens_11",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_brindabangardens_11",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_brindabangardens_11",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_brindabangardens_11",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.1",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.7",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.8",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.4",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -9628,64 +16240,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Buland Darwaza",
-        "cost": 13,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "5.0",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.9",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
         "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -9769,81 +16401,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_bulanddarwaza_12",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_bulanddarwaza_12",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_bulanddarwaza_12",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_bulanddarwaza_12",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_bulanddarwaza_12",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_bulanddarwaza_12",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_bulanddarwaza_12",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_bulanddarwaza_12",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_bulanddarwaza_12",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_bulanddarwaza_12",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_bulanddarwaza_12",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_bulanddarwaza_12",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_bulanddarwaza_12",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_bulanddarwaza_12",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_bulanddarwaza_12",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_bulanddarwaza_12",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_bulanddarwaza_12",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_bulanddarwaza_12",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_bulanddarwaza_12",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_bulanddarwaza_12",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.3",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.7",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.2",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.4",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.5",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "5.0",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -9956,64 +16796,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Charminar",
-        "cost": 11,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.0",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.9",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
         "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.3",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "October to March",
@@ -10097,81 +16957,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_charminar_13",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_charminar_13",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_charminar_13",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_charminar_13",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_charminar_13",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_charminar_13",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_charminar_13",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_charminar_13",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_charminar_13",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_charminar_13",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_charminar_13",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_charminar_13",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_charminar_13",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_charminar_13",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_charminar_13",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_charminar_13",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_charminar_13",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_charminar_13",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_charminar_13",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_charminar_13",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.0",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.8",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.5",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.3",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "5.0",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -10284,64 +17352,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Cheena Kesava Temple",
-        "cost": 17,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.6",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.7",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "5.0",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.8",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -10425,43 +17513,167 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_cheenakesavatemple_14",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_cheenakesavatemple_14",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_cheenakesavatemple_14",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_cheenakesavatemple_14",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_cheenakesavatemple_14",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_cheenakesavatemple_14",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_cheenakesavatemple_14",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_cheenakesavatemple_14",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_cheenakesavatemple_14",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_cheenakesavatemple_14",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_cheenakesavatemple_14",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_cheenakesavatemple_14",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_cheenakesavatemple_14",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_cheenakesavatemple_14",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_cheenakesavatemple_14",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_cheenakesavatemple_14",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_cheenakesavatemple_14",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_cheenakesavatemple_14",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_cheenakesavatemple_14",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_cheenakesavatemple_14",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
@@ -10469,37 +17681,121 @@ const destinations = [
         "id": "r1",
         "name": "The Local Spice Route",
         "rating": "4.3",
-        "openingTime": "11:00 AM - 11:00 PM",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.5",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.8",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.4",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -10612,64 +17908,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Chilka Lake",
-        "cost": 14,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -10753,81 +18069,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_chilkalake_15",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_chilkalake_15",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_chilkalake_15",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_chilkalake_15",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_chilkalake_15",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_chilkalake_15",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_chilkalake_15",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_chilkalake_15",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_chilkalake_15",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_chilkalake_15",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_chilkalake_15",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_chilkalake_15",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_chilkalake_15",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_chilkalake_15",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_chilkalake_15",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_chilkalake_15",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_chilkalake_15",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_chilkalake_15",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_chilkalake_15",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_chilkalake_15",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.7",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.5",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.2",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.7",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.7",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.2",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -10940,64 +18464,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Dal Lake",
-        "cost": 14,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "name": "City Landmark Tour",
+        "cost": 25,
         "rating": "4.6",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "National Museum Visit",
+        "cost": 15,
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.7",
-        "openingTime": "09:00 AM",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.5",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -11081,81 +18625,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_dallake_16",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_dallake_16",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_dallake_16",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_dallake_16",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_dallake_16",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_dallake_16",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_dallake_16",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_dallake_16",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_dallake_16",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_dallake_16",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_dallake_16",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_dallake_16",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_dallake_16",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_dallake_16",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_dallake_16",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_dallake_16",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_dallake_16",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_dallake_16",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_dallake_16",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_dallake_16",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.5",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.3",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.1",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.9",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.6",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.4",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -11268,64 +19020,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Dilwara Temple",
-        "cost": 14,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "name": "City Landmark Tour",
+        "cost": 25,
         "rating": "4.9",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.6",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.4",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -11409,81 +19181,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_dilwaratemple_17",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_dilwaratemple_17",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_dilwaratemple_17",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_dilwaratemple_17",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_dilwaratemple_17",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_dilwaratemple_17",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_dilwaratemple_17",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_dilwaratemple_17",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_dilwaratemple_17",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_dilwaratemple_17",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_dilwaratemple_17",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_dilwaratemple_17",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_dilwaratemple_17",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_dilwaratemple_17",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_dilwaratemple_17",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_dilwaratemple_17",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_dilwaratemple_17",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_dilwaratemple_17",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_dilwaratemple_17",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_dilwaratemple_17",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.5",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.3",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.4",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.2",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -11596,64 +19576,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Elephanta Caves",
-        "cost": 11,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
+        "name": "City Landmark Tour",
+        "cost": 25,
         "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.3",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.4",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -11737,81 +19737,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_elephantacaves_18",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_elephantacaves_18",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_elephantacaves_18",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_elephantacaves_18",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_elephantacaves_18",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_elephantacaves_18",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_elephantacaves_18",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_elephantacaves_18",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_elephantacaves_18",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_elephantacaves_18",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_elephantacaves_18",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_elephantacaves_18",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_elephantacaves_18",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_elephantacaves_18",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_elephantacaves_18",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_elephantacaves_18",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_elephantacaves_18",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_elephantacaves_18",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_elephantacaves_18",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_elephantacaves_18",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.7",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.2",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "5.0",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.4",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -11924,64 +20132,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Ellora Caves",
-        "cost": 13,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.7",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.5",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.9",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.8",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -12065,81 +20293,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_elloracaves_19",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_elloracaves_19",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_elloracaves_19",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_elloracaves_19",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_elloracaves_19",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_elloracaves_19",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_elloracaves_19",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_elloracaves_19",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_elloracaves_19",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_elloracaves_19",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_elloracaves_19",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_elloracaves_19",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_elloracaves_19",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_elloracaves_19",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_elloracaves_19",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_elloracaves_19",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_elloracaves_19",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_elloracaves_19",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_elloracaves_19",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_elloracaves_19",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "5.0",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.7",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.9",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "5.0",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.2",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.3",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "5.0",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -12252,64 +20688,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Gateway of India",
-        "cost": 19,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
+        "name": "City Landmark Tour",
+        "cost": 500,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "National Museum Visit",
+        "cost": 200,
         "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 1200,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 1500,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.3",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 2000,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 400,
+        "rating": "4.8",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -12393,81 +20849,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_gatewayofindia_20",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 4500,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_gatewayofindia_20",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 3800,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_gatewayofindia_20",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 12000,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_gatewayofindia_20",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 25000,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_gatewayofindia_20",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 3200,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_gatewayofindia_20",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 2800,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_gatewayofindia_20",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 1800,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_gatewayofindia_20",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 1200,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_gatewayofindia_20",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 800,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_gatewayofindia_20",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 3500,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_gatewayofindia_20",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 1500,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_gatewayofindia_20",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 1200,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_gatewayofindia_20",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 1800,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_gatewayofindia_20",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 600,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_gatewayofindia_20",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 900,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_gatewayofindia_20",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 2500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_gatewayofindia_20",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 3500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_gatewayofindia_20",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 5500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_gatewayofindia_20",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 15000,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_gatewayofindia_20",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 8000,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.3",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.6",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 500,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "5.0",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.9",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 1200,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.1",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 200,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 2500,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 1500,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 600,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 800,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 700,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 400,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 2000,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -12580,64 +21244,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Golden Temple",
-        "cost": 14,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.5",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.6",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "5.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.2",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -12721,81 +21405,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_goldentemple_21",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_goldentemple_21",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_goldentemple_21",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_goldentemple_21",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_goldentemple_21",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_goldentemple_21",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_goldentemple_21",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_goldentemple_21",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_goldentemple_21",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_goldentemple_21",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_goldentemple_21",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_goldentemple_21",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_goldentemple_21",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_goldentemple_21",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_goldentemple_21",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_goldentemple_21",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_goldentemple_21",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_goldentemple_21",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_goldentemple_21",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_goldentemple_21",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.2",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.7",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.6",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.0",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -12908,64 +21800,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Gol Gumbaz",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "5.0",
+        "openingTime": "09:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
-        "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.8",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
         "rating": "4.5",
-        "openingTime": "09:00 AM",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.8",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.4",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -13049,81 +21961,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_golgumbaz_22",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_golgumbaz_22",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_golgumbaz_22",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_golgumbaz_22",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_golgumbaz_22",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_golgumbaz_22",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_golgumbaz_22",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_golgumbaz_22",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_golgumbaz_22",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_golgumbaz_22",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_golgumbaz_22",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_golgumbaz_22",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_golgumbaz_22",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_golgumbaz_22",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_golgumbaz_22",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_golgumbaz_22",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_golgumbaz_22",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_golgumbaz_22",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_golgumbaz_22",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_golgumbaz_22",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.7",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.0",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.3",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.7",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.4",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.9",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -13236,64 +22356,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Hanging Gardens",
-        "cost": 18,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.6",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "September to November",
@@ -13377,43 +22517,167 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_hanginggardens_23",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_hanginggardens_23",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_hanginggardens_23",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_hanginggardens_23",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_hanginggardens_23",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_hanginggardens_23",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_hanginggardens_23",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_hanginggardens_23",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_hanginggardens_23",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_hanginggardens_23",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_hanginggardens_23",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_hanginggardens_23",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_hanginggardens_23",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_hanginggardens_23",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_hanginggardens_23",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_hanginggardens_23",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_hanginggardens_23",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_hanginggardens_23",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_hanginggardens_23",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_hanginggardens_23",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
@@ -13421,37 +22685,121 @@ const destinations = [
         "id": "r1",
         "name": "The Local Spice Route",
         "rating": "4.4",
-        "openingTime": "11:00 AM - 11:00 PM",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.5",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.3",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "5.0",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.0",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -13564,64 +22912,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Hawa Mahal",
-        "cost": 17,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.6",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "rating": "4.2",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.8",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "5.0",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -13705,43 +23073,167 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_hawamahal_24",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_hawamahal_24",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_hawamahal_24",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_hawamahal_24",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_hawamahal_24",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_hawamahal_24",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_hawamahal_24",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_hawamahal_24",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_hawamahal_24",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_hawamahal_24",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_hawamahal_24",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_hawamahal_24",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_hawamahal_24",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_hawamahal_24",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_hawamahal_24",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_hawamahal_24",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_hawamahal_24",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_hawamahal_24",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_hawamahal_24",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_hawamahal_24",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
@@ -13749,37 +23241,121 @@ const destinations = [
         "id": "r1",
         "name": "The Local Spice Route",
         "rating": "4.4",
-        "openingTime": "11:00 AM - 11:00 PM",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.9",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.6",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.2",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -13892,64 +23468,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Howrah Bridge",
-        "cost": 10,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.6",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.8",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.0",
-        "openingTime": "09:00 AM",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.8",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.8",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "December to April",
@@ -14033,81 +23629,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_howrahbridge_25",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_howrahbridge_25",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_howrahbridge_25",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_howrahbridge_25",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_howrahbridge_25",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_howrahbridge_25",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_howrahbridge_25",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_howrahbridge_25",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_howrahbridge_25",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_howrahbridge_25",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_howrahbridge_25",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_howrahbridge_25",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_howrahbridge_25",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_howrahbridge_25",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_howrahbridge_25",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_howrahbridge_25",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_howrahbridge_25",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_howrahbridge_25",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_howrahbridge_25",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_howrahbridge_25",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.6",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "5.0",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.7",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.3",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.8",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -14220,64 +24024,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Island Palace",
-        "cost": 19,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.7",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.5",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.9",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.0",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
         "rating": "4.8",
-        "openingTime": "09:00 AM",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.5",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "Year-round",
@@ -14361,81 +24185,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_islandpalace_26",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_islandpalace_26",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_islandpalace_26",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_islandpalace_26",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_islandpalace_26",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_islandpalace_26",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_islandpalace_26",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_islandpalace_26",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_islandpalace_26",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_islandpalace_26",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_islandpalace_26",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_islandpalace_26",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_islandpalace_26",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_islandpalace_26",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_islandpalace_26",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_islandpalace_26",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_islandpalace_26",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_islandpalace_26",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_islandpalace_26",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_islandpalace_26",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.9",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.6",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.9",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.7",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.8",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "3.9",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.4",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -14548,64 +24580,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Itmaad-ud-Daulah's Tomb",
-        "cost": 14,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.2",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.6",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
         "rating": "4.7",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "5.0",
-        "openingTime": "09:00 AM",
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "4.9",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.5",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.9",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.6",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "December to April",
@@ -14689,81 +24741,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_itmaaduddaulahstomb_27",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_itmaaduddaulahstomb_27",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_itmaaduddaulahstomb_27",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_itmaaduddaulahstomb_27",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_itmaaduddaulahstomb_27",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_itmaaduddaulahstomb_27",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_itmaaduddaulahstomb_27",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_itmaaduddaulahstomb_27",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_itmaaduddaulahstomb_27",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_itmaaduddaulahstomb_27",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_itmaaduddaulahstomb_27",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_itmaaduddaulahstomb_27",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_itmaaduddaulahstomb_27",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_itmaaduddaulahstomb_27",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_itmaaduddaulahstomb_27",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_itmaaduddaulahstomb_27",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_itmaaduddaulahstomb_27",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_itmaaduddaulahstomb_27",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_itmaaduddaulahstomb_27",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_itmaaduddaulahstomb_27",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.5",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.7",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
+        "name": "Skyline Bistro",
         "rating": "4.2",
-        "openingTime": "08:00 AM - 09:00 PM",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.7",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.2",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -14876,64 +25136,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Jagannath Temple",
-        "cost": 17,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.9",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "5.0",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.3",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
         "rating": "4.9",
-        "openingTime": "09:00 AM",
+        "openingTime": "06:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.7",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.8",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.7",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -15017,81 +25297,289 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_jagannathtemple_28",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_jagannathtemple_28",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_jagannathtemple_28",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_jagannathtemple_28",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_jagannathtemple_28",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_jagannathtemple_28",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_jagannathtemple_28",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_jagannathtemple_28",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_jagannathtemple_28",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_jagannathtemple_28",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_jagannathtemple_28",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_jagannathtemple_28",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_jagannathtemple_28",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_jagannathtemple_28",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_jagannathtemple_28",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_jagannathtemple_28",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_jagannathtemple_28",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_jagannathtemple_28",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_jagannathtemple_28",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_jagannathtemple_28",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.9",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.7",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.8",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.2",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.4",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.0",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.0",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
   },
@@ -15204,64 +25692,84 @@ const destinations = [
     ],
     "activities": [
       {
-        "id": "a1",
-        "name": "Visit Jahaz Mahal",
-        "cost": 19,
-        "suggestedTime": "Morning (09:00 AM)",
-        "proximity": "Walking distance from center",
-        "description": "A comprehensive guided tour covering the history, architecture, and cultural significance of the site.",
-        "rating": "4.1",
+        "name": "City Landmark Tour",
+        "cost": 25,
+        "rating": "4.9",
         "openingTime": "09:00 AM",
         "closingTime": "06:00 PM",
-        "durationHours": 2
+        "category": "Main"
       },
       {
-        "id": "a2",
-        "name": "Guided City Tour",
-        "cost": 20,
-        "suggestedTime": "Late Morning (11:00 AM)",
-        "proximity": "2 km from hotel",
-        "description": "An adventurous experience perfectly suited for making unforgettable memories with expert instructors.",
-        "rating": "4.4",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
-      },
-      {
-        "id": "a3",
-        "name": "Cultural Show",
+        "name": "National Museum Visit",
         "cost": 15,
-        "suggestedTime": "Afternoon (02:00 PM)",
-        "proximity": "5 km from city center",
-        "description": "Relax and unwind as you take in the breathtaking panoramic views and serene atmosphere.",
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "05:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Old Town Walking Trail",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Secret Garden Photography",
+        "cost": 10,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Hidden Gem"
+      },
+      {
+        "name": "Local Artisan Workshop",
+        "cost": 50,
+        "rating": "5.0",
+        "openingTime": "11:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Sunset View Point Trek",
+        "cost": 0,
+        "rating": "5.0",
+        "openingTime": "04:00 PM",
+        "closingTime": "07:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "River Rafting / Boating",
+        "cost": 70,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Hidden Night Market",
+        "cost": 0,
         "rating": "4.5",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "openingTime": "07:00 PM",
+        "closingTime": "02:00 AM",
+        "category": "Hidden Gem"
       },
       {
-        "id": "a4",
-        "name": "Local Market Walk",
-        "cost": 5,
-        "suggestedTime": "Late Afternoon (04:00 PM)",
-        "proximity": "10 km away",
-        "description": "A cultural deep-dive where you interact with locals and learn about the traditional ways of life.",
-        "rating": "4.6",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Cooking Class (Local Food)",
+        "cost": 100,
+        "rating": "4.7",
+        "openingTime": "10:00 AM",
+        "closingTime": "01:00 PM",
+        "category": "Cultural"
       },
       {
-        "id": "a5",
-        "name": "Premium Sightseeing",
-        "cost": 35,
-        "suggestedTime": "Evening (06:00 PM)",
-        "proximity": "Heart of the city",
-        "description": "An action-packed session full of thrill, ideal for those looking to get their adrenaline pumping.",
-        "rating": "4.2",
-        "openingTime": "09:00 AM",
-        "closingTime": "06:00 PM",
-        "durationHours": 2
+        "name": "Nature Sanctuary Visit",
+        "cost": 30,
+        "rating": "4.4",
+        "openingTime": "07:00 AM",
+        "closingTime": "05:30 PM",
+        "category": "Main"
       }
     ],
     "bestMonths": "November to February",
@@ -15345,84 +25853,522 @@ const destinations = [
       "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
       "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
     ],
-    "cancellationPolicy": [
-      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
-      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
-      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
-    ],
+    "cancellationPolicy": "Full refund if cancelled 7 days before. 50% refund if cancelled 48 hours before. No refund for last-minute cancellations (under 24h). Proceed via 'Manage Booking' in dashboard.",
     "detailedTransport": [
       {
-        "id": "dt1",
-        "type": "Flight",
+        "id": "f1-img_jahazmahal_29",
+        "type": "Economy",
         "agency": "Air India",
         "name": "AI-402 Direct",
-        "departureTime": "08:30 AM",
-        "cost": 5000
+        "cost": 400,
+        "departureTime": "08:30 AM"
       },
       {
-        "id": "dt2",
-        "type": "Train",
+        "id": "f2-img_jahazmahal_29",
+        "type": "Economy",
+        "agency": "IndiGo",
+        "name": "6E-2104",
+        "cost": 350,
+        "departureTime": "10:15 AM"
+      },
+      {
+        "id": "f3-img_jahazmahal_29",
+        "type": "Business",
+        "agency": "Vistara",
+        "name": "UK-812",
+        "cost": 1100,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "f4-img_jahazmahal_29",
+        "type": "Premium",
+        "agency": "Qatar Airways",
+        "name": "QR-501",
+        "cost": 2500,
+        "departureTime": "09:00 PM"
+      },
+      {
+        "id": "f5-img_jahazmahal_29",
+        "type": "Economy",
+        "agency": "SpiceJet",
+        "name": "SG-123",
+        "cost": 300,
+        "departureTime": "06:00 AM"
+      },
+      {
+        "id": "t1-img_jahazmahal_29",
+        "type": "Rajdhani Express",
         "agency": "Indian Railways",
-        "name": "Rajdhani Express",
-        "departureTime": "06:00 AM",
-        "cost": 1500
+        "name": "22435 Platinum",
+        "cost": 80,
+        "departureTime": "04:30 PM"
       },
       {
-        "id": "dt3",
-        "type": "Bus",
-        "agency": "SmartBus",
-        "name": "Volvo AC Sleeper",
-        "departureTime": "22:00 PM",
-        "cost": 800
+        "id": "t2-img_jahazmahal_29",
+        "type": "Shatabdi Express",
+        "agency": "Indian Railways",
+        "name": "12002 Morning",
+        "cost": 60,
+        "departureTime": "06:00 AM"
       },
       {
-        "id": "dt4",
-        "type": "Car",
-        "agency": "YouWe Travel",
-        "name": "Private Sedan",
-        "departureTime": "Flexible",
-        "cost": 2000
+        "id": "t3-img_jahazmahal_29",
+        "type": "Duronto Express",
+        "agency": "Indian Railways",
+        "name": "12260 Sleeper",
+        "cost": 40,
+        "departureTime": "11:00 PM"
+      },
+      {
+        "id": "t4-img_jahazmahal_29",
+        "type": "Garib Rath",
+        "agency": "Indian Railways",
+        "name": "12910 Budget",
+        "cost": 30,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t5-img_jahazmahal_29",
+        "type": "Tejas Express",
+        "agency": "Indian Railways",
+        "name": "22672 Luxury",
+        "cost": 100,
+        "departureTime": "01:30 PM"
+      },
+      {
+        "id": "b1-img_jahazmahal_29",
+        "type": "Volvo Multi-Axle AC",
+        "agency": "Zingbus",
+        "name": "Premium Sleeper",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-img_jahazmahal_29",
+        "type": "Scania AC",
+        "agency": "Orange Travels",
+        "name": "Executive Seater",
+        "cost": 40,
+        "departureTime": "08:00 AM"
+      },
+      {
+        "id": "b3-img_jahazmahal_29",
+        "type": "Mercedes AC",
+        "agency": "SRS Travels",
+        "name": "Night Glide",
+        "cost": 65,
+        "departureTime": "11:30 PM"
+      },
+      {
+        "id": "b4-img_jahazmahal_29",
+        "type": "Semi-Sleeper Non-AC",
+        "agency": "KSRTC",
+        "name": "Janrath",
+        "cost": 25,
+        "departureTime": "07:00 AM"
+      },
+      {
+        "id": "b5-img_jahazmahal_29",
+        "type": "Mini Bus Luxury",
+        "agency": "Local Tour Bus",
+        "name": "Day Explorer",
+        "cost": 35,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-img_jahazmahal_29",
+        "type": "Hatchback (Swift/WagonR)",
+        "agency": "Ola Rentals",
+        "name": "Self-Drive/Chauffeur",
+        "cost": 80,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-img_jahazmahal_29",
+        "type": "Sedan (Dzire/City)",
+        "agency": "Uber Intercity",
+        "name": "Business Class",
+        "cost": 120,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c3-img_jahazmahal_29",
+        "type": "SUV (Innova/Crysta)",
+        "agency": "Zoomcar",
+        "name": "Family Group",
+        "cost": 180,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c4-img_jahazmahal_29",
+        "type": "Luxury Sedan (BMW/Audi)",
+        "agency": "BlackBucks",
+        "name": "Elite Travel",
+        "cost": 500,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c5-img_jahazmahal_29",
+        "type": "Force Traveller (12 Seater)",
+        "agency": "Tempo Travellers",
+        "name": "Group Tourer",
+        "cost": 250,
+        "departureTime": "Flexible"
       }
     ],
     "restaurants": [
       {
         "id": "r1",
         "name": "The Local Spice Route",
-        "rating": "4.1",
-        "openingTime": "11:00 AM - 11:00 PM",
+        "rating": "4.8",
         "menuHighlights": [
           "Authentic Thali",
-          "Spicy Curries",
-          "Local Street Food Sampler"
+          "Spicy Curries"
         ],
-        "averageCost": 400
+        "averageCost": 25,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
       },
       {
         "id": "r2",
-        "name": "Ocean View Cafe",
-        "rating": "4.6",
-        "openingTime": "08:00 AM - 09:00 PM",
+        "name": "Skyline Bistro",
+        "rating": "4.4",
         "menuHighlights": [
-          "Continental Breakfast",
-          "Fresh Seafood",
-          "Artisan Coffee"
+          "Pasta",
+          "Mocktails"
         ],
-        "averageCost": 800
+        "averageCost": 60,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
       },
       {
         "id": "r3",
-        "name": "Royal Heritage Dining",
-        "rating": "4.9",
-        "openingTime": "06:00 PM - 11:30 PM",
+        "name": "Street Bite Hub",
+        "rating": "4.5",
         "menuHighlights": [
-          "Premium Steaks",
-          "Fine Wine",
-          "Chef Tasting Menu"
+          "Burgers",
+          "Local Snacks"
         ],
-        "averageCost": 2500
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      },
+      {
+        "id": "r4",
+        "name": "Royal Dining Palace",
+        "rating": "4.6",
+        "menuHighlights": [
+          "Gourmet Platter",
+          "Fine Wine"
+        ],
+        "averageCost": 120,
+        "category": "Fine Dining",
+        "openingTime": "07:00 PM - 11:30 PM"
+      },
+      {
+        "id": "r5",
+        "name": "Oceanic Seafood",
+        "rating": "4.2",
+        "menuHighlights": [
+          "Grilled Fish",
+          "Lobster"
+        ],
+        "averageCost": 70,
+        "category": "Seafood",
+        "openingTime": "11:00 AM - 10:30 PM"
+      },
+      {
+        "id": "r6",
+        "name": "Green Garden Cafe",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Vegan Bowl",
+          "Smoothies"
+        ],
+        "averageCost": 30,
+        "category": "Vegan",
+        "openingTime": "08:00 AM - 08:00 PM"
+      },
+      {
+        "id": "r7",
+        "name": "Tandoori Tales",
+        "rating": "4.1",
+        "menuHighlights": [
+          "Kebabs",
+          "Biryani"
+        ],
+        "averageCost": 40,
+        "category": "Traditional",
+        "openingTime": "01:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r8",
+        "name": "Wok & Roll",
+        "rating": "4.3",
+        "menuHighlights": [
+          "Dim Sums",
+          "Noodles"
+        ],
+        "averageCost": 35,
+        "category": "Asian",
+        "openingTime": "12:30 PM - 11:00 PM"
+      },
+      {
+        "id": "r9",
+        "name": "Brew & Bake",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Artisan Bread",
+          "Latte"
+        ],
+        "averageCost": 20,
+        "category": "Cafe",
+        "openingTime": "07:00 AM - 09:00 PM"
+      },
+      {
+        "id": "r10",
+        "name": "Steak House 101",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Ribeye",
+          "Mashed Potatoes"
+        ],
+        "averageCost": 90,
+        "category": "Steakhouse",
+        "openingTime": "06:00 PM - 11:00 PM"
       }
     ]
+  },
+  {
+  "id": "andaman",
+  "name": "Amazing Andaman (Port Blair, Havelock & Neil)",
+  "image": "https://images.unsplash.com/photo-1589136142558-74611990c0a7?auto=format&fit=crop&q=80&w=1000",
+  "flights": [
+    {
+      "id": "af1",
+      "type": "Economy (To Port Blair)",
+      "cost": 8000
+    },
+    {
+      "id": "af2",
+      "type": "Business (To Port Blair)",
+      "cost": 18000
+    }
+  ],
+  "hotels": [
+    {
+      "id": "ah1",
+      "type": "Option 1: 3-Star Budget",
+      "costPerNight": 4500,
+      "rating": "3.8",
+      "roomOptions": [
+        {
+          "type": "Standard Room (Sea Deck/Green Imperial)",
+          "cost": 4500
+        }
+      ],
+      "name": "Sea Deck / Green Imperial / Blue Lagoon"
+    },
+    {
+      "id": "ah2",
+      "type": "Option 2: 3-Star Premium",
+      "costPerNight": 5000,
+      "rating": "4.2",
+      "roomOptions": [
+        {
+          "type": "Deluxe Room / Chalet (Bay Leaf/ILE Bay)",
+          "cost": 5000
+        }
+      ],
+      "name": "Bay Leaf Inn / ILE Bay / TSG Aura"
+    },
+    {
+      "id": "ah3",
+      "type": "Option 3: 4-Star Luxury",
+      "costPerNight": 6000,
+      "rating": "4.6",
+      "roomOptions": [
+        {
+          "type": "Deluxe Ocean View / Bamboo Saa",
+          "cost": 6000
+        }
+      ],
+      "name": "Mansha Residency / Sea Hill / Pearl Park"
+    }
+  ],
+  "detailedTransport": [
+    {
+      "id": "at1",
+      "type": "Ferry: Port Blair to Havelock",
+      "agency": "Makruzz/Nautika",
+      "name": "Premium Class",
+      "cost": 1500,
+      "departureTime": "09:30 AM - 02:00 PM"
+    },
+    {
+      "id": "at2",
+      "type": "Ferry: Havelock to Neil",
+      "agency": "Nautika",
+      "name": "Luxury Class",
+      "cost": 1200,
+      "departureTime": "09:30 AM - 12:00 PM"
+    },
+    {
+      "id": "at3",
+      "type": "Ferry: Neil to Port Blair",
+      "agency": "Nautika",
+      "name": "Luxury Class",
+      "cost": 1200,
+      "departureTime": "09:30 AM - 12:00 PM"
+    },
+    {
+      "id": "at4",
+      "type": "Private Car",
+      "agency": "YouWe Travel",
+      "name": "AC Sedan/SUV Sightseeing",
+      "cost": 3500,
+      "departureTime": "Full Day"
+    }
+  ],
+  "activities": [
+    {
+      "name": "Radhanagar Beach Visit",
+      "cost": 0,
+      "rating": "4.9",
+      "openingTime": "06:00 AM",
+      "closingTime": "06:00 PM",
+      "category": "Main"
+    },
+    {
+      "name": "Elephant Beach Speed Boat",
+      "cost": 1000,
+      "rating": "4.8",
+      "openingTime": "08:00 AM",
+      "closingTime": "03:00 PM",
+      "category": "Adventure"
+    },
+    {
+      "name": "Shore Scuba Diving",
+      "cost": 3500,
+      "rating": "4.7",
+      "openingTime": "06:00 AM",
+      "closingTime": "02:00 PM",
+      "category": "Adventure"
+    },
+    {
+      "name": "Kalapathar Beach Sunrise",
+      "cost": 0,
+      "rating": "4.9",
+      "openingTime": "04:30 AM",
+      "closingTime": "07:00 AM",
+      "category": "Traditional"
+    },
+    {
+      "name": "Cellular Jail Light & Sound Show",
+      "cost": 300,
+      "rating": "4.8",
+      "openingTime": "06:00 PM",
+      "closingTime": "08:00 PM",
+      "category": "Cultural"
+    },
+    {
+      "name": "Glass Boat Ride (Bharatpur)",
+      "cost": 500,
+      "rating": "4.5",
+      "openingTime": "10:00 AM",
+      "closingTime": "02:00 PM",
+      "category": "Main"
+    },
+    {
+      "name": "Sitapur Beach Coral Viewing",
+      "cost": 0,
+      "rating": "4.6",
+      "openingTime": "08:00 AM",
+      "closingTime": "04:00 PM",
+      "category": "Main"
+    },
+    {
+      "name": "Corbyn Cove Beach Sightseeing",
+      "cost": 0,
+      "rating": "4.7",
+      "openingTime": "Anytime",
+      "closingTime": "Anytime",
+      "category": "Main"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "ar1",
+      "name": "Local Seafood Special",
+      "category": "Seafood",
+      "rating": "4.8",
+      "menuHighlights": [
+        "Lobster",
+        "Crab",
+        "Fish Curry"
+      ],
+      "openingTime": "12:00 PM - 10:00 PM",
+      "averageCost": 800
+    },
+    {
+      "id": "ar2",
+      "name": "Havelock Beach Cafe",
+      "category": "Cafe",
+      "rating": "4.6",
+      "menuHighlights": [
+        "Grilled Fish",
+        "Pasta",
+        "Coconut Water"
+      ],
+      "openingTime": "08:00 AM - 11:00 PM",
+      "averageCost": 600
+    }
+  ],
+  "cancellationPolicy": "30+ days: 25% charge | 15-30 days: 50% charge | 0-15 days: 100% charge",
+  "packingList": [
+    "Light breathable clothing",
+    "Sunscreen & Sunglasses",
+    "Insect repellent",
+    "Swimwear",
+    "Flip-flops/Sandals",
+    "Waterproof bags",
+    "Medication/First-aid kit",
+    "Reusable water bottle",
+    "Portable charger"
+  ],
+  "knowBeforeYouGo": [
+    "Preferred network: BSNL/Airtel",
+    "Internet rarely works, carry printouts",
+    "ATMs available at Havelock/Port Blair, carry cash for Neil",
+    "Vehicles are point-to-point only",
+    "Cellular jail closed on Mondays",
+    "Sunrise is best experienced early morning"
+  ],
+  "shoppingGuide": "Aberdeen Bazaar (Pearls), Sagarika Govt Emporium (Handicrafts), Shell Jewelry, Coconut Shell decor.",
+  "culturalEtiquette": "Observe decency in dress, especially at places of worship. Do not enter restricted tribal areas.",
+  "inclusions": [
+    "Accommodation with breakfast",
+    "Airport Transfer",
+    "Private Car Ferry transfers",
+    "Premium Ferry charges (Makruzz/Nautika)",
+    "Toll/Parking",
+    "Cellular Jail tickets",
+    "Elephant boat ride"
+  ],
+  "exclusions": [
+    "Other watersports",
+    "Lunch & Dinner",
+    "Personal expenses",
+    "Scuba Diving by boat (5500 INR)"
+  ],
+  "bankDetails": {
+    "name": "You We Travel OPC Private Limited",
+    "bank": "HDFC Bank",
+    "account": "50200093843846",
+    "ifsc": "HDFC0001934",
+    "type": "Current"
   }
+}
 ];
 
 module.exports = destinations;

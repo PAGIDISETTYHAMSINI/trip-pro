@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { MapPin, Wallet, Calendar, Plane, Building, Utensils, Activity, Search, Train, Car, Info, Users, Clock } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 
@@ -102,86 +102,116 @@ export const Home = () => {
 
   return (
     <>
-      <section className="hero container">
-        <h1>Plan Your Dream Trip <br/>Within Your Budget</h1>
-        <p>Tell us where you want to go and how much you want to spend, and we'll craft the perfect itinerary options for you.</p>
-        <div style={{ marginBottom: '3rem' }}>
-          <Link to="/build-trip" className="btn" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.39)' }}>
-            Or Build Your Own Custom Trip
+      <section className="hero container" style={{ textAlign: 'center', padding: '6rem 0' }}>
+        <h1 style={{ fontSize: '4rem', lineHeight: 1.1, marginBottom: '1.5rem', fontWeight: 900, background: 'linear-gradient(to right, var(--primary), #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Travel Smarter.<br/>Not Harder.
+        </h1>
+        <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto 3rem', color: 'var(--text-muted)' }}>
+          The world's first manually-curated, pin-to-pin travel engine. No generic packages—just your budget, your dates, and your style.
+        </p>
+        
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
+          <Link to="/build-trip" className="btn" style={{ padding: '1rem 2rem', fontSize: '1.1rem', background: 'var(--primary)', boxShadow: '0 10px 25px -5px rgba(79, 70, 229, 0.4)' }}>
+            <Activity size={20} /> Build Custom Trip
           </Link>
+          <a href="#featured" className="btn" style={{ padding: '1rem 2rem', fontSize: '1.1rem', background: 'white', color: 'var(--text-main)', border: '1px solid var(--border)' }}>
+            Explore Packages
+          </a>
         </div>
 
-        <div className="planner-form-container glass">
-          <form className="planner-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label><MapPin size={16} style={{display:'inline', marginRight:'4px'}}/> Destination</label>
-              <select 
-                className="input-field" 
-                name="destinationId" 
-                value={formData.destinationId} 
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select a place...</option>
-                <option value="surprise">🎁 Surprise Me!</option>
-                {destinations.map(d => (
-                  <option key={d.id} value={d.id}>{d.name}</option>
-                ))}
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label><Wallet size={16} style={{display:'inline', marginRight:'4px'}}/> Budget ({selectedDestinationInfo?.currencySymbol || '$'})</label>
-              <input 
-                type="number" 
-                className="input-field" 
-                name="budget" 
-                placeholder={selectedDestinationInfo?.currencySymbol === '₹' ? "e.g. 50000" : "e.g. 1500"} 
-                value={formData.budget} 
-                onChange={handleChange}
-                min="10"
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label><Calendar size={16} style={{display:'inline', marginRight:'4px'}}/> Duration (Days)</label>
-              <input 
-                type="number" 
-                className="input-field" 
-                name="days" 
-                value={formData.days} 
-                onChange={handleChange}
-                min="1"
-                required
-              />
-            </div>
-
-            <button type="submit" className="btn">
-              <Search size={20} /> Let's Go
-            </button>
-          </form>
-          {error && <div className="error-message">{error}</div>}
-        </div>
-
-        {selectedDestinationInfo && !isSurprise && (
-          <div className="destination-insights glass" style={{ marginTop: '2rem', padding: '1.5rem', display: 'flex', gap: '2rem', justifyContent: 'center', background: 'rgba(255,255,255,0.8)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Info size={20} color="var(--primary)" />
-              <div>
-                <strong style={{ display: 'block', fontSize: '0.8rem', color: 'var(--text-muted)' }}>Best Months to Visit</strong>
-                <span>{selectedDestinationInfo.bestMonths || 'Year-round'}</span>
-              </div>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Users size={20} color="var(--primary)" />
-              <div>
-                <strong style={{ display: 'block', fontSize: '0.8rem', color: 'var(--text-muted)' }}>Great For</strong>
-                <span>{selectedDestinationInfo.suggestedAgeGroups || 'All Age Groups'}</span>
-              </div>
-            </div>
+        {/* Quick Stats */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '4rem', marginBottom: '5rem', opacity: 0.7 }}>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>50+</div>
+            <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', tracking: '0.1em' }}>Destinations</div>
           </div>
-        )}
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>12k+</div>
+            <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', tracking: '0.1em' }}>Trips Planned</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>4.9/5</div>
+            <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', tracking: '0.1em' }}>User Rating</div>
+          </div>
+        </div>
+
+        <div id="featured" style={{ marginTop: '6rem' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Signature Featured Packages</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            {[
+              { id: 'andaman', name: 'Amazing Andaman', price: '₹18,000', img: 'https://images.unsplash.com/photo-1589136142558-74611990c0a7?auto=format&fit=crop&q=80&w=600', tag: 'Bestseller' },
+              { id: 'paris', name: 'Romance in Paris', price: '$1,200', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=600', tag: 'Luxury' },
+              { id: 'tokyo', name: 'Tokyo Explorer', price: '$1,500', img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=600', tag: 'Modern' }
+            ].map(pkg => (
+              <div key={pkg.id} className="glass" style={{ padding: '0', overflow: 'hidden', cursor: 'pointer' }} onClick={() => navigate('/build-trip')}>
+                <div style={{ height: '200px', background: `url(${pkg.img}) center/cover` }}>
+                  <span style={{ margin: '1rem', display: 'inline-block', background: 'var(--primary)', color: 'white', padding: '0.25rem 0.75rem', borderRadius: '20px', fontSize: '0.7rem', fontWeight: 800 }}>{pkg.tag}</span>
+                </div>
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ marginBottom: '0.5rem' }}>{pkg.name}</h3>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>Starting from {pkg.price} per person</p>
+                  <button className="btn" style={{ width: '100%', background: 'transparent', border: '1px solid var(--primary)', color: 'var(--primary)' }}>View Details</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ marginTop: '8rem', maxWidth: '900px', margin: '8rem auto 0' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Intelligent Trip Planner</h2>
+          <div className="planner-form-container glass" style={{ padding: '3rem' }}>
+            <form className="planner-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label><MapPin size={16} style={{display:'inline', marginRight:'4px'}}/> Destination</label>
+                <select 
+                  className="input-field" 
+                  name="destinationId" 
+                  value={formData.destinationId} 
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select a place...</option>
+                  <option value="surprise">🎁 Surprise Me!</option>
+                  {destinations.map(d => (
+                    <option key={d.id} value={d.id}>{d.name}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label><Wallet size={16} style={{display:'inline', marginRight:'4px'}}/> Budget ({selectedDestinationInfo?.currencySymbol || '$'})</label>
+                <input 
+                  type="number" 
+                  className="input-field" 
+                  name="budget" 
+                  placeholder={selectedDestinationInfo?.currencySymbol === '₹' ? "e.g. 50000" : "e.g. 1500"} 
+                  value={formData.budget} 
+                  onChange={handleChange}
+                  min="10"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label><Calendar size={16} style={{display:'inline', marginRight:'4px'}}/> Duration (Days)</label>
+                <input 
+                  type="number" 
+                  className="input-field" 
+                  name="days" 
+                  value={formData.days} 
+                  onChange={handleChange}
+                  min="1"
+                  required
+                />
+              </div>
+
+              <button type="submit" className="btn" style={{ height: '54px' }}>
+                <Search size={20} /> Create Itinerary
+              </button>
+            </form>
+            {error && <div className="error-message" style={{ marginTop: '1.5rem' }}>{error}</div>}
+          </div>
+        </div>
       </section>
 
       {searched && (
@@ -235,16 +265,22 @@ export const Home = () => {
                   </div>
 
                   <div className="cost-breakdown">
+                    {/* Visual Progress Bar Breakdown */}
+                    <div style={{ height: '8px', background: '#eee', borderRadius: '4px', display: 'flex', overflow: 'hidden', marginBottom: '1.5rem' }}>
+                      <div style={{ width: `${(itinerary.breakdown.transport / itinerary.totalCost) * 100}%`, background: 'var(--primary)' }}></div>
+                      <div style={{ width: `${(itinerary.breakdown.hotel / itinerary.totalCost) * 100}%`, background: '#8b5cf6' }}></div>
+                      <div style={{ width: `${(itinerary.breakdown.food / itinerary.totalCost) * 100}%`, background: '#10b981' }}></div>
+                      <div style={{ width: `${(itinerary.breakdown.activities / itinerary.totalCost) * 100}%`, background: '#f59e0b' }}></div>
+                    </div>
+
                     <div className="breakdown-item">
                       <div className="item-info">
-                        <div className="item-icon">
-                          {itinerary.transport.method === 'Train' ? <Train size={20} /> : 
-                           itinerary.transport.method === 'Car' ? <Car size={20} /> : 
-                           <Plane size={20} />}
+                        <div className="item-icon" style={{ background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)' }}>
+                          {itinerary.transport.method === 'Train' ? <Train size={18} /> : itinerary.transport.method === 'Car' ? <Car size={18} /> : <Plane size={18} />}
                         </div>
                         <div>
                           <strong>{itinerary.transport.method}</strong>
-                          <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.transport.type}</div>
+                          <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>{itinerary.transport.type}</div>
                         </div>
                       </div>
                       <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.transport.toLocaleString()}</div>
@@ -252,10 +288,10 @@ export const Home = () => {
 
                     <div className="breakdown-item">
                       <div className="item-info">
-                        <div className="item-icon"><Building size={20} /></div>
+                        <div className="item-icon" style={{ background: 'rgba(139, 92, 246, 0.1)', color: '#8b5cf6' }}><Building size={18} /></div>
                         <div>
-                          <strong>Hotel ({formData.days} nights)</strong>
-                          <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.hotel.type}</div>
+                          <strong>Stay ({formData.days} nights)</strong>
+                          <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>{itinerary.hotel.type}</div>
                         </div>
                       </div>
                       <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.hotel.toLocaleString()}</div>
@@ -263,10 +299,10 @@ export const Home = () => {
 
                     <div className="breakdown-item">
                       <div className="item-info">
-                        <div className="item-icon"><Utensils size={20} /></div>
+                        <div className="item-icon" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981' }}><Utensils size={18} /></div>
                         <div>
-                          <strong>Food ({formData.days} days)</strong>
-                          <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.food.type}</div>
+                          <strong>Dining</strong>
+                          <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>{itinerary.food.type}</div>
                         </div>
                       </div>
                       <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.food.toLocaleString()}</div>
@@ -275,10 +311,10 @@ export const Home = () => {
                     {itinerary.activities.length > 0 && (
                       <div className="breakdown-item" style={{borderBottom: 'none'}}>
                         <div className="item-info">
-                          <div className="item-icon"><Activity size={20} /></div>
+                          <div className="item-icon" style={{ background: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b' }}><Activity size={18} /></div>
                           <div>
-                            <strong>Activities</strong>
-                            <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.activities.length} included</div>
+                            <strong>Activities ({itinerary.activities.length})</strong>
+                            <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>Smart Scheduled</div>
                           </div>
                         </div>
                         <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.activities.toLocaleString()}</div>

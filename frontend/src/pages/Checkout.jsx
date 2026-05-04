@@ -28,17 +28,19 @@ export const Checkout = () => {
       // Simulate payment delay
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      const bookingData = {
-        destinationId: destination.id,
-        destinationName: destination.name,
-        totalCost: itinerary.totalCost,
-        days: days,
-        itineraryDetails: itinerary
-      };
+      if (token) {
+        const bookingData = {
+          destinationId: destination.id,
+          destinationName: destination.name,
+          totalCost: itinerary.totalCost,
+          days: days,
+          itineraryDetails: itinerary
+        };
 
-      await axios.post('http://localhost:5000/api/bookings', bookingData, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
+        await axios.post('http://localhost:5000/api/bookings', bookingData, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+      }
 
       navigate('/success', { state: { destinationName: destination.name, totalCost: itinerary.totalCost } });
     } catch (err) {
@@ -92,16 +94,42 @@ export const Checkout = () => {
 
 export const Success = () => {
   const location = useLocation();
+  const { token } = useContext(AuthContext);
   const destinationName = location.state?.destinationName;
+  const totalCost = location.state?.totalCost;
 
   return (
     <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '80vh', textAlign: 'center' }}>
-      <CheckCircle size={80} color="var(--primary)" style={{ marginBottom: '1rem' }} />
-      <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Payment Successful!</h1>
-      <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>
-        Your trip to <strong>{destinationName}</strong> has been successfully booked. 
-      </p>
-      <Link to="/" className="btn">Plan Another Trip</Link>
+      <div className="fade-in">
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          <CheckCircle size={100} color="#10b981" style={{ marginBottom: '1.5rem' }} />
+          <div className="confetti-sim" style={{ position: 'absolute', top: 0, left: 0 }}></div>
+        </div>
+        <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', fontWeight: 900, color: 'var(--text-main)' }}>You're Going to {destinationName}!</h1>
+        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '600px' }}>
+          Pack your bags! Your dream trip has been confirmed. A detailed itinerary and booking receipt have been sent to your dashboard.
+        </p>
+
+        <div className="glass" style={{ padding: '2rem', marginBottom: '3rem', border: '2px solid #10b981', background: 'rgba(16, 185, 129, 0.05)' }}>
+          <h3 style={{ marginBottom: '0.5rem', color: '#10b981' }}>Booking Confirmed</h3>
+          <p style={{ fontSize: '1.5rem', fontWeight: 800 }}>Total Paid: {totalCost?.toLocaleString() ? (destinationName.includes('Andaman') ? '₹' : '$') + totalCost.toLocaleString() : '---'}</p>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+          {token ? (
+            <Link to="/dashboard" className="btn" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.39)' }}>
+              View My Schedule
+            </Link>
+          ) : (
+            <Link to="/login" className="btn" style={{ background: 'var(--primary)', boxShadow: '0 4px 14px 0 rgba(79, 70, 229, 0.39)' }}>
+              Log in to Save Trip
+            </Link>
+          )}
+          <Link to="/" className="btn" style={{ background: 'white', color: 'var(--text-main)', border: '1px solid var(--border)' }}>
+            Return to Home
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
