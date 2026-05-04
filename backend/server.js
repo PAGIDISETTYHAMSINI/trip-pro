@@ -17,7 +17,8 @@ app.get('/api/destinations', (req, res) => {
   const minimalDestinations = destinations.map(d => ({
     id: d.id,
     name: d.name,
-    image: d.image
+    image: d.image,
+    currencySymbol: d.name.includes('India') ? '₹' : '$'
   }));
   res.json(minimalDestinations);
 });
@@ -50,13 +51,22 @@ app.get('/api/itineraries', (req, res) => {
     return res.status(404).json({ error: "Destination not found" });
   }
 
+  const isIndian = destination.name.includes('India');
+  const rate = isIndian ? 83 : 1;
+  const currencySymbol = isIndian ? '₹' : '$';
+
   const validItineraries = [];
 
   // Generate itineraries by iterating over flights, hotels, and food options
-  for (const flight of destination.flights) {
-    for (const hotel of destination.hotels) {
-      for (const food of destination.foodOptions) {
+  for (const flightBase of destination.flights) {
+    for (const hotelBase of destination.hotels) {
+      for (const foodBase of destination.foodOptions) {
         
+        const flight = { ...flightBase, cost: flightBase.cost * rate };
+        const hotel = { ...hotelBase, costPerNight: hotelBase.costPerNight * rate };
+        const food = { ...foodBase, costPerDay: foodBase.costPerDay * rate };
+        const activities = destination.activities.map(a => ({ ...a, cost: a.cost * rate }));
+
         const baseCost = flight.cost + (hotel.costPerNight * daysNum) + (food.costPerDay * daysNum);
         
         if (baseCost <= budgetNum) {
@@ -65,8 +75,8 @@ app.get('/api/itineraries', (req, res) => {
           
           // Generate all combinations of activities
           let allActivityCombos = [[]]; // Start with 0 activities
-          for (let i = 1; i <= destination.activities.length; i++) {
-            getCombinations(destination.activities, i, 0, [], allActivityCombos);
+          for (let i = 1; i <= activities.length; i++) {
+            getCombinations(activities, i, 0, [], allActivityCombos);
           }
           
           // Filter activity combos that fit in remaining budget and sort by most expensive (closest to budget)
@@ -88,6 +98,7 @@ app.get('/api/itineraries', (req, res) => {
               food: { ...food, totalCost: food.costPerDay * daysNum },
               activities: combo,
               totalCost,
+              currencySymbol,
               breakdown: {
                 flight: flight.cost,
                 hotel: hotel.costPerNight * daysNum,

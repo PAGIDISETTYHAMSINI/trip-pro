@@ -97,15 +97,15 @@ export const Home = () => {
             </div>
 
             <div className="form-group">
-              <label><Wallet size={16} style={{display:'inline', marginRight:'4px'}}/> Budget ($)</label>
+              <label><Wallet size={16} style={{display:'inline', marginRight:'4px'}}/> Budget ({selectedDestinationInfo?.currencySymbol || '$'})</label>
               <input 
                 type="number" 
                 className="input-field" 
                 name="budget" 
-                placeholder="e.g. 1500" 
+                placeholder={selectedDestinationInfo?.currencySymbol === '₹' ? "e.g. 50000" : "e.g. 1500"} 
                 value={formData.budget} 
                 onChange={handleChange}
-                min="100"
+                min="10"
                 required
               />
             </div>
@@ -142,7 +142,7 @@ export const Home = () => {
             ) : itineraries.length > 0 ? (
               <>
                 <h2>Curated Options for {selectedDestinationInfo?.name}</h2>
-                <p className="text-muted">We found {itineraries.length} ways to make your trip happen under ${formData.budget}.</p>
+                <p className="text-muted">We found {itineraries.length} ways to make your trip happen under {selectedDestinationInfo?.currencySymbol}{formData.budget}.</p>
               </>
             ) : (
               <>
@@ -158,7 +158,7 @@ export const Home = () => {
                 <div key={index} className="itinerary-card glass">
                   <div className="card-header">
                     <h3>Option {index + 1}</h3>
-                    <div className="total-cost">${itinerary.totalCost.toLocaleString()}</div>
+                    <div className="total-cost">{itinerary.currencySymbol}{itinerary.totalCost.toLocaleString()}</div>
                   </div>
 
                   <div className="cost-breakdown">
@@ -170,7 +170,7 @@ export const Home = () => {
                           <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.flight.type}</div>
                         </div>
                       </div>
-                      <div style={{fontWeight: 600}}>${itinerary.breakdown.flight}</div>
+                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.flight.toLocaleString()}</div>
                     </div>
 
                     <div className="breakdown-item">
@@ -181,7 +181,7 @@ export const Home = () => {
                           <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.hotel.type}</div>
                         </div>
                       </div>
-                      <div style={{fontWeight: 600}}>${itinerary.breakdown.hotel}</div>
+                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.hotel.toLocaleString()}</div>
                     </div>
 
                     <div className="breakdown-item">
@@ -192,7 +192,7 @@ export const Home = () => {
                           <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.food.type}</div>
                         </div>
                       </div>
-                      <div style={{fontWeight: 600}}>${itinerary.breakdown.food}</div>
+                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.food.toLocaleString()}</div>
                     </div>
 
                     {itinerary.activities.length > 0 && (
@@ -204,7 +204,7 @@ export const Home = () => {
                             <div style={{fontSize: '0.8rem', color: 'var(--text-muted)'}}>{itinerary.activities.length} included</div>
                           </div>
                         </div>
-                        <div style={{fontWeight: 600}}>${itinerary.breakdown.activities}</div>
+                        <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.activities.toLocaleString()}</div>
                       </div>
                     )}
                   </div>

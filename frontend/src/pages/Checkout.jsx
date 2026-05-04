@@ -56,7 +56,7 @@ export const Checkout = () => {
           <h3>Trip Summary</h3>
           <p><strong>Destination:</strong> {destination.name}</p>
           <p><strong>Duration:</strong> {days} Days</p>
-          <p><strong>Total Amount:</strong> <span style={{ color: 'var(--primary)', fontSize: '1.25rem', fontWeight: 'bold' }}>${itinerary.totalCost.toLocaleString()}</span></p>
+          <p><strong>Total Amount:</strong> <span style={{ color: 'var(--primary)', fontSize: '1.25rem', fontWeight: 'bold' }}>{itinerary.currencySymbol || '$'}{itinerary.totalCost.toLocaleString()}</span></p>
         </div>
 
         {error && <div className="error-message" style={{ marginBottom: '1rem' }}>{error}</div>}
@@ -82,7 +82,7 @@ export const Checkout = () => {
           </div>
           
           <button type="submit" className="btn" style={{ width: '100%', marginTop: '1rem', height: '50px' }} disabled={loading}>
-            {loading ? 'Processing Payment...' : `Pay $${itinerary.totalCost.toLocaleString()}`}
+            {loading ? 'Processing Payment...' : `Pay ${itinerary.currencySymbol || '$'}${itinerary.totalCost.toLocaleString()}`}
           </button>
         </form>
       </div>

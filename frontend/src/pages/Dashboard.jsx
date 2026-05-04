@@ -60,7 +60,7 @@ export const Dashboard = () => {
               </div>
               <div style={{ textAlign: 'right' }}>
                 <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--primary)' }}>
-                  ${booking.totalCost.toLocaleString()}
+                  {booking.itineraryDetails.currencySymbol || '$'}{booking.totalCost.toLocaleString()}
                 </div>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem', padding: '0.25rem 0.75rem', background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 600 }}>
                   <CreditCard size={14} /> Status: {booking.status}
