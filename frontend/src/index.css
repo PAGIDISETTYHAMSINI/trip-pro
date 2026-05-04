@@ -334,6 +334,53 @@ header {
   border: 1px solid #f87171;
 }
 
+/* Accordion Styles */
+.agency-accordion {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.agency-accordion:last-child {
+  border-bottom: none;
+}
+
+.agency-accordion summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none; /* Hide default arrow */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--dark);
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.agency-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.agency-accordion summary:hover {
+  background: rgba(79, 70, 229, 0.05);
+}
+
+.agency-accordion[open] summary {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.agency-accordion ul {
+  padding-left: 2.5rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.agency-accordion li {
+  margin-bottom: 0.5rem;
+}
+
 @media print {
   .print-hide {
     display: none !important;

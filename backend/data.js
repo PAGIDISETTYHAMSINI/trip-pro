@@ -135,7 +135,60 @@ const destinations = [
     ],
     "language": "fr",
     "culturalEtiquette": "Always say 'Bonjour' when entering a shop. Service is included in bills, but a small tip for exceptional service is polite.",
-    "emergencyContacts": "Emergency: 112 | Police: 17 | Ambulance: 15"
+    "emergencyContacts": "Emergency: 112 | Police: 17 | Ambulance: 15",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "bali",
@@ -273,7 +326,62 @@ const destinations = [
     ],
     "language": "id",
     "culturalEtiquette": "Dress modestly. Never point with your index finger; use your thumb instead. Remove shoes before entering homes.",
-    "emergencyContacts": "Police: 110 | Ambulance: 118"
+    "emergencyContacts": "Police: 110 | Ambulance: 118",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Light clothing: breathable clothes suitable for hot and humid weather.",
+      "Sunscreen and sunglasses.",
+      "Swimwear and beach towels.",
+      "Waterproof bags for water activities.",
+      "Flip-flops or sandals.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "tokyo",
@@ -411,7 +519,60 @@ const destinations = [
     ],
     "language": "ja",
     "culturalEtiquette": "Do NOT tip; it can be considered rude. Bowing is the standard greeting. Keep quiet on public transport.",
-    "emergencyContacts": "Police: 110 | Ambulance/Fire: 119"
+    "emergencyContacts": "Police: 110 | Ambulance/Fire: 119",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "newyork",
@@ -549,7 +710,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Tipping is practically mandatory for services (15-20% at restaurants). Personal space is highly valued.",
-    "emergencyContacts": "Emergency: 911"
+    "emergencyContacts": "Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "goa",
@@ -687,7 +901,62 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Light clothing: breathable clothes suitable for hot and humid weather.",
+      "Sunscreen and sunglasses.",
+      "Swimwear and beach towels.",
+      "Waterproof bags for water activities.",
+      "Flip-flops or sandals.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "kerala",
@@ -825,7 +1094,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "jaipur",
@@ -963,7 +1285,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "agra",
@@ -1101,7 +1476,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "newdelhi",
@@ -1239,7 +1667,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "mumbai",
@@ -1377,7 +1858,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "varanasi",
@@ -1515,7 +2049,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "ladakh",
@@ -1653,7 +2240,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "andaman",
@@ -1791,7 +2431,62 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Light clothing: breathable clothes suitable for hot and humid weather.",
+      "Sunscreen and sunglasses.",
+      "Swimwear and beach towels.",
+      "Waterproof bags for water activities.",
+      "Flip-flops or sandals.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "manali",
@@ -1929,7 +2624,61 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Heavy woolens and thermal innerwear.",
+      "Sturdy trekking shoes.",
+      "Windproof and waterproof jackets.",
+      "Moisturizers and lip balm for cold winds.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "darjeeling",
@@ -2067,7 +2816,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "rishikesh",
@@ -2205,7 +3007,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "udaipur",
@@ -2343,7 +3198,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_ajanta_0",
@@ -2481,7 +3389,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_amarnathcave_1",
@@ -2619,7 +3580,61 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Heavy woolens and thermal innerwear.",
+      "Sturdy trekking shoes.",
+      "Windproof and waterproof jackets.",
+      "Moisturizers and lip balm for cold winds.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_akbarstomb_2",
@@ -2757,7 +3772,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_amberpalace_3",
@@ -2895,7 +3963,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_anandbhawan_4",
@@ -3033,7 +4154,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_bhakradam_5",
@@ -3171,7 +4345,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_bibidamaqbra_6",
@@ -3309,7 +4536,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_birlaplanetarium_7",
@@ -3447,7 +4727,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_blackpagoda_8",
@@ -3585,7 +4918,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_bodhisatva_9",
@@ -3723,7 +5109,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_brihadeeswaratemple_10",
@@ -3861,7 +5300,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_brindabangardens_11",
@@ -3999,7 +5491,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_bulanddarwaza_12",
@@ -4137,7 +5682,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_charminar_13",
@@ -4275,7 +5873,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_cheenakesavatemple_14",
@@ -4413,7 +6064,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_chilkalake_15",
@@ -4551,7 +6255,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_dallake_16",
@@ -4689,7 +6446,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_dilwaratemple_17",
@@ -4827,7 +6637,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_elephantacaves_18",
@@ -4965,7 +6828,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_elloracaves_19",
@@ -5103,7 +7019,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_gatewayofindia_20",
@@ -5241,7 +7210,60 @@ const destinations = [
     ],
     "language": "hi",
     "culturalEtiquette": "Dress modestly, especially at religious sites. Remove shoes before entering temples. Tipping is optional but appreciated (10%). Use your right hand for eating and passing items.",
-    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112"
+    "emergencyContacts": "Police: 100 | Ambulance: 102 | Emergency: 112",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_goldentemple_21",
@@ -5379,7 +7401,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_golgumbaz_22",
@@ -5517,7 +7592,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_hanginggardens_23",
@@ -5655,7 +7783,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_hawamahal_24",
@@ -5793,7 +7974,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_howrahbridge_25",
@@ -5931,7 +8165,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_islandpalace_26",
@@ -6069,7 +8356,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_itmaaduddaulahstomb_27",
@@ -6207,7 +8547,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_jagannathtemple_28",
@@ -6345,7 +8738,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   },
   {
     "id": "img_jahazmahal_29",
@@ -6483,7 +8929,60 @@ const destinations = [
     ],
     "language": "en",
     "culturalEtiquette": "Dress comfortably and respect local customs. Tipping is generally appreciated (10-15%).",
-    "emergencyContacts": "Local Emergency: 911"
+    "emergencyContacts": "Local Emergency: 911",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Private transfers for arrival and departure",
+      "Toll and parking charges",
+      "All activities and sightseeing mentioned in the schedule",
+      "24/7 dedicated customer support during the trip"
+    ],
+    "exclusions": [
+      "Lunch and dinner (unless explicitly added)",
+      "Personal expenses (laundry, phone calls, room service)",
+      "Optional watersports or adventure activities not in itinerary",
+      "Flights/Train tickets to the starting point (if not selected in transport)"
+    ],
+    "packingList": [
+      "Comfortable walking shoes for city tours.",
+      "Smart casuals for evening dining.",
+      "A light jacket or cardigan.",
+      "Medication and first-aid kit",
+      "Reusable water bottle",
+      "Camera or smartphone",
+      "Cash and important documents",
+      "Portable charger"
+    ],
+    "shoppingGuide": {
+      "whatToShop": [
+        "Local authentic handicrafts and souvenirs",
+        "Traditional clothing and textiles",
+        "Eco-friendly local products"
+      ],
+      "whereToShop": [
+        "Main City Bazaar",
+        "Government Emporium for authentic crafts",
+        "Local Street Markets"
+      ]
+    },
+    "knowBeforeYouGo": [
+      "Internet/data may be spotty in remote areas, keep offline PDFs.",
+      "ATMs are generally available but carry sufficient cash for local vendors.",
+      "Vehicles are point-to-point, deviations may cost extra.",
+      "Confirm schedule timings with your driver every evening.",
+      "Keep the environment clean and dispose of garbage properly."
+    ],
+    "policies": [
+      "Drivers are strictly prohibited from using phones while driving. In case of emergencies, a 5-10 minutes allowance is given.",
+      "The use of tobacco or cigarettes is strictly prohibited during travel.",
+      "We prioritize senior-friendly accommodations with accessible restaurants and rooms.",
+      "Please inform us if wheelchair access is required; we'll ensure arrangements are made."
+    ],
+    "cancellationPolicy": [
+      "If cancellations are made 30 days before the date of travel then 25% of total tour cost will be charged.",
+      "If cancellations are made 15 days to 30 days before the date of travel then 50% of total tour cost will be charged.",
+      "If cancellations are made 0 days to 15 days before the date of travel then 100% of total tour cost will be charged."
+    ]
   }
 ];
 

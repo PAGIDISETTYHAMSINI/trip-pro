@@ -44,10 +44,26 @@ export const TripSchedule = () => {
 
   return (
     <div className="container" style={{ padding: '4rem 0' }}>
-      <Link to="/dashboard" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '2rem', textDecoration: 'none', fontWeight: 600 }}>
+      <Link to="/dashboard" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '1.5rem', textDecoration: 'none', fontWeight: 600 }}>
         <ArrowLeft size={16} /> Back to Dashboard
       </Link>
       
+      {/* Hero Image */}
+      <div className="hero-image print-hide" style={{ 
+        width: '100%', 
+        height: '350px', 
+        borderRadius: '16px', 
+        overflow: 'hidden',
+        marginBottom: '2rem',
+        boxShadow: 'var(--glass-shadow)'
+      }}>
+        <img 
+          src={`https://picsum.photos/seed/${booking.destinationName.replace(/[^a-zA-Z]/g, '')}/1200/400`} 
+          alt={booking.destinationName} 
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+        />
+      </div>
+
       <div className="glass print-hide" style={{ padding: '2rem', marginBottom: '2rem', borderLeft: '5px solid var(--primary)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
@@ -139,6 +155,80 @@ export const TripSchedule = () => {
           </div>
         ))}
       </div>
+
+      {/* Agency Tour Package Details (Accordions) */}
+      <h2 style={{ marginTop: '4rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>Tour Package Essentials</h2>
+      
+      <div className="accordion-group glass" style={{ padding: '1rem' }}>
+        
+        {booking.itineraryDetails.inclusions && (
+          <details className="agency-accordion">
+            <summary>✅ Inclusions</summary>
+            <ul>
+              {booking.itineraryDetails.inclusions.map((item, i) => <li key={i}>{item}</li>)}
+            </ul>
+          </details>
+        )}
+
+        {booking.itineraryDetails.exclusions && (
+          <details className="agency-accordion">
+            <summary>❌ Exclusions</summary>
+            <ul>
+              {booking.itineraryDetails.exclusions.map((item, i) => <li key={i}>{item}</li>)}
+            </ul>
+          </details>
+        )}
+
+        {booking.itineraryDetails.packingList && (
+          <details className="agency-accordion">
+            <summary>🎒 Packing List</summary>
+            <ul>
+              {booking.itineraryDetails.packingList.map((item, i) => <li key={i}>{item}</li>)}
+            </ul>
+          </details>
+        )}
+
+        {booking.itineraryDetails.shoppingGuide && (
+          <details className="agency-accordion">
+            <summary>🛍️ Shopping Guide</summary>
+            <div style={{ padding: '0.5rem 0' }}>
+              <h4 style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>What to Shop</h4>
+              <ul>{booking.itineraryDetails.shoppingGuide.whatToShop.map((item, i) => <li key={i}>{item}</li>)}</ul>
+              <h4 style={{ color: 'var(--primary)', marginTop: '1rem', marginBottom: '0.5rem' }}>Where to Shop</h4>
+              <ul>{booking.itineraryDetails.shoppingGuide.whereToShop.map((item, i) => <li key={i}>{item}</li>)}</ul>
+            </div>
+          </details>
+        )}
+
+        {booking.itineraryDetails.knowBeforeYouGo && (
+          <details className="agency-accordion">
+            <summary>ℹ️ Know Before You Go</summary>
+            <ul>
+              {booking.itineraryDetails.knowBeforeYouGo.map((item, i) => <li key={i}>{item}</li>)}
+            </ul>
+          </details>
+        )}
+
+        {booking.itineraryDetails.policies && (
+          <details className="agency-accordion">
+            <summary>📜 Policies & Care Guidelines</summary>
+            <ul>
+              {booking.itineraryDetails.policies.map((item, i) => <li key={i}>{item}</li>)}
+            </ul>
+          </details>
+        )}
+
+        {booking.itineraryDetails.cancellationPolicy && (
+          <details className="agency-accordion">
+            <summary>💳 Cancellation Policy</summary>
+            <ul>
+              {booking.itineraryDetails.cancellationPolicy.map((item, i) => <li key={i}>{item}</li>)}
+            </ul>
+          </details>
+        )}
+
+      </div>
+
     </div>
   );
 };

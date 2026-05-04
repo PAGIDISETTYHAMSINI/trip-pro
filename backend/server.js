@@ -104,6 +104,13 @@ function generateItinerariesForDestination(destination, budgetNum, daysNum) {
               language: destination.language,
               culturalEtiquette: destination.culturalEtiquette,
               emergencyContacts: destination.emergencyContacts,
+              inclusions: destination.inclusions,
+              exclusions: destination.exclusions,
+              packingList: destination.packingList,
+              shoppingGuide: destination.shoppingGuide,
+              knowBeforeYouGo: destination.knowBeforeYouGo,
+              policies: destination.policies,
+              cancellationPolicy: destination.cancellationPolicy,
               breakdown: {
                 transport: transport.cost,
                 hotel: hotel.costPerNight * daysNum,
