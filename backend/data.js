@@ -274,161 +274,65 @@ const destinations = [
       {
         "id": "f1-paris",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
+        "agency": "Emirates",
+        "name": "Flight-581",
         "cost": 400,
-        "departureTime": "08:30 AM"
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-paris",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-paris",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-paris",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-paris",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-617",
+        "cost": 1200,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-paris",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-2907",
+        "cost": 160,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-paris",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-paris",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-paris",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-paris",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-2863",
+        "cost": 280,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-paris",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-paris",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-paris",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-paris",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-paris",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-paris",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 200,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-paris",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-paris",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-paris",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-paris",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 480,
         "departureTime": "Flexible"
       }
     ],
@@ -832,161 +736,65 @@ const destinations = [
       {
         "id": "f1-bali",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-713",
+        "cost": 800,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-bali",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-bali",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-bali",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
+        "name": "Flight-863",
         "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-bali",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-bali",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-7584",
+        "cost": 320,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-bali",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-bali",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-bali",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-bali",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-8595",
+        "cost": 560,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-bali",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-bali",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-bali",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-bali",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-bali",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-bali",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 400,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-bali",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-bali",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-bali",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-bali",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 960,
         "departureTime": "Flexible"
       }
     ],
@@ -1388,161 +1196,65 @@ const destinations = [
       {
         "id": "f1-tokyo",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
-      },
-      {
-        "id": "f2-tokyo",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-tokyo",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-tokyo",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-tokyo",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-tokyo",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-tokyo",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-tokyo",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-tokyo",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "agency": "Emirates",
+        "name": "Flight-531",
+        "cost": 900,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-tokyo",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "f2-tokyo",
+        "type": "Business",
+        "agency": "Qatar Airways",
+        "name": "Flight-457",
+        "cost": 3000,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t1-tokyo",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-5961",
+        "cost": 360,
+        "departureTime": "1:30 PM"
+      },
+      {
+        "id": "t2-tokyo",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-6265",
+        "cost": 630,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-tokyo",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-tokyo",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-tokyo",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-tokyo",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-tokyo",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-tokyo",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 450,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-tokyo",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-tokyo",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-tokyo",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-tokyo",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 1080,
         "departureTime": "Flexible"
       }
     ],
@@ -1944,161 +1656,65 @@ const destinations = [
       {
         "id": "f1-newyork",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-107",
+        "cost": 300,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-newyork",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-newyork",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-newyork",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-newyork",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-816",
+        "cost": 1000,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-newyork",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-3235",
+        "cost": 120,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-newyork",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-newyork",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-newyork",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-newyork",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-3626",
+        "cost": 210,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-newyork",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-newyork",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-newyork",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-newyork",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-newyork",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-newyork",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 150,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-newyork",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-newyork",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-newyork",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-newyork",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 360,
         "departureTime": "Flexible"
       }
     ],
@@ -2501,162 +2117,66 @@ const destinations = [
     "detailedTransport": [
       {
         "id": "f1-goa",
-        "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "type": "Budget Airline",
+        "agency": "IndiGo",
+        "name": "Flight-707",
+        "cost": 150,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-goa",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-goa",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-goa",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-goa",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "type": "Premium Airline",
+        "agency": "Air India",
+        "name": "Flight-423",
+        "cost": 400,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-goa",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-5421",
+        "cost": 60,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-goa",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-goa",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-goa",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-goa",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-8456",
+        "cost": 105,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-goa",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-goa",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-goa",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-goa",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-goa",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-goa",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 75,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-goa",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-goa",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-goa",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-goa",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 180,
         "departureTime": "Flexible"
       }
     ],
@@ -3058,161 +2578,65 @@ const destinations = [
       {
         "id": "f1-kerala",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
-      },
-      {
-        "id": "f2-kerala",
-        "type": "Economy",
         "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-kerala",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-kerala",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-kerala",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-kerala",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-kerala",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-kerala",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-kerala",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
+        "name": "Flight-645",
+        "cost": 200,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-kerala",
-        "type": "Tejas Express",
+        "id": "f2-kerala",
+        "type": "Business",
+        "agency": "Air India",
+        "name": "Flight-735",
+        "cost": 500,
+        "departureTime": "7:00 AM"
+      },
+      {
+        "id": "t1-kerala",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-5352",
+        "cost": 80,
+        "departureTime": "2:30 PM"
+      },
+      {
+        "id": "t2-kerala",
+        "type": "Premium Sleeper Train",
+        "agency": "Indian Railways",
+        "name": "Express-5312",
+        "cost": 140,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-kerala",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-kerala",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-kerala",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-kerala",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-kerala",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-kerala",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 100,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-kerala",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-kerala",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-kerala",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-kerala",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 240,
         "departureTime": "Flexible"
       }
     ],
@@ -3614,161 +3038,65 @@ const destinations = [
       {
         "id": "f1-jaipur",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-629",
+        "cost": 180,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-jaipur",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-jaipur",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-jaipur",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-jaipur",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-497",
+        "cost": 450,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-jaipur",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-4659",
+        "cost": 72,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-jaipur",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-jaipur",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-jaipur",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-jaipur",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-3193",
+        "cost": 125,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-jaipur",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-jaipur",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-jaipur",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-jaipur",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-jaipur",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-jaipur",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 90,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-jaipur",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-jaipur",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-jaipur",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-jaipur",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 216,
         "departureTime": "Flexible"
       }
     ],
@@ -4170,161 +3498,65 @@ const destinations = [
       {
         "id": "f1-agra",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-716",
+        "cost": 120,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-agra",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-agra",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-agra",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-agra",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-327",
+        "cost": 350,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-agra",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-8755",
+        "cost": 48,
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-agra",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-agra",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-agra",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-agra",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-5800",
+        "cost": 84,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-agra",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-agra",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-agra",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-agra",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-agra",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-agra",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 60,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-agra",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-agra",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-agra",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-agra",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 144,
         "departureTime": "Flexible"
       }
     ],
@@ -4726,161 +3958,65 @@ const destinations = [
       {
         "id": "f1-newdelhi",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-404",
+        "cost": 150,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-newdelhi",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-newdelhi",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-newdelhi",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-newdelhi",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-926",
+        "cost": 400,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-newdelhi",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-5260",
+        "cost": 60,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-newdelhi",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-newdelhi",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-newdelhi",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-newdelhi",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-1664",
+        "cost": 105,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-newdelhi",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-newdelhi",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-newdelhi",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-newdelhi",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-newdelhi",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-newdelhi",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 75,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-newdelhi",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-newdelhi",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-newdelhi",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-newdelhi",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 180,
         "departureTime": "Flexible"
       }
     ],
@@ -5282,161 +4418,65 @@ const destinations = [
       {
         "id": "f1-mumbai",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-966",
+        "cost": 160,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-mumbai",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-mumbai",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-mumbai",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-mumbai",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-202",
+        "cost": 420,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-mumbai",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-9397",
+        "cost": 64,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-mumbai",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-mumbai",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-mumbai",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-mumbai",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-2967",
+        "cost": 112,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-mumbai",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-mumbai",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-mumbai",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-mumbai",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-mumbai",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-mumbai",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 80,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-mumbai",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-mumbai",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-mumbai",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-mumbai",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 192,
         "departureTime": "Flexible"
       }
     ],
@@ -5838,161 +4878,65 @@ const destinations = [
       {
         "id": "f1-varanasi",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-630",
+        "cost": 130,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-varanasi",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-varanasi",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-varanasi",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-varanasi",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-610",
+        "cost": 380,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-varanasi",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-8017",
+        "cost": 52,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-varanasi",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-varanasi",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-varanasi",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-varanasi",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-8539",
+        "cost": 91,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-varanasi",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-varanasi",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-varanasi",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-varanasi",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-varanasi",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-varanasi",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 65,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-varanasi",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-varanasi",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-varanasi",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-varanasi",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 156,
         "departureTime": "Flexible"
       }
     ],
@@ -6394,161 +5338,65 @@ const destinations = [
       {
         "id": "f1-ladakh",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-843",
+        "cost": 250,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-ladakh",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-ladakh",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-ladakh",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-ladakh",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "type": "Premium Economy",
+        "agency": "Air India",
+        "name": "Flight-555",
+        "cost": 500,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-ladakh",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-7987",
+        "cost": 100,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-ladakh",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-ladakh",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-ladakh",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-ladakh",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-8723",
+        "cost": 175,
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-ladakh",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-ladakh",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-ladakh",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-ladakh",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-ladakh",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-ladakh",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 125,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-ladakh",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-ladakh",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-ladakh",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-ladakh",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 300,
         "departureTime": "Flexible"
       }
     ],
@@ -6952,161 +5800,65 @@ const destinations = [
       {
         "id": "f1-andaman",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-116",
+        "cost": 220,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-andaman",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-andaman",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-andaman",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-andaman",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-941",
+        "cost": 600,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-andaman",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-5606",
+        "cost": 88,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-andaman",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-andaman",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-andaman",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-andaman",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-3842",
+        "cost": 154,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-andaman",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-andaman",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-andaman",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-andaman",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-andaman",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-andaman",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 110,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-andaman",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-andaman",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-andaman",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-andaman",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 264,
         "departureTime": "Flexible"
       }
     ],
@@ -7508,162 +6260,66 @@ const destinations = [
     "detailedTransport": [
       {
         "id": "f1-manali",
-        "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "type": "Bus/Economy Travel",
+        "agency": "IndiGo",
+        "name": "Flight-727",
+        "cost": 50,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-manali",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-manali",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-manali",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-manali",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "type": "Private Cab",
+        "agency": "Air India",
+        "name": "Flight-256",
+        "cost": 200,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-manali",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-4614",
+        "cost": 20,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-manali",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-manali",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-manali",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-manali",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-5977",
+        "cost": 35,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-manali",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-manali",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-manali",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-manali",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-manali",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-manali",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 25,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-manali",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-manali",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-manali",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-manali",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 60,
         "departureTime": "Flexible"
       }
     ],
@@ -8065,161 +6721,65 @@ const destinations = [
       {
         "id": "f1-darjeeling",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-517",
+        "cost": 150,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-darjeeling",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-darjeeling",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-darjeeling",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-darjeeling",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-399",
+        "cost": 350,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-darjeeling",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-8248",
+        "cost": 60,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-darjeeling",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-darjeeling",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-darjeeling",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-darjeeling",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-9610",
+        "cost": 105,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-darjeeling",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-darjeeling",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-darjeeling",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-darjeeling",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-darjeeling",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-darjeeling",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 75,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-darjeeling",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-darjeeling",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-darjeeling",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-darjeeling",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 180,
         "departureTime": "Flexible"
       }
     ],
@@ -8621,161 +7181,65 @@ const destinations = [
       {
         "id": "f1-rishikesh",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-766",
+        "cost": 100,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-rishikesh",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-rishikesh",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-rishikesh",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-rishikesh",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "type": "Premium Economy",
+        "agency": "Air India",
+        "name": "Flight-471",
+        "cost": 250,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-rishikesh",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-2053",
+        "cost": 40,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-rishikesh",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-rishikesh",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-rishikesh",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-rishikesh",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-5470",
+        "cost": 70,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-rishikesh",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-rishikesh",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-rishikesh",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-rishikesh",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-rishikesh",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-rishikesh",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 50,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-rishikesh",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-rishikesh",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-rishikesh",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-rishikesh",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 120,
         "departureTime": "Flexible"
       }
     ],
@@ -9177,161 +7641,65 @@ const destinations = [
       {
         "id": "f1-udaipur",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-418",
+        "cost": 140,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-udaipur",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-udaipur",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-udaipur",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-udaipur",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-458",
+        "cost": 380,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-udaipur",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-1275",
+        "cost": 56,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-udaipur",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-udaipur",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-udaipur",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-udaipur",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-5418",
+        "cost": 98,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-udaipur",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-udaipur",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-udaipur",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-udaipur",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-udaipur",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-udaipur",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 70,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-udaipur",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-udaipur",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-udaipur",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-udaipur",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 168,
         "departureTime": "Flexible"
       }
     ],
@@ -9733,161 +8101,65 @@ const destinations = [
       {
         "id": "f1-img_ajanta_0",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-857",
+        "cost": 193,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_ajanta_0",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_ajanta_0",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_ajanta_0",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_ajanta_0",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-920",
+        "cost": 329,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_ajanta_0",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-7731",
+        "cost": 77,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_ajanta_0",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_ajanta_0",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_ajanta_0",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_ajanta_0",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-1792",
+        "cost": 135,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_ajanta_0",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_ajanta_0",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_ajanta_0",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_ajanta_0",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_ajanta_0",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_ajanta_0",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 96,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_ajanta_0",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_ajanta_0",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_ajanta_0",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_ajanta_0",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 231,
         "departureTime": "Flexible"
       }
     ],
@@ -10290,161 +8562,65 @@ const destinations = [
       {
         "id": "f1-img_amarnathcave_1",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-468",
+        "cost": 121,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_amarnathcave_1",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_amarnathcave_1",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_amarnathcave_1",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_amarnathcave_1",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-748",
+        "cost": 412,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_amarnathcave_1",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-3036",
+        "cost": 48,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_amarnathcave_1",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_amarnathcave_1",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_amarnathcave_1",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_amarnathcave_1",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-1548",
+        "cost": 84,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_amarnathcave_1",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_amarnathcave_1",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_amarnathcave_1",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_amarnathcave_1",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_amarnathcave_1",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_amarnathcave_1",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 60,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_amarnathcave_1",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_amarnathcave_1",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_amarnathcave_1",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_amarnathcave_1",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 145,
         "departureTime": "Flexible"
       }
     ],
@@ -10846,161 +9022,65 @@ const destinations = [
       {
         "id": "f1-img_akbarstomb_2",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-287",
+        "cost": 154,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_akbarstomb_2",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_akbarstomb_2",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_akbarstomb_2",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_akbarstomb_2",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_akbarstomb_2",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_akbarstomb_2",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_akbarstomb_2",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_akbarstomb_2",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "name": "Flight-993",
+        "cost": 477,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_akbarstomb_2",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "t1-img_akbarstomb_2",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-1250",
+        "cost": 61,
+        "departureTime": "2:30 PM"
+      },
+      {
+        "id": "t2-img_akbarstomb_2",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-8161",
+        "cost": 107,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_akbarstomb_2",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_akbarstomb_2",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_akbarstomb_2",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_akbarstomb_2",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_akbarstomb_2",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_akbarstomb_2",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 77,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_akbarstomb_2",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_akbarstomb_2",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_akbarstomb_2",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_akbarstomb_2",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 184,
         "departureTime": "Flexible"
       }
     ],
@@ -11402,161 +9482,65 @@ const destinations = [
       {
         "id": "f1-img_amberpalace_3",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
-      },
-      {
-        "id": "f2-img_amberpalace_3",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_amberpalace_3",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_amberpalace_3",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_amberpalace_3",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_amberpalace_3",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_amberpalace_3",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_amberpalace_3",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_amberpalace_3",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "agency": "Emirates",
+        "name": "Flight-338",
+        "cost": 115,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_amberpalace_3",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "f2-img_amberpalace_3",
+        "type": "Business",
+        "agency": "Qatar Airways",
+        "name": "Flight-233",
+        "cost": 391,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t1-img_amberpalace_3",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-6507",
+        "cost": 46,
+        "departureTime": "2:30 PM"
+      },
+      {
+        "id": "t2-img_amberpalace_3",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-6978",
+        "cost": 80,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_amberpalace_3",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_amberpalace_3",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_amberpalace_3",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_amberpalace_3",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_amberpalace_3",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_amberpalace_3",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 57,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_amberpalace_3",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_amberpalace_3",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_amberpalace_3",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_amberpalace_3",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 138,
         "departureTime": "Flexible"
       }
     ],
@@ -11958,161 +9942,65 @@ const destinations = [
       {
         "id": "f1-img_anandbhawan_4",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-801",
+        "cost": 119,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_anandbhawan_4",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_anandbhawan_4",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_anandbhawan_4",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_anandbhawan_4",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-734",
+        "cost": 393,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_anandbhawan_4",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-2736",
+        "cost": 47,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-img_anandbhawan_4",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_anandbhawan_4",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_anandbhawan_4",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_anandbhawan_4",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-4486",
+        "cost": 83,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_anandbhawan_4",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_anandbhawan_4",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_anandbhawan_4",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_anandbhawan_4",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_anandbhawan_4",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_anandbhawan_4",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 59,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_anandbhawan_4",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_anandbhawan_4",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_anandbhawan_4",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_anandbhawan_4",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 142,
         "departureTime": "Flexible"
       }
     ],
@@ -12514,161 +10402,65 @@ const destinations = [
       {
         "id": "f1-img_bhakradam_5",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
-      },
-      {
-        "id": "f2-img_bhakradam_5",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_bhakradam_5",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_bhakradam_5",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_bhakradam_5",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_bhakradam_5",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_bhakradam_5",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_bhakradam_5",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_bhakradam_5",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "agency": "Emirates",
+        "name": "Flight-913",
+        "cost": 106,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_bhakradam_5",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "f2-img_bhakradam_5",
+        "type": "Business",
+        "agency": "Qatar Airways",
+        "name": "Flight-482",
+        "cost": 499,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t1-img_bhakradam_5",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-9794",
+        "cost": 42,
+        "departureTime": "2:30 PM"
+      },
+      {
+        "id": "t2-img_bhakradam_5",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-6947",
+        "cost": 74,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_bhakradam_5",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_bhakradam_5",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_bhakradam_5",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_bhakradam_5",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_bhakradam_5",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_bhakradam_5",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 53,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_bhakradam_5",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_bhakradam_5",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_bhakradam_5",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_bhakradam_5",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 127,
         "departureTime": "Flexible"
       }
     ],
@@ -13070,161 +10862,65 @@ const destinations = [
       {
         "id": "f1-img_bibidamaqbra_6",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-505",
+        "cost": 195,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_bibidamaqbra_6",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_bibidamaqbra_6",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_bibidamaqbra_6",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_bibidamaqbra_6",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-936",
+        "cost": 494,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_bibidamaqbra_6",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-8908",
+        "cost": 78,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-img_bibidamaqbra_6",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_bibidamaqbra_6",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_bibidamaqbra_6",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_bibidamaqbra_6",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-5856",
+        "cost": 136,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_bibidamaqbra_6",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_bibidamaqbra_6",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_bibidamaqbra_6",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_bibidamaqbra_6",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_bibidamaqbra_6",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_bibidamaqbra_6",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 97,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_bibidamaqbra_6",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_bibidamaqbra_6",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_bibidamaqbra_6",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_bibidamaqbra_6",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 234,
         "departureTime": "Flexible"
       }
     ],
@@ -13626,161 +11322,65 @@ const destinations = [
       {
         "id": "f1-img_birlaplanetarium_7",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-202",
+        "cost": 165,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-img_birlaplanetarium_7",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_birlaplanetarium_7",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_birlaplanetarium_7",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_birlaplanetarium_7",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-389",
+        "cost": 302,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_birlaplanetarium_7",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-5612",
+        "cost": 66,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-img_birlaplanetarium_7",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_birlaplanetarium_7",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_birlaplanetarium_7",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_birlaplanetarium_7",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-4207",
+        "cost": 115,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_birlaplanetarium_7",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_birlaplanetarium_7",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_birlaplanetarium_7",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_birlaplanetarium_7",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_birlaplanetarium_7",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_birlaplanetarium_7",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 82,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_birlaplanetarium_7",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_birlaplanetarium_7",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_birlaplanetarium_7",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_birlaplanetarium_7",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 198,
         "departureTime": "Flexible"
       }
     ],
@@ -14182,161 +11782,65 @@ const destinations = [
       {
         "id": "f1-img_blackpagoda_8",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-191",
+        "cost": 110,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-img_blackpagoda_8",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_blackpagoda_8",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_blackpagoda_8",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_blackpagoda_8",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-307",
+        "cost": 391,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_blackpagoda_8",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-2025",
+        "cost": 44,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_blackpagoda_8",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_blackpagoda_8",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_blackpagoda_8",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_blackpagoda_8",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-9053",
+        "cost": 77,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_blackpagoda_8",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_blackpagoda_8",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_blackpagoda_8",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_blackpagoda_8",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_blackpagoda_8",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_blackpagoda_8",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 55,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_blackpagoda_8",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_blackpagoda_8",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_blackpagoda_8",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_blackpagoda_8",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 132,
         "departureTime": "Flexible"
       }
     ],
@@ -14738,161 +12242,65 @@ const destinations = [
       {
         "id": "f1-img_bodhisatva_9",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-376",
+        "cost": 172,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_bodhisatva_9",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_bodhisatva_9",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_bodhisatva_9",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_bodhisatva_9",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-580",
+        "cost": 461,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_bodhisatva_9",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-4885",
+        "cost": 68,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_bodhisatva_9",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_bodhisatva_9",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_bodhisatva_9",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_bodhisatva_9",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-7617",
+        "cost": 120,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_bodhisatva_9",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_bodhisatva_9",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_bodhisatva_9",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_bodhisatva_9",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_bodhisatva_9",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_bodhisatva_9",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 86,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_bodhisatva_9",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_bodhisatva_9",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_bodhisatva_9",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_bodhisatva_9",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 206,
         "departureTime": "Flexible"
       }
     ],
@@ -15294,161 +12702,65 @@ const destinations = [
       {
         "id": "f1-img_brihadeeswaratemple_10",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-623",
+        "cost": 149,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-img_brihadeeswaratemple_10",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_brihadeeswaratemple_10",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_brihadeeswaratemple_10",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_brihadeeswaratemple_10",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-510",
+        "cost": 494,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_brihadeeswaratemple_10",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-4854",
+        "cost": 59,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-img_brihadeeswaratemple_10",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_brihadeeswaratemple_10",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_brihadeeswaratemple_10",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_brihadeeswaratemple_10",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-2381",
+        "cost": 104,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_brihadeeswaratemple_10",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_brihadeeswaratemple_10",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_brihadeeswaratemple_10",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_brihadeeswaratemple_10",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_brihadeeswaratemple_10",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_brihadeeswaratemple_10",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 74,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_brihadeeswaratemple_10",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_brihadeeswaratemple_10",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_brihadeeswaratemple_10",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_brihadeeswaratemple_10",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 178,
         "departureTime": "Flexible"
       }
     ],
@@ -15850,161 +13162,65 @@ const destinations = [
       {
         "id": "f1-img_brindabangardens_11",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-461",
+        "cost": 117,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_brindabangardens_11",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_brindabangardens_11",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_brindabangardens_11",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_brindabangardens_11",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-834",
+        "cost": 481,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_brindabangardens_11",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-9262",
+        "cost": 46,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_brindabangardens_11",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_brindabangardens_11",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_brindabangardens_11",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_brindabangardens_11",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-5594",
+        "cost": 81,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_brindabangardens_11",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_brindabangardens_11",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_brindabangardens_11",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_brindabangardens_11",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_brindabangardens_11",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_brindabangardens_11",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 58,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_brindabangardens_11",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_brindabangardens_11",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_brindabangardens_11",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_brindabangardens_11",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 140,
         "departureTime": "Flexible"
       }
     ],
@@ -16406,161 +13622,65 @@ const destinations = [
       {
         "id": "f1-img_bulanddarwaza_12",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-351",
+        "cost": 164,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_bulanddarwaza_12",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_bulanddarwaza_12",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_bulanddarwaza_12",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_bulanddarwaza_12",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-850",
+        "cost": 469,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_bulanddarwaza_12",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-9780",
+        "cost": 65,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_bulanddarwaza_12",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_bulanddarwaza_12",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_bulanddarwaza_12",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_bulanddarwaza_12",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-9802",
+        "cost": 114,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_bulanddarwaza_12",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_bulanddarwaza_12",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_bulanddarwaza_12",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_bulanddarwaza_12",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_bulanddarwaza_12",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_bulanddarwaza_12",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 82,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_bulanddarwaza_12",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_bulanddarwaza_12",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_bulanddarwaza_12",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_bulanddarwaza_12",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 196,
         "departureTime": "Flexible"
       }
     ],
@@ -16962,161 +14082,65 @@ const destinations = [
       {
         "id": "f1-img_charminar_13",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-520",
+        "cost": 194,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_charminar_13",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_charminar_13",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_charminar_13",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_charminar_13",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-757",
+        "cost": 426,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_charminar_13",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-5525",
+        "cost": 77,
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_charminar_13",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_charminar_13",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_charminar_13",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_charminar_13",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-3341",
+        "cost": 135,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_charminar_13",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_charminar_13",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_charminar_13",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_charminar_13",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_charminar_13",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_charminar_13",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 97,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_charminar_13",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_charminar_13",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_charminar_13",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_charminar_13",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 232,
         "departureTime": "Flexible"
       }
     ],
@@ -17518,161 +14542,65 @@ const destinations = [
       {
         "id": "f1-img_cheenakesavatemple_14",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-171",
+        "cost": 191,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-img_cheenakesavatemple_14",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_cheenakesavatemple_14",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_cheenakesavatemple_14",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_cheenakesavatemple_14",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-721",
+        "cost": 348,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_cheenakesavatemple_14",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-2791",
+        "cost": 76,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_cheenakesavatemple_14",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_cheenakesavatemple_14",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_cheenakesavatemple_14",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_cheenakesavatemple_14",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-4009",
+        "cost": 133,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_cheenakesavatemple_14",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_cheenakesavatemple_14",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_cheenakesavatemple_14",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_cheenakesavatemple_14",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_cheenakesavatemple_14",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_cheenakesavatemple_14",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 95,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_cheenakesavatemple_14",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_cheenakesavatemple_14",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_cheenakesavatemple_14",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_cheenakesavatemple_14",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 229,
         "departureTime": "Flexible"
       }
     ],
@@ -18074,161 +15002,65 @@ const destinations = [
       {
         "id": "f1-img_chilkalake_15",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
-      },
-      {
-        "id": "f2-img_chilkalake_15",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_chilkalake_15",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_chilkalake_15",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_chilkalake_15",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_chilkalake_15",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_chilkalake_15",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_chilkalake_15",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_chilkalake_15",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "agency": "Emirates",
+        "name": "Flight-544",
+        "cost": 126,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_chilkalake_15",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "f2-img_chilkalake_15",
+        "type": "Business",
+        "agency": "Qatar Airways",
+        "name": "Flight-167",
+        "cost": 461,
+        "departureTime": "10:00 AM"
+      },
+      {
+        "id": "t1-img_chilkalake_15",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-8522",
+        "cost": 50,
+        "departureTime": "1:30 PM"
+      },
+      {
+        "id": "t2-img_chilkalake_15",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-4506",
+        "cost": 88,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_chilkalake_15",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_chilkalake_15",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_chilkalake_15",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_chilkalake_15",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_chilkalake_15",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_chilkalake_15",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 63,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_chilkalake_15",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_chilkalake_15",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_chilkalake_15",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_chilkalake_15",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 151,
         "departureTime": "Flexible"
       }
     ],
@@ -18630,161 +15462,65 @@ const destinations = [
       {
         "id": "f1-img_dallake_16",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-833",
+        "cost": 188,
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_dallake_16",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_dallake_16",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_dallake_16",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_dallake_16",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-478",
+        "cost": 353,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_dallake_16",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-3045",
+        "cost": 75,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_dallake_16",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_dallake_16",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_dallake_16",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_dallake_16",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-9420",
+        "cost": 131,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_dallake_16",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_dallake_16",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_dallake_16",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_dallake_16",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_dallake_16",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_dallake_16",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 94,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_dallake_16",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_dallake_16",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_dallake_16",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_dallake_16",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 225,
         "departureTime": "Flexible"
       }
     ],
@@ -19186,161 +15922,65 @@ const destinations = [
       {
         "id": "f1-img_dilwaratemple_17",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-201",
+        "cost": 143,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_dilwaratemple_17",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_dilwaratemple_17",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_dilwaratemple_17",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_dilwaratemple_17",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-358",
+        "cost": 472,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_dilwaratemple_17",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-1329",
+        "cost": 57,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-img_dilwaratemple_17",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_dilwaratemple_17",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_dilwaratemple_17",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_dilwaratemple_17",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-7484",
         "cost": 100,
-        "departureTime": "01:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_dilwaratemple_17",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_dilwaratemple_17",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_dilwaratemple_17",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_dilwaratemple_17",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_dilwaratemple_17",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_dilwaratemple_17",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 71,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_dilwaratemple_17",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_dilwaratemple_17",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_dilwaratemple_17",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_dilwaratemple_17",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 171,
         "departureTime": "Flexible"
       }
     ],
@@ -19742,161 +16382,65 @@ const destinations = [
       {
         "id": "f1-img_elephantacaves_18",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-928",
+        "cost": 176,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_elephantacaves_18",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_elephantacaves_18",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_elephantacaves_18",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_elephantacaves_18",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-448",
+        "cost": 382,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_elephantacaves_18",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-9879",
+        "cost": 70,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-img_elephantacaves_18",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_elephantacaves_18",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_elephantacaves_18",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_elephantacaves_18",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-4284",
+        "cost": 123,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_elephantacaves_18",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_elephantacaves_18",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_elephantacaves_18",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_elephantacaves_18",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_elephantacaves_18",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_elephantacaves_18",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 88,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_elephantacaves_18",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_elephantacaves_18",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_elephantacaves_18",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_elephantacaves_18",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 211,
         "departureTime": "Flexible"
       }
     ],
@@ -20298,161 +16842,65 @@ const destinations = [
       {
         "id": "f1-img_elloracaves_19",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-802",
+        "cost": 116,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_elloracaves_19",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_elloracaves_19",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_elloracaves_19",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_elloracaves_19",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-748",
+        "cost": 428,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_elloracaves_19",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-1777",
+        "cost": 46,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_elloracaves_19",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_elloracaves_19",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_elloracaves_19",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_elloracaves_19",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-1188",
+        "cost": 81,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_elloracaves_19",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_elloracaves_19",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_elloracaves_19",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_elloracaves_19",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_elloracaves_19",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_elloracaves_19",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 58,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_elloracaves_19",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_elloracaves_19",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_elloracaves_19",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_elloracaves_19",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 139,
         "departureTime": "Flexible"
       }
     ],
@@ -20854,161 +17302,65 @@ const destinations = [
       {
         "id": "f1-img_gatewayofindia_20",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 4500,
-        "departureTime": "08:30 AM"
+        "agency": "IndiGo",
+        "name": "Flight-327",
+        "cost": 141,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_gatewayofindia_20",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 3800,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_gatewayofindia_20",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 12000,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_gatewayofindia_20",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 25000,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_gatewayofindia_20",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 3200,
-        "departureTime": "06:00 AM"
+        "agency": "Air India",
+        "name": "Flight-724",
+        "cost": 352,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_gatewayofindia_20",
-        "type": "Rajdhani Express",
+        "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 2800,
-        "departureTime": "04:30 PM"
+        "name": "Express-3114",
+        "cost": 56,
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-img_gatewayofindia_20",
-        "type": "Shatabdi Express",
+        "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 1800,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_gatewayofindia_20",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 1200,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_gatewayofindia_20",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 800,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_gatewayofindia_20",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 3500,
-        "departureTime": "01:30 PM"
+        "name": "Express-7979",
+        "cost": 98,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_gatewayofindia_20",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
-        "cost": 1500,
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 4150,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_gatewayofindia_20",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 1200,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_gatewayofindia_20",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 1800,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_gatewayofindia_20",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
-        "cost": 600,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_gatewayofindia_20",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 900,
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 2075,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_gatewayofindia_20",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 2500,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 70,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_gatewayofindia_20",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 3500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_gatewayofindia_20",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 5500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_gatewayofindia_20",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 15000,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_gatewayofindia_20",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 8000,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 169,
         "departureTime": "Flexible"
       }
     ],
@@ -21410,161 +17762,65 @@ const destinations = [
       {
         "id": "f1-img_goldentemple_21",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-323",
+        "cost": 180,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_goldentemple_21",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_goldentemple_21",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_goldentemple_21",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_goldentemple_21",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-807",
+        "cost": 321,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_goldentemple_21",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-1701",
+        "cost": 72,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_goldentemple_21",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_goldentemple_21",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_goldentemple_21",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_goldentemple_21",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-6317",
+        "cost": 125,
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_goldentemple_21",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_goldentemple_21",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_goldentemple_21",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_goldentemple_21",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_goldentemple_21",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_goldentemple_21",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 90,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_goldentemple_21",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_goldentemple_21",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_goldentemple_21",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_goldentemple_21",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 216,
         "departureTime": "Flexible"
       }
     ],
@@ -21966,161 +18222,65 @@ const destinations = [
       {
         "id": "f1-img_golgumbaz_22",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-594",
+        "cost": 145,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-img_golgumbaz_22",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_golgumbaz_22",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_golgumbaz_22",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_golgumbaz_22",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_golgumbaz_22",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_golgumbaz_22",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_golgumbaz_22",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_golgumbaz_22",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "name": "Flight-218",
+        "cost": 481,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_golgumbaz_22",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "t1-img_golgumbaz_22",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-2285",
+        "cost": 58,
+        "departureTime": "5:30 PM"
+      },
+      {
+        "id": "t2-img_golgumbaz_22",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-7324",
+        "cost": 101,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_golgumbaz_22",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_golgumbaz_22",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_golgumbaz_22",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_golgumbaz_22",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_golgumbaz_22",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_golgumbaz_22",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 72,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_golgumbaz_22",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_golgumbaz_22",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_golgumbaz_22",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_golgumbaz_22",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 174,
         "departureTime": "Flexible"
       }
     ],
@@ -22522,161 +18682,65 @@ const destinations = [
       {
         "id": "f1-img_hanginggardens_23",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-314",
+        "cost": 181,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-img_hanginggardens_23",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_hanginggardens_23",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_hanginggardens_23",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_hanginggardens_23",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-543",
+        "cost": 367,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_hanginggardens_23",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-5375",
+        "cost": 72,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_hanginggardens_23",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_hanginggardens_23",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_hanginggardens_23",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_hanginggardens_23",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-9311",
+        "cost": 126,
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_hanginggardens_23",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_hanginggardens_23",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_hanginggardens_23",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_hanginggardens_23",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_hanginggardens_23",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_hanginggardens_23",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 90,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_hanginggardens_23",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_hanginggardens_23",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_hanginggardens_23",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_hanginggardens_23",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 217,
         "departureTime": "Flexible"
       }
     ],
@@ -23078,161 +19142,65 @@ const destinations = [
       {
         "id": "f1-img_hawamahal_24",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-245",
+        "cost": 124,
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_hawamahal_24",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_hawamahal_24",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_hawamahal_24",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_hawamahal_24",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-864",
+        "cost": 489,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_hawamahal_24",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-8586",
+        "cost": 49,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_hawamahal_24",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_hawamahal_24",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_hawamahal_24",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_hawamahal_24",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-9100",
+        "cost": 86,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_hawamahal_24",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_hawamahal_24",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_hawamahal_24",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_hawamahal_24",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_hawamahal_24",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_hawamahal_24",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 62,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_hawamahal_24",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_hawamahal_24",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_hawamahal_24",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_hawamahal_24",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 148,
         "departureTime": "Flexible"
       }
     ],
@@ -23634,161 +19602,65 @@ const destinations = [
       {
         "id": "f1-img_howrahbridge_25",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
-      },
-      {
-        "id": "f2-img_howrahbridge_25",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_howrahbridge_25",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_howrahbridge_25",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_howrahbridge_25",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_howrahbridge_25",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_howrahbridge_25",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_howrahbridge_25",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_howrahbridge_25",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "agency": "Emirates",
+        "name": "Flight-523",
+        "cost": 159,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_howrahbridge_25",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "f2-img_howrahbridge_25",
+        "type": "Business",
+        "agency": "Qatar Airways",
+        "name": "Flight-653",
+        "cost": 300,
+        "departureTime": "6:00 AM"
+      },
+      {
+        "id": "t1-img_howrahbridge_25",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-8269",
+        "cost": 63,
+        "departureTime": "5:30 PM"
+      },
+      {
+        "id": "t2-img_howrahbridge_25",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-2456",
+        "cost": 111,
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_howrahbridge_25",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_howrahbridge_25",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_howrahbridge_25",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_howrahbridge_25",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_howrahbridge_25",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_howrahbridge_25",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 79,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_howrahbridge_25",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_howrahbridge_25",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_howrahbridge_25",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_howrahbridge_25",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 190,
         "departureTime": "Flexible"
       }
     ],
@@ -24190,161 +20062,65 @@ const destinations = [
       {
         "id": "f1-img_islandpalace_26",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-977",
+        "cost": 118,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_islandpalace_26",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_islandpalace_26",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_islandpalace_26",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_islandpalace_26",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-351",
+        "cost": 401,
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_islandpalace_26",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-6843",
+        "cost": 47,
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_islandpalace_26",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_islandpalace_26",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_islandpalace_26",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_islandpalace_26",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-1762",
+        "cost": 82,
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_islandpalace_26",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_islandpalace_26",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_islandpalace_26",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_islandpalace_26",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_islandpalace_26",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_islandpalace_26",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 59,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_islandpalace_26",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_islandpalace_26",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_islandpalace_26",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_islandpalace_26",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 141,
         "departureTime": "Flexible"
       }
     ],
@@ -24746,161 +20522,65 @@ const destinations = [
       {
         "id": "f1-img_itmaaduddaulahstomb_27",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-869",
+        "cost": 156,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-img_itmaaduddaulahstomb_27",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_itmaaduddaulahstomb_27",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_itmaaduddaulahstomb_27",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_itmaaduddaulahstomb_27",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
+        "name": "Flight-146",
+        "cost": 335,
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_itmaaduddaulahstomb_27",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-1075",
+        "cost": 62,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_itmaaduddaulahstomb_27",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_itmaaduddaulahstomb_27",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_itmaaduddaulahstomb_27",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
-        "departureTime": "10:00 AM"
-      },
-      {
-        "id": "t5-img_itmaaduddaulahstomb_27",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-1251",
+        "cost": 109,
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_itmaaduddaulahstomb_27",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_itmaaduddaulahstomb_27",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_itmaaduddaulahstomb_27",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_itmaaduddaulahstomb_27",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_itmaaduddaulahstomb_27",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_itmaaduddaulahstomb_27",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 78,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_itmaaduddaulahstomb_27",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_itmaaduddaulahstomb_27",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_itmaaduddaulahstomb_27",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_itmaaduddaulahstomb_27",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 187,
         "departureTime": "Flexible"
       }
     ],
@@ -25302,161 +20982,65 @@ const destinations = [
       {
         "id": "f1-img_jagannathtemple_28",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
-      },
-      {
-        "id": "f2-img_jagannathtemple_28",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_jagannathtemple_28",
-        "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_jagannathtemple_28",
-        "type": "Premium",
-        "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_jagannathtemple_28",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_jagannathtemple_28",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_jagannathtemple_28",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_jagannathtemple_28",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_jagannathtemple_28",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "agency": "Emirates",
+        "name": "Flight-432",
+        "cost": 169,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_jagannathtemple_28",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "f2-img_jagannathtemple_28",
+        "type": "Business",
+        "agency": "Qatar Airways",
+        "name": "Flight-270",
+        "cost": 444,
+        "departureTime": "7:00 AM"
+      },
+      {
+        "id": "t1-img_jagannathtemple_28",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-2801",
+        "cost": 67,
+        "departureTime": "5:30 PM"
+      },
+      {
+        "id": "t2-img_jagannathtemple_28",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-8504",
+        "cost": 118,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_jagannathtemple_28",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_jagannathtemple_28",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_jagannathtemple_28",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_jagannathtemple_28",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_jagannathtemple_28",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_jagannathtemple_28",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 84,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_jagannathtemple_28",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_jagannathtemple_28",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_jagannathtemple_28",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_jagannathtemple_28",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 202,
         "departureTime": "Flexible"
       }
     ],
@@ -25858,161 +21442,65 @@ const destinations = [
       {
         "id": "f1-img_jahazmahal_29",
         "type": "Economy",
-        "agency": "Air India",
-        "name": "AI-402 Direct",
-        "cost": 400,
-        "departureTime": "08:30 AM"
+        "agency": "Emirates",
+        "name": "Flight-383",
+        "cost": 173,
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_jahazmahal_29",
-        "type": "Economy",
-        "agency": "IndiGo",
-        "name": "6E-2104",
-        "cost": 350,
-        "departureTime": "10:15 AM"
-      },
-      {
-        "id": "f3-img_jahazmahal_29",
         "type": "Business",
-        "agency": "Vistara",
-        "name": "UK-812",
-        "cost": 1100,
-        "departureTime": "02:00 PM"
-      },
-      {
-        "id": "f4-img_jahazmahal_29",
-        "type": "Premium",
         "agency": "Qatar Airways",
-        "name": "QR-501",
-        "cost": 2500,
-        "departureTime": "09:00 PM"
-      },
-      {
-        "id": "f5-img_jahazmahal_29",
-        "type": "Economy",
-        "agency": "SpiceJet",
-        "name": "SG-123",
-        "cost": 300,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t1-img_jahazmahal_29",
-        "type": "Rajdhani Express",
-        "agency": "Indian Railways",
-        "name": "22435 Platinum",
-        "cost": 80,
-        "departureTime": "04:30 PM"
-      },
-      {
-        "id": "t2-img_jahazmahal_29",
-        "type": "Shatabdi Express",
-        "agency": "Indian Railways",
-        "name": "12002 Morning",
-        "cost": 60,
-        "departureTime": "06:00 AM"
-      },
-      {
-        "id": "t3-img_jahazmahal_29",
-        "type": "Duronto Express",
-        "agency": "Indian Railways",
-        "name": "12260 Sleeper",
-        "cost": 40,
-        "departureTime": "11:00 PM"
-      },
-      {
-        "id": "t4-img_jahazmahal_29",
-        "type": "Garib Rath",
-        "agency": "Indian Railways",
-        "name": "12910 Budget",
-        "cost": 30,
+        "name": "Flight-543",
+        "cost": 342,
         "departureTime": "10:00 AM"
       },
       {
-        "id": "t5-img_jahazmahal_29",
-        "type": "Tejas Express",
-        "agency": "Indian Railways",
-        "name": "22672 Luxury",
-        "cost": 100,
-        "departureTime": "01:30 PM"
+        "id": "t1-img_jahazmahal_29",
+        "type": "Express Train",
+        "agency": "EuroRail",
+        "name": "Express-5834",
+        "cost": 69,
+        "departureTime": "4:30 PM"
+      },
+      {
+        "id": "t2-img_jahazmahal_29",
+        "type": "Premium Sleeper Train",
+        "agency": "EuroRail",
+        "name": "Express-8348",
+        "cost": 121,
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_jahazmahal_29",
-        "type": "Volvo Multi-Axle AC",
-        "agency": "Zingbus",
-        "name": "Premium Sleeper",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
         "cost": 50,
         "departureTime": "10:00 PM"
       },
       {
         "id": "b2-img_jahazmahal_29",
-        "type": "Scania AC",
-        "agency": "Orange Travels",
-        "name": "Executive Seater",
-        "cost": 40,
-        "departureTime": "08:00 AM"
-      },
-      {
-        "id": "b3-img_jahazmahal_29",
-        "type": "Mercedes AC",
-        "agency": "SRS Travels",
-        "name": "Night Glide",
-        "cost": 65,
-        "departureTime": "11:30 PM"
-      },
-      {
-        "id": "b4-img_jahazmahal_29",
-        "type": "Semi-Sleeper Non-AC",
-        "agency": "KSRTC",
-        "name": "Janrath",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "07:00 AM"
-      },
-      {
-        "id": "b5-img_jahazmahal_29",
-        "type": "Mini Bus Luxury",
-        "agency": "Local Tour Bus",
-        "name": "Day Explorer",
-        "cost": 35,
         "departureTime": "09:00 AM"
       },
       {
         "id": "c1-img_jahazmahal_29",
-        "type": "Hatchback (Swift/WagonR)",
-        "agency": "Ola Rentals",
-        "name": "Self-Drive/Chauffeur",
-        "cost": 80,
+        "type": "Standard Sedan",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 86,
         "departureTime": "Flexible"
       },
       {
         "id": "c2-img_jahazmahal_29",
-        "type": "Sedan (Dzire/City)",
-        "agency": "Uber Intercity",
-        "name": "Business Class",
-        "cost": 120,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c3-img_jahazmahal_29",
-        "type": "SUV (Innova/Crysta)",
-        "agency": "Zoomcar",
-        "name": "Family Group",
-        "cost": 180,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c4-img_jahazmahal_29",
-        "type": "Luxury Sedan (BMW/Audi)",
-        "agency": "BlackBucks",
-        "name": "Elite Travel",
-        "cost": 500,
-        "departureTime": "Flexible"
-      },
-      {
-        "id": "c5-img_jahazmahal_29",
-        "type": "Force Traveller (12 Seater)",
-        "agency": "Tempo Travellers",
-        "name": "Group Tourer",
-        "cost": 250,
+        "type": "Luxury SUV",
+        "agency": "Zoomcar / Rental",
+        "name": "Private Chauffeur",
+        "cost": 207,
         "departureTime": "Flexible"
       }
     ],
@@ -26140,235 +21628,269 @@ const destinations = [
     ]
   },
   {
-  "id": "andaman",
-  "name": "Amazing Andaman (Port Blair, Havelock & Neil)",
-  "image": "https://images.unsplash.com/photo-1589136142558-74611990c0a7?auto=format&fit=crop&q=80&w=1000",
-  "flights": [
-    {
-      "id": "af1",
-      "type": "Economy (To Port Blair)",
-      "cost": 8000
-    },
-    {
-      "id": "af2",
-      "type": "Business (To Port Blair)",
-      "cost": 18000
+    "id": "andaman",
+    "name": "Amazing Andaman (Port Blair, Havelock & Neil)",
+    "image": "https://images.unsplash.com/photo-1589136142558-74611990c0a7?auto=format&fit=crop&q=80&w=1000",
+    "flights": [
+      {
+        "id": "af1",
+        "type": "Economy (To Port Blair)",
+        "cost": 8000
+      },
+      {
+        "id": "af2",
+        "type": "Business (To Port Blair)",
+        "cost": 18000
+      }
+    ],
+    "hotels": [
+      {
+        "id": "ah1",
+        "type": "Option 1: 3-Star Budget",
+        "costPerNight": 4500,
+        "rating": "3.8",
+        "roomOptions": [
+          {
+            "type": "Standard Room (Sea Deck/Green Imperial)",
+            "cost": 4500
+          }
+        ],
+        "name": "Sea Deck / Green Imperial / Blue Lagoon"
+      },
+      {
+        "id": "ah2",
+        "type": "Option 2: 3-Star Premium",
+        "costPerNight": 5000,
+        "rating": "4.2",
+        "roomOptions": [
+          {
+            "type": "Deluxe Room / Chalet (Bay Leaf/ILE Bay)",
+            "cost": 5000
+          }
+        ],
+        "name": "Bay Leaf Inn / ILE Bay / TSG Aura"
+      },
+      {
+        "id": "ah3",
+        "type": "Option 3: 4-Star Luxury",
+        "costPerNight": 6000,
+        "rating": "4.6",
+        "roomOptions": [
+          {
+            "type": "Deluxe Ocean View / Bamboo Saa",
+            "cost": 6000
+          }
+        ],
+        "name": "Mansha Residency / Sea Hill / Pearl Park"
+      }
+    ],
+    "detailedTransport": [
+      {
+        "id": "f1-andaman",
+        "type": "Economy (To Port Blair)",
+        "agency": "Emirates",
+        "name": "Flight-951",
+        "cost": 8000,
+        "departureTime": "7:00 AM"
+      },
+      {
+        "id": "f2-andaman",
+        "type": "Business (To Port Blair)",
+        "agency": "Qatar Airways",
+        "name": "Flight-409",
+        "cost": 18000,
+        "departureTime": "11:00 AM"
+      },
+      {
+        "id": "t1-andaman",
+        "type": "Standard Train",
+        "agency": "National Rail",
+        "name": "Exp-520",
+        "cost": 80,
+        "departureTime": "02:00 PM"
+      },
+      {
+        "id": "b1-andaman",
+        "type": "Luxury AC Sleeper",
+        "agency": "City Connect Travels",
+        "name": "Night Glide",
+        "cost": 50,
+        "departureTime": "10:00 PM"
+      },
+      {
+        "id": "b2-andaman",
+        "type": "Standard AC Bus",
+        "agency": "Regional Transit",
+        "name": "Day Cruiser",
+        "cost": 25,
+        "departureTime": "09:00 AM"
+      },
+      {
+        "id": "c1-andaman",
+        "type": "Sedan",
+        "agency": "Local Taxi",
+        "name": "City Cab",
+        "cost": 100,
+        "departureTime": "Flexible"
+      },
+      {
+        "id": "c2-andaman",
+        "type": "SUV",
+        "agency": "Premium Rentals",
+        "name": "Family Tourer",
+        "cost": 180,
+        "departureTime": "Flexible"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Radhanagar Beach Visit",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "06:00 AM",
+        "closingTime": "06:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Elephant Beach Speed Boat",
+        "cost": 1000,
+        "rating": "4.8",
+        "openingTime": "08:00 AM",
+        "closingTime": "03:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Shore Scuba Diving",
+        "cost": 3500,
+        "rating": "4.7",
+        "openingTime": "06:00 AM",
+        "closingTime": "02:00 PM",
+        "category": "Adventure"
+      },
+      {
+        "name": "Kalapathar Beach Sunrise",
+        "cost": 0,
+        "rating": "4.9",
+        "openingTime": "04:30 AM",
+        "closingTime": "07:00 AM",
+        "category": "Traditional"
+      },
+      {
+        "name": "Cellular Jail Light & Sound Show",
+        "cost": 300,
+        "rating": "4.8",
+        "openingTime": "06:00 PM",
+        "closingTime": "08:00 PM",
+        "category": "Cultural"
+      },
+      {
+        "name": "Glass Boat Ride (Bharatpur)",
+        "cost": 500,
+        "rating": "4.5",
+        "openingTime": "10:00 AM",
+        "closingTime": "02:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Sitapur Beach Coral Viewing",
+        "cost": 0,
+        "rating": "4.6",
+        "openingTime": "08:00 AM",
+        "closingTime": "04:00 PM",
+        "category": "Main"
+      },
+      {
+        "name": "Corbyn Cove Beach Sightseeing",
+        "cost": 0,
+        "rating": "4.7",
+        "openingTime": "Anytime",
+        "closingTime": "Anytime",
+        "category": "Main"
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "r1",
+        "name": "The Amazing Andaman (Port Blair Spices",
+        "rating": "4.7",
+        "menuHighlights": [
+          "Local Delicacy",
+          "Signature Plate"
+        ],
+        "averageCost": 35,
+        "category": "Traditional",
+        "openingTime": "12:00 PM - 11:00 PM"
+      },
+      {
+        "id": "r2",
+        "name": "Skyline Bistro",
+        "rating": "4.5",
+        "menuHighlights": [
+          "Continental Plate",
+          "Mocktails"
+        ],
+        "averageCost": 50,
+        "category": "Continental",
+        "openingTime": "10:00 AM - 12:00 AM"
+      },
+      {
+        "id": "r3",
+        "name": "Street Bite Hub",
+        "rating": "4.8",
+        "menuHighlights": [
+          "Street Food Assortment",
+          "Quick Bites"
+        ],
+        "averageCost": 15,
+        "category": "Street Food",
+        "openingTime": "04:00 PM - 02:00 AM"
+      }
+    ],
+    "cancellationPolicy": "30+ days: 25% charge | 15-30 days: 50% charge | 0-15 days: 100% charge",
+    "packingList": [
+      "Light breathable clothing",
+      "Sunscreen & Sunglasses",
+      "Insect repellent",
+      "Swimwear",
+      "Flip-flops/Sandals",
+      "Waterproof bags",
+      "Medication/First-aid kit",
+      "Reusable water bottle",
+      "Portable charger"
+    ],
+    "knowBeforeYouGo": [
+      "Preferred network: BSNL/Airtel",
+      "Internet rarely works, carry printouts",
+      "ATMs available at Havelock/Port Blair, carry cash for Neil",
+      "Vehicles are point-to-point only",
+      "Cellular jail closed on Mondays",
+      "Sunrise is best experienced early morning"
+    ],
+    "shoppingGuide": "Aberdeen Bazaar (Pearls), Sagarika Govt Emporium (Handicrafts), Shell Jewelry, Coconut Shell decor.",
+    "culturalEtiquette": "Observe decency in dress, especially at places of worship. Do not enter restricted tribal areas.",
+    "inclusions": [
+      "Accommodation with breakfast",
+      "Airport Transfer",
+      "Private Car Ferry transfers",
+      "Premium Ferry charges (Makruzz/Nautika)",
+      "Toll/Parking",
+      "Cellular Jail tickets",
+      "Elephant boat ride"
+    ],
+    "exclusions": [
+      "Other watersports",
+      "Lunch & Dinner",
+      "Personal expenses",
+      "Scuba Diving by boat (5500 INR)"
+    ],
+    "bankDetails": {
+      "name": "You We Travel OPC Private Limited",
+      "bank": "HDFC Bank",
+      "account": "50200093843846",
+      "ifsc": "HDFC0001934",
+      "type": "Current"
     }
-  ],
-  "hotels": [
-    {
-      "id": "ah1",
-      "type": "Option 1: 3-Star Budget",
-      "costPerNight": 4500,
-      "rating": "3.8",
-      "roomOptions": [
-        {
-          "type": "Standard Room (Sea Deck/Green Imperial)",
-          "cost": 4500
-        }
-      ],
-      "name": "Sea Deck / Green Imperial / Blue Lagoon"
-    },
-    {
-      "id": "ah2",
-      "type": "Option 2: 3-Star Premium",
-      "costPerNight": 5000,
-      "rating": "4.2",
-      "roomOptions": [
-        {
-          "type": "Deluxe Room / Chalet (Bay Leaf/ILE Bay)",
-          "cost": 5000
-        }
-      ],
-      "name": "Bay Leaf Inn / ILE Bay / TSG Aura"
-    },
-    {
-      "id": "ah3",
-      "type": "Option 3: 4-Star Luxury",
-      "costPerNight": 6000,
-      "rating": "4.6",
-      "roomOptions": [
-        {
-          "type": "Deluxe Ocean View / Bamboo Saa",
-          "cost": 6000
-        }
-      ],
-      "name": "Mansha Residency / Sea Hill / Pearl Park"
-    }
-  ],
-  "detailedTransport": [
-    {
-      "id": "at1",
-      "type": "Ferry: Port Blair to Havelock",
-      "agency": "Makruzz/Nautika",
-      "name": "Premium Class",
-      "cost": 1500,
-      "departureTime": "09:30 AM - 02:00 PM"
-    },
-    {
-      "id": "at2",
-      "type": "Ferry: Havelock to Neil",
-      "agency": "Nautika",
-      "name": "Luxury Class",
-      "cost": 1200,
-      "departureTime": "09:30 AM - 12:00 PM"
-    },
-    {
-      "id": "at3",
-      "type": "Ferry: Neil to Port Blair",
-      "agency": "Nautika",
-      "name": "Luxury Class",
-      "cost": 1200,
-      "departureTime": "09:30 AM - 12:00 PM"
-    },
-    {
-      "id": "at4",
-      "type": "Private Car",
-      "agency": "YouWe Travel",
-      "name": "AC Sedan/SUV Sightseeing",
-      "cost": 3500,
-      "departureTime": "Full Day"
-    }
-  ],
-  "activities": [
-    {
-      "name": "Radhanagar Beach Visit",
-      "cost": 0,
-      "rating": "4.9",
-      "openingTime": "06:00 AM",
-      "closingTime": "06:00 PM",
-      "category": "Main"
-    },
-    {
-      "name": "Elephant Beach Speed Boat",
-      "cost": 1000,
-      "rating": "4.8",
-      "openingTime": "08:00 AM",
-      "closingTime": "03:00 PM",
-      "category": "Adventure"
-    },
-    {
-      "name": "Shore Scuba Diving",
-      "cost": 3500,
-      "rating": "4.7",
-      "openingTime": "06:00 AM",
-      "closingTime": "02:00 PM",
-      "category": "Adventure"
-    },
-    {
-      "name": "Kalapathar Beach Sunrise",
-      "cost": 0,
-      "rating": "4.9",
-      "openingTime": "04:30 AM",
-      "closingTime": "07:00 AM",
-      "category": "Traditional"
-    },
-    {
-      "name": "Cellular Jail Light & Sound Show",
-      "cost": 300,
-      "rating": "4.8",
-      "openingTime": "06:00 PM",
-      "closingTime": "08:00 PM",
-      "category": "Cultural"
-    },
-    {
-      "name": "Glass Boat Ride (Bharatpur)",
-      "cost": 500,
-      "rating": "4.5",
-      "openingTime": "10:00 AM",
-      "closingTime": "02:00 PM",
-      "category": "Main"
-    },
-    {
-      "name": "Sitapur Beach Coral Viewing",
-      "cost": 0,
-      "rating": "4.6",
-      "openingTime": "08:00 AM",
-      "closingTime": "04:00 PM",
-      "category": "Main"
-    },
-    {
-      "name": "Corbyn Cove Beach Sightseeing",
-      "cost": 0,
-      "rating": "4.7",
-      "openingTime": "Anytime",
-      "closingTime": "Anytime",
-      "category": "Main"
-    }
-  ],
-  "restaurants": [
-    {
-      "id": "ar1",
-      "name": "Local Seafood Special",
-      "category": "Seafood",
-      "rating": "4.8",
-      "menuHighlights": [
-        "Lobster",
-        "Crab",
-        "Fish Curry"
-      ],
-      "openingTime": "12:00 PM - 10:00 PM",
-      "averageCost": 800
-    },
-    {
-      "id": "ar2",
-      "name": "Havelock Beach Cafe",
-      "category": "Cafe",
-      "rating": "4.6",
-      "menuHighlights": [
-        "Grilled Fish",
-        "Pasta",
-        "Coconut Water"
-      ],
-      "openingTime": "08:00 AM - 11:00 PM",
-      "averageCost": 600
-    }
-  ],
-  "cancellationPolicy": "30+ days: 25% charge | 15-30 days: 50% charge | 0-15 days: 100% charge",
-  "packingList": [
-    "Light breathable clothing",
-    "Sunscreen & Sunglasses",
-    "Insect repellent",
-    "Swimwear",
-    "Flip-flops/Sandals",
-    "Waterproof bags",
-    "Medication/First-aid kit",
-    "Reusable water bottle",
-    "Portable charger"
-  ],
-  "knowBeforeYouGo": [
-    "Preferred network: BSNL/Airtel",
-    "Internet rarely works, carry printouts",
-    "ATMs available at Havelock/Port Blair, carry cash for Neil",
-    "Vehicles are point-to-point only",
-    "Cellular jail closed on Mondays",
-    "Sunrise is best experienced early morning"
-  ],
-  "shoppingGuide": "Aberdeen Bazaar (Pearls), Sagarika Govt Emporium (Handicrafts), Shell Jewelry, Coconut Shell decor.",
-  "culturalEtiquette": "Observe decency in dress, especially at places of worship. Do not enter restricted tribal areas.",
-  "inclusions": [
-    "Accommodation with breakfast",
-    "Airport Transfer",
-    "Private Car Ferry transfers",
-    "Premium Ferry charges (Makruzz/Nautika)",
-    "Toll/Parking",
-    "Cellular Jail tickets",
-    "Elephant boat ride"
-  ],
-  "exclusions": [
-    "Other watersports",
-    "Lunch & Dinner",
-    "Personal expenses",
-    "Scuba Diving by boat (5500 INR)"
-  ],
-  "bankDetails": {
-    "name": "You We Travel OPC Private Limited",
-    "bank": "HDFC Bank",
-    "account": "50200093843846",
-    "ifsc": "HDFC0001934",
-    "type": "Current"
   }
-}
 ];
 
 module.exports = destinations;

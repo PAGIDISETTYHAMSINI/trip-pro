@@ -84,11 +84,11 @@ const RazorpayMock = ({ amount, currency, email, onSuccess, onClose }) => {
             )}
             
             {method === 'upi' && (
-              <div style={{ textAlign: 'center', paddingTop: '2rem' }}>
-                <div style={{ width: '120px', height: '120px', background: '#f3f4f6', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px' }}>
-                  <Smartphone size={48} color="#9ca3af" />
+              <div style={{ textAlign: 'center', paddingTop: '1rem' }}>
+                <div style={{ width: '150px', height: '150px', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px', overflow: 'hidden', border: '1px solid #e5e7eb' }}>
+                  <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=trip-pro@upi&am=${amount}&pn=Trip%20Pro%20Concierge`} alt="Scan to Pay" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <p style={{ fontSize: '0.9rem', color: '#4b5563', marginBottom: '1rem' }}>Scan QR with any UPI app</p>
+                <p style={{ fontSize: '0.9rem', color: '#4b5563', marginBottom: '1rem' }}>Scan QR with any UPI app to pay <strong>{currency}{amount.toLocaleString()}</strong></p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                   <div style={{ height: '1px', background: '#e5e7eb', flex: 1 }}></div>
                   <span style={{ fontSize: '0.8rem', color: '#9ca3af' }}>OR</span>
