@@ -14,6 +14,7 @@ export const TripBuilder = () => {
   
   // Form State
   const [selectedDestinationId, setSelectedDestinationId] = useState('');
+  const [boardingPoint, setBoardingPoint] = useState('');
   const [days, setDays] = useState(3);
   const [startDate, setStartDate] = useState(new Date().toISOString().split('T')[0]);
   const [travelers, setTravelers] = useState(2);
@@ -187,7 +188,7 @@ export const TripBuilder = () => {
     else setSelectedRoom(sortedRooms[Math.floor(sortedRooms.length / 2)]);
 
     // 3. Select Top 3 Activities
-    const topActivities = [...destDetails.activities].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)).slice(0, 3);
+    const topActivities = [...(destDetails.activities || [])].sort((a, b) => parseFloat(b.rating || 0) - parseFloat(a.rating || 0)).slice(0, 3);
     setSelectedActivities(topActivities);
 
     // 4. Select 1 Restaurant
@@ -238,6 +239,7 @@ export const TripBuilder = () => {
     const itinerary = {
       totalCost: calculateTotal(),
       currencySymbol: destDetails.name.includes('India') || destDetails.name.includes('Andaman') ? '₹' : '$',
+      boardingPoint: boardingPoint || 'Not specified',
       transport: selectedTransport,
       hotel: selectedHotel,
       room: selectedRoom,
@@ -305,6 +307,10 @@ export const TripBuilder = () => {
                   {destinations.map(d => <option key={d.id} value={d.id}>{d.name}</option>)}
                 </select>
               </div>
+              <div className="form-group">
+                <label>Where are you traveling from? (Boarding Point)</label>
+                <input type="text" className="input-field" placeholder="e.g. New Delhi, New York" value={boardingPoint} onChange={(e) => setBoardingPoint(e.target.value)} />
+              </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
                   <label>Travelers</label>
@@ -352,7 +358,9 @@ export const TripBuilder = () => {
                     <div style={{ fontWeight: 'bold' }}>{tr.agency}</div>
                     <div style={{ color: 'var(--primary)', fontWeight: 'bold' }}>{destDetails.name.includes('India') ? '₹' : '$'}{tr.cost}</div>
                   </div>
-                  <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{tr.name}</div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                    {boardingPoint ? `${boardingPoint} ➔ ${destDetails.name}` : tr.name}
+                  </div>
                   <div style={{ fontSize: '0.8rem', marginTop: '0.5rem' }}><Clock size={14} style={{ display: 'inline', marginRight: '4px' }}/> {tr.departureTime}</div>
                 </div>
               ))}

@@ -114,6 +114,52 @@ destinations.forEach(dest => {
       }
     ];
   }
+
+  // Activities
+  if (!dest.activities || dest.activities.length === 0) {
+    dest.activities = [
+      {
+        name: "City Landmark Tour",
+        cost: isIndian ? 500 : 25,
+        rating: "4.5",
+        openingTime: "09:00 AM",
+        closingTime: "06:00 PM",
+        category: "Main"
+      },
+      {
+        name: "National Museum Visit",
+        cost: isIndian ? 200 : 15,
+        rating: "4.6",
+        openingTime: "10:00 AM",
+        closingTime: "05:00 PM",
+        category: "Main"
+      },
+      {
+        name: "Old Town Walking Trail",
+        cost: 0,
+        rating: "4.9",
+        openingTime: "Anytime",
+        closingTime: "Anytime",
+        category: "Hidden Gem"
+      },
+      {
+        name: "Local Artisan Workshop",
+        cost: isIndian ? 1200 : 40,
+        rating: "4.9",
+        openingTime: "11:00 AM",
+        closingTime: "04:00 PM",
+        category: "Cultural"
+      },
+      {
+        name: "Sunset View Point Trek",
+        cost: 0,
+        rating: "4.9",
+        openingTime: "04:00 PM",
+        closingTime: "07:00 PM",
+        category: "Adventure"
+      }
+    ];
+  }
 });
 
 // Write back to data.js

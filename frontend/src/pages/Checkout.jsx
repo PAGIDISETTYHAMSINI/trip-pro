@@ -61,7 +61,7 @@ export const Checkout = () => {
         
         <div style={{ background: 'rgba(79, 70, 229, 0.05)', padding: '1rem', borderRadius: '8px', marginBottom: '2rem' }}>
           <h3>Trip Summary</h3>
-          <p><strong>Destination:</strong> {destination.name}</p>
+          <p><strong>Route:</strong> {itinerary.boardingPoint && itinerary.boardingPoint !== 'Not specified' ? `${itinerary.boardingPoint} ➔ ${destination.name}` : destination.name}</p>
           <p><strong>Duration:</strong> {days} Days</p>
           <p><strong>Total Amount:</strong> <span style={{ color: 'var(--primary)', fontSize: '1.25rem', fontWeight: 'bold' }}>{itinerary.currencySymbol || '$'}{itinerary.totalCost.toLocaleString()}</span></p>
         </div>

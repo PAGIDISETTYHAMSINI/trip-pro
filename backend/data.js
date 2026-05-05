@@ -275,33 +275,33 @@ const destinations = [
         "id": "f1-paris",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-581",
+        "name": "Flight-374",
         "cost": 400,
-        "departureTime": "9:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-paris",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-617",
+        "name": "Flight-749",
         "cost": 1200,
-        "departureTime": "6:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-paris",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2907",
+        "name": "Express-3145",
         "cost": 160,
-        "departureTime": "3:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-paris",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-2863",
+        "name": "Express-8172",
         "cost": 280,
-        "departureTime": "1:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-paris",
@@ -737,33 +737,33 @@ const destinations = [
         "id": "f1-bali",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-713",
+        "name": "Flight-734",
         "cost": 800,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-bali",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-863",
+        "name": "Flight-633",
         "cost": 2500,
-        "departureTime": "7:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-bali",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-7584",
+        "name": "Express-4310",
         "cost": 320,
-        "departureTime": "4:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-bali",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8595",
+        "name": "Express-8355",
         "cost": 560,
-        "departureTime": "3:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-bali",
@@ -1197,7 +1197,7 @@ const destinations = [
         "id": "f1-tokyo",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-531",
+        "name": "Flight-312",
         "cost": 900,
         "departureTime": "10:00 AM"
       },
@@ -1205,25 +1205,25 @@ const destinations = [
         "id": "f2-tokyo",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-457",
+        "name": "Flight-255",
         "cost": 3000,
-        "departureTime": "10:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-tokyo",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5961",
+        "name": "Express-6390",
         "cost": 360,
-        "departureTime": "1:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-tokyo",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-6265",
+        "name": "Express-8165",
         "cost": 630,
-        "departureTime": "3:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-tokyo",
@@ -1657,23 +1657,23 @@ const destinations = [
         "id": "f1-newyork",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-107",
+        "name": "Flight-722",
         "cost": 300,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-newyork",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-816",
+        "name": "Flight-131",
         "cost": 1000,
-        "departureTime": "6:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-newyork",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-3235",
+        "name": "Express-9552",
         "cost": 120,
         "departureTime": "4:30 PM"
       },
@@ -1681,9 +1681,9 @@ const destinations = [
         "id": "t2-newyork",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-3626",
+        "name": "Express-6256",
         "cost": 210,
-        "departureTime": "3:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-newyork",
@@ -2119,15 +2119,15 @@ const destinations = [
         "id": "f1-goa",
         "type": "Budget Airline",
         "agency": "IndiGo",
-        "name": "Flight-707",
+        "name": "Flight-601",
         "cost": 150,
-        "departureTime": "8:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-goa",
         "type": "Premium Airline",
         "agency": "Air India",
-        "name": "Flight-423",
+        "name": "Flight-735",
         "cost": 400,
         "departureTime": "9:00 AM"
       },
@@ -2135,17 +2135,17 @@ const destinations = [
         "id": "t1-goa",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-5421",
+        "name": "Express-2177",
         "cost": 60,
-        "departureTime": "1:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-goa",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-8456",
+        "name": "Express-5750",
         "cost": 105,
-        "departureTime": "3:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-goa",
@@ -2579,31 +2579,31 @@ const destinations = [
         "id": "f1-kerala",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-645",
+        "name": "Flight-735",
         "cost": 200,
-        "departureTime": "10:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-kerala",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-735",
+        "name": "Flight-996",
         "cost": 500,
-        "departureTime": "7:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-kerala",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-5352",
+        "name": "Express-8096",
         "cost": 80,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-kerala",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-5312",
+        "name": "Express-3916",
         "cost": 140,
         "departureTime": "1:30 PM"
       },
@@ -3039,33 +3039,33 @@ const destinations = [
         "id": "f1-jaipur",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-629",
+        "name": "Flight-217",
         "cost": 180,
-        "departureTime": "11:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-jaipur",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-497",
+        "name": "Flight-307",
         "cost": 450,
-        "departureTime": "6:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-jaipur",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-4659",
+        "name": "Express-2681",
         "cost": 72,
-        "departureTime": "3:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-jaipur",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-3193",
+        "name": "Express-8026",
         "cost": 125,
-        "departureTime": "3:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-jaipur",
@@ -3499,7 +3499,7 @@ const destinations = [
         "id": "f1-agra",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-716",
+        "name": "Flight-719",
         "cost": 120,
         "departureTime": "8:00 AM"
       },
@@ -3507,23 +3507,23 @@ const destinations = [
         "id": "f2-agra",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-327",
+        "name": "Flight-847",
         "cost": 350,
-        "departureTime": "7:00 AM"
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-agra",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-8755",
+        "name": "Express-4028",
         "cost": 48,
-        "departureTime": "5:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-agra",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-5800",
+        "name": "Express-5888",
         "cost": 84,
         "departureTime": "6:30 PM"
       },
@@ -3959,33 +3959,33 @@ const destinations = [
         "id": "f1-newdelhi",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-404",
+        "name": "Flight-920",
         "cost": 150,
-        "departureTime": "8:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-newdelhi",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-926",
+        "name": "Flight-981",
         "cost": 400,
-        "departureTime": "8:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-newdelhi",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-5260",
+        "name": "Express-3652",
         "cost": 60,
-        "departureTime": "2:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-newdelhi",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-1664",
+        "name": "Express-2798",
         "cost": 105,
-        "departureTime": "6:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-newdelhi",
@@ -4419,33 +4419,33 @@ const destinations = [
         "id": "f1-mumbai",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-966",
+        "name": "Flight-352",
         "cost": 160,
-        "departureTime": "6:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-mumbai",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-202",
+        "name": "Flight-921",
         "cost": 420,
-        "departureTime": "11:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-mumbai",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-9397",
+        "name": "Express-9807",
         "cost": 64,
-        "departureTime": "2:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-mumbai",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-2967",
+        "name": "Express-4582",
         "cost": 112,
-        "departureTime": "3:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-mumbai",
@@ -4879,23 +4879,23 @@ const destinations = [
         "id": "f1-varanasi",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-630",
+        "name": "Flight-952",
         "cost": 130,
-        "departureTime": "8:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-varanasi",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-610",
+        "name": "Flight-982",
         "cost": 380,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "t1-varanasi",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-8017",
+        "name": "Express-6239",
         "cost": 52,
         "departureTime": "3:30 PM"
       },
@@ -4903,9 +4903,9 @@ const destinations = [
         "id": "t2-varanasi",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-8539",
+        "name": "Express-7972",
         "cost": 91,
-        "departureTime": "6:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-varanasi",
@@ -5339,23 +5339,23 @@ const destinations = [
         "id": "f1-ladakh",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-843",
+        "name": "Flight-446",
         "cost": 250,
-        "departureTime": "11:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-ladakh",
         "type": "Premium Economy",
         "agency": "Air India",
-        "name": "Flight-555",
+        "name": "Flight-437",
         "cost": 500,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-ladakh",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-7987",
+        "name": "Express-5655",
         "cost": 100,
         "departureTime": "1:30 PM"
       },
@@ -5363,9 +5363,9 @@ const destinations = [
         "id": "t2-ladakh",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-8723",
+        "name": "Express-9260",
         "cost": 175,
-        "departureTime": "5:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-ladakh",
@@ -5801,7 +5801,7 @@ const destinations = [
         "id": "f1-andaman",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-116",
+        "name": "Flight-108",
         "cost": 220,
         "departureTime": "8:00 AM"
       },
@@ -5809,25 +5809,25 @@ const destinations = [
         "id": "f2-andaman",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-941",
+        "name": "Flight-649",
         "cost": 600,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-andaman",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-5606",
+        "name": "Express-4369",
         "cost": 88,
-        "departureTime": "1:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-andaman",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-3842",
+        "name": "Express-4551",
         "cost": 154,
-        "departureTime": "1:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-andaman",
@@ -6262,7 +6262,7 @@ const destinations = [
         "id": "f1-manali",
         "type": "Bus/Economy Travel",
         "agency": "IndiGo",
-        "name": "Flight-727",
+        "name": "Flight-150",
         "cost": 50,
         "departureTime": "7:00 AM"
       },
@@ -6270,25 +6270,25 @@ const destinations = [
         "id": "f2-manali",
         "type": "Private Cab",
         "agency": "Air India",
-        "name": "Flight-256",
+        "name": "Flight-127",
         "cost": 200,
-        "departureTime": "9:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-manali",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-4614",
+        "name": "Express-4761",
         "cost": 20,
-        "departureTime": "1:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-manali",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-5977",
+        "name": "Express-8539",
         "cost": 35,
-        "departureTime": "2:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-manali",
@@ -6722,33 +6722,33 @@ const destinations = [
         "id": "f1-darjeeling",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-517",
+        "name": "Flight-137",
         "cost": 150,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-darjeeling",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-399",
+        "name": "Flight-962",
         "cost": 350,
-        "departureTime": "11:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-darjeeling",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-8248",
+        "name": "Express-6457",
         "cost": 60,
-        "departureTime": "2:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-darjeeling",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-9610",
+        "name": "Express-3311",
         "cost": 105,
-        "departureTime": "2:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-darjeeling",
@@ -7182,23 +7182,23 @@ const destinations = [
         "id": "f1-rishikesh",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-766",
+        "name": "Flight-788",
         "cost": 100,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-rishikesh",
         "type": "Premium Economy",
         "agency": "Air India",
-        "name": "Flight-471",
+        "name": "Flight-272",
         "cost": 250,
-        "departureTime": "6:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "t1-rishikesh",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-2053",
+        "name": "Express-7966",
         "cost": 40,
         "departureTime": "1:30 PM"
       },
@@ -7206,9 +7206,9 @@ const destinations = [
         "id": "t2-rishikesh",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-5470",
+        "name": "Express-2020",
         "cost": 70,
-        "departureTime": "6:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-rishikesh",
@@ -7642,7 +7642,7 @@ const destinations = [
         "id": "f1-udaipur",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-418",
+        "name": "Flight-679",
         "cost": 140,
         "departureTime": "9:00 AM"
       },
@@ -7650,25 +7650,25 @@ const destinations = [
         "id": "f2-udaipur",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-458",
+        "name": "Flight-195",
         "cost": 380,
-        "departureTime": "11:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-udaipur",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-1275",
+        "name": "Express-4712",
         "cost": 56,
-        "departureTime": "4:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-udaipur",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-5418",
+        "name": "Express-6003",
         "cost": 98,
-        "departureTime": "4:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-udaipur",
@@ -8102,33 +8102,33 @@ const destinations = [
         "id": "f1-img_ajanta_0",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-857",
+        "name": "Flight-831",
         "cost": 193,
-        "departureTime": "6:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-img_ajanta_0",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-920",
+        "name": "Flight-893",
         "cost": 329,
-        "departureTime": "6:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_ajanta_0",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-7731",
+        "name": "Express-6764",
         "cost": 77,
-        "departureTime": "1:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-img_ajanta_0",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1792",
+        "name": "Express-1300",
         "cost": 135,
-        "departureTime": "4:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_ajanta_0",
@@ -8563,33 +8563,33 @@ const destinations = [
         "id": "f1-img_amarnathcave_1",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-468",
+        "name": "Flight-872",
         "cost": 121,
-        "departureTime": "11:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_amarnathcave_1",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-748",
+        "name": "Flight-875",
         "cost": 412,
-        "departureTime": "8:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_amarnathcave_1",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-3036",
+        "name": "Express-5135",
         "cost": 48,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_amarnathcave_1",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1548",
+        "name": "Express-5594",
         "cost": 84,
-        "departureTime": "3:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_amarnathcave_1",
@@ -9023,33 +9023,33 @@ const destinations = [
         "id": "f1-img_akbarstomb_2",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-287",
+        "name": "Flight-197",
         "cost": 154,
-        "departureTime": "6:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_akbarstomb_2",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-993",
+        "name": "Flight-976",
         "cost": 477,
-        "departureTime": "10:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-img_akbarstomb_2",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-1250",
+        "name": "Express-4741",
         "cost": 61,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_akbarstomb_2",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8161",
+        "name": "Express-3245",
         "cost": 107,
-        "departureTime": "6:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_akbarstomb_2",
@@ -9483,23 +9483,23 @@ const destinations = [
         "id": "f1-img_amberpalace_3",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-338",
+        "name": "Flight-378",
         "cost": 115,
-        "departureTime": "10:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-img_amberpalace_3",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-233",
+        "name": "Flight-237",
         "cost": 391,
-        "departureTime": "10:00 AM"
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_amberpalace_3",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6507",
+        "name": "Express-1985",
         "cost": 46,
         "departureTime": "2:30 PM"
       },
@@ -9507,9 +9507,9 @@ const destinations = [
         "id": "t2-img_amberpalace_3",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-6978",
+        "name": "Express-2913",
         "cost": 80,
-        "departureTime": "1:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_amberpalace_3",
@@ -9943,7 +9943,7 @@ const destinations = [
         "id": "f1-img_anandbhawan_4",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-801",
+        "name": "Flight-145",
         "cost": 119,
         "departureTime": "7:00 AM"
       },
@@ -9951,23 +9951,23 @@ const destinations = [
         "id": "f2-img_anandbhawan_4",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-734",
+        "name": "Flight-185",
         "cost": 393,
-        "departureTime": "6:00 AM"
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_anandbhawan_4",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2736",
+        "name": "Express-8393",
         "cost": 47,
-        "departureTime": "4:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_anandbhawan_4",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4486",
+        "name": "Express-8078",
         "cost": 83,
         "departureTime": "3:30 PM"
       },
@@ -10403,31 +10403,31 @@ const destinations = [
         "id": "f1-img_bhakradam_5",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-913",
+        "name": "Flight-733",
         "cost": 106,
-        "departureTime": "10:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_bhakradam_5",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-482",
+        "name": "Flight-762",
         "cost": 499,
-        "departureTime": "10:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_bhakradam_5",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-9794",
+        "name": "Express-2790",
         "cost": 42,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_bhakradam_5",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-6947",
+        "name": "Express-5378",
         "cost": 74,
         "departureTime": "2:30 PM"
       },
@@ -10863,31 +10863,31 @@ const destinations = [
         "id": "f1-img_bibidamaqbra_6",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-505",
+        "name": "Flight-756",
         "cost": 195,
-        "departureTime": "11:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_bibidamaqbra_6",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-936",
+        "name": "Flight-393",
         "cost": 494,
-        "departureTime": "8:00 AM"
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_bibidamaqbra_6",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-8908",
+        "name": "Express-8174",
         "cost": 78,
-        "departureTime": "6:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_bibidamaqbra_6",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-5856",
+        "name": "Express-8665",
         "cost": 136,
         "departureTime": "6:30 PM"
       },
@@ -11323,33 +11323,33 @@ const destinations = [
         "id": "f1-img_birlaplanetarium_7",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-202",
+        "name": "Flight-940",
         "cost": 165,
-        "departureTime": "9:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_birlaplanetarium_7",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-389",
+        "name": "Flight-843",
         "cost": 302,
-        "departureTime": "7:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_birlaplanetarium_7",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5612",
+        "name": "Express-8433",
         "cost": 66,
-        "departureTime": "3:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_birlaplanetarium_7",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4207",
+        "name": "Express-5691",
         "cost": 115,
-        "departureTime": "1:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_birlaplanetarium_7",
@@ -11783,33 +11783,33 @@ const destinations = [
         "id": "f1-img_blackpagoda_8",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-191",
+        "name": "Flight-226",
         "cost": 110,
-        "departureTime": "8:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_blackpagoda_8",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-307",
+        "name": "Flight-941",
         "cost": 391,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "t1-img_blackpagoda_8",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2025",
+        "name": "Express-4673",
         "cost": 44,
-        "departureTime": "2:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-img_blackpagoda_8",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-9053",
+        "name": "Express-8921",
         "cost": 77,
-        "departureTime": "6:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_blackpagoda_8",
@@ -12243,33 +12243,33 @@ const destinations = [
         "id": "f1-img_bodhisatva_9",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-376",
+        "name": "Flight-162",
         "cost": 172,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "f2-img_bodhisatva_9",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-580",
+        "name": "Flight-571",
         "cost": 461,
-        "departureTime": "8:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-img_bodhisatva_9",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4885",
+        "name": "Express-6032",
         "cost": 68,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_bodhisatva_9",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-7617",
+        "name": "Express-3256",
         "cost": 120,
-        "departureTime": "3:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_bodhisatva_9",
@@ -12703,33 +12703,33 @@ const destinations = [
         "id": "f1-img_brihadeeswaratemple_10",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-623",
+        "name": "Flight-466",
         "cost": 149,
-        "departureTime": "9:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "f2-img_brihadeeswaratemple_10",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-510",
+        "name": "Flight-791",
         "cost": 494,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_brihadeeswaratemple_10",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4854",
+        "name": "Express-6307",
         "cost": 59,
-        "departureTime": "4:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_brihadeeswaratemple_10",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-2381",
+        "name": "Express-8101",
         "cost": 104,
-        "departureTime": "6:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_brihadeeswaratemple_10",
@@ -13163,15 +13163,15 @@ const destinations = [
         "id": "f1-img_brindabangardens_11",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-461",
+        "name": "Flight-145",
         "cost": 117,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_brindabangardens_11",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-834",
+        "name": "Flight-768",
         "cost": 481,
         "departureTime": "6:00 AM"
       },
@@ -13179,17 +13179,17 @@ const destinations = [
         "id": "t1-img_brindabangardens_11",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-9262",
+        "name": "Express-6462",
         "cost": 46,
-        "departureTime": "1:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-img_brindabangardens_11",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-5594",
+        "name": "Express-3984",
         "cost": 81,
-        "departureTime": "3:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_brindabangardens_11",
@@ -13623,33 +13623,33 @@ const destinations = [
         "id": "f1-img_bulanddarwaza_12",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-351",
+        "name": "Flight-302",
         "cost": 164,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_bulanddarwaza_12",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-850",
+        "name": "Flight-139",
         "cost": 469,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_bulanddarwaza_12",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-9780",
+        "name": "Express-6542",
         "cost": 65,
-        "departureTime": "1:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-img_bulanddarwaza_12",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-9802",
+        "name": "Express-1971",
         "cost": 114,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_bulanddarwaza_12",
@@ -14083,7 +14083,7 @@ const destinations = [
         "id": "f1-img_charminar_13",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-520",
+        "name": "Flight-848",
         "cost": 194,
         "departureTime": "6:00 AM"
       },
@@ -14091,25 +14091,25 @@ const destinations = [
         "id": "f2-img_charminar_13",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-757",
+        "name": "Flight-936",
         "cost": 426,
-        "departureTime": "9:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-img_charminar_13",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5525",
+        "name": "Express-2247",
         "cost": 77,
-        "departureTime": "5:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_charminar_13",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-3341",
+        "name": "Express-8846",
         "cost": 135,
-        "departureTime": "3:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_charminar_13",
@@ -14543,7 +14543,7 @@ const destinations = [
         "id": "f1-img_cheenakesavatemple_14",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-171",
+        "name": "Flight-558",
         "cost": 191,
         "departureTime": "9:00 AM"
       },
@@ -14551,25 +14551,25 @@ const destinations = [
         "id": "f2-img_cheenakesavatemple_14",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-721",
+        "name": "Flight-813",
         "cost": 348,
-        "departureTime": "6:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_cheenakesavatemple_14",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2791",
+        "name": "Express-4631",
         "cost": 76,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_cheenakesavatemple_14",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4009",
+        "name": "Express-4434",
         "cost": 133,
-        "departureTime": "2:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_cheenakesavatemple_14",
@@ -15003,33 +15003,33 @@ const destinations = [
         "id": "f1-img_chilkalake_15",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-544",
+        "name": "Flight-833",
         "cost": 126,
-        "departureTime": "10:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "f2-img_chilkalake_15",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-167",
+        "name": "Flight-887",
         "cost": 461,
-        "departureTime": "10:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_chilkalake_15",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-8522",
+        "name": "Express-2603",
         "cost": 50,
-        "departureTime": "1:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-img_chilkalake_15",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4506",
+        "name": "Express-4493",
         "cost": 88,
-        "departureTime": "1:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_chilkalake_15",
@@ -15463,23 +15463,23 @@ const destinations = [
         "id": "f1-img_dallake_16",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-833",
+        "name": "Flight-623",
         "cost": 188,
-        "departureTime": "11:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_dallake_16",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-478",
+        "name": "Flight-211",
         "cost": 353,
-        "departureTime": "7:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_dallake_16",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-3045",
+        "name": "Express-6778",
         "cost": 75,
         "departureTime": "1:30 PM"
       },
@@ -15487,9 +15487,9 @@ const destinations = [
         "id": "t2-img_dallake_16",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-9420",
+        "name": "Express-7121",
         "cost": 131,
-        "departureTime": "3:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_dallake_16",
@@ -15923,15 +15923,15 @@ const destinations = [
         "id": "f1-img_dilwaratemple_17",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-201",
+        "name": "Flight-887",
         "cost": 143,
-        "departureTime": "6:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_dilwaratemple_17",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-358",
+        "name": "Flight-144",
         "cost": 472,
         "departureTime": "7:00 AM"
       },
@@ -15939,7 +15939,7 @@ const destinations = [
         "id": "t1-img_dilwaratemple_17",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-1329",
+        "name": "Express-2191",
         "cost": 57,
         "departureTime": "6:30 PM"
       },
@@ -15947,9 +15947,9 @@ const destinations = [
         "id": "t2-img_dilwaratemple_17",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-7484",
+        "name": "Express-3362",
         "cost": 100,
-        "departureTime": "1:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "b1-img_dilwaratemple_17",
@@ -16383,15 +16383,15 @@ const destinations = [
         "id": "f1-img_elephantacaves_18",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-928",
+        "name": "Flight-873",
         "cost": 176,
-        "departureTime": "6:00 AM"
+        "departureTime": "9:00 AM"
       },
       {
         "id": "f2-img_elephantacaves_18",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-448",
+        "name": "Flight-971",
         "cost": 382,
         "departureTime": "7:00 AM"
       },
@@ -16399,17 +16399,17 @@ const destinations = [
         "id": "t1-img_elephantacaves_18",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-9879",
+        "name": "Express-6529",
         "cost": 70,
-        "departureTime": "6:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_elephantacaves_18",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4284",
+        "name": "Express-3825",
         "cost": 123,
-        "departureTime": "4:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "b1-img_elephantacaves_18",
@@ -16843,33 +16843,33 @@ const destinations = [
         "id": "f1-img_elloracaves_19",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-802",
+        "name": "Flight-738",
         "cost": 116,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "f2-img_elloracaves_19",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-748",
+        "name": "Flight-425",
         "cost": 428,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_elloracaves_19",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-1777",
+        "name": "Express-3653",
         "cost": 46,
-        "departureTime": "1:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-img_elloracaves_19",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1188",
+        "name": "Express-8787",
         "cost": 81,
-        "departureTime": "3:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_elloracaves_19",
@@ -17303,23 +17303,23 @@ const destinations = [
         "id": "f1-img_gatewayofindia_20",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-327",
+        "name": "Flight-957",
         "cost": 141,
-        "departureTime": "6:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_gatewayofindia_20",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-724",
+        "name": "Flight-895",
         "cost": 352,
-        "departureTime": "9:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_gatewayofindia_20",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-3114",
+        "name": "Express-9269",
         "cost": 56,
         "departureTime": "3:30 PM"
       },
@@ -17327,7 +17327,7 @@ const destinations = [
         "id": "t2-img_gatewayofindia_20",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-7979",
+        "name": "Express-4972",
         "cost": 98,
         "departureTime": "6:30 PM"
       },
@@ -17763,31 +17763,31 @@ const destinations = [
         "id": "f1-img_goldentemple_21",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-323",
+        "name": "Flight-458",
         "cost": 180,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "f2-img_goldentemple_21",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-807",
+        "name": "Flight-217",
         "cost": 321,
-        "departureTime": "6:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-img_goldentemple_21",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-1701",
+        "name": "Express-6678",
         "cost": 72,
-        "departureTime": "1:30 PM"
+        "departureTime": "5:30 PM"
       },
       {
         "id": "t2-img_goldentemple_21",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-6317",
+        "name": "Express-8833",
         "cost": 125,
         "departureTime": "5:30 PM"
       },
@@ -18223,33 +18223,33 @@ const destinations = [
         "id": "f1-img_golgumbaz_22",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-594",
+        "name": "Flight-462",
         "cost": 145,
-        "departureTime": "9:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_golgumbaz_22",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-218",
+        "name": "Flight-415",
         "cost": 481,
-        "departureTime": "10:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_golgumbaz_22",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2285",
+        "name": "Express-7516",
         "cost": 58,
-        "departureTime": "5:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "t2-img_golgumbaz_22",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-7324",
+        "name": "Express-8677",
         "cost": 101,
-        "departureTime": "6:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_golgumbaz_22",
@@ -18683,33 +18683,33 @@ const destinations = [
         "id": "f1-img_hanginggardens_23",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-314",
+        "name": "Flight-605",
         "cost": 181,
-        "departureTime": "9:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-img_hanginggardens_23",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-543",
+        "name": "Flight-871",
         "cost": 367,
-        "departureTime": "7:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_hanginggardens_23",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5375",
+        "name": "Express-4940",
         "cost": 72,
-        "departureTime": "2:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "t2-img_hanginggardens_23",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-9311",
+        "name": "Express-1343",
         "cost": 126,
-        "departureTime": "5:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_hanginggardens_23",
@@ -19143,7 +19143,7 @@ const destinations = [
         "id": "f1-img_hawamahal_24",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-245",
+        "name": "Flight-809",
         "cost": 124,
         "departureTime": "6:00 AM"
       },
@@ -19151,25 +19151,25 @@ const destinations = [
         "id": "f2-img_hawamahal_24",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-864",
+        "name": "Flight-578",
         "cost": 489,
-        "departureTime": "7:00 AM"
+        "departureTime": "9:00 AM"
       },
       {
         "id": "t1-img_hawamahal_24",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-8586",
+        "name": "Express-5719",
         "cost": 49,
-        "departureTime": "1:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-img_hawamahal_24",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-9100",
+        "name": "Express-9815",
         "cost": 86,
-        "departureTime": "1:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_hawamahal_24",
@@ -19603,33 +19603,33 @@ const destinations = [
         "id": "f1-img_howrahbridge_25",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-523",
+        "name": "Flight-463",
         "cost": 159,
-        "departureTime": "10:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_howrahbridge_25",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-653",
+        "name": "Flight-317",
         "cost": 300,
-        "departureTime": "6:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_howrahbridge_25",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-8269",
+        "name": "Express-5768",
         "cost": 63,
-        "departureTime": "5:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_howrahbridge_25",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-2456",
+        "name": "Express-2854",
         "cost": 111,
-        "departureTime": "2:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "b1-img_howrahbridge_25",
@@ -20063,33 +20063,33 @@ const destinations = [
         "id": "f1-img_islandpalace_26",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-977",
+        "name": "Flight-429",
         "cost": 118,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "f2-img_islandpalace_26",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-351",
+        "name": "Flight-822",
         "cost": 401,
-        "departureTime": "9:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-img_islandpalace_26",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6843",
+        "name": "Express-4894",
         "cost": 47,
-        "departureTime": "5:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "t2-img_islandpalace_26",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1762",
+        "name": "Express-2780",
         "cost": 82,
-        "departureTime": "4:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_islandpalace_26",
@@ -20523,23 +20523,23 @@ const destinations = [
         "id": "f1-img_itmaaduddaulahstomb_27",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-869",
+        "name": "Flight-867",
         "cost": 156,
-        "departureTime": "8:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "f2-img_itmaaduddaulahstomb_27",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-146",
+        "name": "Flight-716",
         "cost": 335,
-        "departureTime": "8:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "t1-img_itmaaduddaulahstomb_27",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-1075",
+        "name": "Express-4870",
         "cost": 62,
         "departureTime": "1:30 PM"
       },
@@ -20547,9 +20547,9 @@ const destinations = [
         "id": "t2-img_itmaaduddaulahstomb_27",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1251",
+        "name": "Express-6704",
         "cost": 109,
-        "departureTime": "1:30 PM"
+        "departureTime": "3:30 PM"
       },
       {
         "id": "b1-img_itmaaduddaulahstomb_27",
@@ -20983,33 +20983,33 @@ const destinations = [
         "id": "f1-img_jagannathtemple_28",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-432",
+        "name": "Flight-810",
         "cost": 169,
-        "departureTime": "10:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "f2-img_jagannathtemple_28",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-270",
+        "name": "Flight-666",
         "cost": 444,
-        "departureTime": "7:00 AM"
+        "departureTime": "6:00 AM"
       },
       {
         "id": "t1-img_jagannathtemple_28",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2801",
+        "name": "Express-6129",
         "cost": 67,
-        "departureTime": "5:30 PM"
+        "departureTime": "4:30 PM"
       },
       {
         "id": "t2-img_jagannathtemple_28",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8504",
+        "name": "Express-9104",
         "cost": 118,
-        "departureTime": "6:30 PM"
+        "departureTime": "2:30 PM"
       },
       {
         "id": "b1-img_jagannathtemple_28",
@@ -21443,33 +21443,33 @@ const destinations = [
         "id": "f1-img_jahazmahal_29",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-383",
+        "name": "Flight-397",
         "cost": 173,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM"
       },
       {
         "id": "f2-img_jahazmahal_29",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-543",
+        "name": "Flight-909",
         "cost": 342,
-        "departureTime": "10:00 AM"
+        "departureTime": "7:00 AM"
       },
       {
         "id": "t1-img_jahazmahal_29",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5834",
+        "name": "Express-5535",
         "cost": 69,
-        "departureTime": "4:30 PM"
+        "departureTime": "6:30 PM"
       },
       {
         "id": "t2-img_jahazmahal_29",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8348",
+        "name": "Express-4771",
         "cost": 121,
-        "departureTime": "6:30 PM"
+        "departureTime": "1:30 PM"
       },
       {
         "id": "b1-img_jahazmahal_29",
@@ -21689,23 +21689,23 @@ const destinations = [
         "id": "f1-andaman",
         "type": "Economy (To Port Blair)",
         "agency": "Emirates",
-        "name": "Flight-951",
+        "name": "Flight-559",
         "cost": 8000,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM"
       },
       {
         "id": "f2-andaman",
         "type": "Business (To Port Blair)",
         "agency": "Qatar Airways",
-        "name": "Flight-409",
+        "name": "Flight-582",
         "cost": 18000,
-        "departureTime": "11:00 AM"
+        "departureTime": "8:00 AM"
       },
       {
         "id": "t1-andaman",
         "type": "Standard Train",
         "agency": "National Rail",
-        "name": "Exp-520",
+        "name": "Exp-815",
         "cost": 80,
         "departureTime": "02:00 PM"
       },
