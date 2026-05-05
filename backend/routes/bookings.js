@@ -9,18 +9,23 @@ const router = express.Router();
 // Helper to generate a day-by-day schedule
 const generateSchedule = (itinerary, days) => {
   const schedule = [];
-  const activities = [...itinerary.activities];
-  const restaurants = itinerary.hotel.nearbyRestaurants || ["Local Cafe", "Downtown Restaurant"];
+  const activities = itinerary.activities ? [...itinerary.activities] : [];
+  const restaurants = itinerary.hotel?.nearbyRestaurants || ["Local Cafe", "Downtown Restaurant"];
   
   for (let i = 1; i <= days; i++) {
     const dayPlan = { day: i, morning: '', afternoon: '', evening: '' };
     
     // Day 1: Arrival
     if (i === 1) {
-      dayPlan.morning = `Arrive via ${itinerary.transport.method} (${itinerary.transport.type}) and check-in to your ${itinerary.hotel.type}.`;
+      const transportMethod = itinerary.transport?.method || 'Transport';
+      const transportType = itinerary.transport?.type || 'Standard';
+      const hotelType = itinerary.hotel?.type || 'Hotel';
+      dayPlan.morning = `Arrive via ${transportMethod} (${transportType}) and check-in to your ${hotelType}.`;
     } else if (i === days) {
-      dayPlan.morning = `Check-out from hotel and prepare for departure via ${itinerary.transport.method}.`;
+      const transportMethod = itinerary.transport?.method || 'Transport';
+      dayPlan.morning = `Check-out from hotel and prepare for departure via ${transportMethod}.`;
     }
+
 
     // Distribute activities based on suggested time
     let morningActs = activities.filter(a => a.suggestedTime.includes('Morning'));
