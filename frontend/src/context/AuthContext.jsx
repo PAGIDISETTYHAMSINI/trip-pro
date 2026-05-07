@@ -10,10 +10,24 @@ export const AuthProvider = ({ children }) => {
     // Sync token to localStorage
     if (token) {
       localStorage.setItem('token', token);
-      // In a real app, you might want to fetch user profile here with the token
-      // For now we'll assume user object is stored during login/signup
-      const storedUser = localStorage.getItem('user');
-      if (storedUser) setUser(JSON.parse(storedUser));
+      
+      // Fetch fresh user data (including coins)
+      const fetchProfile = async () => {
+        try {
+          const res = await fetch('https://trip-pro.onrender.com/api/auth/profile', {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          if (res.ok) {
+            const data = await res.json();
+            setUser(data);
+            localStorage.setItem('user', JSON.stringify(data));
+          }
+        } catch (err) {
+          console.error("Failed to fetch profile", err);
+        }
+      };
+      
+      fetchProfile();
     } else {
       localStorage.removeItem('token');
       localStorage.removeItem('user');

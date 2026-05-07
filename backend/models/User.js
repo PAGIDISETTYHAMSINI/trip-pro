@@ -23,6 +23,10 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  coins: {
+    type: DataTypes.FLOAT,
+    defaultValue: 0,
+  },
 });
 
 module.exports = User;

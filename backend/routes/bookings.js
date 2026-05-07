@@ -117,7 +117,24 @@ const sendScheduleEmail = async (userEmail, destinationName, schedule, totalCost
 // Create a new booking
 router.post('/', authMiddleware, async (req, res) => {
   try {
-    const { destinationId, destinationName, totalCost, days, itineraryDetails } = req.body;
+    const { destinationId, destinationName, totalCost, days, itineraryDetails, coinsUsed } = req.body;
+    
+    const user = await User.findByPk(req.user);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+
+    // Handle coins deduction if used
+    if (coinsUsed > 0) {
+      if (user.coins >= coinsUsed) {
+        user.coins -= coinsUsed;
+      } else {
+        return res.status(400).json({ error: 'Insufficient coins' });
+      }
+    }
+
+    // Award new coins (5% of payment)
+    const coinsEarned = Math.round(totalCost * 0.05);
+    user.coins += coinsEarned;
+    await user.save();
 
     const schedule = generateSchedule(itineraryDetails, days);
 
@@ -128,17 +145,14 @@ router.post('/', authMiddleware, async (req, res) => {
       totalCost,
       days,
       itineraryDetails,
-      schedule
+      schedule,
+      status: 'PAID'
     });
 
-    // Fetch user email to send the itinerary
-    const user = await User.findByPk(req.user);
-    if (user) {
-      // Send email asynchronously so it doesn't block response
-      sendScheduleEmail(user.email, destinationName, schedule, totalCost, itineraryDetails.currencySymbol || '$');
-    }
+    // Send email asynchronously
+    sendScheduleEmail(user.email, destinationName, schedule, totalCost, itineraryDetails.currencySymbol || '$');
 
-    res.status(201).json({ message: 'Booking successful', booking });
+    res.status(201).json({ message: 'Booking successful', booking, coinsEarned, currentBalance: user.coins });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error while booking' });
@@ -156,6 +170,26 @@ router.get('/', authMiddleware, async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error fetching bookings' });
+  }
+});
+
+// Cancel a booking
+router.put('/:id/cancel', authMiddleware, async (req, res) => {
+  try {
+    const booking = await Booking.findOne({ where: { id: req.params.id, userId: req.user } });
+    if (!booking) return res.status(404).json({ error: 'Booking not found' });
+
+    if (booking.status === 'CANCELLED') {
+      return res.status(400).json({ error: 'Booking is already cancelled' });
+    }
+
+    booking.status = 'CANCELLED';
+    await booking.save();
+
+    res.json({ message: 'Booking cancelled successfully', booking });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error cancelling booking' });
   }
 });
 

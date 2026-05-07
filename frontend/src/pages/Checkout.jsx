@@ -8,7 +8,8 @@ import RazorpayMock from '../components/RazorpayMock';
 export const Checkout = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { token } = useContext(AuthContext);
+  const { token, user } = useContext(AuthContext);
+  const [useCoins, setUseCoins] = useState(false);
   
   const itinerary = location.state?.itinerary;
   const destination = location.state?.destination;
@@ -33,13 +34,17 @@ export const Checkout = () => {
     
     try {
       if (token) {
+        const coinsToUse = useCoins ? Math.min(user?.coins || 0, itinerary.totalCost) : 0;
+        const finalCost = itinerary.totalCost - coinsToUse;
+
         const bookingData = {
           destinationId: destination.id,
           destinationName: destination.name,
-          totalCost: itinerary.totalCost,
+          totalCost: finalCost,
           days: days,
           itineraryDetails: itinerary,
-          paymentId: paymentDetails.razorpay_payment_id
+          paymentId: paymentDetails.razorpay_payment_id,
+          coinsUsed: coinsToUse
         };
 
         await axios.post('https://trip-pro.onrender.com/api/bookings', bookingData, {
@@ -92,12 +97,39 @@ export const Checkout = () => {
                 <span style={{ color: 'var(--text-muted)' }}>Taxes & Fees (15%)</span>
                 <span>{itinerary.currencySymbol || '$'}{Math.round(itinerary.totalCost * 0.15).toLocaleString()}</span>
               </div>
+              {useCoins && (
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#10b981', fontWeight: 'bold' }}>
+                  <span>Coins Discount</span>
+                  <span>-{itinerary.currencySymbol || '$'}{Math.min(user?.coins || 0, itinerary.totalCost).toLocaleString()}</span>
+                </div>
+              )}
               <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px solid rgba(0,0,0,0.1)', fontWeight: 'bold', fontSize: '1.25rem', color: 'var(--primary)' }}>
-                <span>Total Amount</span>
-                <span>{itinerary.currencySymbol || '$'}{itinerary.totalCost.toLocaleString()}</span>
+                <span>Final Total</span>
+                <span>{itinerary.currencySymbol || '$'}{(itinerary.totalCost - (useCoins ? Math.min(user?.coins || 0, itinerary.totalCost) : 0)).toLocaleString()}</span>
               </div>
             </div>
           </div>
+
+          {/* Travel Coins Toggle */}
+          {user?.coins > 0 && (
+            <div className="glass" style={{ padding: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', border: '1px solid #f59e0b', background: 'rgba(245, 158, 11, 0.05)' }}>
+              <input 
+                type="checkbox" 
+                id="useCoins" 
+                checked={useCoins} 
+                onChange={(e) => setUseCoins(e.target.checked)}
+                style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+              />
+              <label htmlFor="useCoins" style={{ cursor: 'pointer', flex: 1 }}>
+                <div style={{ fontWeight: 'bold', color: '#f59e0b', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  Apply Travel Coins?
+                </div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                  You have <strong>{user.coins}</strong> coins available. 1 coin = 1 unit of currency.
+                </div>
+              </label>
+            </div>
+          )}
 
         {error && <div className="error-message" style={{ marginBottom: '1rem' }}>{error}</div>}
 
