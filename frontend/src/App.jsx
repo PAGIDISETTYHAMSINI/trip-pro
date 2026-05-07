@@ -9,6 +9,7 @@ import { Dashboard } from './pages/Dashboard';
 import { TripSchedule } from './pages/TripSchedule';
 import { TripBuilder } from './pages/TripBuilder';
 import { ExpenseTracker } from './pages/ExpenseTracker';
+import { AdminDashboard } from './pages/AdminDashboard';
 import './index.css';
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
           <Route path="/build-trip" element={<TripBuilder />} />
           <Route path="/dashboard/schedule/:id" element={<TripSchedule />} />
           <Route path="/dashboard/expenses" element={<ExpenseTracker />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </main>
     </>
