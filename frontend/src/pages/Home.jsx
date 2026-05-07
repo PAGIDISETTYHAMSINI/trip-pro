@@ -84,7 +84,6 @@ export const Home = () => {
       return;
     }
     
-    // For Surprise Me, destination is dynamic. Otherwise, find it from dropdown.
     const dest = isSurprise 
       ? { id: itinerary.destinationId, name: itinerary.destinationName, currencySymbol: itinerary.currencySymbol }
       : destinations.find(d => d.id === formData.destinationId);
@@ -102,69 +101,78 @@ export const Home = () => {
 
   return (
     <>
-      <section className="hero container" style={{ textAlign: 'center', padding: '6rem 0' }}>
-        <h1 style={{ fontSize: '4rem', lineHeight: 1.1, marginBottom: '1.5rem', fontWeight: 900, background: 'linear-gradient(to right, var(--primary), #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          Travel Smarter.<br/>Not Harder.
-        </h1>
-        <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto 3rem', color: 'var(--text-muted)' }}>
-          The world's first manually-curated, pin-to-pin travel engine. No generic packages—just your budget, your dates, and your style.
-        </p>
-        
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
-          <Link to="/build-trip" className="btn" style={{ padding: '1rem 2rem', fontSize: '1.1rem', background: 'var(--primary)', boxShadow: '0 10px 25px -5px rgba(79, 70, 229, 0.4)' }}>
-            <Activity size={20} /> Build Custom Trip
-          </Link>
-          <a href="#featured" className="btn" style={{ padding: '1rem 2rem', fontSize: '1.1rem', background: 'white', color: 'var(--text-main)', border: '1px solid var(--border)' }}>
-            Explore Packages
-          </a>
+      {/* Hero Section */}
+      <section className="container py-5 text-center">
+        <div className="row justify-content-center py-lg-5">
+          <div className="col-lg-10">
+            <h1 className="display-2 fw-black mb-3 lh-1" style={{ background: 'linear-gradient(to right, var(--primary), #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              Travel Smarter.<br/>Not Harder.
+            </h1>
+            <p className="lead text-muted mb-5 mx-auto" style={{ maxWidth: '750px' }}>
+              The world's first manually-curated, pin-to-pin travel engine. No generic packages—just your budget, your dates, and your style.
+            </p>
+            
+            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5">
+              <Link to="/build-trip" className="btn-primary-custom px-5 py-3">
+                <Activity size={20} /> Build Custom Trip
+              </Link>
+              <a href="#featured" className="btn btn-outline-dark px-5 py-3 rounded-4 fw-bold">
+                Explore Packages
+              </a>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="row g-4 justify-content-center opacity-75 mt-5">
+              <div className="col-4 col-md-2">
+                <div className="fw-black h3 mb-0">50+</div>
+                <div className="small text-uppercase tracking-wider">Destinations</div>
+              </div>
+              <div className="col-4 col-md-2 border-start border-end">
+                <div className="fw-black h3 mb-0">12k+</div>
+                <div className="small text-uppercase tracking-wider">Trips</div>
+              </div>
+              <div className="col-4 col-md-2">
+                <div className="fw-black h3 mb-0">4.9/5</div>
+                <div className="small text-uppercase tracking-wider">Rating</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Quick Stats */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '4rem', marginBottom: '5rem', opacity: 0.7 }}>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>50+</div>
-            <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', tracking: '0.1em' }}>Destinations</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>12k+</div>
-            <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', tracking: '0.1em' }}>Trips Planned</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>4.9/5</div>
-            <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', tracking: '0.1em' }}>User Rating</div>
-          </div>
-        </div>
-
-        <div id="featured" style={{ marginTop: '6rem' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Signature Featured Packages</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        {/* Featured Packages */}
+        <div id="featured" className="mt-5 pt-5">
+          <h2 className="fw-black text-center mb-5">Signature Featured Packages</h2>
+          <div className="row g-4">
             {[
               { id: 'andaman', name: 'Amazing Andaman', price: '₹18,000', img: 'https://images.unsplash.com/photo-1589136142558-74611990c0a7?auto=format&fit=crop&q=80&w=600', tag: 'Bestseller' },
               { id: 'paris', name: 'Romance in Paris', price: '$1,200', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=600', tag: 'Luxury' },
               { id: 'tokyo', name: 'Tokyo Explorer', price: '$1,500', img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=600', tag: 'Modern' }
             ].map(pkg => (
-              <div key={pkg.id} className="glass" style={{ padding: '0', overflow: 'hidden', cursor: 'pointer' }} onClick={() => navigate('/build-trip')}>
-                <div style={{ height: '200px', background: `url(${pkg.img}) center/cover` }}>
-                  <span style={{ margin: '1rem', display: 'inline-block', background: 'var(--primary)', color: 'white', padding: '0.25rem 0.75rem', borderRadius: '20px', fontSize: '0.7rem', fontWeight: 800 }}>{pkg.tag}</span>
-                </div>
-                <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ marginBottom: '0.5rem' }}>{pkg.name}</h3>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>Starting from {pkg.price} per person</p>
-                  <button className="btn" style={{ width: '100%', background: 'transparent', border: '1px solid var(--primary)', color: 'var(--primary)' }}>View Details</button>
+              <div key={pkg.id} className="col-lg-4 col-md-6 text-start">
+                <div className="glass glass-hover h-100 p-0 overflow-hidden cursor-pointer" onClick={() => navigate('/build-trip')}>
+                  <div style={{ height: '220px', background: `url(${pkg.img}) center/cover` }}>
+                    <span className="m-3 badge bg-primary rounded-pill fw-black px-3 py-2 fs-7">{pkg.tag}</span>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="fw-bold mb-2">{pkg.name}</h3>
+                    <p className="text-muted small mb-4">Starting from <span className="fw-bold text-primary">{pkg.price}</span> per person</p>
+                    <button className="btn btn-outline-primary w-100 rounded-3 fw-bold py-2">View Details</button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div style={{ marginTop: '8rem', maxWidth: '900px', margin: '8rem auto 0' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Intelligent Trip Planner</h2>
-          <div className="planner-form-container glass" style={{ padding: '3rem' }}>
-            <form className="planner-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label><MapPin size={16} style={{display:'inline', marginRight:'4px'}}/> Destination</label>
+        {/* Planner Form */}
+        <div className="mt-5 pt-5 mx-auto" style={{ maxWidth: '1000px' }}>
+          <h2 className="fw-black text-center mb-4">Intelligent Trip Planner</h2>
+          <div className="glass p-4 p-md-5 shadow-lg">
+            <form className="row g-3 align-items-end" onSubmit={handleSubmit}>
+              <div className="col-lg-4 col-md-6 text-start">
+                <label className="form-label small fw-bold text-muted mb-2"><MapPin size={16} className="me-1"/> Destination</label>
                 <select 
-                  className="input-field" 
+                  className="form-select py-3 rounded-3" 
                   name="destinationId" 
                   value={formData.destinationId} 
                   onChange={handleChange}
@@ -178,11 +186,11 @@ export const Home = () => {
                 </select>
               </div>
 
-              <div className="form-group">
-                <label><Wallet size={16} style={{display:'inline', marginRight:'4px'}}/> Budget ({selectedDestinationInfo?.currencySymbol || '$'})</label>
+              <div className="col-lg-3 col-md-6 text-start">
+                <label className="form-label small fw-bold text-muted mb-2"><Wallet size={16} className="me-1"/> Budget ({selectedDestinationInfo?.currencySymbol || '$'})</label>
                 <input 
                   type="number" 
-                  className="input-field" 
+                  className="form-control py-3 rounded-3" 
                   name="budget" 
                   placeholder={selectedDestinationInfo?.currencySymbol === '₹' ? "e.g. 50000" : "e.g. 1500"} 
                   value={formData.budget} 
@@ -192,11 +200,11 @@ export const Home = () => {
                 />
               </div>
 
-              <div className="form-group">
-                <label><Calendar size={16} style={{display:'inline', marginRight:'4px'}}/> Duration (Days)</label>
+              <div className="col-lg-2 col-md-6 text-start">
+                <label className="form-label small fw-bold text-muted mb-2"><Calendar size={16} className="me-1"/> Days</label>
                 <input 
                   type="number" 
-                  className="input-field" 
+                  className="form-control py-3 rounded-3" 
                   name="days" 
                   value={formData.days} 
                   onChange={handleChange}
@@ -205,149 +213,119 @@ export const Home = () => {
                 />
               </div>
 
-              <button type="submit" className="btn" style={{ height: '54px' }}>
-                <Search size={20} /> Create Itinerary
-              </button>
+              <div className="col-lg-3 col-md-6">
+                <button type="submit" className="btn-primary-custom w-100 py-3 rounded-3">
+                  <Search size={20} /> Create Plan
+                </button>
+              </div>
             </form>
-            {error && <div className="error-message" style={{ marginTop: '1.5rem' }}>{error}</div>}
+            {error && <div className="alert alert-danger mt-4 rounded-3 py-2 text-center">{error}</div>}
           </div>
         </div>
       </section>
 
       {searched && (
-        <section className="results-section container">
-          <div className="results-header">
+        <section className="container py-5">
+          <div className="text-center mb-5">
             {loading ? (
-              <div className="loading">
-                <div className="spinner"></div>
-                <h3>Finding the best options for you...</h3>
+              <div className="py-5">
+                <div className="spinner-border text-primary mb-3" style={{ width: '3rem', height: '3rem' }}></div>
+                <h3 className="fw-black">Finding the best options...</h3>
               </div>
             ) : itineraries.length > 0 ? (
               <>
-                <h2>{isSurprise ? "Here is what your budget can do!" : `Curated Options for ${selectedDestinationInfo?.name}`}</h2>
+                <h2 className="fw-black mb-2">{isSurprise ? "Here is what your budget can do!" : `Curated Options for ${selectedDestinationInfo?.name}`}</h2>
                 <p className="text-muted">We found {itineraries.length} ways to make your trip happen under {selectedDestinationInfo?.currencySymbol}{formData.budget}.</p>
                 
-                {!isSurprise && itineraries.length > 0 && (
-                  <div className="vibe-slider-container glass" style={{ marginTop: '1.5rem', padding: '1.5rem', display: 'inline-block', width: '100%', maxWidth: '500px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontWeight: 'bold' }}>
-                      <span style={{ color: vibe < 40 ? 'var(--primary)' : 'var(--text-muted)' }}>More Experiences</span>
-                      <span style={{ color: vibe >= 40 && vibe <= 60 ? 'var(--primary)' : 'var(--text-muted)' }}>Balanced</span>
-                      <span style={{ color: vibe > 60 ? 'var(--primary)' : 'var(--text-muted)' }}>Luxury Comfort</span>
+                {!isSurprise && (
+                  <div className="glass d-inline-block p-4 mt-3 shadow-sm mx-auto w-100" style={{ maxWidth: '500px' }}>
+                    <div className="d-flex justify-content-between small fw-bold mb-2">
+                      <span className={vibe < 40 ? 'text-primary' : 'text-muted'}>Experience</span>
+                      <span className={vibe >= 40 && vibe <= 60 ? 'text-primary' : 'text-muted'}>Balanced</span>
+                      <span className={vibe > 60 ? 'text-primary' : 'text-muted'}>Luxury</span>
                     </div>
                     <input 
                       type="range" 
+                      className="form-range"
                       min="0" max="100" 
                       value={vibe} 
                       onChange={(e) => setVibe(parseInt(e.target.value))}
-                      style={{ width: '100%', cursor: 'pointer' }}
                     />
-                    <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-                      Drag the slider to adjust your itinerary dynamically!
-                    </p>
+                    <p className="small text-muted mt-2 mb-0">Drag to adjust your travel style dynamically!</p>
                   </div>
                 )}
               </>
             ) : (
-              <>
-                <h2>No options found</h2>
+              <div className="py-5">
+                <h2 className="fw-black">No options found</h2>
                 <p className="text-muted">Try increasing your budget or reducing the number of days.</p>
-              </>
+              </div>
             )}
           </div>
 
           {!loading && itineraries.length > 0 && (
-            <div className="results-grid">
+            <div className="row g-4">
               {displayItineraries.map((itinerary, index) => (
-                <div key={index} className="itinerary-card glass">
-                  <div className="card-header">
-                    <h3>{isSurprise ? itinerary.destinationName : `Option ${index + 1}`}</h3>
-                    <div className="total-cost">{itinerary.currencySymbol}{itinerary.totalCost.toLocaleString()}</div>
-                  </div>
-
-                  <div className="cost-breakdown">
-                    {/* Visual Progress Bar Breakdown */}
-                    <div style={{ height: '8px', background: '#eee', borderRadius: '4px', display: 'flex', overflow: 'hidden', marginBottom: '1.5rem' }}>
-                      <div style={{ width: `${(itinerary.breakdown.transport / itinerary.totalCost) * 100}%`, background: 'var(--primary)' }}></div>
-                      <div style={{ width: `${(itinerary.breakdown.hotel / itinerary.totalCost) * 100}%`, background: '#8b5cf6' }}></div>
-                      <div style={{ width: `${(itinerary.breakdown.food / itinerary.totalCost) * 100}%`, background: '#10b981' }}></div>
-                      <div style={{ width: `${(itinerary.breakdown.activities / itinerary.totalCost) * 100}%`, background: '#f59e0b' }}></div>
+                <div key={index} className="col-lg-4 col-md-6">
+                  <div className="glass glass-hover h-100 p-4 d-flex flex-column border-top border-4 border-primary">
+                    <div className="d-flex justify-content-between align-items-start mb-4">
+                      <h3 className="fw-bold fs-4 mb-0">{isSurprise ? itinerary.destinationName : `Option ${index + 1}`}</h3>
+                      <div className="fs-3 fw-black text-primary">{itinerary.currencySymbol}{itinerary.totalCost.toLocaleString()}</div>
                     </div>
 
-                    <div className="breakdown-item">
-                      <div className="item-info">
-                        <div className="item-icon" style={{ background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)' }}>
-                          {itinerary.transport.method === 'Train' ? <Train size={18} /> : itinerary.transport.method === 'Car' ? <Car size={18} /> : <Plane size={18} />}
-                        </div>
-                        <div>
-                          <strong>{itinerary.transport.method}</strong>
-                          <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>{itinerary.transport.type}</div>
-                        </div>
+                    <div className="d-flex flex-column gap-3 mb-4 flex-grow-1">
+                      {/* Cost Bar */}
+                      <div className="progress" style={{ height: '10px' }}>
+                        <div className="progress-bar bg-primary" style={{ width: `${(itinerary.breakdown.transport / itinerary.totalCost) * 100}%` }}></div>
+                        <div className="progress-bar" style={{ width: `${(itinerary.breakdown.hotel / itinerary.totalCost) * 100}%`, background: '#8b5cf6' }}></div>
+                        <div className="progress-bar bg-success" style={{ width: `${(itinerary.breakdown.food / itinerary.totalCost) * 100}%` }}></div>
+                        <div className="progress-bar bg-warning" style={{ width: `${(itinerary.breakdown.activities / itinerary.totalCost) * 100}%` }}></div>
                       </div>
-                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.transport.toLocaleString()}</div>
-                    </div>
 
-                    <div className="breakdown-item">
-                      <div className="item-info">
-                        <div className="item-icon" style={{ background: 'rgba(139, 92, 246, 0.1)', color: '#8b5cf6' }}><Building size={18} /></div>
-                        <div>
-                          <strong>Stay ({formData.days} nights)</strong>
-                          <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>{itinerary.hotel.type}</div>
-                        </div>
-                      </div>
-                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.hotel.toLocaleString()}</div>
-                    </div>
-
-                    <div className="breakdown-item">
-                      <div className="item-info">
-                        <div className="item-icon" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981' }}><Utensils size={18} /></div>
-                        <div>
-                          <strong>Dining</strong>
-                          <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>{itinerary.food.type}</div>
-                        </div>
-                      </div>
-                      <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.food.toLocaleString()}</div>
-                    </div>
-
-                    {itinerary.activities.length > 0 && (
-                      <div className="breakdown-item" style={{borderBottom: 'none'}}>
-                        <div className="item-info">
-                          <div className="item-icon" style={{ background: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b' }}><Activity size={18} /></div>
-                          <div>
-                            <strong>Activities ({itinerary.activities.length})</strong>
-                            <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>Smart Scheduled</div>
+                      <div className="d-flex justify-content-between align-items-center py-2 border-bottom border-dashed">
+                        <div className="d-flex align-items-center gap-2 small fw-bold">
+                          <div className="p-2 bg-primary bg-opacity-10 rounded-2 text-primary">
+                            {itinerary.transport.method === 'Train' ? <Train size={16} /> : itinerary.transport.method === 'Car' ? <Car size={16} /> : <Plane size={16} />}
                           </div>
+                          <span>{itinerary.transport.method} ({itinerary.transport.type})</span>
                         </div>
-                        <div style={{fontWeight: 600}}>{itinerary.currencySymbol}{itinerary.breakdown.activities.toLocaleString()}</div>
+                        <span className="small fw-bold">{itinerary.currencySymbol}{itinerary.breakdown.transport.toLocaleString()}</span>
                       </div>
-                    )}
-                  </div>
 
-                  {itinerary.activities.length > 0 && (
-                    <div className="activities-list" style={{ marginBottom: '1.5rem' }}>
-                      <h4 style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <Clock size={16} color="var(--primary)" /> Smart Activity Schedule
-                      </h4>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                        {itinerary.activities.map((act, i) => (
-                          <div key={i} style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.5)', borderRadius: '8px', borderLeft: '3px solid var(--primary)' }}>
-                            <div style={{ fontWeight: '600', fontSize: '0.95rem' }}>{act.name}</div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-                              <span>{act.suggestedTime || 'Flexible Time'}</span>
-                              <span>{act.proximity || 'Near City Center'}</span>
-                            </div>
+                      <div className="d-flex justify-content-between align-items-center py-2 border-bottom border-dashed">
+                        <div className="d-flex align-items-center gap-2 small fw-bold">
+                          <div className="p-2 bg-info bg-opacity-10 rounded-2 text-info"><Building size={16} /></div>
+                          <span>Stay ({itinerary.hotel.type})</span>
+                        </div>
+                        <span className="small fw-bold">{itinerary.currencySymbol}{itinerary.breakdown.hotel.toLocaleString()}</span>
+                      </div>
+
+                      <div className="d-flex justify-content-between align-items-center py-2 border-bottom border-dashed">
+                        <div className="d-flex align-items-center gap-2 small fw-bold">
+                          <div className="p-2 bg-success bg-opacity-10 rounded-2 text-success"><Utensils size={16} /></div>
+                          <span>Dining & Food</span>
+                        </div>
+                        <span className="small fw-bold">{itinerary.currencySymbol}{itinerary.breakdown.food.toLocaleString()}</span>
+                      </div>
+
+                      {itinerary.activities.length > 0 && (
+                        <div className="d-flex justify-content-between align-items-center py-2">
+                          <div className="d-flex align-items-center gap-2 small fw-bold">
+                            <div className="p-2 bg-warning bg-opacity-10 rounded-2 text-warning"><Activity size={16} /></div>
+                            <span>Activities ({itinerary.activities.length})</span>
                           </div>
-                        ))}
-                      </div>
+                          <span className="small fw-bold">{itinerary.currencySymbol}{itinerary.breakdown.activities.toLocaleString()}</span>
+                        </div>
+                      )}
                     </div>
-                  )}
 
-                  <button 
-                    className="btn" 
-                    style={{ width: '100%', marginTop: 'auto' }}
-                    onClick={() => handleBook(itinerary)}
-                  >
-                    Book This Trip
-                  </button>
+                    <button 
+                      className="btn-primary-custom w-100 py-3 mt-auto"
+                      onClick={() => handleBook(itinerary)}
+                    >
+                      Book This Plan
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>

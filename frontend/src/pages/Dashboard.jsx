@@ -50,123 +50,112 @@ export const Dashboard = () => {
   }
 
   return (
-    <div className="container" style={{ padding: '4rem 0' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '2rem' }}>
-        <div>
-          <h2 style={{ marginBottom: '2rem' }}>My Trips</h2>
+    <div className="container py-5">
+      <div className="row g-4">
+        {/* Main Content: Trips */}
+        <div className="col-lg-8 col-md-12">
+          <h2 className="fw-black mb-4 d-flex align-items-center gap-2">
+            <Plane color="var(--primary)" /> My Trip History
+          </h2>
       
-      {bookings.length === 0 ? (
-        <div className="glass" style={{ padding: '3rem', textAlign: 'center' }}>
-          <Plane size={48} color="var(--text-muted)" style={{ margin: '0 auto 1rem' }} />
-          <h3 style={{ marginBottom: '1rem' }}>No trips planned yet</h3>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>You haven't booked any trips. Let's find your next adventure!</p>
-          <Link to="/" className="btn">Plan a Trip</Link>
-        </div>
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {bookings.map(booking => (
-            <div key={booking.id} className="glass" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderLeft: `6px solid ${booking.status === 'CANCELLED' ? '#ef4444' : 'var(--primary)'}`, opacity: booking.status === 'CANCELLED' ? 0.7 : 1 }}>
-              <div style={{ flex: 1 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: '800', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    {booking.route || booking.destinationName}
-                  </h3>
-                  <span style={{ background: booking.status === 'CANCELLED' ? '#fee2e2' : 'rgba(16, 185, 129, 0.1)', color: booking.status === 'CANCELLED' ? '#ef4444' : '#10b981', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: '900' }}>
-                    {booking.status}
-                  </span>
-                </div>
-                
-                <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                    <Calendar size={16} /> {booking.days} Days &bull; {new Date(booking.createdAt).toLocaleDateString()}
-                  </div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                    <Zap size={16} /> {booking.totalTravelers || 1} Travelers
-                  </div>
-                </div>
-
-                <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(0,0,0,0.02)', borderRadius: '6px', fontSize: '0.85rem' }}>
-                  <span style={{ fontWeight: 'bold', color: 'var(--primary)' }}>Plan Summary:</span> {booking.itineraryDetails.hotel?.name || 'Hotel'} + {booking.itineraryDetails.transport?.agency || 'Transport'} ({booking.itineraryDetails.transport?.type})
-                </div>
-              </div>
-
-              <div style={{ textAlign: 'right', minWidth: '220px', marginLeft: '2rem' }}>
-                <div style={{ fontSize: '1.8rem', fontWeight: '900', color: booking.status === 'CANCELLED' ? 'var(--text-muted)' : 'var(--primary)', marginBottom: '1rem' }}>
-                  {booking.itineraryDetails.currencySymbol || '$'}{booking.totalCost.toLocaleString()}
-                </div>
-                
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                  {booking.status !== 'CANCELLED' ? (
-                    <>
-                      <Link to={`/dashboard/schedule/${booking.id}`} className="btn" style={{ padding: '0.6rem', fontSize: '0.9rem', width: '100%', textAlign: 'center', fontWeight: 'bold' }}>
-                        View Full Schedule
-                      </Link>
-                      <button onClick={() => handleCancel(booking.id)} style={{ background: 'transparent', border: '1px solid #ef4444', color: '#ef4444', padding: '0.5rem', borderRadius: '6px', fontSize: '0.85rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.3rem', fontWeight: '600' }}>
-                        <XCircle size={15} /> Cancel Booking
-                      </button>
-                    </>
-                  ) : (
-                    <div style={{ color: '#ef4444', fontSize: '0.9rem', fontWeight: 'bold', fontStyle: 'italic', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.4rem' }}>
-                      <AlertCircle size={18} /> Booking Cancelled
+          {bookings.length === 0 ? (
+            <div className="glass p-5 text-center">
+              <Plane size={64} className="text-muted mb-4" />
+              <h3 className="fw-bold mb-2">No adventures yet</h3>
+              <p className="text-muted mb-4">Your next dream destination is just a few clicks away.</p>
+              <Link to="/" className="btn-primary-custom px-5">Start Planning</Link>
+            </div>
+          ) : (
+            <div className="d-flex flex-column gap-4">
+              {bookings.map(booking => (
+                <div key={booking.id} className="glass glass-hover p-4 border-start border-4" style={{ borderColor: booking.status === 'CANCELLED' ? '#ef4444' : 'var(--primary)' }}>
+                  <div className="row align-items-center">
+                    <div className="col-md-7 mb-3 mb-md-0">
+                      <div className="d-flex align-items-center gap-2 mb-2">
+                        <h4 className="fw-black mb-0 fs-4">{booking.route || booking.destinationName}</h4>
+                        <span className={`badge rounded-pill ${booking.status === 'CANCELLED' ? 'bg-danger-subtle text-danger' : 'bg-success-subtle text-success'}`}>
+                          {booking.status}
+                        </span>
+                      </div>
+                      <div className="d-flex flex-wrap gap-3 small text-muted mb-3">
+                        <span className="d-flex align-items-center gap-1"><Calendar size={14}/> {booking.days} Days Trip</span>
+                        <span className="d-flex align-items-center gap-1"><Zap size={14}/> {booking.totalTravelers || 1} Travelers</span>
+                      </div>
+                      <div className="p-3 bg-light rounded-3 small">
+                        <span className="fw-bold text-primary">Live Plan:</span> {booking.itineraryDetails?.hotel?.name || 'Hotel Selection'} &bull; {booking.itineraryDetails?.transport?.agency || 'Travel Agency'}
+                      </div>
                     </div>
-                  )}
+                    <div className="col-md-5 text-md-end">
+                      <div className="fs-2 fw-black text-primary mb-3">
+                        {booking.itineraryDetails?.currencySymbol || '₹'}{booking.totalCost.toLocaleString()}
+                      </div>
+                      <div className="d-grid gap-2">
+                        {booking.status !== 'CANCELLED' ? (
+                          <>
+                            <Link to={`/dashboard/schedule/${booking.id}`} className="btn-primary-custom w-100 py-2 fs-6">
+                              View Schedule
+                            </Link>
+                            <button onClick={() => handleCancel(booking.id)} className="btn btn-outline-danger btn-sm border-0 d-flex align-items-center justify-content-center gap-1">
+                              <XCircle size={14} /> Cancel Trip
+                            </button>
+                          </>
+                        ) : (
+                          <div className="text-danger small fw-bold italic d-flex align-items-center justify-content-end gap-1">
+                            <AlertCircle size={16} /> Booking Revoked
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
-      )}
-      </div>
-        {/* Elite Sidebar Stats */}
-        <div>
-          <div className="glass" style={{ padding: '1.5rem', marginBottom: '1.5rem', borderBottom: '4px solid #f59e0b', background: 'rgba(245, 158, 11, 0.05)' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Coins size={18} color="#f59e0b"/> My Travel Coins</h3>
-            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f59e0b', textAlign: 'center' }}>{user?.coins || 0}</div>
-            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '0.5rem' }}>Use these for your next adventure! 💰</p>
-          </div>
 
-          <div className="glass" style={{ padding: '1.5rem', marginBottom: '1.5rem', borderBottom: '4px solid var(--primary)' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Zap size={18} color="var(--primary)"/> Efficiency Score</h3>
-            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)', textAlign: 'center' }}>84<span style={{ fontSize: '1rem' }}>/100</span></div>
-            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '0.5rem' }}>You saved 12% on your last trip! 🎉</p>
-          </div>
+        {/* Sidebar: Stats */}
+        <div className="col-lg-4 col-md-12">
+          <div className="sticky-top" style={{ top: '2rem' }}>
+            {/* Reward Coins */}
+            <div className="glass p-4 mb-4 border-bottom border-4" style={{ borderColor: '#f59e0b', background: 'rgba(245, 158, 11, 0.05)' }}>
+              <h5 className="fw-black mb-3 d-flex align-items-center gap-2"><Coins size={20} color="#f59e0b"/> Travel Wallet</h5>
+              <div className="display-4 fw-black text-warning text-center">{user?.coins || 0}</div>
+              <p className="small text-muted text-center mt-2">Available coins for next trip! 💰</p>
+            </div>
 
-          <div className="glass" style={{ padding: '1.5rem', marginBottom: '1.5rem' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}><PieChart size={18} style={{ verticalAlign: 'middle', marginRight: '8px' }}/> Budget Heatmap</h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', marginBottom: '0.25rem' }}>
-                  <span>Stay (Hotels)</span>
-                  <span>45%</span>
-                </div>
-                <div style={{ width: '100%', height: '6px', background: 'var(--border)', borderRadius: '3px' }}>
-                  <div style={{ width: '45%', height: '100%', background: '#4f46e5', borderRadius: '3px' }}></div>
-                </div>
-              </div>
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', marginBottom: '0.25rem' }}>
-                  <span>Transport</span>
-                  <span>30%</span>
-                </div>
-                <div style={{ width: '100%', height: '6px', background: 'var(--border)', borderRadius: '3px' }}>
-                  <div style={{ width: '30%', height: '100%', background: '#0ea5e9', borderRadius: '3px' }}></div>
-                </div>
-              </div>
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', marginBottom: '0.25rem' }}>
-                  <span>Dining & Fun</span>
-                  <span>25%</span>
-                </div>
-                <div style={{ width: '100%', height: '6px', background: 'var(--border)', borderRadius: '3px' }}>
-                  <div style={{ width: '25%', height: '100%', background: '#10b981', borderRadius: '3px' }}></div>
-                </div>
+            {/* Efficiency Score */}
+            <div className="glass p-4 mb-4 border-bottom border-4 border-primary">
+              <h5 className="fw-black mb-3 d-flex align-items-center gap-2"><Zap size={20} color="var(--primary)"/> Smart Savings</h5>
+              <div className="display-5 fw-black text-primary text-center">84<span className="fs-5 text-muted">/100</span></div>
+              <p className="small text-muted text-center mt-2">Elite score based on itinerary cost!</p>
+            </div>
+
+            {/* Visual Budgeting */}
+            <div className="glass p-4 mb-4">
+              <h5 className="fw-black mb-4 d-flex align-items-center gap-2"><PieChart size={20} /> Spending Analytics</h5>
+              <div className="d-flex flex-column gap-3">
+                {[
+                  { label: 'Accommodation', val: 45, color: 'bg-primary' },
+                  { label: 'Transport', val: 30, color: 'bg-info' },
+                  { label: 'Experience', val: 25, color: 'bg-success' }
+                ].map(item => (
+                  <div key={item.label}>
+                    <div className="d-flex justify-content-between small fw-bold mb-1">
+                      <span>{item.label}</span>
+                      <span>{item.val}%</span>
+                    </div>
+                    <div className="progress" style={{ height: '8px' }}>
+                      <div className={`progress-bar ${item.color}`} style={{ width: `${item.val}%` }}></div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
 
-          <Link to="/dashboard/expenses" className="btn" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-            <Wallet size={18}/> Open Live Expense Tracker
-          </Link>
+            <Link to="/dashboard/expenses" className="btn btn-dark w-100 py-3 rounded-4 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2">
+              <Wallet size={18}/> Live Expense Tracker
+            </Link>
+          </div>
         </div>
       </div>
     </div>

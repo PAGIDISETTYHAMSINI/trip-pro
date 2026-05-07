@@ -27,81 +27,83 @@ export const AdminDashboard = () => {
     if (token) fetchAllData();
   }, [token]);
 
-  if (loading) return <div className="container" style={{ padding: '4rem 0', textAlign: 'center' }}><RefreshCw className="animate-spin" /> Loading Master Database...</div>;
+  if (loading) return (
+    <div className="container py-5 text-center">
+      <div className="spinner-border text-primary" role="status"></div>
+      <p className="mt-3">Loading Master Database...</p>
+    </div>
+  );
 
   return (
-    <div className="container" style={{ padding: '4rem 0' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-        <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <Database color="var(--primary)" /> Master Admin Dashboard
-        </h2>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-            <div className="glass" style={{ padding: '0.5rem 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Users size={18} color="var(--primary)"/> <strong>{new Set(bookings.map(b => b.userId)).size}</strong> Users
+    <div className="container py-5">
+      <div className="row align-items-center mb-4">
+        <div className="col-lg-6">
+          <h2 className="fw-black mb-1 d-flex align-items-center gap-2">
+            <Database color="var(--primary)" /> Master Admin Panel
+          </h2>
+          <p className="text-muted">Total Data Visibility & History</p>
+        </div>
+        <div className="col-lg-6 text-lg-end d-flex gap-2 justify-content-lg-end">
+            <a href="https://console.neon.tech/app/projects/ep-purple-art-aqai8m26/tables" target="_blank" rel="noreferrer" className="btn btn-dark btn-sm d-flex align-items-center gap-2">
+                <ShieldCheck size={16}/> Neon Console
+            </a>
+            <div className="glass px-3 py-2 d-flex align-items-center gap-2">
+                <Users size={18} color="var(--primary)"/> <span className="fw-bold">{new Set(bookings.map(b => b.userId)).size}</span> <span className="text-muted d-none d-md-inline">Users</span>
             </div>
-            <div className="glass" style={{ padding: '0.5rem 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CreditCard size={18} color="#10b981"/> <strong>{bookings.length}</strong> Total Bookings
+            <div className="glass px-3 py-2 d-flex align-items-center gap-2">
+                <CreditCard size={18} color="#10b981"/> <span className="fw-bold">{bookings.length}</span> <span className="text-muted d-none d-md-inline">Bookings</span>
             </div>
         </div>
       </div>
 
-      <div className="glass" style={{ padding: '0', overflow: 'hidden' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
-          <thead style={{ background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)' }}>
-            <tr>
-              <th style={{ padding: '1rem' }}>User</th>
-              <th style={{ padding: '1rem' }}>Route / Destination</th>
-              <th style={{ padding: '1rem' }}>Amount</th>
-              <th style={{ padding: '1rem' }}>Status</th>
-              <th style={{ padding: '1rem' }}>Payment ID</th>
-              <th style={{ padding: '1rem' }}>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bookings.map((booking) => (
-              <tr key={booking.id} style={{ borderBottom: '1px solid var(--border)' }}>
-                <td style={{ padding: '1rem' }}>
-                  <div style={{ fontWeight: 'bold' }}>{booking.User?.name || 'Guest'}</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{booking.User?.email}</div>
-                </td>
-                <td style={{ padding: '1rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 600 }}>
-                    <MapPin size={14} color="var(--primary)" /> {booking.route || booking.destinationName}
-                  </div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{booking.days} Days</div>
-                </td>
-                <td style={{ padding: '1rem', fontWeight: 'bold', color: 'var(--primary)' }}>
-                  {booking.itineraryDetails?.currencySymbol || '$'}{booking.totalCost.toLocaleString()}
-                </td>
-                <td style={{ padding: '1rem' }}>
-                  <span style={{ 
-                    padding: '0.2rem 0.5rem', 
-                    borderRadius: '4px', 
-                    fontSize: '0.7rem', 
-                    fontWeight: 'bold',
-                    background: booking.status === 'PAID' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)',
-                    color: booking.status === 'PAID' ? '#10b981' : '#ef4444'
-                  }}>
-                    {booking.status}
-                  </span>
-                </td>
-                <td style={{ padding: '1rem', fontSize: '0.8rem', fontFamily: 'monospace' }}>
-                  {booking.paymentId || 'N/A'}
-                </td>
-                <td style={{ padding: '1rem', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                    <Calendar size={12} /> {new Date(booking.createdAt).toLocaleDateString()}
-                  </div>
-                </td>
+      <div className="glass shadow-sm overflow-hidden mb-4">
+        <div className="table-responsive">
+          <table className="table table-hover mb-0 align-middle">
+            <thead className="table-light text-uppercase" style={{ fontSize: '0.75rem', letterSpacing: '0.05em' }}>
+              <tr>
+                <th className="px-4 py-3 border-0">User Account</th>
+                <th className="px-4 py-3 border-0">Route & Trip Details</th>
+                <th className="px-4 py-3 border-0">Payment Info</th>
+                <th className="px-4 py-3 border-0">Status</th>
+                <th className="px-4 py-3 border-0 text-end">Booked Date</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {bookings.map((booking) => (
+                <tr key={booking.id}>
+                  <td className="px-4 py-3">
+                    <div className="fw-bold">{booking.User?.name || 'Guest User'}</div>
+                    <div className="small text-muted">{booking.User?.email || 'No email'}</div>
+                  </td>
+                  <td className="px-4 py-3">
+                    <div className="d-flex align-items-center gap-2 fw-semibold">
+                      <MapPin size={14} color="var(--primary)" /> {booking.route || booking.destinationName}
+                    </div>
+                    <div className="small text-muted">{booking.days} Days • {booking.totalTravelers || 1} Travelers</div>
+                  </td>
+                  <td className="px-4 py-3">
+                    <div className="fw-black text-primary">
+                      {booking.itineraryDetails?.currencySymbol || '₹'}{booking.totalCost.toLocaleString()}
+                    </div>
+                    <div className="small text-muted" style={{ fontFamily: 'monospace' }}>{booking.paymentId?.substring(0, 15)}...</div>
+                  </td>
+                  <td className="px-4 py-3">
+                    <span className={`badge rounded-pill ${booking.status === 'PAID' ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger'} px-3 py-2`}>
+                      {booking.status}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3 text-end small text-muted">
+                    {new Date(booking.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       
-      <div style={{ marginTop: '2rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-        <ShieldCheck size={16} style={{ verticalAlign: 'middle', marginRight: '4px' }} /> 
-        Secure Admin Access Verified via PostgreSQL Core
+      <div className="text-center py-4 text-muted small">
+        <ShieldCheck size={16} className="me-1" /> Secure PostgreSQL Engine: {bookings.length > 0 ? 'NEON DB ACTIVE' : 'CONNECTING...'}
       </div>
     </div>
   );
