@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { MapPin, ArrowRight, Check, ShieldCheck, Waves, Mountain, Camera, Utensils, Music, Activity, Users, Zap, Wallet, TrendingUp, Plane, Building, Star, Info } from 'lucide-react';
+import { MapPin, ArrowRight, Check, ShieldCheck, Waves, Mountain, Camera, Utensils, Music, Activity, Users, Zap, Wallet, TrendingUp, Plane, Building, Star, Info, Compass } from 'lucide-react';
 
 const API = 'https://trip-pro.onrender.com';
 
@@ -40,7 +40,6 @@ export const TripBuilder = () => {
       .then(res => {
         const data = res.data || [];
         setDestinations(data);
-        // Pre-select if passed from Explore India
         if (location.state?.destination) {
           const pre = data.find(d => d.name.toLowerCase() === location.state.destination.toLowerCase());
           if (pre) setSelectedDestinationId(pre.id);
@@ -106,70 +105,69 @@ export const TripBuilder = () => {
     });
   };
 
-  /* STEPS META */
-  const stepLabels = ['Route', 'Dates', 'Interests', 'Transport', 'Stay', 'Review'];
+  const stepLabels = ['Route', 'Dates', 'Vibe', 'Travel', 'Stay', 'Final'];
 
   const S = ({ children }) => <div className="fade-in">{children}</div>;
 
   const NextBtn = ({ onClick, disabled, label = 'Continue', icon }) => (
-    <button className="btn-next-step" onClick={onClick} disabled={disabled} style={{ marginTop: '2rem' }}>
+    <button className="btn-startup w-100 py-3 mt-4 justify-content-center" onClick={onClick} disabled={disabled}>
       {label} {icon || <ArrowRight size={18} />}
     </button>
   );
 
   return (
-    <div style={{ background: 'var(--slate-50)', minHeight: '100vh', padding: '2rem 0' }}>
+    <div className="bg-light min-vh-100 py-5">
       <div className="container">
         {/* HEADER */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <Link to="/" style={{ fontWeight: 900, fontSize: '1.3rem', color: 'var(--slate-900)' }}>
-            ✈ Trip<span style={{ color: 'var(--primary)' }}>Pro</span>
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <Link to="/" className="logo">
+            <Plane size={24} />
+            <span>Trip<span className="text-primary">Pro</span></span>
           </Link>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-500)' }}>
-            Step {step} of {stepLabels.length}
+          <span className="small fw-black text-muted text-uppercase opacity-50">
+            Step {step} / {stepLabels.length}
           </span>
         </div>
 
-        {/* PROGRESS */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '2.5rem', overflowX: 'auto' }}>
+        {/* PROGRESS BAR */}
+        <div className="d-flex gap-2 mb-5 overflow-auto no-scrollbar py-2">
           {stepLabels.map((label, i) => {
             const num = i + 1;
             const cls = step > num ? 'done' : step === num ? 'active' : 'inactive';
             return (
-              <div key={num} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
+              <div key={num} className="d-flex align-items-center gap-2 flex-shrink-0">
                 <div className={`step-pill ${cls}`}>{step > num ? <Check size={14} /> : num}</div>
-                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: step >= num ? 'var(--primary)' : 'var(--slate-400)' }}>{label}</span>
-                {i < stepLabels.length - 1 && <div style={{ width: '24px', height: '2px', background: step > num ? 'var(--primary)' : 'var(--slate-200)' }}></div>}
+                <span className={`small fw-bold ${step >= num ? 'text-primary' : 'text-muted'}`}>{label}</span>
+                {i < stepLabels.length - 1 && <div className="bg-light-subtle" style={{ width: '20px', height: '2px', background: step > num ? 'var(--primary)' : 'var(--slate-200)' }}></div>}
               </div>
             );
           })}
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: '2rem', alignItems: 'start' }}>
+        <div className="row g-4">
           {/* MAIN CONTENT */}
-          <div>
-            {/* STEP 1 — Route */}
+          <div className="col-lg-8">
             {step === 1 && (
               <S>
-                <div className="card" style={{ padding: '2rem' }}>
-                  <h2 style={{ fontWeight: 900, marginBottom: '1.75rem' }}>
-                    <MapPin size={28} style={{ color: 'var(--primary)', verticalAlign: 'middle', marginRight: '0.5rem' }} />
+                <div className="card border-0 shadow-sm p-4 p-md-5">
+                  <h2 className="fw-black mb-4">
+                    <MapPin size={28} className="text-primary me-2" />
                     Where to?
                   </h2>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
-                    <div style={{ gridColumn: '1 / -1' }}>
+                  <div className="row g-3">
+                    <div className="col-12">
                       <label className="form-label">Destination</label>
                       <select className="form-select" value={selectedDestinationId} onChange={e => setSelectedDestinationId(e.target.value)}>
                         <option value="">{destLoading ? 'Loading...' : 'Select a destination'}</option>
                         {destinations.map(d => <option key={d.id} value={d.id}>{d.name}</option>)}
                       </select>
                     </div>
-                    <div>
+                    <div className="col-md-6">
                       <label className="form-label">Boarding From</label>
                       <input type="text" className="form-control" placeholder="e.g. Bangalore"
                         value={boardingPoint} onChange={e => setBoardingPoint(e.target.value)} />
                     </div>
-                    <div>
+                    <div className="col-md-6">
                       <label className="form-label">Travel Style</label>
                       <select className="form-select" value={travelStyle} onChange={e => setTravelStyle(e.target.value)}>
                         <option value="budget">Budget Saver</option>
@@ -183,50 +181,50 @@ export const TripBuilder = () => {
               </S>
             )}
 
-            {/* STEP 2 — Dates & Group */}
             {step === 2 && (
               <S>
-                <div className="card" style={{ padding: '2rem' }}>
-                  <h2 style={{ fontWeight: 900, marginBottom: '1.75rem' }}>Dates & Group Size</h2>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.5rem' }}>
-                    <div>
+                <div className="card border-0 shadow-sm p-4 p-md-5">
+                  <h2 className="fw-black mb-4">Dates & Group</h2>
+                  <div className="row g-3 mb-4">
+                    <div className="col-md-6">
                       <label className="form-label">Start Date</label>
                       <input type="date" className="form-control" value={startDate} onChange={e => setStartDate(e.target.value)} />
                     </div>
-                    <div>
+                    <div className="col-md-6">
                       <label className="form-label">Return Date</label>
                       <input type="date" className="form-control" value={returnDate} onChange={e => setReturnDate(e.target.value)} />
                     </div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+                  <div className="row g-3">
                     {[{ label: 'Adults', val: adults, set: setAdults, min: 1 }, { label: 'Children', val: children, set: setChildren, min: 0 }].map(g => (
-                      <div key={g.label} style={{ border: '1.5px solid var(--slate-200)', borderRadius: 'var(--radius-lg)', padding: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700 }}>
-                          <Users size={18} style={{ color: 'var(--slate-400)' }} /> {g.label}
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                          <button onClick={() => g.set(Math.max(g.min, g.val - 1))} style={{ width: '32px', height: '32px', borderRadius: '50%', border: '1.5px solid var(--slate-200)', background: 'var(--white)', cursor: 'pointer', fontWeight: 700, fontSize: '1.1rem' }}>−</button>
-                          <span style={{ fontWeight: 900, fontSize: '1.25rem', minWidth: '24px', textAlign: 'center' }}>{g.val}</span>
-                          <button onClick={() => g.set(g.val + 1)} style={{ width: '32px', height: '32px', borderRadius: '50%', border: '1.5px solid var(--slate-200)', background: 'var(--white)', cursor: 'pointer', fontWeight: 700, fontSize: '1.1rem' }}>+</button>
+                      <div key={g.label} className="col-md-6">
+                        <div className="border rounded-xl p-3 d-flex justify-content-between align-items-center bg-white shadow-sm">
+                          <div className="fw-bold d-flex align-items-center gap-2">
+                            <Users size={18} className="text-muted" /> {g.label}
+                          </div>
+                          <div className="d-flex align-items-center gap-3">
+                            <button onClick={() => g.set(Math.max(g.min, g.val - 1))} className="btn border rounded-circle p-0" style={{ width: '32px', height: '32px' }}>−</button>
+                            <span className="fw-black fs-5">{g.val}</span>
+                            <button onClick={() => g.set(g.val + 1)} className="btn border rounded-circle p-0" style={{ width: '32px', height: '32px' }}>+</button>
+                          </div>
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
-                    <button className="btn" onClick={() => setStep(1)}>← Back</button>
-                    <button className="btn-next-step" onClick={() => setStep(3)} style={{ flex: 1 }}>Pick Interests <ArrowRight size={18} /></button>
+                  <div className="d-flex gap-3 mt-5">
+                    <button className="btn border px-4" onClick={() => setStep(1)}>Back</button>
+                    <button className="btn-startup flex-grow-1 justify-content-center" onClick={() => setStep(3)}>Pick Interests</button>
                   </div>
                 </div>
               </S>
             )}
 
-            {/* STEP 3 — Interests */}
             {step === 3 && (
               <S>
-                <div className="card" style={{ padding: '2rem' }}>
-                  <h2 style={{ fontWeight: 900, marginBottom: '0.5rem' }}>What's your vibe?</h2>
-                  <p style={{ color: 'var(--slate-500)', marginBottom: '1.75rem' }}>Select all that apply. AI uses this to personalize your route.</p>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                <div className="card border-0 shadow-sm p-4 p-md-5">
+                  <h2 className="fw-black mb-2">What's your vibe?</h2>
+                  <p className="text-muted mb-4 small">AI uses this to personalize your route.</p>
+                  <div className="row g-3">
                     {[
                       { id: 'beach', label: 'Beach', Icon: Waves },
                       { id: 'mountain', label: 'Mountain', Icon: Mountain },
@@ -235,15 +233,17 @@ export const TripBuilder = () => {
                       { id: 'nightlife', label: 'Nightlife', Icon: Music },
                       { id: 'adventure', label: 'Adventure', Icon: Activity },
                     ].map(({ id, label, Icon }) => (
-                      <div key={id} className={`vibe-card ${interests.includes(id) ? 'active' : ''}`} onClick={() => toggleInterest(id)}>
-                        <Icon size={28} style={{ marginBottom: '0.5rem' }} />
-                        <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>{label}</div>
+                      <div key={id} className="col-4 col-md-4">
+                        <div className={`vibe-card ${interests.includes(id) ? 'active' : ''}`} onClick={() => toggleInterest(id)}>
+                          <Icon size={24} className="mb-2" />
+                          <div className="small fw-bold">{label}</div>
+                        </div>
                       </div>
                     ))}
                   </div>
-                  <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
-                    <button className="btn" onClick={() => setStep(2)}>← Back</button>
-                    <button className="btn-next-step" onClick={fetchDestDetails} disabled={apiLoading} style={{ flex: 1 }}>
+                  <div className="d-flex gap-3 mt-5">
+                    <button className="btn border px-4" onClick={() => setStep(2)}>Back</button>
+                    <button className="btn-startup flex-grow-1 justify-content-center" onClick={fetchDestDetails} disabled={apiLoading}>
                       {apiLoading ? 'Generating...' : 'Generate AI Route'} <Zap size={18} />
                     </button>
                   </div>
@@ -251,136 +251,103 @@ export const TripBuilder = () => {
               </S>
             )}
 
-            {/* STEP 4 — Transport */}
             {step === 4 && destDetails && (
               <S>
-                <div className="card" style={{ padding: '2rem' }}>
-                  <h2 style={{ fontWeight: 900, marginBottom: '1.75rem' }}>
-                    <Plane size={26} style={{ color: 'var(--primary)', verticalAlign: 'middle', marginRight: '0.5rem' }} />
+                <div className="card border-0 shadow-sm p-4 p-md-5">
+                  <h2 className="fw-black mb-4">
+                    <Plane size={26} className="text-primary me-2" />
                     Select Transport
                   </h2>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <div className="d-flex flex-column gap-3">
                     {(destDetails.detailedTransport || []).map(tr => (
                       <div key={tr.id} className={`select-card ${selectedTransport?.id === tr.id ? 'selected' : ''}`} onClick={() => setSelectedTransport(tr)}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div className="d-flex justify-content-between align-items-center">
                           <div>
-                            <div style={{ fontWeight: 800, fontSize: '1.05rem' }}>{tr.agency}</div>
-                            <div style={{ fontSize: '0.85rem', color: 'var(--slate-500)', marginTop: '0.2rem' }}>{tr.type} · {boardingPoint} → {destDetails.name}</div>
+                            <div className="fw-black fs-5">{tr.agency}</div>
+                            <div className="small text-muted mt-1">{tr.type} · {boardingPoint} → {destDetails.name}</div>
                           </div>
-                          <div style={{ fontWeight: 900, fontSize: '1.5rem', color: 'var(--primary)' }}>{currency}{tr.cost?.toLocaleString()}</div>
+                          <div className="fs-3 fw-black text-primary">{currency}{tr.cost?.toLocaleString()}</div>
                         </div>
                       </div>
                     ))}
-                    {(!destDetails.detailedTransport || destDetails.detailedTransport.length === 0) && (
-                      <p style={{ color: 'var(--slate-500)', textAlign: 'center', padding: '2rem' }}>No transport data available.</p>
-                    )}
                   </div>
-                  <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
-                    <button className="btn" onClick={() => setStep(3)}>← Back</button>
-                    <button className="btn-next-step" onClick={() => setStep(5)} disabled={!selectedTransport} style={{ flex: 1 }}>Choose Hotel <ArrowRight size={18} /></button>
+                  <div className="d-flex gap-3 mt-5">
+                    <button className="btn border px-4" onClick={() => setStep(3)}>Back</button>
+                    <button className="btn-startup flex-grow-1 justify-content-center" onClick={() => setStep(5)} disabled={!selectedTransport}>Choose Hotel</button>
                   </div>
                 </div>
               </S>
             )}
 
-            {/* STEP 5 — Hotel */}
             {step === 5 && destDetails && (
               <S>
-                <div className="card" style={{ padding: '2rem' }}>
-                  <h2 style={{ fontWeight: 900, marginBottom: '1.75rem' }}>
-                    <Building size={26} style={{ color: 'var(--primary)', verticalAlign: 'middle', marginRight: '0.5rem' }} />
-                    Hotels & Rooms
+                <div className="card border-0 shadow-sm p-4 p-md-5">
+                  <h2 className="fw-black mb-4">
+                    <Building size={26} className="text-primary me-2" />
+                    Hotels & Experience
                   </h2>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
+                  <div className="row g-3 mb-5">
                     {(destDetails.hotels || []).map(h => (
-                      <div key={h.id} className={`select-card ${selectedHotel?.id === h.id ? 'selected' : ''}`} onClick={() => { setSelectedHotel(h); setSelectedRoom(h.roomOptions?.[0]); }}>
-                        <div style={{ fontWeight: 800, marginBottom: '0.35rem' }}>{h.name}</div>
-                        <div style={{ display: 'flex', gap: '2px', marginBottom: '0.75rem' }}>
-                          {[1,2,3,4,5].map(s => <Star key={s} size={12} fill={s <= Math.floor(h.rating) ? 'var(--warning)' : 'none'} stroke="var(--warning)" />)}
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                          {(h.roomOptions || []).map(r => (
-                            <div key={r.type}
-                              className={`select-card ${selectedRoom?.type === r.type && selectedHotel?.id === h.id ? 'selected' : ''}`}
-                              style={{ padding: '0.6rem 0.875rem', borderRadius: 'var(--radius-md)', margin: 0 }}
-                              onClick={e => { e.stopPropagation(); setSelectedHotel(h); setSelectedRoom(r); }}>
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span style={{ fontWeight: 700, fontSize: '0.85rem' }}>{r.type}</span>
-                                <span style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '0.9rem' }}>{currency}{r.cost?.toLocaleString()}</span>
+                      <div key={h.id} className="col-md-6">
+                        <div className={`select-card h-100 ${selectedHotel?.id === h.id ? 'selected' : ''}`} onClick={() => { setSelectedHotel(h); setSelectedRoom(h.roomOptions?.[0]); }}>
+                          <div className="fw-black mb-1">{h.name}</div>
+                          <div className="d-flex gap-1 mb-3 text-warning">
+                            {[1,2,3,4,5].map(s => <Star key={s} size={12} fill={s <= Math.floor(h.rating) ? 'currentColor' : 'none'} />)}
+                          </div>
+                          <div className="d-flex flex-column gap-2">
+                            {(h.roomOptions || []).map(r => (
+                              <div key={r.type}
+                                className={`p-2 rounded-lg border small fw-bold transition ${selectedRoom?.type === r.type && selectedHotel?.id === h.id ? 'bg-primary text-white border-primary' : 'bg-light'}`}
+                                onClick={e => { e.stopPropagation(); setSelectedHotel(h); setSelectedRoom(r); }}>
+                                <div className="d-flex justify-content-between">
+                                  <span>{r.type}</span>
+                                  <span>{currency}{r.cost}</span>
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            ))}
+                          </div>
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Activities */}
-                  {(destDetails.activities || []).length > 0 && (
-                    <>
-                      <h4 style={{ fontWeight: 800, marginBottom: '0.75rem', marginTop: '1.5rem' }}>Activities</h4>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                        {destDetails.activities.map(act => (
-                          <div key={act.name} className={`select-card ${selectedActivities.find(a => a.name === act.name) ? 'selected' : ''}`} onClick={() => toggleActivity(act)} style={{ padding: '0.875rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                              <div>
-                                <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>{act.name}</div>
-                                <div style={{ fontSize: '0.78rem', color: 'var(--slate-500)' }}>{act.proximity}</div>
-                              </div>
-                              <div style={{ fontWeight: 800, color: 'var(--primary)', fontSize: '0.9rem' }}>{currency}{act.cost}</div>
-                            </div>
-                            {selectedActivities.find(a => a.name === act.name) && <div style={{ fontSize: '0.75rem', color: 'var(--success)', fontWeight: 700, marginTop: '0.4rem' }}>✓ Added</div>}
+                  <h4 className="fw-black mb-3">Add-ons</h4>
+                  <div className="row g-2 mb-5">
+                    {destDetails.activities.map(act => (
+                      <div key={act.name} className="col-md-6">
+                        <div className={`select-card small ${selectedActivities.find(a => a.name === act.name) ? 'selected' : ''}`} onClick={() => toggleActivity(act)}>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <span className="fw-black">{act.name}</span>
+                            <span className="text-primary">{currency}{act.cost}</span>
                           </div>
-                        ))}
+                        </div>
                       </div>
-                    </>
-                  )}
+                    ))}
+                  </div>
 
-                  {/* Restaurants */}
-                  {(destDetails.restaurants || []).length > 0 && (
-                    <>
-                      <h4 style={{ fontWeight: 800, marginBottom: '0.75rem' }}>Dining</h4>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                        {destDetails.restaurants.map(res => (
-                          <div key={res.name} className={`select-card ${selectedRestaurants.find(r => r.name === res.name) ? 'selected' : ''}`} onClick={() => toggleRestaurant(res)} style={{ padding: '0.875rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                              <div>
-                                <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>{res.name}</div>
-                                <div style={{ fontSize: '0.78rem', color: 'var(--slate-500)' }}>{res.cuisine} · ⭐{res.rating}</div>
-                              </div>
-                              <div style={{ fontWeight: 800, color: 'var(--primary)', fontSize: '0.9rem' }}>{currency}{res.averageCost}</div>
-                            </div>
-                            {selectedRestaurants.find(r => r.name === res.name) && <div style={{ fontSize: '0.75rem', color: 'var(--success)', fontWeight: 700, marginTop: '0.4rem' }}>✓ Added</div>}
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  )}
-
-                  <div style={{ display: 'flex', gap: '1rem' }}>
-                    <button className="btn" onClick={() => setStep(4)}>← Back</button>
-                    <button className="btn-next-step" onClick={() => setStep(6)} disabled={!selectedRoom} style={{ flex: 1 }}>Review Trip <ArrowRight size={18} /></button>
+                  <div className="d-flex gap-3">
+                    <button className="btn border px-4" onClick={() => setStep(4)}>Back</button>
+                    <button className="btn-startup flex-grow-1 justify-content-center" onClick={() => setStep(6)} disabled={!selectedRoom}>Review Trip</button>
                   </div>
                 </div>
               </S>
             )}
 
-            {/* STEP 6 — Review */}
             {step === 6 && destDetails && (
               <S>
-                <div className="card" style={{ padding: '2.5rem', textAlign: 'center' }}>
-                  <ShieldCheck size={56} style={{ color: 'var(--success)', margin: '0 auto 1.25rem' }} />
-                  <h2 style={{ fontWeight: 900, fontSize: '2rem', marginBottom: '0.5rem' }}>Trip Confirmed!</h2>
-                  <p style={{ color: 'var(--slate-500)', marginBottom: '2rem' }}>
+                <div className="card border-0 shadow-sm p-4 p-md-5 text-center">
+                  <ShieldCheck size={56} className="text-success mx-auto mb-3" />
+                  <h2 className="fw-black display-6 mb-2">Trip Confirmed!</h2>
+                  <p className="text-muted mb-5">
                     Your {getDays()}-day trip from <strong>{boardingPoint}</strong> to <strong>{destDetails.name}</strong> is ready.
                   </p>
-                  <div style={{ background: 'var(--slate-50)', borderRadius: 'var(--radius-lg)', padding: '1.5rem', marginBottom: '2rem', border: '1px solid var(--slate-200)' }}>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--slate-400)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Total Package Value</div>
-                    <div style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--primary)', lineHeight: 1 }}>
+                  <div className="bg-light rounded-xl p-4 mb-5 border">
+                    <div className="small fw-black text-muted text-uppercase mb-2 opacity-50">Total Package Value</div>
+                    <div className="display-4 fw-black text-primary lh-1">
                       {currency}{calculateTotal().toLocaleString()}
                     </div>
                   </div>
-                  <button className="btn-startup w-100" style={{ justifyContent: 'center', padding: '1rem', fontSize: '1rem' }} onClick={proceedToCheckout}>
+                  <button className="btn-startup w-100 py-3 fs-5 justify-content-center" onClick={proceedToCheckout}>
                     Confirm & Book Now
                   </button>
                 </div>
@@ -388,50 +355,55 @@ export const TripBuilder = () => {
             )}
           </div>
 
-          {/* SIDEBAR BUDGET */}
-          <div>
-              </div>
-            </div>
+          {/* SIDEBAR */}
+          <div className="col-lg-4">
+             {/* Total Card */}
+             <div className="card border-0 shadow-lg p-4 bg-slate-900 text-white mb-4">
+                <div className="small fw-black opacity-50 text-uppercase mb-2">Current Total</div>
+                <div className="display-5 fw-black text-primary mb-1">
+                   {currency}{calculateTotal().toLocaleString()}
+                </div>
+                <div className="small opacity-50">{getDays()} days trip</div>
+             </div>
 
-            {/* CURRENCY CONVERTER */}
-            <div className="card" style={{ marginTop: '1.25rem', padding: '1.5rem' }}>
-               <h5 style={{ fontWeight: 800, marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--slate-500)', textTransform: 'uppercase' }}>Currency Converter</h5>
-               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                  {[
-                    { label: 'USD', rate: 1, sym: '$' },
-                    { label: 'INR', rate: 83, sym: '₹' },
-                    { label: 'EUR', rate: 0.92, sym: '€' },
-                    { label: 'GBP', rate: 0.79, sym: '£' },
-                  ].map(c => {
-                    const base = calculateTotal();
-                    const converted = currency === '₹' ? (base / 83) * c.rate : base * c.rate;
-                    return (
-                      <div key={c.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                         <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-500)' }}>{c.label}</span>
-                         <span style={{ fontWeight: 800, fontSize: '0.95rem' }}>{c.sym}{Math.round(converted).toLocaleString()}</span>
-                      </div>
-                    );
-                  })}
-               </div>
-               <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--slate-100)', fontSize: '0.7rem', color: 'var(--slate-400)', textAlign: 'center' }}>
-                  <Info size={10} /> Market rates applied.
-               </div>
-            {/* CARBON FOOTPRINT */}
-            <div className="card" style={{ marginTop: '1.25rem', padding: '1.5rem', background: 'var(--success-soft)', border: '1px solid var(--success)' }}>
-               <h5 style={{ fontWeight: 800, marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--success)', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                 <Compass size={14} /> Sustainability
-               </h5>
-               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-600)' }}>Carbon Offset</span>
-                  <span style={{ fontWeight: 900, color: 'var(--success)' }}>{selectedTransport?.type === 'EV' || selectedTransport?.type === 'Train' ? 'Low' : 'Medium'}</span>
-               </div>
-               <div className="progress" style={{ height: '6px', marginBottom: '1rem', background: 'rgba(34,197,94,0.1)' }}>
-                  <div className="progress-bar" style={{ width: selectedTransport?.type === 'EV' ? '20%' : '65%', background: 'var(--success)' }}></div>
-               </div>
-               <p style={{ fontSize: '0.75rem', color: 'var(--slate-500)', margin: 0, lineHeight: 1.4 }}>
-                 Choosing {selectedTransport?.type || 'public'} transport reduces your footprint by <strong>35%</strong>.
-               </p>
-            </div>
+             {/* Currency Converter */}
+             <div className="card border-0 shadow-sm p-4 mb-4">
+                <h6 className="fw-black text-muted text-uppercase mb-4 opacity-50">Currency Converter</h6>
+                <div className="d-flex flex-column gap-3">
+                   {[
+                     { label: 'USD', rate: 1, sym: '$' },
+                     { label: 'INR', rate: 83, sym: '₹' },
+                     { label: 'EUR', rate: 0.92, sym: '€' },
+                     { label: 'GBP', rate: 0.79, sym: '£' },
+                   ].map(c => {
+                     const base = calculateTotal();
+                     const converted = currency === '₹' ? (base / 83) * c.rate : base * c.rate;
+                     return (
+                       <div key={c.label} className="d-flex justify-content-between align-items-center">
+                          <span className="small fw-black text-muted">{c.label}</span>
+                          <span className="fw-black">{c.sym}{Math.round(converted).toLocaleString()}</span>
+                       </div>
+                     );
+                   })}
+                </div>
+             </div>
+
+             {/* Sustainability */}
+             <div className="card border-0 shadow-sm p-4 bg-success-soft border border-success">
+                <h6 className="fw-black text-success text-uppercase mb-3 opacity-75 d-flex align-items-center gap-2">
+                  <Compass size={14} /> Sustainability
+                </h6>
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                   <span className="small fw-bold text-muted">Carbon Offset</span>
+                   <span className="fw-black text-success">{selectedTransport?.type === 'EV' || selectedTransport?.type === 'Train' ? 'Low' : 'Medium'}</span>
+                </div>
+                <div className="progress mb-3" style={{ height: '6px' }}>
+                   <div className="progress-bar bg-success" style={{ width: selectedTransport?.type === 'EV' ? '20%' : '65%' }}></div>
+                </div>
+                <p className="small text-muted m-0 lh-base" style={{ fontSize: '0.75rem' }}>
+                  Choosing {selectedTransport?.type || 'public'} transport reduces your footprint by <strong>35%</strong>.
+                </p>
+             </div>
           </div>
         </div>
       </div>

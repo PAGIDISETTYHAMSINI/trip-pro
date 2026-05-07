@@ -1,12 +1,11 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useState, useContext } from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
-import { Plane, LogOut, User, LayoutDashboard, Menu } from 'lucide-react';
+import { Plane, LogOut, User, LayoutDashboard, Menu, X, Globe, Sparkles, ShieldCheck } from 'lucide-react';
 import { AuthContext } from './context/AuthContext';
 import './index.css';
 import { AIAssistant } from './components/AIAssistant';
 
-/* Lazy load pages to prevent one broken page crashing the whole app */
+/* Lazy load pages */
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
 const Login = lazy(() => import('./pages/Auth').then(m => ({ default: m.Login })));
 const Signup = lazy(() => import('./pages/Auth').then(m => ({ default: m.Signup })));
@@ -19,7 +18,6 @@ const ExpenseTracker = lazy(() => import('./pages/ExpenseTracker').then(m => ({ 
 const AdminDashboard = lazy(() => import('./pages/AdminDashboard').then(m => ({ default: m.AdminDashboard })));
 const ExploreIndia = lazy(() => import('./pages/ExploreIndia').then(m => ({ default: m.ExploreIndia })));
 
-/* Page-level error boundary */
 import { Component } from 'react';
 class ErrorBoundary extends Component {
   state = { hasError: false, error: null };
@@ -30,9 +28,7 @@ class ErrorBoundary extends Component {
         <h2 style={{ color: '#ef4444', marginBottom: '1rem' }}>Something went wrong</h2>
         <p style={{ color: '#64748b', marginBottom: '2rem' }}>{this.state.error?.message}</p>
         <button onClick={() => { this.setState({ hasError: false }); window.location.href = '/'; }}
-          style={{ background: '#2563eb', color: '#fff', padding: '0.75rem 2rem', border: 'none', borderRadius: '10px', cursor: 'pointer', fontWeight: 700 }}>
-          Go Home
-        </button>
+          className="btn-startup">Go Home</button>
       </div>
     );
     return this.props.children;
@@ -48,46 +44,88 @@ const PageLoader = () => (
 
 function App() {
   const { user, logout } = useContext(AuthContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogout = () => { logout(); navigate('/'); };
+  const handleLogout = () => { logout(); navigate('/'); setIsMenuOpen(false); };
 
   return (
     <div className="page-wrapper">
       {/* HEADER */}
       <header className="site-header">
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" className="logo">
-            <Plane size={26} style={{ color: 'var(--primary)' }} />
-            <span style={{ color: 'var(--slate-900)' }}>Trip<span style={{ color: 'var(--primary)' }}>Pro</span></span>
+          <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>
+            <Plane size={26} />
+            <span>Trip<span className="text-primary">Pro</span></span>
           </Link>
 
-          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-            <Link to="/explore-india" className="nav-link" style={{ fontWeight: 700, color: 'var(--primary)' }}>Explore India</Link>
-          </div>
-
-          <nav style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+          {/* Desktop Nav */}
+          <nav className="desktop-only" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+            <Link to="/explore-india" className="nav-link">Explore India</Link>
             {user ? (
               <>
                 <Link to="/dashboard" className="nav-link" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <LayoutDashboard size={16} /> My Trips
                 </Link>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--slate-600)', fontWeight: 600, fontSize: '0.9rem' }}>
-                  <User size={16} /> {user.name}
-                </span>
-                <button onClick={handleLogout} className="btn" style={{ fontSize: '0.85rem', padding: '0.5rem 1rem' }}>
+                <button onClick={handleLogout} className="btn" style={{ fontSize: '0.85rem' }}>
                   <LogOut size={14} /> Logout
                 </button>
               </>
             ) : (
               <>
                 <Link to="/login" className="nav-link">Login</Link>
-                <Link to="/signup" className="btn-startup" style={{ fontSize: '0.85rem', padding: '0.6rem 1.25rem' }}>Sign Up</Link>
+                <Link to="/signup" className="btn-startup" style={{ fontSize: '0.85rem' }}>Sign Up</Link>
               </>
             )}
           </nav>
+
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="btn d-md-none" 
+            style={{ border: 'none', background: 'transparent', padding: '0.5rem', display: 'flex' }}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fade-in" style={{ position: 'fixed', inset: 0, top: '65px', background: '#fff', zIndex: 99, padding: '2rem' }}>
+           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <Link to="/explore-india" className="nav-link" style={{ fontSize: '1.5rem', fontWeight: 800 }} onClick={() => setIsMenuOpen(false)}>
+                 <Globe size={20} className="me-2" /> Explore India
+              </Link>
+              {user ? (
+                <>
+                  <Link to="/dashboard" className="nav-link" style={{ fontSize: '1.5rem', fontWeight: 800 }} onClick={() => setIsMenuOpen(false)}>
+                     <LayoutDashboard size={20} className="me-2" /> My Dashboard
+                  </Link>
+                  <Link to="/build-trip" className="nav-link" style={{ fontSize: '1.5rem', fontWeight: 800 }} onClick={() => setIsMenuOpen(false)}>
+                     <Sparkles size={20} className="me-2" /> AI Planner
+                  </Link>
+                  <hr style={{ border: 'none', borderTop: '1px solid var(--slate-100)' }} />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+                     <div style={{ width: '40px', height: '40px', background: 'var(--primary-soft)', color: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>{user.name.charAt(0)}</div>
+                     <div>
+                        <div style={{ fontWeight: 800 }}>{user.name}</div>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--slate-500)' }}>Elite Member</div>
+                     </div>
+                  </div>
+                  <button onClick={handleLogout} className="btn-startup" style={{ width: '100%', justifyContent: 'center' }}>
+                     <LogOut size={18} /> Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link to="/login" className="btn" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }} onClick={() => setIsMenuOpen(false)}>Login</Link>
+                  <Link to="/signup" className="btn-startup" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }} onClick={() => setIsMenuOpen(false)}>Create Account</Link>
+                </>
+              )}
+           </div>
+        </div>
+      )}
 
       {/* MAIN */}
       <main style={{ flex: 1 }}>

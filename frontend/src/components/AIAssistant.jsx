@@ -43,56 +43,60 @@ export const AIAssistant = () => {
   return (
     <>
       <div className="ai-bubble" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
+        {isOpen ? <X size={24} /> : <MessageSquare size={24} />}
         {!isOpen && (
-           <div style={{ position: 'absolute', top: '-5px', right: '-5px', background: 'var(--danger)', color: '#fff', width: '20px', height: '20px', borderRadius: '50%', fontSize: '0.65rem', fontWeight: 900, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid #fff' }}>
+           <div className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-white" style={{ fontSize: '0.6rem' }}>
               1
            </div>
         )}
       </div>
 
       {isOpen && (
-        <div className="chat-window fade-in">
-          <div className="chat-header">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <div style={{ background: 'rgba(255,255,255,0.2)', padding: '0.5rem', borderRadius: 'var(--radius-md)' }}>
-                <Bot size={20} />
+        <div className="chat-window shadow-lg border-0 fade-in">
+          <div className="chat-header d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center gap-2">
+              <div className="bg-white bg-opacity-25 p-2 rounded-lg">
+                <Bot size={18} />
               </div>
               <div>
-                <div style={{ fontWeight: 800, fontSize: '0.95rem', lineHeight: 1 }}>Trip Pro AI</div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.8, marginTop: '2px' }}>Online · Ready to Plan</div>
+                <div className="fw-black small lh-1">Trip Pro AI</div>
+                <div className="small opacity-75 mt-1" style={{ fontSize: '0.65rem' }}>Online · Ready to Plan</div>
               </div>
             </div>
-            <Sparkles size={18} />
+            <Sparkles size={16} />
           </div>
 
-          <div className="chat-body">
+          <div className="chat-body p-3">
             {messages.map((m, i) => (
-              <div key={i} className={`chat-message ${m.role}`}>
+              <div key={i} className={`chat-message ${m.role} mb-2 shadow-sm`}>
                 {m.content}
               </div>
             ))}
             <div ref={chatEndRef} />
           </div>
 
-          <div className="chat-footer">
-            <input 
-              type="text" 
-              className="chat-input" 
-              placeholder="Ask anything..." 
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-            />
-            <button 
-              onClick={handleSend}
-              style={{ background: 'var(--primary)', color: '#fff', border: 'none', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-              <Send size={18} />
-            </button>
+          <div className="chat-footer p-3 bg-white border-top">
+            <div className="d-flex gap-2">
+              <input 
+                type="text" 
+                className="form-control form-control-sm border-0 bg-light" 
+                placeholder="Ask anything..." 
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                style={{ borderRadius: '20px', paddingLeft: '1rem' }}
+              />
+              <button 
+                onClick={handleSend}
+                className="btn btn-primary rounded-circle p-0 d-flex align-items-center justify-content-center flex-shrink-0"
+                style={{ width: '36px', height: '36px' }}
+              >
+                <Send size={16} />
+              </button>
+            </div>
           </div>
           
-          <div style={{ padding: '0.5rem 1.5rem', background: 'var(--slate-50)', fontSize: '0.65rem', color: 'var(--slate-400)', textAlign: 'center', fontWeight: 700 }}>
+          <div className="py-2 bg-light text-center small text-muted fw-bold border-top" style={{ fontSize: '0.6rem', letterSpacing: '0.5px' }}>
              POWERED BY TRIP PRO INTELLIGENCE
           </div>
         </div>
@@ -100,3 +104,5 @@ export const AIAssistant = () => {
     </>
   );
 };
+
+export default AIAssistant;

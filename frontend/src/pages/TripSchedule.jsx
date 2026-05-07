@@ -27,16 +27,16 @@ export const TripSchedule = () => {
   };
 
   if (loading) return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh', flexDirection: 'column', gap: '1rem' }}>
+    <div className="d-flex justify-content-center align-items-center min-vh-100 flex-column gap-3">
       <div className="spinner"></div>
-      <p style={{ color: 'var(--slate-500)', fontWeight: 600 }}>Loading itinerary...</p>
+      <p className="text-muted fw-bold">Loading itinerary...</p>
     </div>
   );
 
   if (!booking) return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh', flexDirection: 'column', gap: '1.5rem', textAlign: 'center', padding: '2rem' }}>
-      <h2 style={{ fontWeight: 900 }}>Itinerary Not Found</h2>
-      <p style={{ color: 'var(--slate-500)' }}>This booking may have been removed or you may need to log in.</p>
+    <div className="d-flex justify-content-center align-items-center min-vh-100 flex-column gap-4 text-center p-4">
+      <h2 className="fw-black">Itinerary Not Found</h2>
+      <p className="text-muted">This booking may have been removed or you may need to log in.</p>
       <Link to="/dashboard" className="btn-startup">← Back to Dashboard</Link>
     </div>
   );
@@ -45,37 +45,41 @@ export const TripSchedule = () => {
   const currency = booking.itineraryDetails?.currencySymbol || '₹';
 
   return (
-    <div style={{ background: 'var(--slate-50)', minHeight: '100vh', padding: '2rem 0' }}>
+    <div className="bg-light min-vh-100 py-5">
       <div className="container">
-        <Link to="/dashboard" className="btn" style={{ marginBottom: '2rem', display: 'inline-flex' }}>
-          <ArrowLeft size={16} /> Back to Dashboard
+        <Link to="/dashboard" className="btn border bg-white px-4 mb-4 d-inline-flex align-items-center gap-2 small fw-bold">
+          <ArrowLeft size={16} /> Dashboard
         </Link>
 
         {/* HEADER CARD */}
-        <div className="card" style={{ padding: '2rem', marginBottom: '2rem', borderLeft: '6px solid var(--primary)' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '2rem', alignItems: 'center' }}>
-            <div>
-              <span className="badge badge-success" style={{ marginBottom: '0.75rem' }}>✓ VERIFIED ITINERARY</span>
-              <h1 style={{ fontWeight: 900, fontSize: '2.5rem', marginBottom: '1.5rem' }}>{booking.destinationName}</h1>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                <div style={{ background: 'var(--slate-50)', borderRadius: 'var(--radius-lg)', padding: '1rem', border: '1px solid var(--slate-200)' }}>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.3rem' }}>Boarding From</div>
-                  <div style={{ fontWeight: 900, fontSize: '1.15rem' }}>{boardingPoint}</div>
+        <div className="card border-0 shadow-sm p-4 p-md-5 mb-4 border-start border-5 border-primary">
+          <div className="row g-4 align-items-center">
+            <div className="col-lg-8">
+              <span className="badge bg-success text-white mb-3">✓ VERIFIED ITINERARY</span>
+              <h1 className="fw-black display-5 mb-4">{booking.destinationName}</h1>
+              <div className="row g-3">
+                <div className="col-6 col-md-4">
+                  <div className="bg-light rounded-xl p-3 border">
+                    <div className="small text-muted fw-bold text-uppercase opacity-50 mb-1" style={{ fontSize: '0.65rem' }}>Boarding From</div>
+                    <div className="fw-black">{boardingPoint}</div>
+                  </div>
                 </div>
-                <div style={{ background: 'var(--slate-50)', borderRadius: 'var(--radius-lg)', padding: '1rem', border: '1px solid var(--slate-200)' }}>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.3rem' }}>Duration</div>
-                  <div style={{ fontWeight: 900, fontSize: '1.15rem' }}>{booking.days} Days</div>
+                <div className="col-6 col-md-4">
+                  <div className="bg-light rounded-xl p-3 border">
+                    <div className="small text-muted fw-bold text-uppercase opacity-50 mb-1" style={{ fontSize: '0.65rem' }}>Duration</div>
+                    <div className="fw-black">{booking.days} Days</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div style={{ textAlign: 'right' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.3rem' }}>Total</div>
-              <div style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--primary)', lineHeight: 1, marginBottom: '1.5rem' }}>
+            <div className="col-lg-4 text-lg-end">
+              <div className="small text-muted fw-bold text-uppercase opacity-50 mb-1">Total Package</div>
+              <div className="display-4 fw-black text-primary lh-1 mb-4">
                 {currency}{booking.totalCost?.toLocaleString()}
               </div>
-              <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'flex-end' }}>
-                <button onClick={() => window.print()} className="btn" style={{ fontWeight: 700 }}>Save PDF</button>
-                <button onClick={handleWhatsAppShare} style={{ background: '#25d366', color: '#fff', border: 'none', borderRadius: 'var(--radius-md)', padding: '0.6rem 1.25rem', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.4rem', fontFamily: 'inherit' }}>
+              <div className="d-flex gap-2 justify-content-lg-end">
+                <button onClick={() => window.print()} className="btn border bg-white fw-bold px-4">PDF</button>
+                <button onClick={handleWhatsAppShare} className="btn bg-success text-white border-0 fw-bold px-4 d-flex align-items-center gap-2">
                   <Share2 size={16} /> Share
                 </button>
               </div>
@@ -84,43 +88,42 @@ export const TripSchedule = () => {
         </div>
 
         {/* CONTENT GRID */}
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '1.5rem', alignItems: 'start' }}>
-
+        <div className="row g-4">
           {/* SCHEDULE */}
-          <div>
-            <h3 style={{ fontWeight: 900, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Clock size={24} style={{ color: 'var(--primary)' }} /> Daily Itinerary
+          <div className="col-lg-8">
+            <h3 className="fw-black mb-4 d-flex align-items-center gap-2">
+              <Clock size={24} className="text-primary" /> Daily Itinerary
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div className="d-flex flex-column gap-4">
               {(booking.schedule || []).map((day, idx) => (
-                <div key={idx} className="card" style={{ padding: '1.5rem', position: 'relative', borderLeft: '4px solid var(--primary)', borderRadius: 'var(--radius-lg)' }}>
-                  <div style={{ position: 'absolute', top: '-14px', left: '1rem', background: 'var(--primary)', color: '#fff', padding: '0.25rem 0.875rem', borderRadius: 'var(--radius-full)', fontWeight: 800, fontSize: '0.8rem' }}>
+                <div key={idx} className="card border-0 shadow-sm p-4 border-start border-4 border-primary position-relative">
+                  <div className="position-absolute translate-middle-y top-0 start-0 ms-4 bg-primary text-white px-3 py-1 rounded-pill small fw-black">
                     DAY {day.day}
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginTop: '0.5rem' }}>
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 700, color: 'var(--warning)', marginBottom: '0.5rem', fontSize: '0.85rem' }}>
+                  <div className="row g-4 mt-2">
+                    <div className="col-md-4">
+                      <div className="d-flex align-items-center gap-2 fw-bold text-warning small mb-2">
                         <Sun size={16} /> Morning
                       </div>
-                      <p style={{ fontSize: '0.875rem', color: 'var(--slate-600)', lineHeight: 1.6, margin: 0 }}>{day.morning}</p>
+                      <p className="small text-muted m-0 lh-base">{day.morning}</p>
                     </div>
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 700, color: 'var(--danger)', marginBottom: '0.5rem', fontSize: '0.85rem', opacity: 0.8 }}>
+                    <div className="col-md-4 border-md-start border-md-end">
+                      <div className="d-flex align-items-center gap-2 fw-bold text-danger small opacity-75 mb-2">
                         <Sunset size={16} /> Afternoon
                       </div>
-                      <p style={{ fontSize: '0.875rem', color: 'var(--slate-600)', lineHeight: 1.6, margin: 0 }}>{day.afternoon}</p>
+                      <p className="small text-muted m-0 lh-base">{day.afternoon}</p>
                     </div>
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '0.5rem', fontSize: '0.85rem' }}>
+                    <div className="col-md-4">
+                      <div className="d-flex align-items-center gap-2 fw-bold text-primary small mb-2">
                         <Moon size={16} /> Evening
                       </div>
-                      <p style={{ fontSize: '0.875rem', color: 'var(--slate-600)', lineHeight: 1.6, margin: 0 }}>{day.evening}</p>
+                      <p className="small text-muted m-0 lh-base">{day.evening}</p>
                     </div>
                   </div>
                 </div>
               ))}
               {(!booking.schedule || booking.schedule.length === 0) && (
-                <div className="card" style={{ padding: '2rem', textAlign: 'center', color: 'var(--slate-400)' }}>
+                <div className="card border-0 shadow-sm p-5 text-center text-muted">
                   No daily schedule available for this booking.
                 </div>
               )}
@@ -128,24 +131,24 @@ export const TripSchedule = () => {
           </div>
 
           {/* SIDEBAR */}
-          <div style={{ position: 'sticky', top: '6rem' }}>
-            <div className="card" style={{ padding: '1.5rem', marginBottom: '1rem' }}>
-              <h5 style={{ fontWeight: 800, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <ShieldCheck size={18} style={{ color: 'var(--primary)' }} /> Support Info
+          <div className="col-lg-4">
+            <div className="card border-0 shadow-sm p-4 mb-4">
+              <h5 className="fw-black mb-4 d-flex align-items-center gap-2">
+                <ShieldCheck size={18} className="text-primary" /> Support Info
               </h5>
-              <div style={{ marginBottom: '1rem' }}>
-                <div style={{ fontSize: '0.75rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.25rem' }}>Emergency</div>
-                <div style={{ fontWeight: 700, color: 'var(--danger)' }}>{booking.itineraryDetails?.emergencyContacts || '112 / 911'}</div>
+              <div className="mb-4">
+                <div className="small text-muted fw-bold text-uppercase opacity-50 mb-1" style={{ fontSize: '0.65rem' }}>Emergency Contact</div>
+                <div className="fw-black text-danger">{booking.itineraryDetails?.emergencyContacts || '112 / 911'}</div>
               </div>
               <div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.25rem' }}>Cultural Tips</div>
-                <div style={{ fontSize: '0.85rem', color: 'var(--slate-600)' }}>{booking.itineraryDetails?.culturalEtiquette || 'Respect local customs and traditions.'}</div>
+                <div className="small text-muted fw-bold text-uppercase opacity-50 mb-1" style={{ fontSize: '0.65rem' }}>Cultural Etiquette</div>
+                <div className="small text-muted lh-base">{booking.itineraryDetails?.culturalEtiquette || 'Respect local customs and traditions.'}</div>
               </div>
             </div>
-            <div style={{ background: 'var(--primary-soft)', border: '1px solid #bfdbfe', borderRadius: 'var(--radius-lg)', padding: '1rem', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-              <CheckCircle size={18} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '0.1rem' }} />
-              <p style={{ fontSize: '0.85rem', color: 'var(--primary-dark)', fontWeight: 600, margin: 0 }}>
-                Verified booking. Fetched live from Neon PostgreSQL database.
+            <div className="bg-primary-soft border border-primary-subtle rounded-xl p-3 d-flex gap-3 align-items-start">
+              <CheckCircle size={18} className="text-primary mt-1 flex-shrink-0" />
+              <p className="small text-main fw-bold m-0">
+                Verified booking. Secure data synced with production-grade backend.
               </p>
             </div>
           </div>

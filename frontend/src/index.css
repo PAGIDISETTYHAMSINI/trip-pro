@@ -567,6 +567,60 @@ h1, h2, h3, h4, h5, h6 { font-weight: 800; line-height: 1.2; letter-spacing: -0.
   outline: none;
 }
 
+/* =========================================================
+   MOBILE RESPONSIVE OVERRIDES — TRIP PRO 3.0
+   ========================================================= */
+@media (max-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --radius-xl: 14px; /* Slightly smaller radius for mobile */
+  }
+  
+  h1 { font-size: 2.25rem !important; }
+  h2 { font-size: 1.75rem !important; }
+  h3 { font-size: 1.4rem !important; }
+  
+  .section { padding: 3rem 0; }
+  
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  
+  .container { padding: 0 1rem; }
+  
+  /* Sidebar handling — make it non-sticky and full width on mobile */
+  .budget-sidebar { 
+    position: relative !important; 
+    top: 0 !important; 
+    margin-top: 2rem; 
+  }
+  
+  /* Chat window adjustments */
+  .chat-window {
+    width: calc(100vw - 2rem);
+    height: 70vh;
+    right: 1rem;
+    bottom: 5rem;
+  }
+  
+  .ai-bubble {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Form adjustments */
+  .form-control, .form-select { font-size: 16px; /* Prevents iOS zoom on focus */ }
+  
+  /* Hide desktop-only nav items */
+  .desktop-only { display: none !important; }
+}
+
+/* =========================================================
+   ANIMATIONS & EFFECTS
+   ========================================================= */
 @keyframes pulse {
   0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4); }
   70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(124, 58, 237, 0); }
