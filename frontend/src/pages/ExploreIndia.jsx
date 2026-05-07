@@ -87,7 +87,7 @@ export const ExploreIndia = () => {
           
           <div className="glass" style={{ padding: '0.5rem', maxWidth: '700px', margin: '0 auto', display: 'flex', gap: '0.5rem', borderRadius: 'var(--radius-xl)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1, paddingLeft: '1rem' }}>
-              <Search size={20} style={{ color: 'var(--slate-400)' }} />
+              <Globe size={20} style={{ color: 'var(--slate-400)' }} />
               <input 
                 type="text" 
                 placeholder="Search destinations (e.g. Goa, Munnar...)" 
@@ -97,6 +97,19 @@ export const ExploreIndia = () => {
               />
             </div>
             <button className="btn-startup" style={{ padding: '0.75rem 2rem' }}>Explore AI Picks</button>
+          </div>
+          
+          <div style={{ marginTop: '3rem', display: 'flex', gap: '2rem', justifyContent: 'center' }}>
+             {[
+               { label: 'Trending', val: 'Ladakh' },
+               { label: 'Hot Pick', val: 'Varkala' },
+               { label: 'Hidden Gem', val: 'Spiti' },
+             ].map((t, i) => (
+               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.1)', padding: '0.5rem 1rem', borderRadius: 'var(--radius-full)', border: '1px solid rgba(255,255,255,0.2)' }}>
+                 <TrendingUp size={14} className="text-primary" />
+                 <span style={{ fontSize: '0.85rem', fontWeight: 700 }}>{t.label}: <span style={{ color: 'var(--primary)' }}>{t.val}</span></span>
+               </div>
+             ))}
           </div>
         </div>
       </section>
@@ -357,6 +370,44 @@ export const ExploreIndia = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* INDIA TRAVEL REELS */}
+      <section style={{ background: 'var(--slate-50)', padding: '5rem 0' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
+            <div>
+              <h2 style={{ fontWeight: 900, fontSize: '2.5rem' }}>Travel <span className="text-gradient">Reels</span></h2>
+              <p style={{ color: 'var(--slate-500)' }}>Short, immersive glimpses into India's most stunning locales.</p>
+            </div>
+            <button className="btn" style={{ fontWeight: 700 }}>Post your reel</button>
+          </div>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+             {[
+               { title: 'Morning in Munnar', views: '12k', img: 'https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&q=80&w=600' },
+               { title: 'Goa Sunsets', views: '45k', img: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80&w=600' },
+               { title: 'Varanasi Ghats', views: '28k', img: 'https://images.unsplash.com/photo-1561359313-0639aad49ca6?auto=format&fit=crop&q=80&w=600' },
+               { title: 'Ladakh Peaks', views: '67k', img: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&q=80&w=600' },
+             ].map((reel, i) => (
+               <div key={i} className="cinematic-card" style={{ height: '400px', cursor: 'pointer' }}>
+                  <img src={reel.img} alt={reel.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <div className="cinematic-overlay" style={{ background: 'linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.9))' }}>
+                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                        <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                           <Zap size={12} fill="#fff" />
+                        </div>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 800 }}>LIVE STORY</span>
+                     </div>
+                     <h4 style={{ color: '#fff', fontWeight: 900, fontSize: '1.1rem' }}>{reel.title}</h4>
+                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', opacity: 0.8 }}>
+                        <Users size={12} /> {reel.views} watching
+                     </div>
+                  </div>
+               </div>
+             ))}
+          </div>
         </div>
       </section>
 

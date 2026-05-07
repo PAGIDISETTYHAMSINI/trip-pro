@@ -1,21 +1,24 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { Database, Users, CreditCard, MapPin, Calendar, Trash2, ShieldCheck, RefreshCw } from 'lucide-react';
+import { Database, Users, CreditCard, MapPin, Calendar, Trash2, ShieldCheck, RefreshCw, ArrowUpRight, Search, Filter, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const API = 'https://trip-pro.onrender.com';
 
 export const AdminDashboard = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
   const { token } = useContext(AuthContext);
 
   const fetchAllData = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('https://trip-pro.onrender.com/api/bookings/admin/all', {
+      const res = await axios.get(`${API}/api/bookings/admin/all`, {
         headers: { Authorization: `Bearer ${token}` }
       });
-      setBookings(res.data);
+      setBookings(res.data || []);
     } catch (err) {
       console.error("Admin fetch failed", err);
     } finally {
@@ -27,95 +30,154 @@ export const AdminDashboard = () => {
     if (token) fetchAllData();
   }, [token]);
 
+  const filteredBookings = bookings.filter(b => 
+    b.destinationName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    b.User?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    b.User?.email?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const stats = [
+    { label: 'Total Revenue', value: `₹${bookings.reduce((acc, b) => acc + (b.totalCost || 0), 0).toLocaleString()}`, icon: <CreditCard size={20} />, color: 'var(--success)' },
+    { label: 'Total Bookings', value: bookings.length, icon: <RefreshCw size={20} />, color: 'var(--primary)' },
+    { label: 'Active Users', value: new Set(bookings.map(b => b.userId)).size, icon: <Users size={20} />, color: 'var(--secondary)' },
+    { label: 'Destinations', value: new Set(bookings.map(b => b.destinationName)).size, icon: <MapPin size={20} />, color: 'var(--warning)' },
+  ];
+
   if (loading) return (
-    <div className="container py-5 text-center">
-      <div className="spinner-border text-primary" role="status"></div>
-      <p className="mt-3">Loading Master Database...</p>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', flexDirection: 'column', gap: '1rem' }}>
+      <div className="spinner"></div>
+      <p style={{ color: 'var(--slate-500)', fontWeight: 600 }}>Loading master database...</p>
     </div>
   );
 
   return (
-    <div className="container py-5">
-      <div className="row align-items-center mb-4">
-        <div className="col-lg-6">
-          <h2 className="fw-black mb-1 d-flex align-items-center gap-2">
-            <Database color="var(--primary)" /> Master Admin Panel
-          </h2>
-          <p className="text-muted">Total Data Visibility & History</p>
+    <div style={{ background: 'var(--slate-50)', minHeight: '100vh', padding: '2rem 0' }}>
+      <div className="container">
+        {/* HEADER */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem' }}>
+          <div>
+            <div className="badge badge-primary mb-2">MASTER CONTROL</div>
+            <h1 style={{ fontWeight: 900, fontSize: '2.5rem', marginBottom: '0.5rem' }}>Admin <span className="text-gradient">Dashboard</span></h1>
+            <p style={{ color: 'var(--slate-500)', fontSize: '1.1rem' }}>System-wide visibility and transaction history.</p>
+          </div>
+          <div style={{ display: 'flex', gap: '0.75rem' }}>
+             <button onClick={fetchAllData} className="btn" style={{ padding: '0.75rem' }}><RefreshCw size={18} /></button>
+             <a href="https://console.neon.tech" target="_blank" rel="noreferrer" className="btn-startup" style={{ background: 'var(--slate-900)', border: 'none' }}>
+                <ShieldCheck size={18} /> Neon Console
+             </a>
+          </div>
         </div>
-        <div className="col-lg-6 text-lg-end d-flex gap-2 justify-content-lg-end">
-            <a href="https://console.neon.tech/app/projects" target="_blank" rel="noreferrer" className="btn btn-dark btn-sm d-flex align-items-center gap-2 px-3">
-                <ShieldCheck size={16}/> Go to Neon Console
-            </a>
-            <div className="glass px-3 py-2 d-flex align-items-center gap-2">
-                <Users size={18} color="var(--primary)"/> <span className="fw-bold">{new Set(bookings.map(b => b.userId)).size}</span> <span className="text-muted d-none d-md-inline">Users</span>
+
+        {/* STATS ROW */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '2.5rem' }}>
+          {stats.map((s, i) => (
+            <div key={i} className="card" style={{ padding: '1.5rem', border: 'none', boxShadow: 'var(--shadow-sm)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                <div style={{ background: s.color + '20', color: s.color, padding: '0.75rem', borderRadius: 'var(--radius-lg)' }}>
+                  {s.icon}
+                </div>
+                <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
+                  +12% <ArrowUpRight size={12} />
+                </span>
+              </div>
+              <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-400)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>{s.label}</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 900, color: 'var(--slate-900)' }}>{s.value}</div>
             </div>
-            <div className="glass px-3 py-2 d-flex align-items-center gap-2">
-                <CreditCard size={18} color="#10b981"/> <span className="fw-bold">{bookings.length}</span> <span className="text-muted d-none d-md-inline">Bookings</span>
-            </div>
+          ))}
         </div>
-      </div>
 
-      {/* Helpful Instructions */}
-      <div className="alert alert-info border-0 rounded-4 p-4 mb-4 shadow-sm">
-        <h5 className="fw-bold"><Database size={20} className="me-2"/> How to see your raw data in Neon:</h5>
-        <ol className="mb-0 mt-2">
-          <li>Click the <strong>"Go to Neon Console"</strong> button above.</li>
-          <li>Select your project <strong>"ep-purple-art..."</strong> from the dashboard.</li>
-          <li>On the left sidebar, click <strong>"Tables"</strong>.</li>
-          <li>You will see <strong>"Users"</strong> and <strong>"Bookings"</strong> right there!</li>
-        </ol>
-      </div>
+        {/* TOOLS BAR */}
+        <div className="glass-card" style={{ padding: '1rem', marginBottom: '1.5rem', border: 'none', display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0 0.5rem' }}>
+            <Search size={18} style={{ color: 'var(--slate-400)' }} />
+            <input 
+              type="text" 
+              placeholder="Search by user name, email, or destination..." 
+              style={{ border: 'none', background: 'transparent', width: '100%', outline: 'none', fontSize: '0.95rem', color: 'var(--slate-900)' }}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div style={{ width: '1px', height: '24px', background: 'var(--slate-200)' }}></div>
+          <button className="btn" style={{ border: 'none', background: 'transparent' }}><Filter size={18} /> Filter</button>
+          <button className="btn" style={{ border: 'none', background: 'transparent' }}><Download size={18} /> Export</button>
+        </div>
 
-      <div className="glass shadow-sm overflow-hidden mb-4">
-        <div className="table-responsive">
-          <table className="table table-hover mb-0 align-middle">
-            <thead className="table-light text-uppercase" style={{ fontSize: '0.75rem', letterSpacing: '0.05em' }}>
-              <tr>
-                <th className="px-4 py-3 border-0">User Account</th>
-                <th className="px-4 py-3 border-0">Route & Trip Details</th>
-                <th className="px-4 py-3 border-0">Payment Info</th>
-                <th className="px-4 py-3 border-0">Status</th>
-                <th className="px-4 py-3 border-0 text-end">Booked Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {bookings.map((booking) => (
-                <tr key={booking.id}>
-                  <td className="px-4 py-3">
-                    <div className="fw-bold">{booking.User?.name || 'Guest User'}</div>
-                    <div className="small text-muted">{booking.User?.email || 'No email'}</div>
-                  </td>
-                  <td className="px-4 py-3">
-                    <div className="d-flex align-items-center gap-2 fw-semibold">
-                      <MapPin size={14} color="var(--primary)" /> {booking.route || booking.destinationName}
-                    </div>
-                    <div className="small text-muted">{booking.days} Days • {booking.totalTravelers || 1} Travelers</div>
-                  </td>
-                  <td className="px-4 py-3">
-                    <div className="fw-black text-primary">
-                      {booking.itineraryDetails?.currencySymbol || '₹'}{booking.totalCost.toLocaleString()}
-                    </div>
-                    <div className="small text-muted" style={{ fontFamily: 'monospace' }}>{booking.paymentId?.substring(0, 15)}...</div>
-                  </td>
-                  <td className="px-4 py-3">
-                    <span className={`badge rounded-pill ${booking.status === 'PAID' ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger'} px-3 py-2`}>
-                      {booking.status}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 text-end small text-muted">
-                    {new Date(booking.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
-                  </td>
+        {/* DATA TABLE */}
+        <div className="card" style={{ border: 'none', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+              <thead>
+                <tr style={{ background: 'var(--slate-50)', borderBottom: '1px solid var(--slate-200)' }}>
+                  <th style={{ padding: '1.25rem 1.5rem', fontSize: '0.75rem', fontWeight: 800, color: 'var(--slate-400)', textTransform: 'uppercase' }}>User / Account</th>
+                  <th style={{ padding: '1.25rem 1.5rem', fontSize: '0.75rem', fontWeight: 800, color: 'var(--slate-400)', textTransform: 'uppercase' }}>Trip Destination</th>
+                  <th style={{ padding: '1.25rem 1.5rem', fontSize: '0.75rem', fontWeight: 800, color: 'var(--slate-400)', textTransform: 'uppercase' }}>Transaction Info</th>
+                  <th style={{ padding: '1.25rem 1.5rem', fontSize: '0.75rem', fontWeight: 800, color: 'var(--slate-400)', textTransform: 'uppercase' }}>Status</th>
+                  <th style={{ padding: '1.25rem 1.5rem', fontSize: '0.75rem', fontWeight: 800, color: 'var(--slate-400)', textTransform: 'uppercase' }}>Date</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {filteredBookings.map((b, i) => (
+                  <tr key={b.id} style={{ borderBottom: i === filteredBookings.length - 1 ? 'none' : '1px solid var(--slate-100)', transition: 'var(--transition)' }}>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                         <div style={{ width: '36px', height: '36px', background: 'var(--primary-soft)', color: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.85rem' }}>
+                            {b.User?.name?.charAt(0) || 'G'}
+                         </div>
+                         <div>
+                            <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>{b.User?.name || 'Guest User'}</div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--slate-400)' }}>{b.User?.email || 'guest@example.com'}</div>
+                         </div>
+                      </div>
+                    </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>
+                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, color: 'var(--slate-700)' }}>
+                          <MapPin size={14} className="text-primary" /> {b.destinationName}
+                       </div>
+                       <div style={{ fontSize: '0.8rem', color: 'var(--slate-400)', marginTop: '0.2rem' }}>{b.days} Days · {b.itineraryDetails?.travelers?.total || 1} Travelers</div>
+                    </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>
+                       <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.1rem' }}>
+                          {b.itineraryDetails?.currencySymbol || '₹'}{b.totalCost?.toLocaleString()}
+                       </div>
+                       <div style={{ fontSize: '0.75rem', color: 'var(--slate-400)', fontFamily: 'monospace', marginTop: '0.2rem' }}>ID: {b.paymentId?.substring(0, 12)}...</div>
+                    </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>
+                       <span style={{ 
+                         padding: '0.4rem 0.75rem', 
+                         borderRadius: 'var(--radius-full)', 
+                         fontSize: '0.7rem', 
+                         fontWeight: 800, 
+                         background: b.status === 'PAID' ? 'var(--success)15' : 'var(--danger)15',
+                         color: b.status === 'PAID' ? 'var(--success)' : 'var(--danger)',
+                         textTransform: 'uppercase'
+                       }}>
+                         {b.status}
+                       </span>
+                    </td>
+                    <td style={{ padding: '1.25rem 1.5rem', fontSize: '0.85rem', color: 'var(--slate-500)', fontWeight: 600 }}>
+                       {new Date(b.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </td>
+                  </tr>
+                ))}
+                {filteredBookings.length === 0 && (
+                  <tr>
+                    <td colSpan="5" style={{ padding: '4rem', textAlign: 'center', color: 'var(--slate-400)' }}>
+                       No bookings found matching your search.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-      
-      <div className="text-center py-4 text-muted small">
-        <ShieldCheck size={16} className="me-1" /> Secure PostgreSQL Engine: {bookings.length > 0 ? 'NEON DB ACTIVE' : 'CONNECTING...'}
+
+        <div style={{ marginTop: '3rem', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', color: 'var(--slate-400)', fontSize: '0.85rem' }}>
+           <ShieldCheck size={16} /> Secure PostgreSQL Engine: <span style={{ fontWeight: 800, color: 'var(--success)' }}>NEON DB ACTIVE</span>
+        </div>
       </div>
     </div>
   );
 };
+
+export default AdminDashboard;
