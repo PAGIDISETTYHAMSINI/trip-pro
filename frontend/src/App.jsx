@@ -38,17 +38,17 @@ function App() {
           {user ? (
             <>
               <Link to="/dashboard" style={{ textDecoration: 'none', color: 'var(--primary)', fontWeight: 600 }}>My Trips</Link>
-              <span style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '1rem' }}>
+              <span style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '1rem', color: 'var(--slate-900)' }}>
                 <User size={18} /> {user.name}
               </span>
-              <button onClick={handleLogout} className="btn" style={{ padding: '0.5rem 1rem', background: 'transparent', color: 'var(--text-main)', border: '1px solid var(--border)' }}>
+              <button onClick={handleLogout} className="btn" style={{ padding: '0.5rem 1rem', background: 'transparent', color: 'var(--slate-900)', border: '1px solid var(--slate-200)' }}>
                 <LogOut size={16} /> Logout
               </button>
             </>
           ) : (
             <>
-              <Link to="/login" style={{ color: 'var(--text-main)', textDecoration: 'none', fontWeight: 600 }}>Login</Link>
-              <Link to="/signup" className="btn" style={{ padding: '0.5rem 1.5rem' }}>Sign Up</Link>
+              <Link to="/login" style={{ color: 'var(--slate-900)', textDecoration: 'none', fontWeight: 600 }}>Login</Link>
+              <Link to="/signup" className="btn-startup" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>Sign Up</Link>
             </>
           )}
         </nav>

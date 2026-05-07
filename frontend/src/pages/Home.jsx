@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import { MapPin, Wallet, Calendar, Plane, Building, Activity, Search, ArrowRight, ShieldCheck, Zap, Star, Globe, TrendingUp, Users, Heart, Share2, Compass, CheckCircle2 } from 'lucide-react';
+import { MapPin, Wallet, Calendar, Plane, Building, Activity, Search, ArrowRight, ShieldCheck, Zap, Star, Globe, TrendingUp, Users, Heart, Share2, Compass, CheckCircle } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 
 export const Home = () => {
@@ -190,7 +190,7 @@ export const Home = () => {
               { icon: <Globe className="text-primary"/>, title: 'Choose Destination', desc: 'Pick from 100+ global hotspots optimized for your currency.' },
               { icon: <Wallet className="text-secondary"/>, title: 'Set Your Budget', desc: 'Our AI calculates live transport, stay, and food costs instantly.' },
               { icon: <Zap className="text-warning"/>, title: 'AI Generation', desc: 'Get a day-by-day itinerary with food and activity suggestions.' },
-              { icon: <CheckCircle2 className="text-success"/>, title: 'Finalize & Go', desc: 'Secure booking with verified partners and 24/7 support.' }
+              { icon: <CheckCircle className="text-success"/>, title: 'Finalize & Go', desc: 'Secure booking with verified partners and 24/7 support.' }
             ].map((step, i) => (
               <div key={i} className="p-4">
                  <div className="p-4 bg-white shadow-md rounded-full d-inline-flex mb-4">{step.icon}</div>

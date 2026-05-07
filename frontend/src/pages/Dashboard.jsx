@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { Plane, Calendar, CreditCard, MapPin, Wallet, TrendingUp, Zap, PieChart, Coins, XCircle, AlertCircle, ChevronRight, LayoutDashboard, Globe, Bookmark, Bell, Settings, ArrowUpRight } from 'lucide-react';
+import { Plane, Calendar, CreditCard, MapPin, Wallet, TrendingUp, Zap, PieChart, Coins, XCircle, AlertCircle, ChevronRight, LayoutDashboard, Globe, Bookmark, Bell, Settings, ArrowUpRight, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Dashboard = () => {
@@ -149,4 +149,4 @@ export const Dashboard = () => {
   );
 };
 
-const Plus = ({size}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>;
+

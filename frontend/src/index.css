@@ -3,6 +3,7 @@
 :root {
   /* Brand Colors - Premium Startup Palette */
   --primary: #2563eb;       /* Royal Blue */
+  --primary-dark: #1d4ed8;
   --primary-soft: #eff6ff;
   --secondary: #7c3aed;     /* Violet */
   --accent: #06b6d4;        /* Cyan */
