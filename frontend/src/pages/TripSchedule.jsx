@@ -43,192 +43,118 @@ export const TripSchedule = () => {
   if (!booking) return <div className="container" style={{ padding: '4rem 0', textAlign: 'center' }}>Schedule not found.</div>;
 
   return (
-    <div className="container" style={{ padding: '4rem 0' }}>
-      <Link to="/dashboard" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '1.5rem', textDecoration: 'none', fontWeight: 600 }}>
-        <ArrowLeft size={16} /> Back to Dashboard
+    <div className="container py-5">
+      <Link to="/dashboard" className="btn btn-sm btn-outline-primary rounded-pill px-3 mb-4 text-decoration-none fw-bold">
+        <ArrowLeft size={16} /> Dashboard
       </Link>
       
-      {/* Hero Image */}
-      <div className="hero-image print-hide" style={{ 
-        width: '100%', 
-        height: '350px', 
-        borderRadius: '16px', 
-        overflow: 'hidden',
-        marginBottom: '2rem',
-        boxShadow: 'var(--glass-shadow)'
-      }}>
-        <img 
-          src={`https://picsum.photos/seed/${booking.destinationName.replace(/[^a-zA-Z]/g, '')}/1200/400`} 
-          alt={booking.destinationName} 
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-        />
-      </div>
-
-      <div className="glass print-hide" style={{ padding: '2rem', marginBottom: '2rem', borderLeft: '5px solid var(--primary)' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
-          <div>
-            <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <MapPin size={24} color="var(--primary)" /> Detailed Itinerary for {booking.destinationName}
-            </h2>
-            <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-              {booking.days} Days • {booking.itineraryDetails?.currencySymbol || '$'}{booking.totalCost.toLocaleString()}
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <button onClick={handleDownloadPDF} className="btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#333' }}>
-              <Download size={16} /> Save Offline (PDF)
-            </button>
-            <button onClick={handleWhatsAppShare} className="btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#25D366', color: '#fff' }}>
-              <Share2 size={16} /> Share via WhatsApp
-            </button>
-          </div>
-        </div>
-        <div style={{ marginTop: '1rem', padding: '1rem', background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderRadius: '8px', fontSize: '0.9rem', display: 'inline-block' }}>
-          ✓ We've emailed a copy of this exact schedule to your registered email address!
-        </div>
-      </div>
-
-      <div className="survival-kit-grid print-hide" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-        <div className="glass" style={{ padding: '1.5rem', borderTop: '4px solid #f59e0b' }}>
-          <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#f59e0b', marginBottom: '1rem' }}>
-            <BookOpen size={20} /> Cultural Etiquette
-          </h3>
-          <p style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '0.95rem' }}>
-            {booking.itineraryDetails?.culturalEtiquette || "Be respectful of local customs. Always greet locals with a smile and ask before taking photos."}
-          </p>
-        </div>
-        <div className="glass" style={{ padding: '1.5rem', borderTop: '4px solid #ef4444' }}>
-          <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ef4444', marginBottom: '1rem' }}>
-            <ShieldAlert size={20} /> Emergency Contacts
-          </h3>
-          <p style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '0.95rem' }}>
-            {booking.itineraryDetails?.emergencyContacts || "Local Emergency: 911 / 112"}
-          </p>
-        </div>
-      </div>
-
-      <Translator targetLanguage={booking.itineraryDetails?.language || 'en'} />
-
-      <h2 style={{ marginTop: '3rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>Your Day-by-Day Path</h2>
-
-      <div className="schedule-timeline" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-        {booking.schedule && booking.schedule.map((day, idx) => (
-          <div key={idx} className="glass" style={{ padding: '2rem' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', borderBottom: '1px solid rgba(255,255,255,0.2)', paddingBottom: '0.5rem' }}>
-              <Calendar size={20} /> Day {day.day}
-            </h3>
-            
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              {/* Morning */}
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255, 152, 0, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <Sun size={20} color="#ff9800" />
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Morning</h4>
-                  <p style={{ color: 'var(--text-muted)', lineHeight: '1.5' }}>{day.morning}</p>
-                </div>
-              </div>
-
-              {/* Afternoon */}
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(233, 30, 99, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <Sunset size={20} color="#e91e63" />
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Afternoon</h4>
-                  <p style={{ color: 'var(--text-muted)', lineHeight: '1.5' }}>{day.afternoon}</p>
-                </div>
-              </div>
-
-              {/* Evening */}
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(103, 58, 183, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <Moon size={20} color="#673ab7" />
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Evening</h4>
-                  <p style={{ color: 'var(--text-muted)', lineHeight: '1.5' }}>{day.evening}</p>
-                </div>
-              </div>
+      {/* Premium Header */}
+      <div className="glass p-4 p-md-5 mb-4 border-top border-5 border-primary shadow-lg overflow-hidden position-relative">
+        <div className="row align-items-center">
+          <div className="col-lg-8">
+            <h1 className="fw-black display-5 mb-2">{booking.destinationName}</h1>
+            <div className="d-flex flex-wrap gap-4 mb-4">
+               <div className="d-flex align-items-center gap-2">
+                  <div className="p-2 bg-primary bg-opacity-10 text-primary rounded-circle"><MapPin size={20}/></div>
+                  <div>
+                    <div className="small text-muted">Boarding From</div>
+                    <div className="fw-bold">{booking.route?.split(' ➔ ')[0] || 'Origin'}</div>
+                  </div>
+               </div>
+               <div className="d-flex align-items-center gap-2">
+                  <div className="p-2 bg-warning bg-opacity-10 text-warning rounded-circle"><Calendar size={20}/></div>
+                  <div>
+                    <div className="small text-muted">Trip Duration</div>
+                    <div className="fw-bold">{booking.days} Glorious Days</div>
+                  </div>
+               </div>
+            </div>
+            <div className="alert alert-success border-0 rounded-4 d-inline-flex align-items-center gap-2 py-2 px-3 small">
+              <CheckCircle size={16}/> Ticket Confirmed & Itinerary Synced with Neon DB
             </div>
           </div>
-        ))}
+          <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
+             <div className="display-4 fw-black text-primary mb-3">
+               {booking.itineraryDetails?.currencySymbol || '₹'}{booking.totalCost.toLocaleString()}
+             </div>
+             <div className="d-flex gap-2 justify-content-lg-end">
+                <button onClick={handleDownloadPDF} className="btn btn-dark rounded-pill px-4 py-2 small fw-bold">Save PDF</button>
+                <button onClick={handleWhatsAppShare} className="btn btn-success rounded-pill px-4 py-2 small fw-bold">Share</button>
+             </div>
+          </div>
+        </div>
       </div>
 
-      {/* Agency Tour Package Details (Accordions) */}
-      <h2 style={{ marginTop: '4rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>Tour Package Essentials</h2>
-      
-      <div className="accordion-group glass" style={{ padding: '1rem' }}>
-        
-        {booking.itineraryDetails.inclusions && (
-          <details className="agency-accordion">
-            <summary>✅ Inclusions</summary>
-            <ul>
-              {booking.itineraryDetails.inclusions.map((item, i) => <li key={i}>{item}</li>)}
-            </ul>
-          </details>
-        )}
-
-        {booking.itineraryDetails.exclusions && (
-          <details className="agency-accordion">
-            <summary>❌ Exclusions</summary>
-            <ul>
-              {booking.itineraryDetails.exclusions.map((item, i) => <li key={i}>{item}</li>)}
-            </ul>
-          </details>
-        )}
-
-        {booking.itineraryDetails.packingList && (
-          <details className="agency-accordion">
-            <summary>🎒 Packing List</summary>
-            <ul>
-              {booking.itineraryDetails.packingList.map((item, i) => <li key={i}>{item}</li>)}
-            </ul>
-          </details>
-        )}
-
-        {booking.itineraryDetails.shoppingGuide && (
-          <details className="agency-accordion">
-            <summary>🛍️ Shopping Guide</summary>
-            <div style={{ padding: '0.5rem 0' }}>
-              <h4 style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>What to Shop</h4>
-              <ul>{booking.itineraryDetails.shoppingGuide.whatToShop.map((item, i) => <li key={i}>{item}</li>)}</ul>
-              <h4 style={{ color: 'var(--primary)', marginTop: '1rem', marginBottom: '0.5rem' }}>Where to Shop</h4>
-              <ul>{booking.itineraryDetails.shoppingGuide.whereToShop.map((item, i) => <li key={i}>{item}</li>)}</ul>
+      <div className="row g-4">
+         <div className="col-lg-8">
+            <h2 className="fw-black mb-4 d-flex align-items-center gap-2"><Clock color="var(--primary)"/> Trip Timeline</h2>
+            <div className="d-flex flex-column gap-4">
+              {booking.schedule && booking.schedule.map((day, idx) => (
+                <div key={idx} className="glass p-4 border-start border-4 border-primary position-relative fade-in">
+                  <div className="position-absolute bg-primary text-white px-3 py-1 rounded-pill fw-bold small shadow-sm" style={{ top: '-15px', left: '20px' }}>
+                    DAY {day.day}
+                  </div>
+                  
+                  <div className="row g-4 mt-1">
+                    <div className="col-md-4 border-end border-dashed">
+                       <div className="d-flex align-items-center gap-2 mb-2 text-warning fw-bold">
+                          <Sun size={18}/> Morning
+                       </div>
+                       <p className="small text-muted mb-0">{day.morning}</p>
+                    </div>
+                    <div className="col-md-4 border-end border-dashed">
+                       <div className="d-flex align-items-center gap-2 mb-2 text-danger fw-bold opacity-75">
+                          <Sunset size={18}/> Afternoon
+                       </div>
+                       <p className="small text-muted mb-0">{day.afternoon}</p>
+                    </div>
+                    <div className="col-md-4">
+                       <div className="d-flex align-items-center gap-2 mb-2 text-primary fw-bold">
+                          <Moon size={18}/> Evening
+                       </div>
+                       <p className="small text-muted mb-0">{day.evening}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </details>
-        )}
+         </div>
 
-        {booking.itineraryDetails.knowBeforeYouGo && (
-          <details className="agency-accordion">
-            <summary>ℹ️ Know Before You Go</summary>
-            <ul>
-              {booking.itineraryDetails.knowBeforeYouGo.map((item, i) => <li key={i}>{item}</li>)}
-            </ul>
-          </details>
-        )}
+         <div className="col-lg-4">
+            <div className="sticky-top" style={{ top: '2rem' }}>
+               <div className="glass p-4 mb-4 bg-dark text-white border-0 shadow-lg">
+                  <h5 className="fw-black mb-3"><BookOpen size={18} className="me-2 text-primary"/> Survival Kit</h5>
+                  <div className="mb-3">
+                     <label className="small text-muted text-uppercase fw-bold">Etiquette</label>
+                     <p className="small mb-0 opacity-75">{booking.itineraryDetails?.culturalEtiquette || "Respect local norms and traditions."}</p>
+                  </div>
+                  <div>
+                     <label className="small text-muted text-uppercase fw-bold">Emergency</label>
+                     <p className="small mb-0 text-danger fw-bold">{booking.itineraryDetails?.emergencyContacts || "Call 112 for assistance"}</p>
+                  </div>
+               </div>
 
-        {booking.itineraryDetails.policies && (
-          <details className="agency-accordion">
-            <summary>📜 Policies & Care Guidelines</summary>
-            <ul>
-              {booking.itineraryDetails.policies.map((item, i) => <li key={i}>{item}</li>)}
-            </ul>
-          </details>
-        )}
-
-        {booking.itineraryDetails.cancellationPolicy && (
-          <details className="agency-accordion">
-            <summary>💳 Cancellation Policy</summary>
-            <ul>
-              {booking.itineraryDetails.cancellationPolicy.map((item, i) => <li key={i}>{item}</li>)}
-            </ul>
-          </details>
-        )}
-
+               <div className="glass p-4">
+                  <h5 className="fw-black mb-3 text-primary">Travel Checklist</h5>
+                  <div className="d-flex flex-column gap-2">
+                     {["Valid ID Proof", "Comfortable Shoes", "Camera & Charger", "Sunscreen / Umbrella"].map(item => (
+                        <div key={item} className="d-flex align-items-center gap-2 small text-muted">
+                           <CheckCircle size={14} className="text-success"/> {item}
+                        </div>
+                     ))}
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
 
+      <div className="mt-5 p-5 glass text-center">
+         <h4 className="fw-black">Enjoy your trip to {booking.destinationName}!</h4>
+         <p className="text-muted">Safe travels from {booking.route?.split(' ➔ ')[0] || 'Origin'} ✈️</p>
+         <Link to="/" className="btn btn-primary rounded-pill px-5 py-3 fw-black mt-3">Book Another Trip</Link>
+      </div>
     </div>
+  );
+};
   );
 };
