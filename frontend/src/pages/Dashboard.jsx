@@ -1,106 +1,131 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { Plane, Calendar, CreditCard, MapPin, Wallet, TrendingUp, Zap, PieChart, Coins, XCircle, AlertCircle, ChevronRight, LayoutDashboard, Globe, Bookmark, Bell, Settings, ArrowUpRight, Plus } from 'lucide-react';
+import { Plane, LayoutDashboard, Globe, Wallet, Zap, Bell, Plus, ArrowUpRight, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const API = 'https://trip-pro.onrender.com';
 
 export const Dashboard = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const { token, user } = useContext(AuthContext);
 
   useEffect(() => {
-    const fetchBookings = async () => {
-      try {
-        const res = await axios.get('https://trip-pro.onrender.com/api/bookings', {
-          headers: { Authorization: `Bearer ${token}` }
-        });
-        setBookings(res.data);
-      } catch (err) {
-        console.error("Failed to fetch bookings", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    if (token) fetchBookings();
+    if (!token) { setLoading(false); return; }
+    axios.get(`${API}/api/bookings`, { headers: { Authorization: `Bearer ${token}` } })
+      .then(res => setBookings(res.data || []))
+      .catch(() => setError('Could not load bookings. Please try again.'))
+      .finally(() => setLoading(false));
   }, [token]);
 
   if (loading) return (
-    <div className="container py-5 text-center">
-      <div className="spinner-border text-primary"></div>
-      <p className="mt-3 fw-bold">Connecting to Cloud Dashboard...</p>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh', flexDirection: 'column', gap: '1rem' }}>
+      <div className="spinner"></div>
+      <p style={{ color: 'var(--slate-500)', fontWeight: 600 }}>Loading dashboard...</p>
+    </div>
+  );
+
+  if (!token) return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh', flexDirection: 'column', gap: '1.5rem', textAlign: 'center', padding: '2rem' }}>
+      <Globe size={56} style={{ color: 'var(--primary)', opacity: 0.4 }} />
+      <h2 style={{ fontWeight: 900 }}>Please log in</h2>
+      <p style={{ color: 'var(--slate-500)' }}>Sign in to view your personalized dashboard.</p>
+      <Link to="/login" className="btn-startup">Log In</Link>
     </div>
   );
 
   return (
-    <div className="container-fluid py-4 py-md-5 bg-slate-50 min-vh-100">
-      <div className="container p-0">
-        
-        {/* Dashboard Header */}
-        <div className="row g-4 align-items-center mb-5 px-3">
-           <div className="col-md-6">
-              <h2 className="display-4 fw-black text-slate-900 mb-1">Welcome, <span className="text-primary">{user?.name || 'Explorer'}</span>.</h2>
-              <p className="text-slate-500 fw-bold">Manage your premium itineraries and rewards.</p>
-           </div>
-           <div className="col-md-6 text-md-end d-flex gap-2 justify-content-md-end">
-              <button className="btn-secondary-startup p-3 rounded-full"><Bell size={20}/></button>
-              <button className="btn-secondary-startup p-3 rounded-full"><Settings size={20}/></button>
-              <Link to="/build-trip" className="btn-startup">NEW AI TRIP <Plus size={18}/></Link>
-           </div>
+    <div style={{ background: 'var(--slate-50)', minHeight: '100vh', padding: '2rem 0' }}>
+      <div className="container">
+
+        {/* HEADER */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.5rem' }}>
+          <div>
+            <h1 style={{ fontWeight: 900, fontSize: '2rem', marginBottom: '0.25rem' }}>
+              Welcome back, <span style={{ color: 'var(--primary)' }}>{user?.name || 'Explorer'}</span> 👋
+            </h1>
+            <p style={{ color: 'var(--slate-500)', fontWeight: 600 }}>Your AI travel command center.</p>
+          </div>
+          <Link to="/build-trip" className="btn-startup" style={{ alignSelf: 'flex-start' }}>
+            <Plus size={16} /> New AI Trip
+          </Link>
         </div>
 
-        <div className="row g-4 px-3 px-md-0">
-          {/* Main Feed */}
-          <div className="col-lg-8">
-            <div className="d-flex align-items-center justify-content-between mb-4">
-               <h4 className="fw-black text-slate-900 mb-0 d-flex align-items-center gap-3">
-                 <LayoutDashboard size={24} className="text-primary"/> Active Passports
-               </h4>
-               <div className="text-primary fw-bold small cursor-pointer hover-underline">View History ➔</div>
+        {/* STATS ROW */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', marginBottom: '2.5rem' }}>
+          {[
+            { label: 'Total Trips', value: bookings.length, icon: <Plane size={22} style={{ color: 'var(--primary)' }} />, bg: 'var(--primary-soft)' },
+            { label: 'AI Coins', value: user?.coins || 0, icon: <Zap size={22} style={{ color: 'var(--warning)' }} />, bg: '#fffbeb' },
+            { label: 'Saved (Est.)', value: '₹12,400', icon: <TrendingUp size={22} style={{ color: 'var(--success)' }} />, bg: '#f0fdf4' },
+          ].map((s, i) => (
+            <div key={i} className="card" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ background: s.bg, borderRadius: 'var(--radius-lg)', padding: '0.75rem' }}>{s.icon}</div>
+              <div>
+                <div style={{ fontSize: '1.75rem', fontWeight: 900, lineHeight: 1 }}>{s.value}</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--slate-500)', fontWeight: 600, marginTop: '0.25rem' }}>{s.label}</div>
+              </div>
             </div>
+          ))}
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '1.5rem', alignItems: 'start' }}>
+
+          {/* BOOKINGS */}
+          <div>
+            <h3 style={{ fontWeight: 900, marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <LayoutDashboard size={20} style={{ color: 'var(--primary)' }} /> My Trips
+            </h3>
+
+            {error && <div className="alert alert-danger mb-3">{error}</div>}
 
             {bookings.length === 0 ? (
-              <div className="glass-card p-5 text-center bg-white border-0">
-                <div className="p-4 bg-primary-soft rounded-full d-inline-block mb-4"><Globe size={48} className="text-primary opacity-50" /></div>
-                <h3 className="fw-black mb-2">The world is waiting.</h3>
-                <p className="text-slate-500 mb-4">You haven't generated any AI itineraries yet. Start your journey today.</p>
-                <Link to="/" className="btn-startup px-5 py-3">Explore Destinations</Link>
+              <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
+                <Globe size={52} style={{ color: 'var(--primary)', opacity: 0.3, margin: '0 auto 1rem' }} />
+                <h3 style={{ fontWeight: 900, marginBottom: '0.5rem' }}>No trips yet</h3>
+                <p style={{ color: 'var(--slate-500)', marginBottom: '1.5rem' }}>Start your first AI-powered trip today.</p>
+                <Link to="/build-trip" className="btn-startup" style={{ display: 'inline-flex' }}>Plan a Trip</Link>
               </div>
             ) : (
-              <div className="d-flex flex-column gap-4">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {bookings.map(booking => (
-                  <div key={booking.id} className="glass-card p-0 overflow-hidden border-0 bg-white">
-                    <div className="row g-0">
-                      <div className="col-md-8 p-4 p-md-5">
-                        <div className="d-flex align-items-center gap-3 mb-4">
-                          <h4 className="fw-black mb-0 fs-2">{booking.destinationName}</h4>
-                          <span className={`badge px-3 py-1 rounded-full fw-bold ${booking.status === 'CANCELLED' ? 'bg-danger bg-opacity-10 text-danger' : 'bg-success bg-opacity-10 text-success'}`} style={{ fontSize: '0.65rem' }}>
-                            {booking.status}
+                  <div key={booking.id} className="trip-card">
+                    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 0 }}>
+                      <div style={{ padding: '1.5rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+                          <h3 style={{ fontWeight: 900, fontSize: '1.4rem', margin: 0 }}>{booking.destinationName}</h3>
+                          <span className={`badge ${booking.status === 'CANCELLED' ? 'badge-danger' : 'badge-success'}`}>
+                            {booking.status || 'CONFIRMED'}
                           </span>
                         </div>
-                        <div className="row g-4 mb-4">
-                           <div className="col-6 col-md-4">
-                              <div className="small text-slate-400 fw-bold text-uppercase mb-1">Departure</div>
-                              <div className="fw-bold">{booking.route?.split(' ➔ ')[0] || 'TBD'}</div>
-                           </div>
-                           <div className="col-6 col-md-4">
-                              <div className="small text-slate-400 fw-bold text-uppercase mb-1">Duration</div>
-                              <div className="fw-bold">{booking.days} Days</div>
-                           </div>
-                           <div className="col-12 col-md-4">
-                              <div className="small text-slate-400 fw-bold text-uppercase mb-1">Stay Confirmed</div>
-                              <div className="fw-bold text-primary text-truncate">{booking.itineraryDetails?.hotel?.name || 'Grand Resort'}</div>
-                           </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                          <div>
+                            <div style={{ fontSize: '0.72rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.25rem' }}>From</div>
+                            <div style={{ fontWeight: 700 }}>{booking.route?.split(' ➔ ')[0] || 'Origin'}</div>
+                          </div>
+                          <div>
+                            <div style={{ fontSize: '0.72rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.25rem' }}>Days</div>
+                            <div style={{ fontWeight: 700 }}>{booking.days || '—'}</div>
+                          </div>
+                          <div>
+                            <div style={{ fontSize: '0.72rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.25rem' }}>Hotel</div>
+                            <div style={{ fontWeight: 700, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {booking.itineraryDetails?.hotel?.name || 'Included'}
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div className="col-md-4 p-4 p-md-5 bg-slate-50 border-start d-flex flex-column justify-content-center text-md-center">
-                         <div className="small text-slate-400 fw-black mb-1">ITINERARY VALUE</div>
-                         <div className="display-5 fw-black text-slate-900 mb-4">
-                           {booking.itineraryDetails?.currencySymbol || '₹'}{booking.totalCost.toLocaleString()}
-                         </div>
-                         <Link to={`/dashboard/schedule/${booking.id}`} className="btn-startup w-100 justify-content-center">
-                            OPEN PASS <ArrowUpRight size={18}/>
-                         </Link>
+                      <div style={{ background: 'var(--slate-50)', borderLeft: '1px solid var(--slate-200)', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', gap: '1rem' }}>
+                        <div>
+                          <div style={{ fontSize: '0.72rem', color: 'var(--slate-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.25rem' }}>Total Value</div>
+                          <div style={{ fontSize: '1.75rem', fontWeight: 900, color: 'var(--slate-900)' }}>
+                            {booking.itineraryDetails?.currencySymbol || '₹'}{booking.totalCost?.toLocaleString() || '0'}
+                          </div>
+                        </div>
+                        <Link to={`/dashboard/schedule/${booking.id}`} className="btn-startup" style={{ fontSize: '0.8rem', padding: '0.6rem 1rem', width: '100%', justifyContent: 'center' }}>
+                          View Pass <ArrowUpRight size={14} />
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -109,38 +134,31 @@ export const Dashboard = () => {
             )}
           </div>
 
-          {/* Widgets Sidebar */}
-          <div className="col-lg-4">
-            <div className="sticky-top" style={{ top: '2rem' }}>
-               {/* Wallet Widget */}
-               <div className="glass-card p-4 p-md-5 border-0 bg-primary text-white mb-4 overflow-hidden position-relative shadow-primary">
-                  <div className="position-absolute top-0 end-0 p-3 opacity-10 rotate-12"><Coins size={120}/></div>
-                  <h5 className="fw-bold mb-4 small tracking-widest text-uppercase opacity-75">Travel Rewards</h5>
-                  <div className="display-3 fw-black text-white mb-1">{user?.coins || 0}</div>
-                  <p className="small fw-bold opacity-75 mb-4">Elite Coins Earned 💎</p>
-                  <button className="btn btn-white w-100 py-2 rounded-lg fw-bold bg-white text-primary border-0">REDEEM POINTS</button>
-               </div>
+          {/* SIDEBAR */}
+          <div>
+            {/* Rewards Card */}
+            <div style={{ background: 'linear-gradient(135deg, var(--primary), var(--secondary))', borderRadius: 'var(--radius-xl)', padding: '1.75rem', color: '#fff', marginBottom: '1.25rem' }}>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, opacity: 0.7, textTransform: 'uppercase', marginBottom: '0.5rem' }}>Travel Rewards</div>
+              <div style={{ fontSize: '3rem', fontWeight: 900, lineHeight: 1, marginBottom: '0.25rem' }}>{user?.coins || 0}</div>
+              <div style={{ fontSize: '0.85rem', opacity: 0.75, marginBottom: '1.25rem' }}>Elite Coins 💎</div>
+              <button style={{ background: 'rgba(255,255,255,0.2)', border: '1px solid rgba(255,255,255,0.3)', color: '#fff', borderRadius: 'var(--radius-md)', padding: '0.6rem 1rem', fontWeight: 700, cursor: 'pointer', width: '100%', fontFamily: 'inherit' }}>
+                Redeem Points
+              </button>
+            </div>
 
-               {/* Analytics Widget */}
-               <div className="glass-card p-4 p-md-5 border-0 bg-white mb-4">
-                  <h5 className="fw-black mb-4 small text-slate-400 tracking-widest text-uppercase">Budget Insights</h5>
-                  <div className="d-flex align-items-center justify-content-between mb-2">
-                     <span className="small fw-bold text-slate-700">EFFICIENCY SCORE</span>
-                     <span className="fw-black text-primary fs-4">88%</span>
-                  </div>
-                  <div className="progress mb-4" style={{ height: '8px', borderRadius: '10px' }}>
-                     <div className="progress-bar bg-primary" style={{ width: '88%' }}></div>
-                  </div>
-                  <p className="small text-slate-500 mb-0">Your optimized routes have saved you over <strong>₹12,400</strong> this year. Excellent!</p>
-               </div>
-
-               {/* Tips Widget */}
-               <div className="p-4 bg-secondary bg-opacity-10 rounded-xl border border-secondary border-opacity-10 d-flex gap-3 align-items-start">
-                  <Zap size={24} className="text-secondary mt-1 flex-shrink-0"/>
-                  <p className="small text-secondary mb-0 fw-bold">
-                    <strong>AI Hack:</strong> Completing your profile earns you 500 extra Elite Coins instantly.
-                  </p>
-               </div>
+            {/* Budget Insights */}
+            <div className="card" style={{ padding: '1.5rem' }}>
+              <h5 style={{ fontWeight: 800, marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--slate-500)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Budget Efficiency</h5>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>Score</span>
+                <span style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>88%</span>
+              </div>
+              <div className="progress" style={{ height: '8px', marginBottom: '0.75rem' }}>
+                <div className="progress-bar" style={{ width: '88%' }}></div>
+              </div>
+              <p style={{ fontSize: '0.8rem', color: 'var(--slate-500)', margin: 0 }}>
+                AI-optimized routes saved you <strong>₹12,400</strong> this year.
+              </p>
             </div>
           </div>
         </div>
@@ -149,4 +167,4 @@ export const Dashboard = () => {
   );
 };
 
-
+export default Dashboard;
