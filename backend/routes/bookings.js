@@ -194,6 +194,18 @@ router.get('/', authMiddleware, async (req, res) => {
   }
 });
 
+// Get single booking by ID
+router.get('/:id', authMiddleware, async (req, res) => {
+  try {
+    const booking = await Booking.findOne({ where: { id: req.params.id, userId: req.user } });
+    if (!booking) return res.status(404).json({ error: 'Booking not found' });
+    res.json(booking);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error fetching booking' });
+  }
+});
+
 // Cancel a booking
 router.put('/:id/cancel', authMiddleware, async (req, res) => {
   try {
