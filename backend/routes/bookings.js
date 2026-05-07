@@ -214,4 +214,18 @@ router.put('/:id/cancel', authMiddleware, async (req, res) => {
   }
 });
 
+// Admin Route: Get ALL bookings for visibility
+router.get('/admin/all', async (req, res) => {
+  try {
+    const bookings = await Booking.findAll({ 
+      include: [{ model: User, attributes: ['name', 'email'] }],
+      order: [['createdAt', 'DESC']]
+    });
+    res.json(bookings);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error fetching all bookings' });
+  }
+});
+
 module.exports = router;

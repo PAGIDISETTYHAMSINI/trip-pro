@@ -31,7 +31,7 @@ export const TripSchedule = () => {
 
   const handleWhatsAppShare = () => {
     if (!booking) return;
-    const text = `Hey! Check out my upcoming trip to ${booking.destinationName} via Budget Trip Planner!\nIt's a ${booking.days}-day trip staying at a ${booking.itineraryDetails.hotel.type}.`;
+    const text = `Hey! Check out my upcoming trip to ${booking.destinationName} via WanderBudget!\nIt's a ${booking.days}-day trip staying at a ${booking.itineraryDetails?.hotel?.name || 'Hotel'}.`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -71,7 +71,7 @@ export const TripSchedule = () => {
               <MapPin size={24} color="var(--primary)" /> Detailed Itinerary for {booking.destinationName}
             </h2>
             <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-              {booking.days} Days • {booking.itineraryDetails.currencySymbol || '$'}{booking.totalCost.toLocaleString()}
+              {booking.days} Days • {booking.itineraryDetails?.currencySymbol || '$'}{booking.totalCost.toLocaleString()}
             </p>
           </div>
           <div style={{ display: 'flex', gap: '1rem' }}>
@@ -94,7 +94,7 @@ export const TripSchedule = () => {
             <BookOpen size={20} /> Cultural Etiquette
           </h3>
           <p style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '0.95rem' }}>
-            {booking.itineraryDetails.culturalEtiquette || "Be respectful of local customs. Always greet locals with a smile and ask before taking photos."}
+            {booking.itineraryDetails?.culturalEtiquette || "Be respectful of local customs. Always greet locals with a smile and ask before taking photos."}
           </p>
         </div>
         <div className="glass" style={{ padding: '1.5rem', borderTop: '4px solid #ef4444' }}>
@@ -102,12 +102,12 @@ export const TripSchedule = () => {
             <ShieldAlert size={20} /> Emergency Contacts
           </h3>
           <p style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '0.95rem' }}>
-            {booking.itineraryDetails.emergencyContacts || "Local Emergency: 911 / 112"}
+            {booking.itineraryDetails?.emergencyContacts || "Local Emergency: 911 / 112"}
           </p>
         </div>
       </div>
 
-      <Translator targetLanguage={booking.itineraryDetails.language || 'es'} />
+      <Translator targetLanguage={booking.itineraryDetails?.language || 'en'} />
 
       <h2 style={{ marginTop: '3rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>Your Day-by-Day Path</h2>
 
