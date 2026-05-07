@@ -10,7 +10,13 @@ const router = express.Router();
 const generateSchedule = (itinerary, days) => {
   const schedule = [];
   const activities = itinerary.activities ? [...itinerary.activities] : [];
-  const restaurants = itinerary.hotel?.nearbyRestaurants || ["Local Cafe", "Downtown Restaurant"];
+  
+  // Try to use selected restaurants, fallback to hotel or generic
+  const restaurants = itinerary.restaurants?.length > 0 
+    ? itinerary.restaurants 
+    : (itinerary.hotel?.nearbyRestaurants || ["Local Cafe", "Downtown Restaurant"]);
+  
+  const getResName = (r) => typeof r === 'string' ? r : (r.name || 'Local Restaurant');
   
   for (let i = 1; i <= days; i++) {
     const dayPlan = { day: i, morning: '', afternoon: '', evening: '' };
@@ -27,15 +33,22 @@ const generateSchedule = (itinerary, days) => {
     }
 
 
-    // Distribute activities based on suggested time
-    let morningActs = activities.filter(a => a.suggestedTime.includes('Morning'));
-    let afternoonActs = activities.filter(a => a.suggestedTime.includes('Afternoon'));
-    let eveningActs = activities.filter(a => a.suggestedTime.includes('Evening'));
+    // Distribute activities based on suggested time (safely)
+    let morningActs = activities.filter(a => a.suggestedTime && a.suggestedTime.includes('Morning'));
+    let afternoonActs = activities.filter(a => a.suggestedTime && a.suggestedTime.includes('Afternoon'));
+    let eveningActs = activities.filter(a => a.suggestedTime && a.suggestedTime.includes('Evening'));
+    
+    // Fallback for activities without specific times (distribute them)
+    let unspecifiedActs = activities.filter(a => !a.suggestedTime);
 
     if (morningActs.length > 0 && !dayPlan.morning) {
       const act = morningActs.shift();
       activities.splice(activities.indexOf(act), 1);
-      dayPlan.morning = `Activity: ${act.name}. ${act.description} (${act.proximity})`;
+      dayPlan.morning = `Activity: ${act.name}. ${act.description || 'Visit this landmark.'} (${act.proximity || 'Nearby'})`;
+    } else if (unspecifiedActs.length > 0 && !dayPlan.morning) {
+      const act = unspecifiedActs.shift();
+      activities.splice(activities.indexOf(act), 1);
+      dayPlan.morning = `Activity: ${act.name}. Explore this local gem.`;
     } else if (!dayPlan.morning) {
       dayPlan.morning = "Relax at the hotel or explore the local neighborhood.";
     }
@@ -43,17 +56,17 @@ const generateSchedule = (itinerary, days) => {
     if (afternoonActs.length > 0) {
       const act = afternoonActs.shift();
       activities.splice(activities.indexOf(act), 1);
-      dayPlan.afternoon = `Activity: ${act.name}. ${act.description} (${act.proximity})`;
+      dayPlan.afternoon = `Activity: ${act.name}. ${act.description || 'Enjoy the scenery.'} (${act.proximity || 'Central'})`;
     } else {
-      dayPlan.afternoon = `Enjoy lunch at ${restaurants[0]} and shop for local souvenirs.`;
+      dayPlan.afternoon = `Enjoy lunch at ${getResName(restaurants[0])} and shop for local souvenirs.`;
     }
 
     if (eveningActs.length > 0) {
       const act = eveningActs.shift();
       activities.splice(activities.indexOf(act), 1);
-      dayPlan.evening = `Activity: ${act.name}. ${act.description} (${act.proximity})`;
+      dayPlan.evening = `Activity: ${act.name}. ${act.description || 'Relaxing experience.'} (${act.proximity || 'Local Area'})`;
     } else {
-      dayPlan.evening = `Relax and have a wonderful dinner at ${restaurants[1]}.`;
+      dayPlan.evening = `Relax and have a wonderful dinner at ${getResName(restaurants[1] || restaurants[0])}.`;
     }
 
     schedule.push(dayPlan);
@@ -117,15 +130,19 @@ const sendScheduleEmail = async (userEmail, destinationName, schedule, totalCost
 // Create a new booking
 router.post('/', authMiddleware, async (req, res) => {
   try {
-    const { destinationId, destinationName, totalCost, days, itineraryDetails, coinsUsed } = req.body;
+    const { destinationId, destinationName, totalCost, days, itineraryDetails, coinsUsed, paymentId } = req.body;
     
     const user = await User.findByPk(req.user);
     if (!user) return res.status(404).json({ error: 'User not found' });
 
+    // Ensure coins is at least 0 to avoid NaN
+    if (user.coins === null || user.coins === undefined) user.coins = 0;
+
     // Handle coins deduction if used
-    if (coinsUsed > 0) {
-      if (user.coins >= coinsUsed) {
-        user.coins -= coinsUsed;
+    const coinsToDeduct = parseFloat(coinsUsed) || 0;
+    if (coinsToDeduct > 0) {
+      if (user.coins >= coinsToDeduct) {
+        user.coins -= coinsToDeduct;
       } else {
         return res.status(400).json({ error: 'Insufficient coins' });
       }
@@ -146,7 +163,11 @@ router.post('/', authMiddleware, async (req, res) => {
       days,
       itineraryDetails,
       schedule,
-      status: 'PAID'
+      status: 'PAID',
+      paymentId: paymentId || 'MOCK_PAYMENT',
+      coinsUsed: coinsToDeduct,
+      totalTravelers: itineraryDetails.travelers?.total || 1,
+      route: itineraryDetails.boardingPoint ? `${itineraryDetails.boardingPoint} ➔ ${destinationName}` : destinationName
     });
 
     // Send email asynchronously

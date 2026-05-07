@@ -65,41 +65,49 @@ export const Dashboard = () => {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {bookings.map(booking => (
-            <div key={booking.id} className="glass" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderLeft: `4px solid ${booking.status === 'CANCELLED' ? '#ef4444' : 'var(--primary)'}`, opacity: booking.status === 'CANCELLED' ? 0.7 : 1 }}>
+            <div key={booking.id} className="glass" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderLeft: `6px solid ${booking.status === 'CANCELLED' ? '#ef4444' : 'var(--primary)'}`, opacity: booking.status === 'CANCELLED' ? 0.7 : 1 }}>
               <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <MapPin size={20} color="var(--primary)" /> {booking.destinationName}
+                  <h3 style={{ fontSize: '1.4rem', fontWeight: '800', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    {booking.route || booking.destinationName}
                   </h3>
-                  {booking.status === 'CANCELLED' && (
-                    <span style={{ background: '#fee2e2', color: '#ef4444', padding: '0.1rem 0.5rem', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold' }}>CANCELLED</span>
-                  )}
+                  <span style={{ background: booking.status === 'CANCELLED' ? '#fee2e2' : 'rgba(16, 185, 129, 0.1)', color: booking.status === 'CANCELLED' ? '#ef4444' : '#10b981', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: '900' }}>
+                    {booking.status}
+                  </span>
                 </div>
-                <p style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
-                  <Calendar size={16} /> {booking.days} Days Trip &bull; {new Date(booking.createdAt).toLocaleDateString()}
-                </p>
-                <div style={{ marginTop: '0.75rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                  <strong>Plan:</strong> {booking.itineraryDetails.hotel?.name || 'Standard Hotel'} &bull; {booking.itineraryDetails.transport?.agency || 'Transport'} ({booking.itineraryDetails.transport?.type || 'Standard'})
+                
+                <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <Calendar size={16} /> {booking.days} Days &bull; {new Date(booking.createdAt).toLocaleDateString()}
+                  </div>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <Zap size={16} /> {booking.totalTravelers || 1} Travelers
+                  </div>
+                </div>
+
+                <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(0,0,0,0.02)', borderRadius: '6px', fontSize: '0.85rem' }}>
+                  <span style={{ fontWeight: 'bold', color: 'var(--primary)' }}>Plan Summary:</span> {booking.itineraryDetails.hotel?.name || 'Hotel'} + {booking.itineraryDetails.transport?.agency || 'Transport'} ({booking.itineraryDetails.transport?.type})
                 </div>
               </div>
-              <div style={{ textAlign: 'right', minWidth: '200px' }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: '900', color: booking.status === 'CANCELLED' ? 'var(--text-muted)' : 'var(--primary)' }}>
+
+              <div style={{ textAlign: 'right', minWidth: '220px', marginLeft: '2rem' }}>
+                <div style={{ fontSize: '1.8rem', fontWeight: '900', color: booking.status === 'CANCELLED' ? 'var(--text-muted)' : 'var(--primary)', marginBottom: '1rem' }}>
                   {booking.itineraryDetails.currencySymbol || '$'}{booking.totalCost.toLocaleString()}
                 </div>
                 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '1rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                   {booking.status !== 'CANCELLED' ? (
                     <>
-                      <Link to={`/dashboard/schedule/${booking.id}`} className="btn" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem', width: '100%', textAlign: 'center' }}>
-                        View Detailed Schedule
+                      <Link to={`/dashboard/schedule/${booking.id}`} className="btn" style={{ padding: '0.6rem', fontSize: '0.9rem', width: '100%', textAlign: 'center', fontWeight: 'bold' }}>
+                        View Full Schedule
                       </Link>
-                      <button onClick={() => handleCancel(booking.id)} style={{ background: 'transparent', border: '1px solid #ef4444', color: '#ef4444', padding: '0.4rem', borderRadius: '6px', fontSize: '0.8rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.3rem' }}>
-                        <XCircle size={14} /> Cancel Booking
+                      <button onClick={() => handleCancel(booking.id)} style={{ background: 'transparent', border: '1px solid #ef4444', color: '#ef4444', padding: '0.5rem', borderRadius: '6px', fontSize: '0.85rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.3rem', fontWeight: '600' }}>
+                        <XCircle size={15} /> Cancel Booking
                       </button>
                     </>
                   ) : (
-                    <div style={{ color: '#ef4444', fontSize: '0.8rem', fontStyle: 'italic', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.3rem' }}>
-                      <AlertCircle size={14} /> Booking Cancelled
+                    <div style={{ color: '#ef4444', fontSize: '0.9rem', fontWeight: 'bold', fontStyle: 'italic', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.4rem' }}>
+                      <AlertCircle size={18} /> Booking Cancelled
                     </div>
                   )}
                 </div>

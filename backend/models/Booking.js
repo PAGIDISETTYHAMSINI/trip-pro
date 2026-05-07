@@ -35,6 +35,22 @@ const Booking = sequelize.define('Booking', {
   schedule: {
     type: DataTypes.JSON, // Stores the day-by-day detailed schedule
     allowNull: true,
+  },
+  paymentId: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  coinsUsed: {
+    type: DataTypes.FLOAT,
+    defaultValue: 0,
+  },
+  totalTravelers: {
+    type: DataTypes.INTEGER,
+    defaultValue: 1,
+  },
+  route: {
+    type: DataTypes.STRING,
+    allowNull: true,
   }
 });
 
