@@ -416,6 +416,21 @@ export const TripBuilder = () => {
                <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--slate-100)', fontSize: '0.7rem', color: 'var(--slate-400)', textAlign: 'center' }}>
                   <Info size={10} /> Market rates applied.
                </div>
+            {/* CARBON FOOTPRINT */}
+            <div className="card" style={{ marginTop: '1.25rem', padding: '1.5rem', background: 'var(--success-soft)', border: '1px solid var(--success)' }}>
+               <h5 style={{ fontWeight: 800, marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--success)', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                 <Compass size={14} /> Sustainability
+               </h5>
+               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-600)' }}>Carbon Offset</span>
+                  <span style={{ fontWeight: 900, color: 'var(--success)' }}>{selectedTransport?.type === 'EV' || selectedTransport?.type === 'Train' ? 'Low' : 'Medium'}</span>
+               </div>
+               <div className="progress" style={{ height: '6px', marginBottom: '1rem', background: 'rgba(34,197,94,0.1)' }}>
+                  <div className="progress-bar" style={{ width: selectedTransport?.type === 'EV' ? '20%' : '65%', background: 'var(--success)' }}></div>
+               </div>
+               <p style={{ fontSize: '0.75rem', color: 'var(--slate-500)', margin: 0, lineHeight: 1.4 }}>
+                 Choosing {selectedTransport?.type || 'public'} transport reduces your footprint by <strong>35%</strong>.
+               </p>
             </div>
           </div>
         </div>

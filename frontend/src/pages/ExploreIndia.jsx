@@ -16,17 +16,17 @@ const destinations = [
   // Hill Stations
   { id: 'manali', name: 'Manali', category: 'hill', state: 'Himachal Pradesh', image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=80&w=800', rating: 4.8, price: '₹12,000', tags: ['Snow', 'Trekking', 'Winter'] },
   { id: 'ooty', name: 'Ooty', category: 'hill', state: 'Tamil Nadu', image: 'https://images.unsplash.com/photo-1590496793929-36417d3485ce?auto=format&fit=crop&q=80&w=800', rating: 4.6, price: '₹9,000', tags: ['Tea Gardens', 'Nature', 'Couples'] },
-  { id: 'munnar', name: 'Munnar', category: 'hill', state: 'Kerala', image: 'https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&q=80&w=800', rating: 4.9, price: '₹15,000', tags: ['Lush Green', 'Honeymoon', 'Calm'] },
-  { id: 'coorg', name: 'Coorg', category: 'hill', state: 'Karnataka', image: 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800', rating: 4.7, price: '₹11,000', tags: ['Coffee', 'Mist', 'Waterfalls'] },
+  { id: 'munnar', name: 'Munnar', category: 'hill', state: 'Kerala', image: 'https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&q=80&w=800', rating: 4.9, price: '₹15,000', tags: ['Lush Green', 'Honeymoon', 'Calm'], isEco: true },
+  { id: 'coorg', name: 'Coorg', category: 'hill', state: 'Karnataka', image: 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800', rating: 4.7, price: '₹11,000', tags: ['Coffee', 'Mist', 'Waterfalls'], isEco: true },
   
   // Beaches
   { id: 'goa', name: 'Goa', category: 'beach', state: 'Goa', image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80&w=800', rating: 4.7, price: '₹8,000', tags: ['Party', 'Sunset', 'Seafood'] },
   { id: 'gokarna', name: 'Gokarna', category: 'beach', state: 'Karnataka', image: 'https://images.unsplash.com/photo-1582208041053-ddd614bca61e?auto=format&fit=crop&q=80&w=800', rating: 4.5, price: '₹6,000', tags: ['Peaceful', 'Camping', 'Trekking'] },
-  { id: 'varkala', name: 'Varkala', category: 'beach', state: 'Kerala', image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=80&w=800', rating: 4.8, price: '₹10,000', tags: ['Cliffs', 'Yoga', 'Surfing'] },
+  { id: 'varkala', name: 'Varkala', category: 'beach', state: 'Kerala', image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=80&w=800', rating: 4.8, price: '₹10,000', tags: ['Cliffs', 'Yoga', 'Surfing'], isEco: true },
 
   // Adventure
   { id: 'ladakh', name: 'Ladakh', category: 'adventure', state: 'Ladakh', image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&q=80&w=800', rating: 4.9, price: '₹25,000', tags: ['Bike Trip', 'Lakes', 'Rugged'] },
-  { id: 'spiti', name: 'Spiti Valley', category: 'adventure', state: 'Himachal Pradesh', image: 'https://images.unsplash.com/photo-1518005020252-218a24fb8227?auto=format&fit=crop&q=80&w=800', rating: 4.8, price: '₹18,000', tags: ['Remote', 'Monasteries', 'Stunning'] },
+  { id: 'spiti', name: 'Spiti Valley', category: 'adventure', state: 'Himachal Pradesh', image: 'https://images.unsplash.com/photo-1518005020252-218a24fb8227?auto=format&fit=crop&q=80&w=800', rating: 4.8, price: '₹18,000', tags: ['Remote', 'Monasteries', 'Stunning'], isEco: true },
   { id: 'rishikesh', name: 'Rishikesh', category: 'adventure', state: 'Uttarakhand', image: 'https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&q=80&w=800', rating: 4.6, price: '₹7,000', tags: ['Rafting', 'Spiritual', 'Camping'] },
   
   // Spiritual
@@ -146,7 +146,14 @@ export const ExploreIndia = () => {
                 <img src={dest.image} alt={dest.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 <div className="cinematic-overlay">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                     <div className="badge badge-primary" style={{ background: 'rgba(255,255,255,0.9)', color: 'var(--primary)' }}>{dest.state}</div>
+                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                        <div className="badge badge-primary" style={{ background: 'rgba(255,255,255,0.9)', color: 'var(--primary)' }}>{dest.state}</div>
+                        {dest.isEco && (
+                          <div className="badge badge-success" style={{ background: 'rgba(34,197,94,0.9)', color: '#fff', fontSize: '0.65rem' }}>
+                            <Compass size={10} /> ECO-FRIENDLY
+                          </div>
+                        )}
+                     </div>
                      <button className="glass" style={{ padding: '0.5rem', borderRadius: '50%', border: 'none', color: '#fff' }}><Heart size={18} /></button>
                   </div>
                   <div style={{ marginTop: 'auto' }}>
