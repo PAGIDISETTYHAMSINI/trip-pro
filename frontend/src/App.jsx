@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { Plane, LogOut, User, LayoutDashboard, Menu } from 'lucide-react';
 import { AuthContext } from './context/AuthContext';
 import './index.css';
+import { AIAssistant } from './components/AIAssistant';
 
 /* Lazy load pages to prevent one broken page crashing the whole app */
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
@@ -108,6 +109,8 @@ function App() {
           </Suspense>
         </ErrorBoundary>
       </main>
+      
+      <AIAssistant />
     </div>
   );
 }

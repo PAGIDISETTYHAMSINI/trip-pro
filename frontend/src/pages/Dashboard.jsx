@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { Plane, LayoutDashboard, Globe, Wallet, Zap, Bell, Plus, ArrowUpRight, TrendingUp } from 'lucide-react';
+import { Plane, LayoutDashboard, Globe, Wallet, Zap, Bell, Plus, ArrowUpRight, TrendingUp, Share2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const API = 'https://trip-pro.onrender.com';
@@ -123,9 +123,21 @@ export const Dashboard = () => {
                             {booking.itineraryDetails?.currencySymbol || '₹'}{booking.totalCost?.toLocaleString() || '0'}
                           </div>
                         </div>
-                        <Link to={`/dashboard/schedule/${booking.id}`} className="btn-startup" style={{ fontSize: '0.8rem', padding: '0.6rem 1rem', width: '100%', justifyContent: 'center' }}>
-                          View Pass <ArrowUpRight size={14} />
-                        </Link>
+                        <div style={{ display: 'flex', gap: '0.5rem', width: '100%' }}>
+                          <Link to={`/dashboard/schedule/${booking.id}`} className="btn-startup" style={{ fontSize: '0.8rem', padding: '0.6rem 1rem', flex: 1, justifyContent: 'center' }}>
+                            View Pass <ArrowUpRight size={14} />
+                          </Link>
+                          <button 
+                            className="btn" 
+                            style={{ padding: '0.6rem', minWidth: '40px' }} 
+                            onClick={() => {
+                              navigator.clipboard.writeText(`Check out my trip to ${booking.destinationName} on Trip Pro!`);
+                              alert('Link copied to clipboard!');
+                            }}
+                          >
+                            <Share2 size={16} />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
