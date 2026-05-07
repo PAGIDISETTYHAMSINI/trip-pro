@@ -59,16 +59,76 @@ export const Checkout = () => {
       <div className="glass" style={{ padding: '2rem' }}>
         <h2 style={{ marginBottom: '2rem', textAlign: 'center' }}>Secure Checkout</h2>
         
-        <div style={{ background: 'rgba(79, 70, 229, 0.05)', padding: '1rem', borderRadius: '8px', marginBottom: '2rem' }}>
-          <h3>Trip Summary</h3>
-          <p><strong>Route:</strong> {itinerary.boardingPoint && itinerary.boardingPoint !== 'Not specified' ? `${itinerary.boardingPoint} ➔ ${destination.name}` : destination.name}</p>
-          <p><strong>Duration:</strong> {days} Days</p>
-          <p><strong>Total Amount:</strong> <span style={{ color: 'var(--primary)', fontSize: '1.25rem', fontWeight: 'bold' }}>{itinerary.currencySymbol || '$'}{itinerary.totalCost.toLocaleString()}</span></p>
-        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          
+          {/* Trip Summary Card */}
+          <div style={{ background: 'rgba(79, 70, 229, 0.05)', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(79, 70, 229, 0.1)' }}>
+            <h3 style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+              Trip Summary 
+              <span style={{ fontSize: '0.9rem', color: 'var(--primary)', fontWeight: 'bold' }}>{itinerary.dates?.days || days} Days</span>
+            </h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px dashed rgba(79, 70, 229, 0.2)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: 'var(--text-muted)' }}>Route</span>
+                <span style={{ fontWeight: '600' }}>{itinerary.boardingPoint && itinerary.boardingPoint !== 'Not specified' ? `${itinerary.boardingPoint} ➔ ${destination.name.substring(0,15)}` : destination.name.substring(0,20)}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: 'var(--text-muted)' }}>Dates</span>
+                <span style={{ fontWeight: '600' }}>{itinerary.dates?.start || 'TBD'} to {itinerary.dates?.end || 'TBD'}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: 'var(--text-muted)' }}>Travelers</span>
+                <span style={{ fontWeight: '600' }}>{itinerary.travelers?.adults || 2} Adults {itinerary.travelers?.children > 0 ? `, ${itinerary.travelers.children} Children` : ''}</span>
+              </div>
+            </div>
+
+            <h4 style={{ marginBottom: '1rem' }}>Fare Breakdown</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.95rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: 'var(--text-muted)' }}>Base Fare</span>
+                <span>{itinerary.currencySymbol || '$'}{Math.round(itinerary.totalCost * 0.85).toLocaleString()}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: 'var(--text-muted)' }}>Taxes & Fees (15%)</span>
+                <span>{itinerary.currencySymbol || '$'}{Math.round(itinerary.totalCost * 0.15).toLocaleString()}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px solid rgba(0,0,0,0.1)', fontWeight: 'bold', fontSize: '1.25rem', color: 'var(--primary)' }}>
+                <span>Total Amount</span>
+                <span>{itinerary.currencySymbol || '$'}{itinerary.totalCost.toLocaleString()}</span>
+              </div>
+            </div>
+          </div>
 
         {error && <div className="error-message" style={{ marginBottom: '1rem' }}>{error}</div>}
 
-        <form onSubmit={initPayment} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {/* Traveler Details Form */}
+          <div style={{ padding: '1.5rem', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+            <h3 style={{ marginBottom: '1.5rem' }}>Traveler Information</h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <div className="form-group" style={{ flex: 1 }}>
+                  <label>First Name</label>
+                  <input type="text" className="input-field" required placeholder="John" />
+                </div>
+                <div className="form-group" style={{ flex: 1 }}>
+                  <label>Last Name</label>
+                  <input type="text" className="input-field" required placeholder="Doe" />
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <div className="form-group" style={{ flex: 1 }}>
+                  <label>Email Address</label>
+                  <input type="email" className="input-field" required placeholder="john@example.com" />
+                </div>
+                <div className="form-group" style={{ flex: 1 }}>
+                  <label>Phone Number</label>
+                  <input type="tel" className="input-field" required placeholder="+1 234 567 8900" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form onSubmit={initPayment} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div style={{ padding: '1.5rem', border: '1px solid #e5e7eb', borderRadius: '8px', textAlign: 'center', background: '#f9fafb' }}>
             <ShieldCheck size={48} color="#3399cc" style={{ margin: '0 auto 1rem' }} />
             <h3 style={{ marginBottom: '0.5rem' }}>Secured Payment Gateway</h3>
@@ -79,6 +139,8 @@ export const Checkout = () => {
             </button>
           </div>
         </form>
+        
+        </div>
       </div>
 
       {showRazorpay && (

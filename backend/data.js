@@ -38,7 +38,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 100
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -62,7 +68,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 300
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -86,7 +99,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 875
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -275,33 +296,49 @@ const destinations = [
         "id": "f1-paris",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-374",
+        "name": "Flight-320",
         "cost": 400,
-        "departureTime": "7:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "4h 38m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-paris",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-749",
+        "name": "Flight-590",
         "cost": 1200,
-        "departureTime": "11:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "6h 27m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-paris",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-3145",
+        "name": "Express-3203",
         "cost": 160,
-        "departureTime": "6:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "7h 25m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-paris",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8172",
+        "name": "Express-6080",
         "cost": 280,
-        "departureTime": "4:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "6h 38m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-paris",
@@ -309,7 +346,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-paris",
@@ -317,7 +358,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-paris",
@@ -325,7 +370,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 200,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-paris",
@@ -333,7 +382,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 480,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -498,7 +551,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -522,7 +581,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 200
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -546,7 +611,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 625
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -737,33 +810,49 @@ const destinations = [
         "id": "f1-bali",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-734",
+        "name": "Flight-472",
         "cost": 800,
-        "departureTime": "11:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "5h 36m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-bali",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-633",
+        "name": "Flight-509",
         "cost": 2500,
-        "departureTime": "8:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "2h 19m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-bali",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4310",
+        "name": "Express-2679",
         "cost": 320,
-        "departureTime": "6:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "11h 39m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-bali",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8355",
+        "name": "Express-8385",
         "cost": 560,
-        "departureTime": "5:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "07:30 PM",
+        "duration": "5h 38m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-bali",
@@ -771,7 +860,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-bali",
@@ -779,7 +872,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-bali",
@@ -787,7 +884,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 400,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-bali",
@@ -795,7 +896,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 960,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -960,7 +1065,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 88
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -984,7 +1095,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 250
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -1008,7 +1125,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 1000
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -1197,33 +1322,49 @@ const destinations = [
         "id": "f1-tokyo",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-312",
+        "name": "Flight-497",
         "cost": 900,
-        "departureTime": "10:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "08:00 AM",
+        "duration": "2h 23m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-tokyo",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-255",
+        "name": "Flight-687",
         "cost": 3000,
-        "departureTime": "6:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "2h 45m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-tokyo",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6390",
+        "name": "Express-4176",
         "cost": 360,
-        "departureTime": "6:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "9h 48m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-tokyo",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8165",
+        "name": "Express-1100",
         "cost": 630,
-        "departureTime": "4:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "9h 17m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-tokyo",
@@ -1231,7 +1372,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-tokyo",
@@ -1239,7 +1384,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-tokyo",
@@ -1247,7 +1396,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 450,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-tokyo",
@@ -1255,7 +1408,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 1080,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -1420,7 +1577,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 200
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -1444,7 +1607,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 500
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -1468,7 +1637,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 1500
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -1657,33 +1834,49 @@ const destinations = [
         "id": "f1-newyork",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-722",
+        "name": "Flight-319",
         "cost": 300,
-        "departureTime": "8:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "3h 46m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-newyork",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-131",
+        "name": "Flight-354",
         "cost": 1000,
-        "departureTime": "7:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "08:00 AM",
+        "duration": "2h 36m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-newyork",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-9552",
+        "name": "Express-9846",
         "cost": 120,
-        "departureTime": "4:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "08:30 PM",
+        "duration": "5h 43m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-newyork",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-6256",
+        "name": "Express-4208",
         "cost": 210,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "12h 19m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-newyork",
@@ -1691,7 +1884,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-newyork",
@@ -1699,7 +1896,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-newyork",
@@ -1707,7 +1908,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 150,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-newyork",
@@ -1715,7 +1920,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 360,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -1880,7 +2089,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 38
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -1904,7 +2119,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 125
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       },
       {
         "id": "h3",
@@ -1928,7 +2151,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 375
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -2119,33 +2350,49 @@ const destinations = [
         "id": "f1-goa",
         "type": "Budget Airline",
         "agency": "IndiGo",
-        "name": "Flight-601",
+        "name": "Flight-647",
         "cost": 150,
-        "departureTime": "6:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "2h 21m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-goa",
         "type": "Premium Airline",
         "agency": "Air India",
-        "name": "Flight-735",
+        "name": "Flight-332",
         "cost": 400,
-        "departureTime": "9:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "3h 40m",
+        "stops": "1 Stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-goa",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-2177",
+        "name": "Express-8316",
         "cost": 60,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "11h 17m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-goa",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-5750",
+        "name": "Express-3113",
         "cost": 105,
-        "departureTime": "6:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "8h 49m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-goa",
@@ -2153,7 +2400,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-goa",
@@ -2161,7 +2412,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-goa",
@@ -2169,7 +2424,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 75,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-goa",
@@ -2177,7 +2436,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 180,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -2342,7 +2605,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -2366,7 +2635,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 200
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -2390,7 +2665,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 500
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -2579,33 +2862,49 @@ const destinations = [
         "id": "f1-kerala",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-735",
+        "name": "Flight-530",
         "cost": 200,
-        "departureTime": "6:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "6h 26m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-kerala",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-996",
+        "name": "Flight-484",
         "cost": 500,
-        "departureTime": "6:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "2h 42m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-kerala",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-8096",
+        "name": "Express-5326",
         "cost": 80,
-        "departureTime": "5:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "12:30 AM (+1)",
+        "duration": "9h 46m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-kerala",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-3916",
+        "name": "Express-9131",
         "cost": 140,
-        "departureTime": "1:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "10h 48m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-kerala",
@@ -2613,7 +2912,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-kerala",
@@ -2621,7 +2924,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-kerala",
@@ -2629,7 +2936,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 100,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-kerala",
@@ -2637,7 +2948,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 240,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -2802,7 +3117,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 30
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -2826,7 +3147,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 150
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -2850,7 +3177,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 750
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       }
     ],
     "foodOptions": [
@@ -3039,33 +3372,49 @@ const destinations = [
         "id": "f1-jaipur",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-217",
+        "name": "Flight-105",
         "cost": 180,
-        "departureTime": "8:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "05:00 PM",
+        "duration": "6h 49m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-jaipur",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-307",
+        "name": "Flight-817",
         "cost": 450,
-        "departureTime": "8:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "5h 31m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-jaipur",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-2681",
+        "name": "Express-6050",
         "cost": 72,
-        "departureTime": "5:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "06:30 PM",
+        "duration": "5h 49m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-jaipur",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-8026",
+        "name": "Express-3097",
         "cost": 125,
-        "departureTime": "2:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "6h 42m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-jaipur",
@@ -3073,7 +3422,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-jaipur",
@@ -3081,7 +3434,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-jaipur",
@@ -3089,7 +3446,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 90,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-jaipur",
@@ -3097,7 +3458,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 216,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -3262,7 +3627,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 38
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -3286,7 +3657,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 100
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -3310,7 +3688,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 625
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -3499,33 +3885,49 @@ const destinations = [
         "id": "f1-agra",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-719",
+        "name": "Flight-803",
         "cost": 120,
-        "departureTime": "8:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "05:00 PM",
+        "duration": "6h 25m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-agra",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-847",
+        "name": "Flight-849",
         "cost": 350,
-        "departureTime": "9:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "3h 11m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-agra",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-4028",
+        "name": "Express-3471",
         "cost": 48,
-        "departureTime": "2:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "8h 27m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-agra",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-5888",
+        "name": "Express-4766",
         "cost": 84,
-        "departureTime": "6:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "9h 12m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-agra",
@@ -3533,7 +3935,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-agra",
@@ -3541,7 +3947,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-agra",
@@ -3549,7 +3959,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 60,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-agra",
@@ -3557,7 +3971,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 144,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -3722,7 +4140,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 30
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -3746,7 +4170,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 113
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -3770,7 +4200,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 450
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       }
     ],
     "foodOptions": [
@@ -3959,33 +4395,49 @@ const destinations = [
         "id": "f1-newdelhi",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-920",
+        "name": "Flight-188",
         "cost": 150,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "2h 12m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-newdelhi",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-981",
+        "name": "Flight-647",
         "cost": 400,
-        "departureTime": "11:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "2h 38m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-newdelhi",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-3652",
+        "name": "Express-9761",
         "cost": 60,
-        "departureTime": "1:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "07:30 PM",
+        "duration": "6h 37m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-newdelhi",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-2798",
+        "name": "Express-1113",
         "cost": 105,
-        "departureTime": "2:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "8h 32m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-newdelhi",
@@ -3993,7 +4445,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-newdelhi",
@@ -4001,7 +4457,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-newdelhi",
@@ -4009,7 +4469,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 75,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-newdelhi",
@@ -4017,7 +4481,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 180,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -4182,7 +4650,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -4206,7 +4680,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 150
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -4230,7 +4710,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 625
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -4419,33 +4907,49 @@ const destinations = [
         "id": "f1-mumbai",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-352",
+        "name": "Flight-345",
         "cost": 160,
-        "departureTime": "8:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "3h 41m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-mumbai",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-921",
+        "name": "Flight-419",
         "cost": 420,
-        "departureTime": "7:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "3h 23m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-mumbai",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-9807",
+        "name": "Express-9527",
         "cost": 64,
-        "departureTime": "4:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "8h 43m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-mumbai",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-4582",
+        "name": "Express-4825",
         "cost": 112,
-        "departureTime": "2:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "10h 41m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-mumbai",
@@ -4453,7 +4957,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-mumbai",
@@ -4461,7 +4969,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-mumbai",
@@ -4469,7 +4981,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 80,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-mumbai",
@@ -4477,7 +4993,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 192,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -4642,7 +5162,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 25
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -4666,7 +5192,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 88
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -4690,7 +5222,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 375
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -4879,33 +5419,49 @@ const destinations = [
         "id": "f1-varanasi",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-952",
+        "name": "Flight-381",
         "cost": 130,
-        "departureTime": "11:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "4h 14m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-varanasi",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-982",
+        "name": "Flight-972",
         "cost": 380,
-        "departureTime": "10:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "3h 27m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-varanasi",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-6239",
+        "name": "Express-4207",
         "cost": 52,
-        "departureTime": "3:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "12:30 AM (+1)",
+        "duration": "6h 30m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-varanasi",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-7972",
+        "name": "Express-4882",
         "cost": 91,
-        "departureTime": "2:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "05:30 AM (+1)",
+        "duration": "11h 22m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-varanasi",
@@ -4913,7 +5469,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-varanasi",
@@ -4921,7 +5481,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-varanasi",
@@ -4929,7 +5493,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 65,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-varanasi",
@@ -4937,7 +5505,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 156,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -5102,7 +5674,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -5126,7 +5704,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 125
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -5150,7 +5735,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 450
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -5339,33 +5932,49 @@ const destinations = [
         "id": "f1-ladakh",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-446",
+        "name": "Flight-963",
         "cost": 250,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "4h 26m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-ladakh",
         "type": "Premium Economy",
         "agency": "Air India",
-        "name": "Flight-437",
+        "name": "Flight-407",
         "cost": 500,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "04:00 PM",
+        "duration": "6h 20m",
+        "stops": "1 Stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-ladakh",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-5655",
+        "name": "Express-9096",
         "cost": 100,
-        "departureTime": "1:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "07:30 PM",
+        "duration": "6h 25m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-ladakh",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-9260",
+        "name": "Express-7316",
         "cost": 175,
-        "departureTime": "4:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "7h 31m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-ladakh",
@@ -5373,7 +5982,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-ladakh",
@@ -5381,7 +5994,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-ladakh",
@@ -5389,7 +6006,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 125,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-ladakh",
@@ -5397,7 +6018,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 300,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -5562,7 +6187,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 63
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -5586,7 +6217,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 200
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       },
       {
         "id": "h3",
@@ -5610,7 +6249,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 625
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -5801,33 +6448,49 @@ const destinations = [
         "id": "f1-andaman",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-108",
+        "name": "Flight-826",
         "cost": 220,
-        "departureTime": "8:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "08:00 AM",
+        "duration": "2h 37m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-andaman",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-649",
+        "name": "Flight-295",
         "cost": 600,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "4h 37m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-andaman",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-4369",
+        "name": "Express-3713",
         "cost": 88,
-        "departureTime": "6:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "11h 43m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-andaman",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-4551",
+        "name": "Express-1314",
         "cost": 154,
-        "departureTime": "6:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "8h 28m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-andaman",
@@ -5835,7 +6498,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-andaman",
@@ -5843,7 +6510,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-andaman",
@@ -5851,7 +6522,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 110,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-andaman",
@@ -5859,7 +6534,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 264,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -6024,7 +6703,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 25
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -6048,7 +6733,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 100
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -6072,7 +6763,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 375
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -6262,33 +6961,49 @@ const destinations = [
         "id": "f1-manali",
         "type": "Bus/Economy Travel",
         "agency": "IndiGo",
-        "name": "Flight-150",
+        "name": "Flight-869",
         "cost": 50,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "3h 22m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-manali",
         "type": "Private Cab",
         "agency": "Air India",
-        "name": "Flight-127",
+        "name": "Flight-313",
         "cost": 200,
-        "departureTime": "7:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "4h 44m",
+        "stops": "1 Stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-manali",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-4761",
+        "name": "Express-3561",
         "cost": 20,
-        "departureTime": "6:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "10h 11m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-manali",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-8539",
+        "name": "Express-3691",
         "cost": 35,
-        "departureTime": "3:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "08:30 PM",
+        "duration": "5h 17m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-manali",
@@ -6296,7 +7011,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-manali",
@@ -6304,7 +7023,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-manali",
@@ -6312,7 +7035,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 25,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-manali",
@@ -6320,7 +7047,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 60,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -6485,7 +7216,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 38
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -6509,7 +7246,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 100
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -6533,7 +7277,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 450
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -6722,33 +7474,49 @@ const destinations = [
         "id": "f1-darjeeling",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-137",
+        "name": "Flight-843",
         "cost": 150,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "04:00 PM",
+        "duration": "6h 35m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-darjeeling",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-962",
+        "name": "Flight-811",
         "cost": 350,
-        "departureTime": "8:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "2h 24m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-darjeeling",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-6457",
+        "name": "Express-2013",
         "cost": 60,
-        "departureTime": "1:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "6h 24m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-darjeeling",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-3311",
+        "name": "Express-8360",
         "cost": 105,
-        "departureTime": "6:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "12:30 AM (+1)",
+        "duration": "6h 23m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-darjeeling",
@@ -6756,7 +7524,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-darjeeling",
@@ -6764,7 +7536,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-darjeeling",
@@ -6772,7 +7548,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 75,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-darjeeling",
@@ -6780,7 +7560,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 180,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -6945,7 +7729,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 20
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -6969,7 +7759,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 75
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -6993,7 +7789,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 500
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -7182,33 +7986,49 @@ const destinations = [
         "id": "f1-rishikesh",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-788",
+        "name": "Flight-673",
         "cost": 100,
-        "departureTime": "8:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "5h 40m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-rishikesh",
         "type": "Premium Economy",
         "agency": "Air India",
-        "name": "Flight-272",
+        "name": "Flight-725",
         "cost": 250,
-        "departureTime": "10:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "5h 31m",
+        "stops": "1 Stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-rishikesh",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-7966",
+        "name": "Express-4466",
         "cost": 40,
-        "departureTime": "1:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "11h 12m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-rishikesh",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-2020",
+        "name": "Express-2716",
         "cost": 70,
-        "departureTime": "5:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "10h 13m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-rishikesh",
@@ -7216,7 +8036,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-rishikesh",
@@ -7224,7 +8048,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-rishikesh",
@@ -7232,7 +8060,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 50,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-rishikesh",
@@ -7240,7 +8072,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 120,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -7405,7 +8241,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 30
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -7429,7 +8271,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 125
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h3",
@@ -7453,7 +8301,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 1000
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -7642,33 +8498,49 @@ const destinations = [
         "id": "f1-udaipur",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-679",
+        "name": "Flight-269",
         "cost": 140,
-        "departureTime": "9:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "4h 25m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-udaipur",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-195",
+        "name": "Flight-321",
         "cost": 380,
-        "departureTime": "6:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "08:00 AM",
+        "duration": "2h 49m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-udaipur",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-4712",
+        "name": "Express-2260",
         "cost": 56,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "11h 27m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-udaipur",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-6003",
+        "name": "Express-6520",
         "cost": 98,
-        "departureTime": "2:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "7h 18m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-udaipur",
@@ -7676,7 +8548,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-udaipur",
@@ -7684,7 +8560,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-udaipur",
@@ -7692,7 +8572,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 70,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-udaipur",
@@ -7700,7 +8584,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 168,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -7865,7 +8753,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 53
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -7889,7 +8783,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 120
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -7913,7 +8814,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 485
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -8102,33 +9011,49 @@ const destinations = [
         "id": "f1-img_ajanta_0",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-831",
+        "name": "Flight-554",
         "cost": 193,
-        "departureTime": "8:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "2h 26m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_ajanta_0",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-893",
+        "name": "Flight-249",
         "cost": 329,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "5h 43m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_ajanta_0",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6764",
+        "name": "Express-8785",
         "cost": 77,
-        "departureTime": "3:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "10h 45m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_ajanta_0",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1300",
+        "name": "Express-9391",
         "cost": 135,
-        "departureTime": "5:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "6h 32m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_ajanta_0",
@@ -8136,7 +9061,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_ajanta_0",
@@ -8144,7 +9073,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_ajanta_0",
@@ -8152,7 +9085,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 96,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_ajanta_0",
@@ -8160,7 +9097,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 231,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -8325,7 +9266,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 60
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -8349,7 +9296,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 103
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -8373,7 +9327,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 620
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -8563,33 +9525,49 @@ const destinations = [
         "id": "f1-img_amarnathcave_1",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-872",
+        "name": "Flight-616",
         "cost": 121,
-        "departureTime": "6:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "2h 31m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_amarnathcave_1",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-875",
+        "name": "Flight-828",
         "cost": 412,
-        "departureTime": "6:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "2h 13m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_amarnathcave_1",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5135",
+        "name": "Express-2852",
         "cost": 48,
-        "departureTime": "5:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "06:30 AM (+1)",
+        "duration": "12h 43m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_amarnathcave_1",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-5594",
+        "name": "Express-3603",
         "cost": 84,
-        "departureTime": "6:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "7h 28m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_amarnathcave_1",
@@ -8597,7 +9575,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_amarnathcave_1",
@@ -8605,7 +9587,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_amarnathcave_1",
@@ -8613,7 +9599,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 60,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_amarnathcave_1",
@@ -8621,7 +9611,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 145,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -8786,7 +9780,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -8810,7 +9810,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 105
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -8834,7 +9841,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 545
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -9023,33 +10038,49 @@ const destinations = [
         "id": "f1-img_akbarstomb_2",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-197",
+        "name": "Flight-488",
         "cost": 154,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "2h 16m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_akbarstomb_2",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-976",
+        "name": "Flight-803",
         "cost": 477,
-        "departureTime": "11:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "5h 11m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_akbarstomb_2",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4741",
+        "name": "Express-1939",
         "cost": 61,
-        "departureTime": "5:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "9h 48m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_akbarstomb_2",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-3245",
+        "name": "Express-3423",
         "cost": 107,
-        "departureTime": "4:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "8h 21m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_akbarstomb_2",
@@ -9057,7 +10088,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_akbarstomb_2",
@@ -9065,7 +10100,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_akbarstomb_2",
@@ -9073,7 +10112,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 77,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_akbarstomb_2",
@@ -9081,7 +10124,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 184,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -9246,7 +10293,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -9270,7 +10323,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 110
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -9294,7 +10354,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 385
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -9483,33 +10551,49 @@ const destinations = [
         "id": "f1-img_amberpalace_3",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-378",
+        "name": "Flight-181",
         "cost": 115,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "5h 43m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_amberpalace_3",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-237",
+        "name": "Flight-202",
         "cost": 391,
-        "departureTime": "9:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "4h 12m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_amberpalace_3",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-1985",
+        "name": "Express-4045",
         "cost": 46,
-        "departureTime": "2:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "12h 36m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_amberpalace_3",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-2913",
+        "name": "Express-6158",
         "cost": 80,
-        "departureTime": "3:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "12h 27m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_amberpalace_3",
@@ -9517,7 +10601,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_amberpalace_3",
@@ -9525,7 +10613,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_amberpalace_3",
@@ -9533,7 +10625,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 57,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_amberpalace_3",
@@ -9541,7 +10637,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 138,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -9706,7 +10806,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 58
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -9730,7 +10836,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 145
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -9754,7 +10867,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 540
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -9943,33 +11064,49 @@ const destinations = [
         "id": "f1-img_anandbhawan_4",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-145",
+        "name": "Flight-714",
         "cost": 119,
-        "departureTime": "7:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "3h 18m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_anandbhawan_4",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-185",
+        "name": "Flight-180",
         "cost": 393,
-        "departureTime": "9:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "4h 43m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_anandbhawan_4",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-8393",
+        "name": "Express-8877",
         "cost": 47,
-        "departureTime": "2:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "8h 45m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_anandbhawan_4",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8078",
+        "name": "Express-9235",
         "cost": 83,
-        "departureTime": "3:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "11h 46m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_anandbhawan_4",
@@ -9977,7 +11114,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_anandbhawan_4",
@@ -9985,7 +11126,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_anandbhawan_4",
@@ -9993,7 +11138,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 59,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_anandbhawan_4",
@@ -10001,7 +11150,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 142,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -10166,7 +11319,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 40
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -10190,7 +11349,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 130
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -10214,7 +11380,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 510
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -10403,33 +11577,49 @@ const destinations = [
         "id": "f1-img_bhakradam_5",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-733",
+        "name": "Flight-300",
         "cost": 106,
-        "departureTime": "11:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "2h 24m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_bhakradam_5",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-762",
+        "name": "Flight-664",
         "cost": 499,
-        "departureTime": "7:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "4h 16m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_bhakradam_5",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2790",
+        "name": "Express-4462",
         "cost": 42,
-        "departureTime": "5:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "07:30 PM",
+        "duration": "6h 21m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_bhakradam_5",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-5378",
+        "name": "Express-3666",
         "cost": 74,
-        "departureTime": "2:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "5h 19m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_bhakradam_5",
@@ -10437,7 +11627,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_bhakradam_5",
@@ -10445,7 +11639,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_bhakradam_5",
@@ -10453,7 +11651,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 53,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_bhakradam_5",
@@ -10461,7 +11663,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 127,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -10626,7 +11832,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 43
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -10650,7 +11862,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 148
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -10674,7 +11893,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 550
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -10863,33 +12090,49 @@ const destinations = [
         "id": "f1-img_bibidamaqbra_6",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-756",
+        "name": "Flight-474",
         "cost": 195,
-        "departureTime": "6:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "05:00 PM",
+        "duration": "6h 40m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_bibidamaqbra_6",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-393",
+        "name": "Flight-910",
         "cost": 494,
-        "departureTime": "9:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "3h 26m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_bibidamaqbra_6",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-8174",
+        "name": "Express-5153",
         "cost": 78,
-        "departureTime": "1:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "08:30 PM",
+        "duration": "5h 13m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_bibidamaqbra_6",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8665",
+        "name": "Express-7307",
         "cost": 136,
-        "departureTime": "6:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "5h 24m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_bibidamaqbra_6",
@@ -10897,7 +12140,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_bibidamaqbra_6",
@@ -10905,7 +12152,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_bibidamaqbra_6",
@@ -10913,7 +12164,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 97,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_bibidamaqbra_6",
@@ -10921,7 +12176,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 234,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -11086,7 +12345,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 53
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -11110,7 +12375,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 148
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -11134,7 +12406,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 428
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -11323,33 +12603,49 @@ const destinations = [
         "id": "f1-img_birlaplanetarium_7",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-940",
+        "name": "Flight-835",
         "cost": 165,
-        "departureTime": "6:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "4h 15m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_birlaplanetarium_7",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-843",
+        "name": "Flight-177",
         "cost": 302,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "2h 44m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_birlaplanetarium_7",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-8433",
+        "name": "Express-1902",
         "cost": 66,
-        "departureTime": "1:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "6h 13m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_birlaplanetarium_7",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-5691",
+        "name": "Express-8741",
         "cost": 115,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "10h 33m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_birlaplanetarium_7",
@@ -11357,7 +12653,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_birlaplanetarium_7",
@@ -11365,7 +12665,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_birlaplanetarium_7",
@@ -11373,7 +12677,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 82,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_birlaplanetarium_7",
@@ -11381,7 +12689,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 198,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -11546,7 +12858,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -11570,7 +12888,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 135
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -11594,7 +12919,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 543
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -11783,33 +13116,49 @@ const destinations = [
         "id": "f1-img_blackpagoda_8",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-226",
+        "name": "Flight-490",
         "cost": 110,
-        "departureTime": "7:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "2h 28m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_blackpagoda_8",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-941",
+        "name": "Flight-498",
         "cost": 391,
-        "departureTime": "10:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "4h 18m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_blackpagoda_8",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4673",
+        "name": "Express-2462",
         "cost": 44,
-        "departureTime": "3:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "8h 49m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_blackpagoda_8",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8921",
+        "name": "Express-7549",
         "cost": 77,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "7h 19m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_blackpagoda_8",
@@ -11817,7 +13166,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_blackpagoda_8",
@@ -11825,7 +13178,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_blackpagoda_8",
@@ -11833,7 +13190,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 55,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_blackpagoda_8",
@@ -11841,7 +13202,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 132,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -12006,7 +13371,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 53
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -12030,7 +13401,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 115
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -12054,7 +13432,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 428
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -12243,33 +13629,49 @@ const destinations = [
         "id": "f1-img_bodhisatva_9",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-162",
+        "name": "Flight-609",
         "cost": 172,
-        "departureTime": "10:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "5h 16m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_bodhisatva_9",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-571",
+        "name": "Flight-580",
         "cost": 461,
-        "departureTime": "11:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "2h 48m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_bodhisatva_9",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6032",
+        "name": "Express-2277",
         "cost": 68,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "12h 34m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_bodhisatva_9",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-3256",
+        "name": "Express-3214",
         "cost": 120,
-        "departureTime": "4:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "10h 42m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_bodhisatva_9",
@@ -12277,7 +13679,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_bodhisatva_9",
@@ -12285,7 +13691,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_bodhisatva_9",
@@ -12293,7 +13703,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 86,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_bodhisatva_9",
@@ -12301,7 +13715,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 206,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -12466,7 +13884,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 58
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -12490,7 +13914,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 113
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -12514,7 +13945,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 563
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -12703,33 +14142,49 @@ const destinations = [
         "id": "f1-img_brihadeeswaratemple_10",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-466",
+        "name": "Flight-200",
         "cost": 149,
-        "departureTime": "10:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "04:00 PM",
+        "duration": "5h 22m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_brihadeeswaratemple_10",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-791",
+        "name": "Flight-804",
         "cost": 494,
-        "departureTime": "8:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "05:00 PM",
+        "duration": "6h 34m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_brihadeeswaratemple_10",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6307",
+        "name": "Express-7121",
         "cost": 59,
-        "departureTime": "5:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "12h 23m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_brihadeeswaratemple_10",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8101",
+        "name": "Express-1138",
         "cost": 104,
-        "departureTime": "4:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "12:30 AM (+1)",
+        "duration": "6h 26m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_brihadeeswaratemple_10",
@@ -12737,7 +14192,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_brihadeeswaratemple_10",
@@ -12745,7 +14204,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_brihadeeswaratemple_10",
@@ -12753,7 +14216,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 74,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_brihadeeswaratemple_10",
@@ -12761,7 +14228,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 178,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -12926,7 +14397,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 40
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -12950,7 +14427,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 145
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -12974,7 +14458,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 620
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -13163,33 +14655,49 @@ const destinations = [
         "id": "f1-img_brindabangardens_11",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-145",
+        "name": "Flight-600",
         "cost": 117,
-        "departureTime": "11:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "3h 36m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_brindabangardens_11",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-768",
+        "name": "Flight-777",
         "cost": 481,
-        "departureTime": "6:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "3h 46m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_brindabangardens_11",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6462",
+        "name": "Express-1680",
         "cost": 46,
-        "departureTime": "4:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "10h 24m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_brindabangardens_11",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-3984",
+        "name": "Express-9664",
         "cost": 81,
-        "departureTime": "1:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "12h 32m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_brindabangardens_11",
@@ -13197,7 +14705,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_brindabangardens_11",
@@ -13205,7 +14717,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_brindabangardens_11",
@@ -13213,7 +14729,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 58,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_brindabangardens_11",
@@ -13221,7 +14741,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 140,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -13386,7 +14910,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 43
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -13410,7 +14940,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 148
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -13434,7 +14971,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 438
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -13623,33 +15168,49 @@ const destinations = [
         "id": "f1-img_bulanddarwaza_12",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-302",
+        "name": "Flight-834",
         "cost": 164,
-        "departureTime": "11:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "5h 34m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_bulanddarwaza_12",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-139",
+        "name": "Flight-108",
         "cost": 469,
-        "departureTime": "8:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "3h 20m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_bulanddarwaza_12",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6542",
+        "name": "Express-5438",
         "cost": 65,
-        "departureTime": "3:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "11h 49m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_bulanddarwaza_12",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1971",
+        "name": "Express-7618",
         "cost": 114,
-        "departureTime": "5:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "12h 34m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_bulanddarwaza_12",
@@ -13657,7 +15218,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_bulanddarwaza_12",
@@ -13665,7 +15230,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_bulanddarwaza_12",
@@ -13673,7 +15242,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 82,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_bulanddarwaza_12",
@@ -13681,7 +15254,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 196,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -13846,7 +15423,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 38
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -13870,7 +15453,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 105
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -13894,7 +15484,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 425
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -14083,33 +15681,49 @@ const destinations = [
         "id": "f1-img_charminar_13",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-848",
+        "name": "Flight-370",
         "cost": 194,
-        "departureTime": "6:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "3h 49m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_charminar_13",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-936",
+        "name": "Flight-311",
         "cost": 426,
-        "departureTime": "11:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "5h 42m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_charminar_13",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2247",
+        "name": "Express-6678",
         "cost": 77,
-        "departureTime": "1:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "11h 19m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_charminar_13",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8846",
+        "name": "Express-6632",
         "cost": 135,
-        "departureTime": "1:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "07:30 PM",
+        "duration": "6h 21m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_charminar_13",
@@ -14117,7 +15731,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_charminar_13",
@@ -14125,7 +15743,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_charminar_13",
@@ -14133,7 +15755,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 97,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_charminar_13",
@@ -14141,7 +15767,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 232,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -14306,7 +15936,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 43
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -14330,7 +15966,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 140
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -14354,7 +15997,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 620
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -14543,33 +16194,49 @@ const destinations = [
         "id": "f1-img_cheenakesavatemple_14",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-558",
+        "name": "Flight-701",
         "cost": 191,
-        "departureTime": "9:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "6h 23m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_cheenakesavatemple_14",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-813",
+        "name": "Flight-197",
         "cost": 348,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "04:00 PM",
+        "duration": "6h 45m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_cheenakesavatemple_14",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4631",
+        "name": "Express-3332",
         "cost": 76,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "10h 13m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_cheenakesavatemple_14",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4434",
+        "name": "Express-4148",
         "cost": 133,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "5h 26m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_cheenakesavatemple_14",
@@ -14577,7 +16244,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_cheenakesavatemple_14",
@@ -14585,7 +16256,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_cheenakesavatemple_14",
@@ -14593,7 +16268,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 95,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_cheenakesavatemple_14",
@@ -14601,7 +16280,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 229,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -14766,7 +16449,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -14790,7 +16479,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 108
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -14814,7 +16510,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 480
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -15003,33 +16707,49 @@ const destinations = [
         "id": "f1-img_chilkalake_15",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-833",
+        "name": "Flight-714",
         "cost": 126,
-        "departureTime": "8:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "4h 13m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_chilkalake_15",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-887",
+        "name": "Flight-658",
         "cost": 461,
-        "departureTime": "6:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "6h 21m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_chilkalake_15",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2603",
+        "name": "Express-4217",
         "cost": 50,
-        "departureTime": "6:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "10h 39m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_chilkalake_15",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4493",
+        "name": "Express-9971",
         "cost": 88,
-        "departureTime": "2:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "12h 10m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_chilkalake_15",
@@ -15037,7 +16757,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_chilkalake_15",
@@ -15045,7 +16769,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_chilkalake_15",
@@ -15053,7 +16781,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 63,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_chilkalake_15",
@@ -15061,7 +16793,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 151,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -15226,7 +16962,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 45
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -15250,7 +16992,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 135
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -15274,7 +17023,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 465
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -15463,33 +17220,49 @@ const destinations = [
         "id": "f1-img_dallake_16",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-623",
+        "name": "Flight-531",
         "cost": 188,
-        "departureTime": "6:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "4h 33m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_dallake_16",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-211",
+        "name": "Flight-452",
         "cost": 353,
-        "departureTime": "6:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "3h 17m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_dallake_16",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6778",
+        "name": "Express-3545",
         "cost": 75,
-        "departureTime": "1:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "10h 27m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_dallake_16",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-7121",
+        "name": "Express-2096",
         "cost": 131,
-        "departureTime": "1:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "5h 49m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_dallake_16",
@@ -15497,7 +17270,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_dallake_16",
@@ -15505,7 +17282,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_dallake_16",
@@ -15513,7 +17294,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 94,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_dallake_16",
@@ -15521,7 +17306,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 225,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -15686,7 +17475,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 53
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -15710,7 +17505,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 145
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -15734,7 +17536,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 533
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -15923,33 +17733,49 @@ const destinations = [
         "id": "f1-img_dilwaratemple_17",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-887",
+        "name": "Flight-711",
         "cost": 143,
-        "departureTime": "11:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "3h 13m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_dilwaratemple_17",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-144",
+        "name": "Flight-796",
         "cost": 472,
-        "departureTime": "7:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "4h 33m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_dilwaratemple_17",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-2191",
+        "name": "Express-1167",
         "cost": 57,
-        "departureTime": "6:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "11h 28m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_dilwaratemple_17",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-3362",
+        "name": "Express-1874",
         "cost": 100,
-        "departureTime": "6:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "06:30 AM (+1)",
+        "duration": "12h 20m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_dilwaratemple_17",
@@ -15957,7 +17783,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_dilwaratemple_17",
@@ -15965,7 +17795,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_dilwaratemple_17",
@@ -15973,7 +17807,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 71,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_dilwaratemple_17",
@@ -15981,7 +17819,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 171,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -16146,7 +17988,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 55
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -16170,7 +18018,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 118
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -16194,7 +18049,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 428
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -16383,33 +18246,49 @@ const destinations = [
         "id": "f1-img_elephantacaves_18",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-873",
+        "name": "Flight-292",
         "cost": 176,
-        "departureTime": "9:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "5h 11m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_elephantacaves_18",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-971",
+        "name": "Flight-225",
         "cost": 382,
-        "departureTime": "7:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "5h 35m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_elephantacaves_18",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6529",
+        "name": "Express-4947",
         "cost": 70,
-        "departureTime": "1:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "10h 23m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_elephantacaves_18",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-3825",
+        "name": "Express-7646",
         "cost": 123,
-        "departureTime": "5:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "04:30 AM (+1)",
+        "duration": "10h 29m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_elephantacaves_18",
@@ -16417,7 +18296,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_elephantacaves_18",
@@ -16425,7 +18308,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_elephantacaves_18",
@@ -16433,7 +18320,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 88,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_elephantacaves_18",
@@ -16441,7 +18332,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 211,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -16606,7 +18501,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 45
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -16630,7 +18531,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 125
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -16654,7 +18562,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 560
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -16843,33 +18759,49 @@ const destinations = [
         "id": "f1-img_elloracaves_19",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-738",
+        "name": "Flight-828",
         "cost": 116,
-        "departureTime": "10:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "10:00 AM",
+        "duration": "4h 33m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_elloracaves_19",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-425",
+        "name": "Flight-881",
         "cost": 428,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "5h 36m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_elloracaves_19",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-3653",
+        "name": "Express-9518",
         "cost": 46,
-        "departureTime": "3:30 PM"
+        "departureTime": "05:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "9h 50m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_elloracaves_19",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8787",
+        "name": "Express-7955",
         "cost": 81,
-        "departureTime": "4:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "9h 15m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_elloracaves_19",
@@ -16877,7 +18809,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_elloracaves_19",
@@ -16885,7 +18821,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_elloracaves_19",
@@ -16893,7 +18833,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 58,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_elloracaves_19",
@@ -16901,7 +18845,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 139,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -17066,7 +19014,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 45
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -17090,7 +19044,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 130
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -17114,7 +19075,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 518
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -17303,33 +19272,49 @@ const destinations = [
         "id": "f1-img_gatewayofindia_20",
         "type": "Economy",
         "agency": "IndiGo",
-        "name": "Flight-957",
+        "name": "Flight-798",
         "cost": 141,
-        "departureTime": "7:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "4h 10m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_gatewayofindia_20",
         "type": "Business",
         "agency": "Air India",
-        "name": "Flight-895",
+        "name": "Flight-217",
         "cost": 352,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "2h 34m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_gatewayofindia_20",
         "type": "Express Train",
         "agency": "Indian Railways",
-        "name": "Express-9269",
+        "name": "Express-9179",
         "cost": 56,
-        "departureTime": "3:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "10h 25m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_gatewayofindia_20",
         "type": "Premium Sleeper Train",
         "agency": "Indian Railways",
-        "name": "Express-4972",
+        "name": "Express-2489",
         "cost": 98,
-        "departureTime": "6:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "08:30 PM",
+        "duration": "5h 17m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_gatewayofindia_20",
@@ -17337,7 +19322,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 4150,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_gatewayofindia_20",
@@ -17345,7 +19334,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 2075,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_gatewayofindia_20",
@@ -17353,7 +19346,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 70,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_gatewayofindia_20",
@@ -17361,7 +19358,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 169,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -17526,7 +19527,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 53
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -17550,7 +19557,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 115
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -17574,7 +19588,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 388
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -17763,33 +19785,49 @@ const destinations = [
         "id": "f1-img_goldentemple_21",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-458",
+        "name": "Flight-291",
         "cost": 180,
-        "departureTime": "10:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "4h 21m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_goldentemple_21",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-217",
+        "name": "Flight-698",
         "cost": 321,
-        "departureTime": "11:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "3h 29m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_goldentemple_21",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6678",
+        "name": "Express-9651",
         "cost": 72,
-        "departureTime": "5:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "7h 37m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_goldentemple_21",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8833",
+        "name": "Express-1508",
         "cost": 125,
-        "departureTime": "5:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "09:30 PM",
+        "duration": "6h 47m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_goldentemple_21",
@@ -17797,7 +19835,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_goldentemple_21",
@@ -17805,7 +19847,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_goldentemple_21",
@@ -17813,7 +19859,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 90,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_goldentemple_21",
@@ -17821,7 +19871,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 216,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -17986,7 +20040,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 48
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -18010,7 +20070,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 110
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -18034,7 +20101,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 595
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -18223,33 +20298,49 @@ const destinations = [
         "id": "f1-img_golgumbaz_22",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-462",
+        "name": "Flight-884",
         "cost": 145,
-        "departureTime": "7:00 AM"
+        "departureTime": "11:00 AM",
+        "arrivalTime": "05:00 PM",
+        "duration": "6h 22m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_golgumbaz_22",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-415",
+        "name": "Flight-556",
         "cost": 481,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "3h 11m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_golgumbaz_22",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-7516",
+        "name": "Express-3352",
         "cost": 58,
-        "departureTime": "3:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "11:30 PM",
+        "duration": "7h 48m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_golgumbaz_22",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-8677",
+        "name": "Express-9167",
         "cost": 101,
-        "departureTime": "1:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "01:30 AM (+1)",
+        "duration": "11h 25m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_golgumbaz_22",
@@ -18257,7 +20348,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_golgumbaz_22",
@@ -18265,7 +20360,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_golgumbaz_22",
@@ -18273,7 +20372,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 72,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_golgumbaz_22",
@@ -18281,7 +20384,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 174,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -18446,7 +20553,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -18470,7 +20583,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 108
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -18494,7 +20614,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 385
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -18683,33 +20811,49 @@ const destinations = [
         "id": "f1-img_hanginggardens_23",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-605",
+        "name": "Flight-217",
         "cost": 181,
-        "departureTime": "11:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "2h 29m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_hanginggardens_23",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-871",
+        "name": "Flight-513",
         "cost": 367,
-        "departureTime": "6:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "3h 50m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_hanginggardens_23",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4940",
+        "name": "Express-7689",
         "cost": 72,
-        "departureTime": "1:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "12h 25m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_hanginggardens_23",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-1343",
+        "name": "Express-7453",
         "cost": 126,
-        "departureTime": "1:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "07:30 PM",
+        "duration": "5h 27m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_hanginggardens_23",
@@ -18717,7 +20861,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_hanginggardens_23",
@@ -18725,7 +20873,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_hanginggardens_23",
@@ -18733,7 +20885,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 90,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_hanginggardens_23",
@@ -18741,7 +20897,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 217,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -18906,7 +21066,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 53
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -18930,7 +21096,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 135
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -18954,7 +21127,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 420
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -19143,33 +21324,49 @@ const destinations = [
         "id": "f1-img_hawamahal_24",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-809",
+        "name": "Flight-783",
         "cost": 124,
-        "departureTime": "6:00 AM"
+        "departureTime": "06:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "3h 22m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_hawamahal_24",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-578",
+        "name": "Flight-157",
         "cost": 489,
-        "departureTime": "9:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "4h 14m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_hawamahal_24",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5719",
+        "name": "Express-4626",
         "cost": 49,
-        "departureTime": "6:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "8h 45m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_hawamahal_24",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-9815",
+        "name": "Express-6943",
         "cost": 86,
-        "departureTime": "2:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "06:30 AM (+1)",
+        "duration": "12h 12m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_hawamahal_24",
@@ -19177,7 +21374,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_hawamahal_24",
@@ -19185,7 +21386,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_hawamahal_24",
@@ -19193,7 +21398,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 62,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_hawamahal_24",
@@ -19201,7 +21410,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 148,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -19366,7 +21579,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 53
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -19390,7 +21609,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 105
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -19414,7 +21640,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 605
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -19603,33 +21837,49 @@ const destinations = [
         "id": "f1-img_howrahbridge_25",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-463",
+        "name": "Flight-133",
         "cost": 159,
-        "departureTime": "7:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "09:00 AM",
+        "duration": "2h 10m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_howrahbridge_25",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-317",
+        "name": "Flight-735",
         "cost": 300,
-        "departureTime": "8:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "3h 37m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_howrahbridge_25",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5768",
+        "name": "Express-5440",
         "cost": 63,
-        "departureTime": "2:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "08:30 PM",
+        "duration": "6h 48m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_howrahbridge_25",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-2854",
+        "name": "Express-1204",
         "cost": 111,
-        "departureTime": "4:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "6h 27m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_howrahbridge_25",
@@ -19637,7 +21887,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_howrahbridge_25",
@@ -19645,7 +21899,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_howrahbridge_25",
@@ -19653,7 +21911,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 79,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_howrahbridge_25",
@@ -19661,7 +21923,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 190,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -19826,7 +22092,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 55
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -19850,7 +22122,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 143
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -19874,7 +22153,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 588
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -20063,33 +22350,49 @@ const destinations = [
         "id": "f1-img_islandpalace_26",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-429",
+        "name": "Flight-713",
         "cost": 118,
-        "departureTime": "10:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "2h 50m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_islandpalace_26",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-822",
+        "name": "Flight-159",
         "cost": 401,
-        "departureTime": "8:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "2h 47m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_islandpalace_26",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4894",
+        "name": "Express-7209",
         "cost": 47,
-        "departureTime": "2:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "11h 19m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_islandpalace_26",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-2780",
+        "name": "Express-6465",
         "cost": 82,
-        "departureTime": "2:30 PM"
+        "departureTime": "06:30 PM",
+        "arrivalTime": "02:30 AM (+1)",
+        "duration": "8h 37m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_islandpalace_26",
@@ -20097,7 +22400,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_islandpalace_26",
@@ -20105,7 +22412,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_islandpalace_26",
@@ -20113,7 +22424,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 59,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_islandpalace_26",
@@ -20121,7 +22436,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 141,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -20286,7 +22605,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 43
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -20310,7 +22635,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 123
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -20334,7 +22666,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 485
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -20523,33 +22863,49 @@ const destinations = [
         "id": "f1-img_itmaaduddaulahstomb_27",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-867",
+        "name": "Flight-621",
         "cost": 156,
-        "departureTime": "6:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "6h 43m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_itmaaduddaulahstomb_27",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-716",
+        "name": "Flight-182",
         "cost": 335,
-        "departureTime": "11:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "5h 35m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_itmaaduddaulahstomb_27",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-4870",
+        "name": "Express-3274",
         "cost": 62,
-        "departureTime": "1:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "6h 37m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_itmaaduddaulahstomb_27",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-6704",
+        "name": "Express-5092",
         "cost": 109,
-        "departureTime": "3:30 PM"
+        "departureTime": "04:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "6h 15m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_itmaaduddaulahstomb_27",
@@ -20557,7 +22913,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_itmaaduddaulahstomb_27",
@@ -20565,7 +22925,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_itmaaduddaulahstomb_27",
@@ -20573,7 +22937,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 78,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_itmaaduddaulahstomb_27",
@@ -20581,7 +22949,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 187,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -20746,7 +23118,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 38
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -20770,7 +23148,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 118
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -20794,7 +23179,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 478
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -20983,33 +23376,49 @@ const destinations = [
         "id": "f1-img_jagannathtemple_28",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-810",
+        "name": "Flight-242",
         "cost": 169,
-        "departureTime": "7:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "4h 47m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_jagannathtemple_28",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-666",
+        "name": "Flight-127",
         "cost": 444,
-        "departureTime": "6:00 AM"
+        "departureTime": "07:00 AM",
+        "arrivalTime": "11:00 AM",
+        "duration": "4h 50m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_jagannathtemple_28",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-6129",
+        "name": "Express-3771",
         "cost": 67,
-        "departureTime": "4:30 PM"
+        "departureTime": "02:30 PM",
+        "arrivalTime": "07:30 PM",
+        "duration": "5h 24m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_jagannathtemple_28",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-9104",
+        "name": "Express-4447",
         "cost": 118,
-        "departureTime": "2:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "10:30 PM",
+        "duration": "7h 20m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_jagannathtemple_28",
@@ -21017,7 +23426,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_jagannathtemple_28",
@@ -21025,7 +23438,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_jagannathtemple_28",
@@ -21033,7 +23450,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 84,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_jagannathtemple_28",
@@ -21041,7 +23462,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 202,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -21206,7 +23631,13 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 50
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Shared Lounge",
+          "24/7 Front Desk"
+        ],
+        "distanceToCenter": "3.8 km from City Center"
       },
       {
         "id": "h2",
@@ -21230,7 +23661,14 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 100
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "h3",
@@ -21254,7 +23692,15 @@ const destinations = [
             "type": "Premium Suite (Balcony)",
             "cost": 595
           }
-        ]
+        ],
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "foodOptions": [
@@ -21443,33 +23889,49 @@ const destinations = [
         "id": "f1-img_jahazmahal_29",
         "type": "Economy",
         "agency": "Emirates",
-        "name": "Flight-397",
+        "name": "Flight-339",
         "cost": 173,
-        "departureTime": "10:00 AM"
+        "departureTime": "10:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "5h 21m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-img_jahazmahal_29",
         "type": "Business",
         "agency": "Qatar Airways",
-        "name": "Flight-909",
+        "name": "Flight-224",
         "cost": 342,
-        "departureTime": "7:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "12:00 PM",
+        "duration": "3h 14m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-img_jahazmahal_29",
         "type": "Express Train",
         "agency": "EuroRail",
-        "name": "Express-5535",
+        "name": "Express-7964",
         "cost": 69,
-        "departureTime": "6:30 PM"
+        "departureTime": "03:30 PM",
+        "arrivalTime": "03:30 AM (+1)",
+        "duration": "12h 23m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "t2-img_jahazmahal_29",
         "type": "Premium Sleeper Train",
         "agency": "EuroRail",
-        "name": "Express-4771",
+        "name": "Express-8480",
         "cost": 121,
-        "departureTime": "1:30 PM"
+        "departureTime": "01:30 PM",
+        "arrivalTime": "12:30 AM (+1)",
+        "duration": "11h 25m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-img_jahazmahal_29",
@@ -21477,7 +23939,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-img_jahazmahal_29",
@@ -21485,7 +23951,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-img_jahazmahal_29",
@@ -21493,7 +23963,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 86,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       },
       {
         "id": "c2-img_jahazmahal_29",
@@ -21501,7 +23975,11 @@ const destinations = [
         "agency": "Zoomcar / Rental",
         "name": "Private Chauffeur",
         "cost": 207,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "Trunk Capacity"
       }
     ],
     "restaurants": [
@@ -21655,7 +24133,14 @@ const destinations = [
             "cost": 4500
           }
         ],
-        "name": "Sea Deck / Green Imperial / Blue Lagoon"
+        "name": "Sea Deck / Green Imperial / Blue Lagoon",
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "ah2",
@@ -21668,7 +24153,14 @@ const destinations = [
             "cost": 5000
           }
         ],
-        "name": "Bay Leaf Inn / ILE Bay / TSG Aura"
+        "name": "Bay Leaf Inn / ILE Bay / TSG Aura",
+        "amenities": [
+          "Free WiFi",
+          "Restaurant",
+          "Air Conditioning",
+          "Breakfast Included"
+        ],
+        "distanceToCenter": "2.2 km from City Center"
       },
       {
         "id": "ah3",
@@ -21681,7 +24173,15 @@ const destinations = [
             "cost": 6000
           }
         ],
-        "name": "Mansha Residency / Sea Hill / Pearl Park"
+        "name": "Mansha Residency / Sea Hill / Pearl Park",
+        "amenities": [
+          "Free WiFi",
+          "Swimming Pool",
+          "Spa",
+          "Breakfast Included",
+          "Gym"
+        ],
+        "distanceToCenter": "1.5 km from City Center"
       }
     ],
     "detailedTransport": [
@@ -21689,25 +24189,37 @@ const destinations = [
         "id": "f1-andaman",
         "type": "Economy (To Port Blair)",
         "agency": "Emirates",
-        "name": "Flight-559",
+        "name": "Flight-665",
         "cost": 8000,
-        "departureTime": "11:00 AM"
+        "departureTime": "08:00 AM",
+        "arrivalTime": "02:00 PM",
+        "duration": "6h 25m",
+        "stops": "Non-stop",
+        "baggage": "15kg Check-in, 7kg Cabin"
       },
       {
         "id": "f2-andaman",
         "type": "Business (To Port Blair)",
         "agency": "Qatar Airways",
-        "name": "Flight-582",
+        "name": "Flight-773",
         "cost": 18000,
-        "departureTime": "8:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "01:00 PM",
+        "duration": "4h 29m",
+        "stops": "1 Stop",
+        "baggage": "30kg Check-in, 7kg Cabin"
       },
       {
         "id": "t1-andaman",
         "type": "Standard Train",
         "agency": "National Rail",
-        "name": "Exp-815",
+        "name": "Exp-193",
         "cost": 80,
-        "departureTime": "02:00 PM"
+        "departureTime": "02:00 PM",
+        "arrivalTime": "10:00 PM",
+        "duration": "8h 00m",
+        "stops": "Direct",
+        "baggage": "Unlimited / Standard"
       },
       {
         "id": "b1-andaman",
@@ -21715,7 +24227,11 @@ const destinations = [
         "agency": "City Connect Travels",
         "name": "Night Glide",
         "cost": 50,
-        "departureTime": "10:00 PM"
+        "departureTime": "10:00 PM",
+        "arrivalTime": "07:00 AM (+1)",
+        "duration": "9h 30m",
+        "stops": "1 Stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "b2-andaman",
@@ -21723,7 +24239,11 @@ const destinations = [
         "agency": "Regional Transit",
         "name": "Day Cruiser",
         "cost": 25,
-        "departureTime": "09:00 AM"
+        "departureTime": "09:00 AM",
+        "arrivalTime": "03:00 PM",
+        "duration": "6h 00m",
+        "stops": "Multi-stop",
+        "baggage": "15kg Hand luggage"
       },
       {
         "id": "c1-andaman",
@@ -21731,7 +24251,11 @@ const destinations = [
         "agency": "Local Taxi",
         "name": "City Cab",
         "cost": 100,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "2 Medium Bags"
       },
       {
         "id": "c2-andaman",
@@ -21739,7 +24263,11 @@ const destinations = [
         "agency": "Premium Rentals",
         "name": "Family Tourer",
         "cost": 180,
-        "departureTime": "Flexible"
+        "departureTime": "Flexible",
+        "arrivalTime": "Flexible",
+        "duration": "Point-to-Point",
+        "stops": "Direct",
+        "baggage": "4 Medium Bags"
       }
     ],
     "activities": [

@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { MapPin, Wallet, Calendar, Plane, Train, Bus, Car, Building, Coffee, Map, Clock, Search, CheckCircle, ArrowRight, ArrowLeft, Activity, Zap } from 'lucide-react';
+import { MapPin, Wallet, Calendar, Plane, Train, Bus, Car, Building, Coffee, Map, Clock, Search, CheckCircle, ArrowRight, ArrowLeft, Activity, Zap, Briefcase, ChevronRight, Users, Wifi, Waves } from 'lucide-react';
 
 export const TripBuilder = () => {
   const { user } = useContext(AuthContext);
@@ -17,7 +17,11 @@ export const TripBuilder = () => {
   const [boardingPoint, setBoardingPoint] = useState('');
   const [days, setDays] = useState(3);
   const [startDate, setStartDate] = useState(new Date().toISOString().split('T')[0]);
-  const [travelers, setTravelers] = useState(2);
+  const [returnDate, setReturnDate] = useState(() => {
+    let d = new Date(); d.setDate(d.getDate() + 3); return d.toISOString().split('T')[0];
+  });
+  const [adults, setAdults] = useState(2);
+  const [children, setChildren] = useState(0);
   const [travelStyle, setTravelStyle] = useState('mid'); // budget, mid, luxury
   const [useBuffer, setUseBuffer] = useState(true); // 15% safety buffer
   const [destDetails, setDestDetails] = useState(null);
@@ -219,14 +223,22 @@ export const TripBuilder = () => {
 
   const calculateTotal = () => {
     let total = 0;
-    if (selectedTransport) total += (selectedTransport.cost * travelers);
-    if (selectedRoom) total += (selectedRoom.cost * days * Math.ceil(travelers / 2)); // Assume 2 per room
+    const totalTravelers = adults + children;
+    if (selectedTransport) total += (selectedTransport.cost * totalTravelers);
+    
+    // Calculate days from dates
+    const start = new Date(startDate);
+    const end = new Date(returnDate);
+    let calculatedDays = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+    if (calculatedDays <= 0) calculatedDays = 1;
+
+    if (selectedRoom) total += (selectedRoom.cost * calculatedDays * Math.ceil(totalTravelers / 2)); // Assume 2 per room
     
     const activitiesCost = selectedActivities.reduce((sum, a) => sum + a.cost, 0);
-    total += (activitiesCost * travelers);
+    total += (activitiesCost * totalTravelers);
     
-    const foodCost = selectedRestaurants.reduce((sum, r) => sum + (r.averageCost * days), 0);
-    total += (foodCost * travelers);
+    const foodCost = selectedRestaurants.reduce((sum, r) => sum + (r.averageCost * calculatedDays), 0);
+    total += (foodCost * totalTravelers);
 
     if (useBuffer) {
       total += (total * 0.15); // 15% Emergency Buffer
@@ -236,10 +248,17 @@ export const TripBuilder = () => {
   };
 
   const proceedToCheckout = () => {
+    const start = new Date(startDate);
+    const end = new Date(returnDate);
+    let calculatedDays = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+    if (calculatedDays <= 0) calculatedDays = 1;
+
     const itinerary = {
       totalCost: calculateTotal(),
       currencySymbol: destDetails.name.includes('India') || destDetails.name.includes('Andaman') ? '₹' : '$',
       boardingPoint: boardingPoint || 'Not specified',
+      travelers: { adults, children, total: adults + children },
+      dates: { start: startDate, end: returnDate, days: calculatedDays },
       transport: selectedTransport,
       hotel: selectedHotel,
       room: selectedRoom,
@@ -247,7 +266,7 @@ export const TripBuilder = () => {
       restaurants: selectedRestaurants,
       cancellationPolicy: destDetails.cancellationPolicy
     };
-    navigate('/checkout', { state: { itinerary, destination: destDetails, days } });
+    navigate('/checkout', { state: { itinerary, destination: destDetails, days: calculatedDays } });
   };
 
   const getVibeStyles = () => {
@@ -307,23 +326,37 @@ export const TripBuilder = () => {
                   {destinations.map(d => <option key={d.id} value={d.id}>{d.name}</option>)}
                 </select>
               </div>
-              <div className="form-group">
-                <label>Where are you traveling from? (Boarding Point)</label>
-                <input type="text" className="input-field" placeholder="e.g. New Delhi, New York" value={boardingPoint} onChange={(e) => setBoardingPoint(e.target.value)} />
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
+                  <label>Departure Date</label>
+                  <input type="date" className="input-field" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+                </div>
+                <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
+                  <label>Return Date</label>
+                  <input type="date" className="input-field" value={returnDate} onChange={(e) => setReturnDate(e.target.value)} />
+                </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
-                  <label>Travelers</label>
-                  <input type="number" className="input-field" min="1" value={travelers} onChange={(e) => setTravelers(parseInt(e.target.value))} />
+                  <label><Users size={16} style={{display:'inline', marginRight:'4px'}}/> Adults</label>
+                  <input type="number" className="input-field" min="1" value={adults} onChange={(e) => setAdults(parseInt(e.target.value))} />
                 </div>
                 <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
-                  <label>Travel Style</label>
+                  <label>Children</label>
+                  <input type="number" className="input-field" min="0" value={children} onChange={(e) => setChildren(parseInt(e.target.value))} />
+                </div>
+                <div className="form-group" style={{ flex: 1, minWidth: '150px' }}>
+                  <label>Cabin / Travel Style</label>
                   <select className="input-field" value={travelStyle} onChange={(e) => setTravelStyle(e.target.value)}>
-                    <option value="budget">Budget (Economy)</option>
-                    <option value="mid">Mid-Range (Comfort)</option>
-                    <option value="luxury">Luxury (Premium)</option>
+                    <option value="budget">Economy / Budget</option>
+                    <option value="mid">Premium / Mid-Range</option>
+                    <option value="luxury">Business / Luxury</option>
                   </select>
                 </div>
+              </div>
+              <div className="form-group">
+                <label>Where are you traveling from? (Boarding Point)</label>
+                <input type="text" className="input-field" placeholder="e.g. New Delhi, New York" value={boardingPoint} onChange={(e) => setBoardingPoint(e.target.value)} />
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(16, 185, 129, 0.1)', padding: '1rem', borderRadius: '8px', border: '1px solid #10b981' }}>
                 <input type="checkbox" checked={useBuffer} onChange={(e) => setUseBuffer(e.target.checked)} style={{ width: '20px', height: '20px' }} />
@@ -349,19 +382,65 @@ export const TripBuilder = () => {
               ))}
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-              {(destDetails.detailedTransport || []).filter(tr => {
+              {destDetails.detailedTransport && destDetails.detailedTransport.filter(tr => {
                 const prefix = transportType[0].toLowerCase();
                 return tr.id.startsWith(prefix);
               }).map(tr => (
-                <div key={tr.id} className={`glass card-hover ${selectedTransport?.id === tr.id ? 'active-card' : ''}`} style={{ padding: '1.5rem', cursor: 'pointer', border: selectedTransport?.id === tr.id ? '2px solid var(--primary)' : '1px solid var(--border)' }} onClick={() => setSelectedTransport(tr)}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                    <div style={{ fontWeight: 'bold' }}>{tr.agency}</div>
-                    <div style={{ color: 'var(--primary)', fontWeight: 'bold' }}>{destDetails.name.includes('India') ? '₹' : '$'}{tr.cost}</div>
+                <div 
+                  key={tr.id} 
+                  className={`glass ${selectedTransport?.id === tr.id ? 'selected' : ''}`}
+                  style={{ 
+                    padding: '1.5rem', 
+                    cursor: 'pointer', 
+                    border: selectedTransport?.id === tr.id ? '2px solid var(--primary)' : '2px solid transparent',
+                    display: 'flex', flexDirection: 'column', gap: '1rem',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onClick={() => setSelectedTransport(tr)}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <div style={{ background: 'var(--bg-card)', padding: '0.5rem', borderRadius: '8px' }}>
+                        {tr.id.startsWith('f') ? <Plane size={24} color="var(--primary)" /> : tr.id.startsWith('t') ? <Train size={24} color="var(--primary)" /> : tr.id.startsWith('b') ? <Bus size={24} color="var(--primary)" /> : <Car size={24} color="var(--primary)" />}
+                      </div>
+                      <div>
+                        <div style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{tr.agency}</div>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{tr.name} &bull; {tr.type}</div>
+                      </div>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{ color: 'var(--text-main)', fontSize: '1.25rem', fontWeight: '900' }}>{destDetails.name.includes('India') ? '₹' : '$'}{tr.cost}</div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>per traveler</div>
+                    </div>
                   </div>
-                  <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                    {boardingPoint ? `${boardingPoint} ➔ ${destDetails.name}` : tr.name}
+
+                  {/* Industry Standard Route Display */}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--bg-main)', padding: '1rem', borderRadius: '8px', marginTop: '0.5rem' }}>
+                    <div style={{ textAlign: 'center' }}>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{tr.departureTime}</div>
+                      <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{boardingPoint ? boardingPoint.substring(0, 3).toUpperCase() : 'ORG'}</div>
+                    </div>
+                    
+                    <div style={{ flex: 1, padding: '0 1rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '0.25rem' }}>{tr.duration || '2h 30m'}</div>
+                      <div style={{ width: '100%', height: '2px', background: '#d1d5db', position: 'relative' }}>
+                        <div style={{ position: 'absolute', top: '-4px', left: '50%', transform: 'translateX(-50%)', width: '10px', height: '10px', borderRadius: '50%', background: '#d1d5db', border: '2px solid white' }}></div>
+                      </div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--primary)', marginTop: '0.25rem', fontWeight: '500' }}>{tr.stops || 'Non-stop'}</div>
+                    </div>
+
+                    <div style={{ textAlign: 'center' }}>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{tr.arrivalTime || 'TBD'}</div>
+                      <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{destDetails.name.substring(0, 3).toUpperCase()}</div>
+                    </div>
                   </div>
-                  <div style={{ fontSize: '0.8rem', marginTop: '0.5rem' }}><Clock size={14} style={{ display: 'inline', marginRight: '4px' }}/> {tr.departureTime}</div>
+
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid var(--border)', paddingTop: '1rem', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <Briefcase size={14} color="var(--primary)" /> {tr.baggage || '15kg Check-in, 7kg Cabin'}
+                    </div>
+                    <div style={{ color: '#10b981', fontWeight: '600' }}>Partially Refundable</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -377,23 +456,47 @@ export const TripBuilder = () => {
           <div className="fade-in">
             <h2 style={{ marginBottom: '2rem' }}>{t.step3}</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
-              {destDetails.hotels.map(hotel => (
-                <div key={hotel.id} className="glass" style={{ padding: '1.5rem', border: selectedHotel?.id === hotel.id ? '2px solid var(--primary)' : '1px solid var(--border)' }}>
-                  <h3 style={{ marginBottom: '0.5rem' }}>{hotel.name}</h3>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                    <span style={{ background: '#f59e0b', color: 'white', padding: '0.1rem 0.4rem', borderRadius: '4px', fontSize: '0.8rem' }}>⭐ {hotel.rating}</span>
-                    <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>{hotel.type}</span>
+              {destDetails.hotels.map(h => (
+                <div key={h.id} className={`glass ${selectedHotel?.id === h.id ? 'selected' : ''}`} style={{ border: selectedHotel?.id === h.id ? '2px solid var(--primary)' : '2px solid transparent', padding: '1.5rem', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: '1rem', transition: 'all 0.3s ease' }} onClick={() => { setSelectedHotel(h); setSelectedRoom(h.roomOptions[0]); }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                    <div>
+                      <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '0.25rem' }}>{h.name || h.type}</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                        <MapPin size={14} /> {h.distanceToCenter || '1.5 km from City Center'}
+                      </div>
+                    </div>
+                    <div style={{ background: '#2563eb', color: 'white', padding: '0.25rem 0.5rem', borderRadius: '4px', fontWeight: 'bold', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                      {h.rating} <span style={{ fontSize: '0.7rem', fontWeight: 'normal' }}>/5</span>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {hotel.roomOptions.map((room, idx) => (
-                      <div key={idx} className={`glass card-hover ${selectedRoom?.type === room.type && selectedHotel?.id === hotel.id ? 'active-card' : ''}`} style={{ padding: '1rem', cursor: 'pointer', border: selectedRoom?.type === room.type && selectedHotel?.id === hotel.id ? '2px solid var(--primary)' : '1px solid var(--border)' }} onClick={() => { setSelectedHotel(hotel); setSelectedRoom(room); }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ fontWeight: 600 }}>{room.type}</span>
-                          <span style={{ color: 'var(--primary)', fontWeight: 'bold' }}>{destDetails.name.includes('India') ? '₹' : '$'}{room.cost}/night</span>
-                        </div>
+                  
+                  {/* Amenities */}
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                    {(h.amenities || ["Free WiFi", "AC", "Breakfast"]).map((amenity, idx) => (
+                      <div key={idx} style={{ fontSize: '0.75rem', background: 'var(--bg-main)', padding: '0.25rem 0.5rem', borderRadius: '4px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                        {amenity.includes('WiFi') && <Wifi size={12} />}
+                        {amenity.includes('Pool') && <Waves size={12} />}
+                        {amenity}
                       </div>
                     ))}
                   </div>
+
+                  {selectedHotel?.id === h.id && (
+                    <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border)' }}>
+                      <h4 style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Select Room Type</h4>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                        {h.roomOptions.map(r => (
+                          <div key={r.type} onClick={(e) => { e.stopPropagation(); setSelectedRoom(r); }} style={{ padding: '1rem', borderRadius: '8px', border: selectedRoom?.type === r.type ? '2px solid var(--primary)' : '1px solid var(--border)', background: selectedRoom?.type === r.type ? 'rgba(79, 70, 229, 0.05)' : 'transparent', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                              <div style={{ fontWeight: '600', fontSize: '0.95rem' }}>{r.type}</div>
+                              <div style={{ fontSize: '0.75rem', color: '#10b981', marginTop: '0.25rem' }}>Free Cancellation before {(startDate ? new Date(new Date(startDate).getTime() - 86400000*2).toLocaleDateString() : 'travel')}</div>
+                            </div>
+                            <div style={{ fontWeight: 'bold', color: 'var(--primary)', fontSize: '1.1rem' }}>{destDetails.name.includes('India') ? '₹' : '$'}{r.cost}<span style={{fontSize:'0.7rem', color:'var(--text-muted)', fontWeight:'normal'}}>/night</span></div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
