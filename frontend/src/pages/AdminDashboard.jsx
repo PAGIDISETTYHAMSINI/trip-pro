@@ -44,8 +44,8 @@ export const AdminDashboard = () => {
           <p className="text-muted">Total Data Visibility & History</p>
         </div>
         <div className="col-lg-6 text-lg-end d-flex gap-2 justify-content-lg-end">
-            <a href="https://console.neon.tech/app/projects/ep-purple-art-aqai8m26/tables" target="_blank" rel="noreferrer" className="btn btn-dark btn-sm d-flex align-items-center gap-2">
-                <ShieldCheck size={16}/> Neon Console
+            <a href="https://console.neon.tech/app/projects" target="_blank" rel="noreferrer" className="btn btn-dark btn-sm d-flex align-items-center gap-2 px-3">
+                <ShieldCheck size={16}/> Go to Neon Console
             </a>
             <div className="glass px-3 py-2 d-flex align-items-center gap-2">
                 <Users size={18} color="var(--primary)"/> <span className="fw-bold">{new Set(bookings.map(b => b.userId)).size}</span> <span className="text-muted d-none d-md-inline">Users</span>
@@ -54,6 +54,17 @@ export const AdminDashboard = () => {
                 <CreditCard size={18} color="#10b981"/> <span className="fw-bold">{bookings.length}</span> <span className="text-muted d-none d-md-inline">Bookings</span>
             </div>
         </div>
+      </div>
+
+      {/* Helpful Instructions */}
+      <div className="alert alert-info border-0 rounded-4 p-4 mb-4 shadow-sm">
+        <h5 className="fw-bold"><Database size={20} className="me-2"/> How to see your raw data in Neon:</h5>
+        <ol className="mb-0 mt-2">
+          <li>Click the <strong>"Go to Neon Console"</strong> button above.</li>
+          <li>Select your project <strong>"ep-purple-art..."</strong> from the dashboard.</li>
+          <li>On the left sidebar, click <strong>"Tables"</strong>.</li>
+          <li>You will see <strong>"Users"</strong> and <strong>"Bookings"</strong> right there!</li>
+        </ol>
       </div>
 
       <div className="glass shadow-sm overflow-hidden mb-4">
