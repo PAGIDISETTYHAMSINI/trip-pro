@@ -1,57 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --primary: #2563eb; /* Royal Blue */
-  --primary-dark: #1d4ed8;
-  --accent: #f59e0b; /* Amber */
-  --bg-main: #f8fafc; /* Light Greyish White */
-  --bg-card: #ffffff;
-  --text-main: #0f172a; /* Slate 900 */
-  --text-muted: #64748b; /* Slate 500 */
-  --border: #e2e8f0;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --transition: all 0.3s ease;
+  /* Brand Colors - Premium Startup Palette */
+  --primary: #2563eb;       /* Royal Blue */
+  --primary-soft: #eff6ff;
+  --secondary: #7c3aed;     /* Violet */
+  --accent: #06b6d4;        /* Cyan */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  
+  /* Neutral Palette */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  
+  /* Layout Variables */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Global Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  background-color: var(--slate-50);
+  color: var(--slate-900);
   overflow-x: hidden;
-  line-height: 1.6;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Fix "Font can't be seen" - Use high contrast light theme */
-.container-fluid, .container {
-  background-color: transparent;
+/* Typography Mastery */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
 }
 
-/* Premium Card (No Blur to eliminate LAG) */
-.glass {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
+.display-1 { font-size: 5rem; font-weight: 900; }
+.display-2 { font-size: 4rem; font-weight: 900; }
+.display-3 { font-size: 3rem; font-weight: 800; }
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium Components */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
   transition: var(--transition);
 }
 
-.glass-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2xl);
+  border-color: rgba(37, 99, 235, 0.2);
 }
 
-/* Unique Buttons */
-.btn-primary-custom {
-  background-color: var(--primary);
+/* Performance Optimized Animations (No Lag) */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Startup Buttons */
+.btn-startup {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white !important;
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 1rem 2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -61,108 +114,94 @@ body {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
 }
 
-.btn-primary-custom:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+.btn-startup:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23);
+  filter: brightness(1.1);
 }
 
-.btn-next-step {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 1.25rem;
-  font-weight: 800;
-  font-size: 1.1rem;
-  transition: var(--transition);
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.btn-next-step:hover {
-  background-color: var(--primary-dark);
-}
-
-/* Form Styling - FIX SCREENSHOT ISSUE */
-.form-control, .form-select {
-  background-color: #fff !important;
-  border: 1.5px solid var(--border) !important;
-  color: var(--text-main) !important;
-  border-radius: 12px !important;
-  padding: 0.85rem 1.25rem !important;
-  font-size: 1rem !important;
-}
-
-.form-control:focus, .form-select:focus {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1) !important;
-  outline: none !important;
-}
-
-.form-label {
-  color: var(--text-muted);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
-
-/* Typography */
-.fw-black { font-weight: 900; }
-.text-primary { color: var(--primary) !important; }
-.text-warning { color: var(--accent) !important; }
-
-/* Grid Utilities */
-.asymmetric-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-/* Ticket Style - Professional */
-.ticket {
-  border-left: 6px solid var(--primary);
-  background-color: #fff;
-  border-radius: 12px;
-}
-
-/* Header */
-header {
+.btn-secondary-startup {
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
+  color: var(--slate-900) !important;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-secondary-startup:hover {
+  background: var(--slate-50);
+  border-color: var(--primary);
+}
+
+/* Form 2.0 - Airbnb Style */
+.form-startup {
+  background: white;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.form-startup:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-soft);
+}
+
+/* Grid Layouts */
+.grid-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-stack { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid-stack { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Skeleton Loading (Fixes Perceived Lag) */
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Scroll Progress */
+.scroll-progress {
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  height: 4px;
+  background: var(--primary);
+  z-index: 9999;
 }
 
-.logo {
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: var(--primary) !important;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+/* Mobile Alignment Mastery */
+@media (max-width: 640px) {
+  .display-2 { font-size: 2.75rem !important; }
+  .display-3 { font-size: 2.25rem !important; }
+  .p-mobile { padding: 1.25rem !important; }
+  .m-mobile { margin: 1.25rem !important; }
 }
 
-/* Mobile Alignment */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-  .display-2 { font-size: 2.5rem !important; }
-  .display-4 { font-size: 2rem !important; }
-  .glass { padding: 1.25rem !important; }
-}
-
-/* Remove Lag animations */
-.fade-in {
-  animation: none; /* Removed heavy animation to stop lagging */
-}
-.bg-shapes {
-  display: none; /* Removed heavy background shapes to stop lagging */
-}
+/* Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
