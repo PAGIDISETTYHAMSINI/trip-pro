@@ -147,7 +147,7 @@ export const Dashboard = () => {
             </div>
 
             {/* Budget Insights */}
-            <div className="card" style={{ padding: '1.5rem' }}>
+            <div className="card" style={{ padding: '1.5rem', marginBottom: '1.25rem' }}>
               <h5 style={{ fontWeight: 800, marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--slate-500)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Budget Efficiency</h5>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>Score</span>
@@ -160,6 +160,22 @@ export const Dashboard = () => {
                 AI-optimized routes saved you <strong>₹12,400</strong> this year.
               </p>
             </div>
+
+            {/* Premium Upgrade */}
+            {!user?.isPremium && (
+              <div className="glass-card" style={{ padding: '1.5rem', border: '1px solid var(--secondary)', background: 'var(--slate-50)' }}>
+                <div className="badge badge-primary" style={{ background: 'var(--secondary)', color: '#fff', marginBottom: '0.75rem' }}>LIMITED OFFER</div>
+                <h4 style={{ fontWeight: 900, fontSize: '1.25rem', marginBottom: '0.5rem' }}>Upgrade to <span style={{ color: 'var(--secondary)' }}>PRO</span></h4>
+                <ul style={{ padding: 0, listStyle: 'none', fontSize: '0.85rem', color: 'var(--slate-600)', marginBottom: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>💎 0% Booking Fees</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>💎 Priority AI Planner</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>💎 Exclusive Hidden Gems</li>
+                </ul>
+                <button className="btn-startup" style={{ background: 'var(--secondary)', width: '100%', justifyContent: 'center' }}>
+                  Upgrade Now
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

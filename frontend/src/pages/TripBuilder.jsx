@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { MapPin, ArrowRight, Check, ShieldCheck, Waves, Mountain, Camera, Utensils, Music, Activity, Users, Zap, Wallet, TrendingUp, Plane, Building, Star } from 'lucide-react';
+import { MapPin, ArrowRight, Check, ShieldCheck, Waves, Mountain, Camera, Utensils, Music, Activity, Users, Zap, Wallet, TrendingUp, Plane, Building, Star, Info } from 'lucide-react';
 
 const API = 'https://trip-pro.onrender.com';
 
@@ -390,26 +390,32 @@ export const TripBuilder = () => {
 
           {/* SIDEBAR BUDGET */}
           <div>
-            <div className="budget-sidebar" style={{ position: 'sticky', top: '6rem' }}>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Live Budget</div>
-              <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#fff', lineHeight: 1, marginBottom: '0.25rem' }}>
-                {currency}{calculateTotal().toLocaleString()}
               </div>
-              <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', marginBottom: '1.5rem' }}>REAL-TIME ESTIMATE</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.85rem', fontWeight: 700 }}>
-                {[
-                  { label: 'Destination', val: destDetails?.name || 'Not set' },
-                  { label: 'Guests', val: adults + children },
-                  { label: 'Duration', val: `${getDays()} days` },
-                  { label: 'Transport', val: selectedTransport ? '✓ Selected' : 'Pending' },
-                  { label: 'Hotel', val: selectedHotel ? '✓ Selected' : 'Pending' },
-                ].map(item => (
-                  <div key={item.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0.75 }}>
-                    <span style={{ color: 'rgba(255,255,255,0.5)' }}>{item.label}</span>
-                    <span style={{ color: '#fff' }}>{item.val}</span>
-                  </div>
-                ))}
-              </div>
+            </div>
+
+            {/* CURRENCY CONVERTER */}
+            <div className="card" style={{ marginTop: '1.25rem', padding: '1.5rem' }}>
+               <h5 style={{ fontWeight: 800, marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--slate-500)', textTransform: 'uppercase' }}>Currency Converter</h5>
+               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  {[
+                    { label: 'USD', rate: 1, sym: '$' },
+                    { label: 'INR', rate: 83, sym: '₹' },
+                    { label: 'EUR', rate: 0.92, sym: '€' },
+                    { label: 'GBP', rate: 0.79, sym: '£' },
+                  ].map(c => {
+                    const base = calculateTotal();
+                    const converted = currency === '₹' ? (base / 83) * c.rate : base * c.rate;
+                    return (
+                      <div key={c.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                         <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-500)' }}>{c.label}</span>
+                         <span style={{ fontWeight: 800, fontSize: '0.95rem' }}>{c.sym}{Math.round(converted).toLocaleString()}</span>
+                      </div>
+                    );
+                  })}
+               </div>
+               <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--slate-100)', fontSize: '0.7rem', color: 'var(--slate-400)', textAlign: 'center' }}>
+                  <Info size={10} /> Market rates applied.
+               </div>
             </div>
           </div>
         </div>

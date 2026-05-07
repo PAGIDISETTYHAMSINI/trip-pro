@@ -98,25 +98,46 @@ const sendScheduleEmail = async (userEmail, destinationName, schedule, totalCost
       },
     });
 
-    let scheduleHtml = `<h2>Your Detailed Trip Schedule to ${destinationName}</h2>
-    <p>Total Cost: ${currencySymbol}${totalCost.toLocaleString()}</p>
-    <hr/>`;
-
-    schedule.forEach(d => {
-      scheduleHtml += `
-        <h3>Day ${d.day}</h3>
-        <ul>
-          <li><strong>Morning:</strong> ${d.morning}</li>
-          <li><strong>Afternoon:</strong> ${d.afternoon}</li>
-          <li><strong>Evening:</strong> ${d.evening}</li>
-        </ul>
-      `;
-    });
+    let scheduleHtml = `
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: #ffffff;">
+        <div style="background: linear-gradient(135deg, #2563eb, #7c3aed); padding: 40px 20px; text-align: center; color: #ffffff;">
+          <h1 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -1px;">Trip<span style="color: #60a5fa;">Pro</span></h1>
+          <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9;">Your India adventure is confirmed!</p>
+        </div>
+        <div style="padding: 30px;">
+          <h2 style="color: #0f172a; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Destination: ${destinationName}</h2>
+          <div style="background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+            <p style="margin: 0; color: #64748b; font-size: 14px; text-transform: uppercase; font-weight: 700;">Total Package Value</p>
+            <p style="margin: 5px 0 0; color: #2563eb; font-size: 32px; font-weight: 900;">${currencySymbol}${totalCost.toLocaleString()}</p>
+          </div>
+          
+          <h3 style="color: #0f172a; font-size: 18px; font-weight: 800; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 20px;">Your Day-by-Day Journey</h3>
+          ${schedule.map(d => `
+            <div style="margin-bottom: 25px;">
+              <p style="color: #2563eb; font-weight: 800; margin: 0 0 10px;">Day ${d.day}</p>
+              <ul style="margin: 0; padding-left: 20px; color: #475569; line-height: 1.6; font-size: 15px;">
+                <li><strong>Morning:</strong> ${d.morning}</li>
+                <li><strong>Afternoon:</strong> ${d.afternoon}</li>
+                <li><strong>Evening:</strong> ${d.evening}</li>
+              </ul>
+            </div>
+          `).join('')}
+          
+          <div style="margin-top: 40px; text-align: center;">
+            <a href="https://trip-pro-frontend.onrender.com/dashboard" style="display: inline-block; background: #2563eb; color: #ffffff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px;">View Full Itinerary</a>
+          </div>
+        </div>
+        <div style="background: #f1f5f9; padding: 20px; text-align: center; font-size: 12px; color: #94a3b8;">
+          <p>© 2026 Trip Pro AI. All rights reserved.</p>
+          <p>Securely powered by Neon PostgreSQL Engine</p>
+        </div>
+      </div>
+    `;
 
     const info = await transporter.sendMail({
-      from: '"Budget Trip Planner" <no-reply@budgetplanner.com>',
+      from: '"Trip Pro AI" <no-reply@trippro.com>',
       to: userEmail,
-      subject: `Your Complete Itinerary for ${destinationName}`,
+      subject: `🎒 Your Epic Trip to ${destinationName} is Ready!`,
       html: scheduleHtml,
     });
 
