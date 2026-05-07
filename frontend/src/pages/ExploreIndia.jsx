@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { MapPin, ArrowRight, Zap, Globe, Star, Heart, Compass, Waves, Mountain, Camera, Utensils, Music, Activity, Users, Calendar, TrendingUp, ShieldCheck, Sun, Info, Navigation, Fuel, Coffee, Camera as PhotoIcon } from 'lucide-react';
+import { MapPin, ArrowRight, Zap, Globe, Star, Heart, Compass, Waves, Mountain, Camera, Utensils, Music, Activity, Users, Calendar, TrendingUp, ShieldCheck, Sun, Info, Navigation, Fuel, Coffee, Camera as PhotoIcon, Sparkles } from 'lucide-react';
 
 const categories = [
   { id: 'all', label: 'All', icon: <Globe size={18} /> },
@@ -99,7 +99,7 @@ export const ExploreIndia = () => {
             <button className="btn-startup" style={{ padding: '0.75rem 2rem' }}>Explore AI Picks</button>
           </div>
           
-          <div style={{ marginTop: '3rem', display: 'flex', gap: '2rem', justifyContent: 'center' }}>
+          <div style={{ marginTop: '3rem', display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
              {[
                { label: 'Trending', val: 'Ladakh' },
                { label: 'Hot Pick', val: 'Varkala' },
@@ -110,6 +110,17 @@ export const ExploreIndia = () => {
                  <span style={{ fontSize: '0.85rem', fontWeight: 700 }}>{t.label}: <span style={{ color: 'var(--primary)' }}>{t.val}</span></span>
                </div>
              ))}
+             <button 
+               onClick={() => {
+                 const randomDest = destinations[Math.floor(Math.random() * destinations.length)];
+                 alert(`🔮 Mystery Unveiled: We're taking you to ${randomDest.name}!`);
+                 navigate('/build-trip', { state: { destination: randomDest.name } });
+               }}
+               style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--secondary)', color: '#fff', padding: '0.5rem 1.5rem', borderRadius: 'var(--radius-full)', border: 'none', fontWeight: 800, cursor: 'pointer', transition: 'var(--transition)' }}
+               className="pulse"
+             >
+               <Sparkles size={16} fill="#fff" /> Surprise Me
+             </button>
           </div>
         </div>
       </section>
