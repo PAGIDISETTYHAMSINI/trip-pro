@@ -16,6 +16,7 @@ const TripSchedule = lazy(() => import('./pages/TripSchedule').then(m => ({ defa
 const TripBuilder = lazy(() => import('./pages/TripBuilder').then(m => ({ default: m.TripBuilder })));
 const ExpenseTracker = lazy(() => import('./pages/ExpenseTracker').then(m => ({ default: m.ExpenseTracker })));
 const AdminDashboard = lazy(() => import('./pages/AdminDashboard').then(m => ({ default: m.AdminDashboard })));
+const ExploreIndia = lazy(() => import('./pages/ExploreIndia').then(m => ({ default: m.ExploreIndia })));
 
 /* Page-level error boundary */
 import { Component } from 'react';
@@ -60,6 +61,10 @@ function App() {
             <span style={{ color: 'var(--slate-900)' }}>Trip<span style={{ color: 'var(--primary)' }}>Pro</span></span>
           </Link>
 
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+            <Link to="/explore-india" className="nav-link" style={{ fontWeight: 700, color: 'var(--primary)' }}>Explore India</Link>
+          </div>
+
           <nav style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
             {user ? (
               <>
@@ -98,6 +103,7 @@ function App() {
               <Route path="/dashboard/schedule/:id" element={<TripSchedule />} />
               <Route path="/dashboard/expenses" element={<ExpenseTracker />} />
               <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/explore-india" element={<ExploreIndia />} />
             </Routes>
           </Suspense>
         </ErrorBoundary>

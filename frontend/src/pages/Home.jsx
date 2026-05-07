@@ -189,6 +189,24 @@ export const Home = () => {
         </section>
       )}
 
+      {/* EXPLORE INDIA CTA */}
+      <section style={{ background: 'var(--primary-soft)', padding: '5rem 0' }}>
+        <div className="container">
+          <div className="glass-card" style={{ padding: '3rem', border: 'none', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', color: '#fff', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: '-10%', right: '-5%', opacity: 0.1 }}>
+              <Globe size={300} />
+            </div>
+            <h2 style={{ fontWeight: 900, fontSize: '2.5rem', marginBottom: '1rem', position: 'relative' }}>Discover India's Treasures</h2>
+            <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '2.5rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
+              From the snow-capped Himalayas to the sun-kissed beaches of Goa, explore the diverse beauty of India with our dedicated discovery system.
+            </p>
+            <Link to="/explore-india" className="btn-startup" style={{ background: '#fff', color: 'var(--primary)', padding: '1rem 2.5rem', fontSize: '1.1rem', position: 'relative' }}>
+              Explore Incredible India <ArrowRight size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer style={{ background: 'var(--slate-900)', color: 'var(--slate-400)', textAlign: 'center', padding: '2rem', marginTop: '4rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>

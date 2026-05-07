@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import { MapPin, ArrowRight, Check, ShieldCheck, Waves, Mountain, Camera, Utensils, Music, Activity, Users, Zap, Wallet, TrendingUp, Plane, Building, Star } from 'lucide-react';
@@ -33,12 +33,22 @@ export const TripBuilder = () => {
   const [selectedActivities, setSelectedActivities] = useState([]);
   const [selectedRestaurants, setSelectedRestaurants] = useState([]);
 
+  const location = useLocation();
+
   useEffect(() => {
     axios.get(`${API}/api/destinations`)
-      .then(res => setDestinations(res.data || []))
+      .then(res => {
+        const data = res.data || [];
+        setDestinations(data);
+        // Pre-select if passed from Explore India
+        if (location.state?.destination) {
+          const pre = data.find(d => d.name.toLowerCase() === location.state.destination.toLowerCase());
+          if (pre) setSelectedDestinationId(pre.id);
+        }
+      })
       .catch(() => {})
       .finally(() => setDestLoading(false));
-  }, []);
+  }, [location.state]);
 
   const toggleInterest = id =>
     setInterests(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
