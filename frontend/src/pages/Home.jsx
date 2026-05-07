@@ -207,13 +207,96 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer style={{ background: 'var(--slate-900)', color: 'var(--slate-400)', textAlign: 'center', padding: '2rem', marginTop: '4rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
-          <Plane size={20} style={{ color: 'var(--primary)' }} />
-          <span style={{ fontWeight: 900, color: '#fff' }}>TripPro</span>
+      {/* TRUSTED BY */}
+      <section style={{ borderTop: '1px solid var(--slate-100)', padding: '2.5rem 0', background: 'var(--white)' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <p style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--slate-400)', textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '1px' }}>Trusted by travelers from</p>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', flexWrap: 'wrap', opacity: 0.5, filter: 'grayscale(1)' }}>
+             <div style={{ fontWeight: 900, fontSize: '1.25rem' }}>HYATT</div>
+             <div style={{ fontWeight: 900, fontSize: '1.25rem' }}>MARRIOTT</div>
+             <div style={{ fontWeight: 900, fontSize: '1.25rem' }}>RADISSON</div>
+             <div style={{ fontWeight: 900, fontSize: '1.25rem' }}>HILTON</div>
+             <div style={{ fontWeight: 900, fontSize: '1.25rem' }}>TAJ</div>
+          </div>
         </div>
-        <p style={{ fontSize: '0.85rem' }}>© 2026 Trip Pro. Production-grade AI travel platform.</p>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="container section">
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <h2 style={{ fontWeight: 900, fontSize: '2.5rem' }}>Stories from the <span className="text-gradient">Road</span></h2>
+          <p style={{ color: 'var(--slate-500)', marginTop: '0.5rem' }}>Join 15,000+ travelers who planned their dream trips with AI.</p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+           {[
+             { name: 'Ananya Sharma', role: 'Solo Traveler', quote: 'Trip Pro AI planned my entire Kerala trip in under 30 seconds. The hotel picks were spot on!' },
+             { name: 'Rahul Varma', role: 'Business Exec', quote: 'The efficiency of the AI planner is unmatched. Saved me hours of research for my Shimla getaway.' },
+             { name: 'Priya Das', role: 'Food Blogger', quote: 'I love the food discovery feature. Found the best hidden cafes in Kolkata thanks to the AI Assistant.' },
+           ].map((t, i) => (
+             <div key={i} className="card" style={{ padding: '2rem', border: 'none', boxShadow: 'var(--shadow-md)' }}>
+                <div style={{ color: 'var(--warning)', marginBottom: '1rem', display: 'flex', gap: '2px' }}>
+                   {[1,2,3,4,5].map(s => <span key={s}>★</span>)}
+                </div>
+                <p style={{ fontStyle: 'italic', color: 'var(--slate-600)', marginBottom: '1.5rem', lineHeight: 1.6 }}>"{t.quote}"</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                   <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--primary-soft)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>
+                      {t.name.charAt(0)}
+                   </div>
+                   <div>
+                      <div style={{ fontWeight: 800, fontSize: '0.9rem' }}>{t.name}</div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--slate-400)' }}>{t.role}</div>
+                   </div>
+                </div>
+             </div>
+           ))}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{ background: 'var(--slate-900)', color: '#fff', padding: '5rem 0 2rem' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '4rem', marginBottom: '4rem' }}>
+             <div>
+                <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                  <Plane size={24} style={{ color: 'var(--primary)' }} />
+                  <span style={{ fontWeight: 900, fontSize: '1.5rem', color: '#fff' }}>TripPro</span>
+                </Link>
+                <p style={{ color: 'var(--slate-400)', lineHeight: 1.7, maxWidth: '300px' }}>
+                   Revolutionizing travel planning with production-grade AI. Discover, plan, and book your perfect India trip in seconds.
+                </p>
+             </div>
+             <div>
+                <h5 style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: 'var(--slate-100)' }}>Platform</h5>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem', color: 'var(--slate-400)' }}>
+                   <li><Link to="/explore-india">Explore India</Link></li>
+                   <li><Link to="/build-trip">AI Planner</Link></li>
+                   <li><Link to="/dashboard">Dashboard</Link></li>
+                   <li><Link to="/admin">Admin Panel</Link></li>
+                </ul>
+             </div>
+             <div>
+                <h5 style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: 'var(--slate-100)' }}>Support</h5>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem', color: 'var(--slate-400)' }}>
+                   <li>Help Center</li>
+                   <li>Safety Tips</li>
+                   <li>Terms of Service</li>
+                   <li>Privacy Policy</li>
+                </ul>
+             </div>
+             <div>
+                <h5 style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: 'var(--slate-100)' }}>Connect</h5>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem', color: 'var(--slate-400)' }}>
+                   <li>Instagram</li>
+                   <li>Twitter</li>
+                   <li>Facebook</li>
+                   <li>LinkedIn</li>
+                </ul>
+             </div>
+          </div>
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '2rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--slate-500)' }}>
+             <p>© 2026 Trip Pro AI. All rights reserved. Built with ❤️ for India.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
